@@ -1,0 +1,13 @@
+﻿#gocart-wrapper {
+    width: 996px;
+    position: absolute;
+    top: 45px;
+    z-index: 10000;
+}
+
+#gocart-header {
+    height: 85px;
+    background-color: #070707;
+}
+
+
