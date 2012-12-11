@@ -13,6 +13,11 @@
     #gocart-actions a.gocart-next, #gocart-actions a.gocart-finalize { margin-top: 20px; float: right; }
     #gocart-actions a.gocart-previous { margin-top: 20px; float: left; }
 
+    #gocart-global-errors ul { display: block; list-style: none; margin: 0 0 15px 30px; }
+    #gocart-global-errors ul li { display: block; list-style: none; margin: 0 0 5px 0; padding: 0; color: red; text-transform: uppercase; }
+
+    #gocart-main-container .gocart-columns { background: url("img/columns.png") left top repeat-y; }
+
 /* General */
 
 /* Header */
@@ -51,14 +56,14 @@
 
     #gocart-form { padding: 30px 0; }
 
-    #gocart-form .gocart-form-column { border-right: 1px solid #f0f0f0; width: 300px; float: left; margin-left: 30px; height: 200px; }
+    #gocart-form .gocart-form-column { width: 300px; float: left; margin-left: 30px; }
     #gocart-form .gocart-form-column.gocart-form-column-3 { border-right: 0; }
 
     #gocart-form label { text-transform: uppercase; font-weight: bold; }
 
-    #gocart-form input[type=text] { width: 245px; background-image: none; display: inline-block; height: 20px; padding: 4px 6px; margin-bottom: 9px; font-size: 14px; line-height: 20px; color: inherit; -webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px; background-color: #ffffff; border: 1px solid #e5e5e5; -webkit-box-shadow: inset 0 1px 1px gainsboro; -moz-box-shadow: inset 0 1px 1px gainsboro; box-shadow: inset 0 1px 1px gainsboro; -webkit-transition: border linear 0.2s, box-shadow linear 0.2s; -moz-transition: border linear 0.2s, box-shadow linear 0.2s; -o-transition: border linear 0.2s, box-shadow linear 0.2s; transition: border linear 0.2s, box-shadow linear 0.2s; }
-    #gocart-form input[type=text].gocart-has-errors{ border-color: red; outline: 0; outline: thin dotted \9; /* IE6-9 */ -webkit-box-shadow: inset 0 1px 1px gainsboro, 0 0 8px red; -moz-box-shadow: inset 0 1px 1px gainsboro, 0 0 8px red; box-shadow: inset 0 1px 1px gainsboro, 0 0 8px red; color: red; }
-    #gocart-form input[type=text]:focus{ border-color: lightblue; outline: 0; outline: thin dotted \9; /* IE6-9 */ -webkit-box-shadow: inset 0 1px 1px gainsboro, 0 0 8px lightblue; -moz-box-shadow: inset 0 1px 1px gainsboro, 0 0 8px lightblue; box-shadow: inset 0 1px 1px gainsboro, 0 0 8px lightblue; }
+    #gocart-form input[type=text], #gocart-form input[type=password] { width: 245px; background-image: none; display: inline-block; height: 20px; padding: 4px 6px; margin-bottom: 9px; font-size: 14px; line-height: 20px; color: inherit; -webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px; background-color: #ffffff; border: 1px solid #e5e5e5; -webkit-box-shadow: inset 0 1px 1px gainsboro; -moz-box-shadow: inset 0 1px 1px gainsboro; box-shadow: inset 0 1px 1px gainsboro; -webkit-transition: border linear 0.2s, box-shadow linear 0.2s; -moz-transition: border linear 0.2s, box-shadow linear 0.2s; -o-transition: border linear 0.2s, box-shadow linear 0.2s; transition: border linear 0.2s, box-shadow linear 0.2s; }
+    #gocart-form input[type=text].gocart-has-errors, #gocart-form input[type=password].gocart-has-errors { border-color: red; outline: 0; outline: thin dotted \9; /* IE6-9 */ -webkit-box-shadow: inset 0 1px 1px gainsboro, 0 0 8px red; -moz-box-shadow: inset 0 1px 1px gainsboro, 0 0 8px red; box-shadow: inset 0 1px 1px gainsboro, 0 0 8px red; color: red; }
+    #gocart-form input[type=text]:focus, #gocart-form input[type=password].gocart-has-errors { border-color: lightblue; outline: 0; outline: thin dotted \9; /* IE6-9 */ -webkit-box-shadow: inset 0 1px 1px gainsboro, 0 0 8px lightblue; -moz-box-shadow: inset 0 1px 1px gainsboro, 0 0 8px lightblue; box-shadow: inset 0 1px 1px gainsboro, 0 0 8px lightblue; }
 
     #gocart-form select { width: 245px; margin: 0; display: inline-block; padding: 4px 6px; margin-bottom: 9px; font-size: 14px; line-height: 20px; color: #555555; -webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px; }
 
@@ -66,8 +71,6 @@
     #gocart-form .gocart-same-as-billing-address a { display: inline-block; text-decoration: none; color: inherit; text-transform: uppercase; font-weight: bold; background: url("img/checkbox.png") left center no-repeat; padding-left: 25px; }
     #gocart-form .gocart-same-as-billing-address a:hover { color: #333333; }
     #gocart-form .gocart-same-as-billing-address.same a { background-image: url("img/checked.png"); }
-
-    #gocart-step-content-payment-method #gocart-form .gocart-form-column { height: auto; }
 
 /* Forms */
 
@@ -77,7 +80,7 @@
 
     table.gocart-list th { text-align: center; color: #999999; text-transform: uppercase; font-weight: bold; padding: 15px 0; }
     
-    table.gocart-list td { padding: 30px 0; text-align: center; background-color: #fbfbfb; border-top: 1px solid #eeeeee; }
+    table.gocart-list td { padding: 20px 0; text-align: center; background-color: #fbfbfb; border-top: 1px solid #eeeeee; }
     table.gocart-list tr.odd td { background-color: #ffffff; }
 
     table.gocart-list td span { display: block; }
@@ -86,14 +89,22 @@
     table.gocart-list span.gocart-product-id { font-weight: bold; color: #979797; font-size: 10pt; }
     table.gocart-list span.gocart-shipping-method-name { font-weight: bold; color: #333333; font-size: 14pt; text-transform: uppercase; }
     table.gocart-list span.gocart-shipping-method-time { font-weight: bold; color: #979797; font-size: 10pt; text-transform: uppercase; }
-    table.gocart-list span.gocart-shipping-method-price { font-weight: bold; color: #0197d0; font-size: 14pt; }
+    table.gocart-list span.gocart-shipping-method-price,
+    table.gocart-list span.gocart-confirm-item-quantity,
+    table.gocart-list span.gocart-confirm-item-price,
+    table.gocart-list span.gocart-confirm-item-total-price {
+         font-weight: bold;
+         font-size: 14pt;
+         color: #0197d0;
+    }
+    table.gocart-list span.gocart-confirm-item-quantity { color: #999999; }
 
 /* Lists */
 
 /* Items */
 
-    table#gocart-items th.gocart-item-th-1 { text-align: left; padding-left: 30px; }
-    table#gocart-items td.gocart-item-td-1 { padding: 0 30px; text-align: left; }
+    table#gocart-items th.gocart-item-th-1, table#gocart-items td.gocart-item-td-1 { text-align: left; padding-left: 30px; }
+    table#gocart-items td.gocart-item-td-1 { padding-right: 30px; }
 
     table#gocart-items td.gocart-item-td-2,
     table#gocart-items td.gocart-item-td-3,
@@ -119,7 +130,7 @@
 
     table#gocart-shipping-methods th.gocart-shipping-method-th-1 { text-align: left; padding-left: 30px; }
     
-    table#gocart-shipping-methods td.gocart-shipping-method-td-1 { padding: 0 60px; text-align: left; background: #fbfbfb url("img/checkbox.png") 30px 22px no-repeat; }
+    table#gocart-shipping-methods td.gocart-shipping-method-td-1 { padding: 0 60px; text-align: left; background: #fbfbfb url("img/checkbox.png") 30px 14px no-repeat; }
     table#gocart-shipping-methods tr.selected td.gocart-shipping-method-td-1 { background-image: url("img/selected.png"); }
     
     table#gocart-shipping-methods td.gocart-shipping-method-td-2 { width: 160px; }
@@ -128,12 +139,65 @@
 
 /* Confirm */
 
-    #gocart-step-content-confirm .gocart-confirm-column { border-right: 1px solid #f0f0f0; width: 300px; float: left; margin: 30px 0 30px 30px; height: 140px; }
-    #gocart-step-content-confirm .gocart-confirm-column.gocart-confirm-column-3 { border-right: 0; }
+    #gocart-step-content-confirm #gocart-actions { border-top: 0; }
 
-    #gocart-step-content-confirm .gocart-confirm-column span { display: block; color: #999999; font-weight:  bold; text-transform: uppercase; font-size: 9pt; }
-    #gocart-step-content-confirm .gocart-confirm-column span.gocart-title { color: #333333; font-size: 14pt; margin-bottom: 10px; }
+    /* Columns */
+        
+        #gocart-step-content-confirm .gocart-columns { margin: 30px 0; }
+
+        #gocart-step-content-confirm .gocart-confirm-column { width: 300px; float: left; margin: 0 0 0 30px; }
+        #gocart-step-content-confirm .gocart-confirm-column.gocart-confirm-column-3 { border-right: 0; }
+
+        #gocart-step-content-confirm .gocart-confirm-column span { display: block; color: #999999; font-weight:  bold; text-transform: uppercase; font-size: 9pt; }
+        #gocart-step-content-confirm .gocart-confirm-column span.gocart-title { color: #333333; font-size: 14pt; margin-bottom: 10px; }
+
+    /* Columns */
+
+    /* Items */
+
+        table#gocart-confirm-items th { background-color: #fbfbfb; border-top: 1px solid #eeeeee; padding: 8px 0; }
+        table#gocart-confirm-items th.gocart-confirm-item-th-1, table#gocart-confirm-items td.gocart-confirm-item-td-1 { text-align: left; padding-left: 30px; }
+        table#gocart-confirm-items td.gocart-confirm-item-td-1 { padding-right: 30px; }
+
+        table#gocart-confirm-items span.gocart-product-name { font-size: 10pt; }
+        table#gocart-confirm-items span.gocart-product-id { font-size: 8pt; }
+
+        table#gocart-confirm-items td.gocart-confirm-item-td-2,
+        table#gocart-confirm-items td.gocart-confirm-item-td-3 {
+            width: 120px;
+        }
+
+        table#gocart-confirm-items td.gocart-confirm-item-td-4 { text-align: right; padding-right: 30px; width: 90px; }
+
+    /* Items */
+
+    /* Prices */
+
+        table#gocart-confirm-prices { width: 100%; }
+        table#gocart-confirm-prices tr td { padding: 12px 30px 8px 30px; border-top: 1px solid #eeeeee; }
+        table#gocart-confirm-prices tr td span { font-size: 14pt; text-transform: uppercase; color: #333333; font-weight: bold; }
+        table#gocart-confirm-prices tr td.gocart-price-td-2 { text-align: right; }
+        table#gocart-confirm-prices tr.gocart-total-price-tr td span { color: #0197d0; }
+        table#gocart-confirm-prices tr.gocart-grand-total-price-tr td { background-color: #cceaf6; padding-top: 26px; padding-bottom: 20px; border-top: 0; }
+        table#gocart-confirm-prices tr.gocart-grand-total-price-tr td span { font-size: 20pt; color: #0197d0; font-weight: bold; }
+
+    /* Prices */
 
 /* Confirm */
+
+/* Thank you */
+
+    #gocart-thankyou-left, #gocart-thankyou-right { height: 340px; float: left; }
+    #gocart-thankyou-left { width: 669px; border-right: 1px solid #eeeeee; }
+    #gocart-thankyou-right { width: 326px; background-color: #fbfbfb; }
+
+    #gocart-thankyou-left span.gocart-title { display: block; margin-top: 170px; text-transform: uppercase; color: #333333; font-size: 24pt; font-weight: bold; text-align: center; }
+    #gocart-thankyou-left span.gocart-title span { color: #0197d0; }
+
+    #gocart-thankyou-right #gocart-form { padding: 30px 30px 0 30px; }
+    #gocart-thankyou-right span.gocart-title { display: block; border-bottom: 1px solid #eeeeee; text-transform: uppercase; color: #333333; font-size: 12pt; font-weight: bold; padding-bottom: 10px; margin-bottom: 10px; }
+    #gocart-thankyou-right .gocart-btn { display: block !important; text-align: center; margin-top: 5px; }
+
+/* Thank you */
 
 
