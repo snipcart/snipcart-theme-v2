@@ -2,13 +2,13 @@
 /* Modal Window */
 
     #gocart-overlay { position: absolute; z-index: 9999; top: 0; left: 0; width: 100%; height: 100%; background-color: #000000; opacity: 0.8; }
-    #gocart-close { display: block; width: 26px; height: 26px; text-indent: -10000px; background: url("img/close.png"); float: right; margin: -13px 0 0 0; }
+    #gocart-close { display: block;text-decoration: none; width: 26px; height: 26px; text-indent: -10000px; background: url("img/close.png") left top no-repeat; float: right; margin: -13px 0 0 0; }
 
 /* Modal Window */
 
 /* General */
 
-    #gocart-main-container { position: absolute; top: 49px; width: 996px; margin: 60px auto; z-index: 10000; font-family: Arial !important; color: #a5a5a5 !important; font-size: 10pt; }
+    #gocart-main-container { position: absolute; top: 60px; width: 996px; margin: 0 auto; z-index: 10000; font-family: Arial !important; color: #a5a5a5 !important; font-size: 10pt; }
 
     #gocart-main-content { background-color: #ffffff; width: 983px; }
 
@@ -195,10 +195,10 @@
 /* Confirm */
 
 /* Thank you */
-
-    #gocart-thankyou-left, #gocart-thankyou-right { height: 340px; float: left; }
-    #gocart-thankyou-left { width: 669px; border-right: 1px solid #eeeeee; }
-    #gocart-thankyou-right { width: 326px; background-color: #fbfbfb; }
+    #gocart-step-content-thankyou { height: 340px; }
+    #gocart-thankyou-left, #gocart-thankyou-right { height: inherit; float: left; }
+    #gocart-thankyou-left { width: 663px; border-right: 1px solid #eeeeee; }
+    #gocart-thankyou-right { width: 317px; background-color: #fbfbfb; }
 
     #gocart-thankyou-left span.gocart-title { display: block; margin-top: 170px; text-transform: uppercase; color: #333333; font-size: 24pt; font-weight: bold; text-align: center; }
     #gocart-thankyou-left span.gocart-title span { color: #0197d0; }
