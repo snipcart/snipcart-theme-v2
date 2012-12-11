@@ -1,12 +1,21 @@
 ﻿
+/* Modal Window */
+
+    #gocart-overlay { position: absolute; z-index: 9999; top: 0; left: 0; width: 100%; height: 100%; background-color: #000000; opacity: 0.8; }
+    #gocart-close { display: block; width: 26px; height: 26px; text-indent: -10000px; background: url("img/close.png"); float: right; margin: -13px 0 0 0; }
+
+/* Modal Window */
+
 /* General */
 
-    #gocart-main-container { width: 996px; position: absolute; top: 45px; z-index: 10000; background-color: #ffffff; font-family: Arial !important; color: #a5a5a5 !important; font-size: 10pt; }
+    #gocart-main-container { position: absolute; top: 49px; width: 996px; margin: 60px auto; z-index: 10000; font-family: Arial !important; color: #a5a5a5 !important; font-size: 10pt; }
+
+    #gocart-main-content { background-color: #ffffff; width: 983px; }
 
     #gocart-main-container span.gocart-clear { display: block; clear: both; }
 
     #gocart-main-container a.gocart-btn { display: inline-block; border: 4px solid #e8e8e8; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; background-color: #a2a2a2; padding: 8px 15px; color: #ffffff; text-transform: uppercase; font-weight: bold; text-decoration: none; cursor: pointer; font-size: 12pt; }
-    #gocart-main-container a.gocart-next { background-color: #019ed4; border: 4px solid #c4e7f4; }
+    #gocart-main-container a.gocart-next, #gocart-main-container a.gocart-finalize { background-color: #019ed4; border: 4px solid #c4e7f4; }
 
     #gocart-actions { height: 75px; padding: 0 20px; border-top: 1px solid #eeeeee; }
 
@@ -41,7 +50,7 @@
     ul#gocart-steps li { display: block; height: inherit; width: 165px; border-right: 1px solid #e1e1e1; float: left; }
     ul#gocart-steps li.active { background-color: #ffffff; border-color: #ffffff; }
 
-    ul#gocart-steps li#gocart-confirm-step { width: 166px; border-right: 0; }
+    ul#gocart-steps li#gocart-confirm-step { width: 153px; border-right: 0; }
 
     ul#gocart-steps li span { display: block; float: left; }
     
@@ -56,19 +65,19 @@
 
     #gocart-form { padding: 30px 0; }
 
-    #gocart-form .gocart-form-column { width: 300px; float: left; margin-left: 30px; }
+    #gocart-form .gocart-form-column { width: 296px; float: left; margin-left: 30px; }
     #gocart-form .gocart-form-column.gocart-form-column-3 { border-right: 0; }
 
-    #gocart-form label { text-transform: uppercase; font-weight: bold; }
+    #gocart-form label { text-transform: uppercase; font-weight: bold; display: block; margin-bottom: 9px; }
 
     #gocart-form input[type=text], #gocart-form input[type=password] { width: 245px; background-image: none; display: inline-block; height: 20px; padding: 4px 6px; margin-bottom: 9px; font-size: 14px; line-height: 20px; color: inherit; -webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px; background-color: #ffffff; border: 1px solid #e5e5e5; -webkit-box-shadow: inset 0 1px 1px gainsboro; -moz-box-shadow: inset 0 1px 1px gainsboro; box-shadow: inset 0 1px 1px gainsboro; -webkit-transition: border linear 0.2s, box-shadow linear 0.2s; -moz-transition: border linear 0.2s, box-shadow linear 0.2s; -o-transition: border linear 0.2s, box-shadow linear 0.2s; transition: border linear 0.2s, box-shadow linear 0.2s; }
     #gocart-form input[type=text].gocart-has-errors, #gocart-form input[type=password].gocart-has-errors { border-color: red; outline: 0; outline: thin dotted \9; /* IE6-9 */ -webkit-box-shadow: inset 0 1px 1px gainsboro, 0 0 8px red; -moz-box-shadow: inset 0 1px 1px gainsboro, 0 0 8px red; box-shadow: inset 0 1px 1px gainsboro, 0 0 8px red; color: red; }
     #gocart-form input[type=text]:focus, #gocart-form input[type=password].gocart-has-errors { border-color: lightblue; outline: 0; outline: thin dotted \9; /* IE6-9 */ -webkit-box-shadow: inset 0 1px 1px gainsboro, 0 0 8px lightblue; -moz-box-shadow: inset 0 1px 1px gainsboro, 0 0 8px lightblue; box-shadow: inset 0 1px 1px gainsboro, 0 0 8px lightblue; }
 
-    #gocart-form select { width: 245px; margin: 0; display: inline-block; padding: 4px 6px; margin-bottom: 9px; font-size: 14px; line-height: 20px; color: #555555; -webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px; }
+    #gocart-form select { width: 245px; margin: 0; display: inline-block; padding: 4px 6px; margin-bottom: 9px; font-size: 14px; line-height: 20px; color: #555555; border: 1px solid #e5e5e5; -webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px; }
 
     #gocart-form .gocart-same-as-billing-address { margin: 0 0 20px 30px; }
-    #gocart-form .gocart-same-as-billing-address a { display: inline-block; text-decoration: none; color: inherit; text-transform: uppercase; font-weight: bold; background: url("img/checkbox.png") left center no-repeat; padding-left: 25px; }
+    #gocart-form .gocart-same-as-billing-address a { display: inline-block; height: 17px; line-height: 17px; text-decoration: none; color: inherit; text-transform: uppercase; font-weight: bold; background: url("img/checkbox.png") left center no-repeat; padding-left: 25px; }
     #gocart-form .gocart-same-as-billing-address a:hover { color: #333333; }
     #gocart-form .gocart-same-as-billing-address.same a { background-image: url("img/checked.png"); }
 
@@ -76,28 +85,28 @@
 
 /* Lists */
 
-    table.gocart-list { width: 100%; }
+    #gocart-main-container table.gocart-list { width: 100%; }
 
-    table.gocart-list th { text-align: center; color: #999999; text-transform: uppercase; font-weight: bold; padding: 15px 0; }
+    #gocart-main-container table.gocart-list th { text-align: center; color: #999999; text-transform: uppercase; font-weight: bold; padding: 15px 0; }
     
-    table.gocart-list td { padding: 20px 0; text-align: center; background-color: #fbfbfb; border-top: 1px solid #eeeeee; }
-    table.gocart-list tr.odd td { background-color: #ffffff; }
+    #gocart-main-container table.gocart-list td { padding: 20px 0; text-align: center; background-color: #fbfbfb; border-top: 1px solid #eeeeee; }
+    #gocart-main-container table.gocart-list tr.odd td { background-color: #ffffff; }
 
-    table.gocart-list td span { display: block; }
+    #gocart-main-container table.gocart-list td span { display: block; }
 
-    table.gocart-list span.gocart-product-name { font-weight: bold; color: #333333; font-size: 14pt; text-transform: uppercase; }
-    table.gocart-list span.gocart-product-id { font-weight: bold; color: #979797; font-size: 10pt; }
-    table.gocart-list span.gocart-shipping-method-name { font-weight: bold; color: #333333; font-size: 14pt; text-transform: uppercase; }
-    table.gocart-list span.gocart-shipping-method-time { font-weight: bold; color: #979797; font-size: 10pt; text-transform: uppercase; }
-    table.gocart-list span.gocart-shipping-method-price,
-    table.gocart-list span.gocart-confirm-item-quantity,
-    table.gocart-list span.gocart-confirm-item-price,
-    table.gocart-list span.gocart-confirm-item-total-price {
+    #gocart-main-container table.gocart-list span.gocart-product-name { font-weight: bold; color: #333333; font-size: 14pt; text-transform: uppercase; }
+    #gocart-main-container table.gocart-list span.gocart-product-id { font-weight: bold; color: #979797; font-size: 10pt; }
+    #gocart-main-container table.gocart-list span.gocart-shipping-method-name { font-weight: bold; color: #333333; font-size: 14pt; text-transform: uppercase; }
+    #gocart-main-container table.gocart-list span.gocart-shipping-method-time { font-weight: bold; color: #979797; font-size: 10pt; text-transform: uppercase; }
+    #gocart-main-container table.gocart-list span.gocart-shipping-method-price,
+    #gocart-main-container table.gocart-list span.gocart-confirm-item-quantity,
+    #gocart-main-container table.gocart-list span.gocart-confirm-item-price,
+    #gocart-main-container table.gocart-list span.gocart-confirm-item-total-price {
          font-weight: bold;
          font-size: 14pt;
          color: #0197d0;
     }
-    table.gocart-list span.gocart-confirm-item-quantity { color: #999999; }
+    #gocart-main-container table.gocart-list span.gocart-confirm-item-quantity { color: #999999; }
 
 /* Lists */
 
@@ -145,7 +154,7 @@
         
         #gocart-step-content-confirm .gocart-columns { margin: 30px 0; }
 
-        #gocart-step-content-confirm .gocart-confirm-column { width: 300px; float: left; margin: 0 0 0 30px; }
+        #gocart-step-content-confirm .gocart-confirm-column { width: 296px; float: left; margin: 0 0 0 30px; }
         #gocart-step-content-confirm .gocart-confirm-column.gocart-confirm-column-3 { border-right: 0; }
 
         #gocart-step-content-confirm .gocart-confirm-column span { display: block; color: #999999; font-weight:  bold; text-transform: uppercase; font-size: 9pt; }
