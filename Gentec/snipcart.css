@@ -22,10 +22,23 @@
     #snipcart-actions a.snipcart-next, #snipcart-actions a.snipcart-finalize { margin-top: 20px; float: right; }
     #snipcart-actions a.snipcart-previous { margin-top: 20px; float: left; }
 
+    #snipcart-actions a.snipcart-previous.snipcart-spacing { margin-left: 10px; }
+    
+
     #snipcart-global-errors ul { display: block; list-style: none; margin: 0 0 15px 30px; }
     #snipcart-global-errors ul li { display: block; list-style: none; margin: 0 0 5px 0; padding: 0; color: red; text-transform: uppercase; }
 
     #snipcart-main-container .snipcart-columns { background: url("img/columns.png") left top repeat-y; }
+
+    #snipcart-main-container span.snipcart-unit-price, #snipcart-main-container span.snipcart-total-price {
+        font-size: 14pt;
+        color: #333333;
+        font-weight: bold;
+    }
+
+    #snipcart-main-container span.snipcart-total-price {
+        color: #0197d0;
+    }
 
 /* General */
 
@@ -35,11 +48,17 @@
 
     #snipcart-header #snipcart-title { display: block; float: left; height: inherit; line-height: 85px; background: url("img/header-icon.png") 30px center no-repeat; padding-left: 80px; color: #898989; text-transform: uppercase; font-weight: bold; font-size: 18pt; }
 
-    #snipcart-header #snipcart-total { display: block; float: right; margin-right: 30px; height: inherit; }
-    #snipcart-header #snipcart-total span { display: block; height: inherit; float: left; font-weight: bold; }
+    #snipcart-header #snipcart-header-right { display: block; float: right; margin-right: 30px; height: 85px; }
+    
+    #snipcart-header #snipcart-total { display: block; height: 50px; }
+    #snipcart-header #snipcart-total span { display: block; height: 50px; float: left; font-weight: bold; }
     #snipcart-header #snipcart-total span.snipcart-label { width: 80px; color: #898989; text-transform: uppercase; margin-right: 10px; }
-    #snipcart-header #snipcart-total span.snipcart-label span { height: auto; margin-top: 20px; }
-    #snipcart-header #snipcart-total span.snipcart-amount { line-height: 85px; color: #0197d0; font-size: 28pt; }
+    #snipcart-header #snipcart-total span.snipcart-label span { height: auto; margin-top: 15px; }
+    #snipcart-header #snipcart-total span.snipcart-amount { color: #0197d0; font-size: 28pt; line-height: 70px; }
+
+    #snipcart-header #snipcart-continue-shopping-link { display: block; text-align: right; margin-top: 8px; }
+    #snipcart-header #snipcart-continue-shopping-link a { color: #9f9f9f; text-decoration: underline; font-size: 9pt; }
+    #snipcart-header #snipcart-continue-shopping-link a:hover { color: #9f9f9f; text-decoration: none; }
 
 /* Header */
 
@@ -87,10 +106,10 @@
 
     #snipcart-main-container table.snipcart-list { width: 100%; }
 
-    #snipcart-main-container table.snipcart-list th { text-align: center; color: #999999; text-transform: uppercase; font-weight: bold; padding: 15px 0; }
+    #snipcart-main-container table.snipcart-list th { text-align: center; color: #999999; font-size: 9pt; background-color: #fbfbfb; text-transform: uppercase; font-weight: bold; height: 40px; }
     
-    #snipcart-main-container table.snipcart-list td { padding: 20px 0; text-align: center; background-color: #fbfbfb; border-top: 1px solid #eeeeee; }
-    #snipcart-main-container table.snipcart-list tr.odd td { background-color: #ffffff; }
+    #snipcart-main-container table.snipcart-list td { padding: 20px 0; text-align: center; border-top: 1px solid #eeeeee; }
+    #snipcart-main-container table.snipcart-list tr.odd td { background-color: #fbfbfb; }
 
     #snipcart-main-container table.snipcart-list td span { display: block; }
 
@@ -115,25 +134,57 @@
     table#snipcart-items th.snipcart-item-th-1, table#snipcart-items td.snipcart-item-td-1 { text-align: left; padding-left: 30px; }
     table#snipcart-items td.snipcart-item-td-1 { padding-right: 30px; }
 
-    table#snipcart-items td.snipcart-item-td-2,
+    table#snipcart-items td.snipcart-item-td-2 {
+        width: 200px;
+    }
+
     table#snipcart-items td.snipcart-item-td-3,
-    table#snipcart-items td.snipcart-item-td-4 {
+    table#snipcart-items td.snipcart-item-td-4,
+    table#snipcart-items td.snipcart-item-td-5 {
         width: 120px;
     }
 
-    table#snipcart-items td.snipcart-item-td-2 a,
-    table#snipcart-items td.snipcart-item-td-2 span {
+    table#snipcart-items td.snipcart-item-td-3 a,
+    table#snipcart-items td.snipcart-item-td-3 span {
         display: inline-block;
     }
 
-    table#snipcart-items td.snipcart-item-td-2 { width: 140px; }
-    table#snipcart-items td.snipcart-item-td-2 a { height: 17px; width: 17px; -webkit-border-radius: 30px; -moz-border-radius: 30px; border-radius: 30px; background-color: #333333; color: #ffffff; line-height: 17px; text-align: center; text-decoration: none; }
-    table#snipcart-items td.snipcart-item-td-2 span { border: 1px solid #e5e5e5; padding: 8px 15px; margin: 0 5px; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; background-color: #ffffff; }
+    table#snipcart-items td.snipcart-item-td-3 { width: 140px; }
+    table#snipcart-items td.snipcart-item-td-3 a { height: 17px; width: 17px; font-family: Arial; font-size: 14pt; -webkit-border-radius: 30px; -moz-border-radius: 30px; border-radius: 30px; background-color: #333333; color: #ffffff; line-height: 14px; text-align: center; text-decoration: none; }
+    table#snipcart-items td.snipcart-item-td-3 a.snipcart-minus-quantity { line-height: 13px; }
 
-    table#snipcart-items td.snipcart-item-td-5 { width: 60px; }
-    table#snipcart-items td.snipcart-item-td-5 a { display: block; width: 40px; height: 17px; width: 17px; -webkit-border-radius: 30px; -moz-border-radius: 30px; border-radius: 30px; background-color: #333333; color: #ffffff; line-height: 17px; text-align: center; text-decoration: none; }
+    table#snipcart-items td.snipcart-item-td-3 span { border: 1px solid #e5e5e5; color: #333333; font-weight: bold; font-size: 12pt; padding: 5px 15px; margin: 0 5px; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; background-color: #ffffff; }
+
+    table#snipcart-items td.snipcart-item-td-6 { width: 60px; }
+    table#snipcart-items td.snipcart-item-td-6 a { display: block; width: 40px; height: 17px; width: 17px; font-family: Arial; font-size: 13pt; -webkit-border-radius: 30px; -moz-border-radius: 30px; border-radius: 30px; background-color: #ed1c24; color: #ffffff; line-height: 15px; text-align: center; text-decoration: none; }
+
+    table#snipcart-items span.snipcart-product-description {
+        font-size: 9pt;    
+    }
 
 /* Items */
+
+/* Login */
+
+    #snipcart-step-content-login #snipcart-form { padding: 0; position: relative; }
+
+    #snipcart-step-content-login .snipcart-form-column.snipcart-form-column1, #snipcart-step-content-login .snipcart-form-column.snipcart-form-column2 { height: 305px; margin-top: 45px; }
+    #snipcart-step-content-login .snipcart-form-column.snipcart-form-column1 { border-right: 1px solid #e1e1e1; }
+    #snipcart-step-content-login .snipcart-form-column.snipcart-form-column1 div { padding-right: 30px; }
+
+    #snipcart-step-content-login .snipcart-form-column.snipcart-form-column2 { width: 266px; }
+
+    #snipcart-step-content-login .snipcart-form-column.snipcart-form-column3 { height: 380px; width: 336px; margin-left: 20px; background: #eff3f3 url("img/login-box-sep.gif") left top no-repeat; }
+    #snipcart-step-content-login .snipcart-form-column.snipcart-form-column3 div { padding: 45px 30px 0 50px; }
+    #snipcart-step-content-login .snipcart-form-column.snipcart-form-column3 span.snipcart-title { margin-bottom: 30px; }
+    #snipcart-step-content-login .snipcart-form-column.snipcart-form-column3 p.snipcart-notice { margin-top: 20px; font-size: 9pt; font-weight: bold; }
+
+    #snipcart-step-content-login .snipcart-form-column span.snipcart-title { text-transform: uppercase; font-weight: bold; display: block; margin-bottom: 10px; border-bottom: 1px solid #e1e1e1; padding-bottom: 10px; font-size: 14pt; color: #333333; }
+    #snipcart-step-content-login #snipcart-form .snipcart-next { display: block; text-align: center; margin-top: 5px; }
+
+    #snipcart-step-content-login #snipcart-login-sep-label { display: block; width: 20px; height: 20px; color: red; position: absolute; top: 46px; right: 314px; color: #ffffff; font-weight: bold; text-transform: uppercase; }
+
+/* Login */
 
 /* Shipping Methods */
 
