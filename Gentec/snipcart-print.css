@@ -1,0 +1,56 @@
+﻿html body *:not(.snipcart-checkout-container *) {
+    display: none;
+}
+
+#snipcart-modal {
+    position: static;
+}
+
+#snipcart-overlay {
+    display: none;
+}
+
+#snipcart-actions {
+    display: none;
+}
+
+.snipcart-checkout-container .snipcart-add-quantity, 
+.snipcart-checkout-container .snipcart-minus-quantity, 
+.snipcart-checkout-container .snipcart-remove-item, 
+.snipcart-checkout-container #snipcart-logged-user, 
+.snipcart-checkout-container #snipcart-continue-shopping-link {
+    display: none !important;
+}
+
+table#snipcart-items td.snipcart-item-td-3 span {
+    border: none;
+    background-color: inherit;
+}
+
+#snipcart-header #snipcart-title {
+    line-height: inherit;
+    display: none;
+}
+
+#snipcart-main-container span.snipcart-total-price {
+    color: inherit;
+    font-weight: bold;
+}
+
+#snipcart-header #snipcart-total span.snipcart-label {
+    width: auto;
+}
+
+#snipcart-header {
+    height: auto;
+}
+#snipcart-header #snipcart-total span.snipcart-label span {
+    margin-top: 0;
+}
+
+#snipcart-header #snipcart-total span.snipcart-amount {
+    font-size: inherit;
+    color: inherit;
+    font-weight: bold;
+    line-height: inherit;
+}
