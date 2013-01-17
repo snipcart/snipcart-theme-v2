@@ -15,7 +15,7 @@
     #snipcart-main-container span.snipcart-clear { display: block; clear: both; }
 
     #snipcart-main-container a.snipcart-btn { display: inline-block; border: 4px solid #e8e8e8; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; background-color: #a2a2a2; padding: 8px 15px; color: #ffffff; text-transform: uppercase; font-weight: bold; text-decoration: none; cursor: pointer; font-size: 12pt; }
-    #snipcart-main-container a.snipcart-next, #snipcart-main-container a.snipcart-finalize { background-color: #019ed4; border: 4px solid #c4e7f4; }
+    #snipcart-main-container a.snipcart-next, #snipcart-main-container a.snipcart-finalize, #snipcart-main-container a.snipcart-mainaction { background-color: #019ed4; border: 4px solid #c4e7f4; }
 
     #snipcart-actions { height: 75px; padding: 0 20px; border-top: 1px solid #eeeeee; }
 
