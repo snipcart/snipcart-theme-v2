@@ -260,4 +260,9 @@
 
 /* Thank you */
 
-
+/* Cart items */
+    #snipcart-sharebyemail-container {
+        float: left;
+        margin-top: 20px;
+    }
+/* Cart items*/
