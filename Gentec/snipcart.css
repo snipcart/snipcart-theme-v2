@@ -7,7 +7,7 @@
 
 /* Modal Window */
 
-    #snipcart-overlay { position: absolute; z-index: 9999; top: 0; left: 0; width: 100%; height: 100%; background-color: #000000; opacity: 0.8; }
+    #snipcart-overlay { position: fixed; z-index: 9999; top: 0; left: 0; width: 100%; height: 100%; background-color: #000000; opacity: 0.8; }
     #snipcart-close { display: block;text-decoration: none; width: 26px; height: 26px; text-indent: -10000px; background: url("img/close.png") left top no-repeat; float: right; margin: -13px 0 0 0; }
 
 /* Modal Window */
