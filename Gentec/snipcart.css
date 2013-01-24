@@ -148,7 +148,7 @@
 
 /* Lists */
 
-    #snipcart-main-container table.snipcart-list { width: 100%; }
+    #snipcart-main-container table.snipcart-list { width: 100%; clear: both; }
 
     #snipcart-main-container table.snipcart-list th { text-align: center; color: #999999; font-size: 9pt; background-color: #fbfbfb; text-transform: uppercase; font-weight: bold; height: 40px; }
     
