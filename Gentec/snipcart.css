@@ -281,7 +281,6 @@
     #snipcart-step-content-confirm #snipcart-actions { border-top: 0; }
     .snipcart-step #snipcart-promocode-container {
         margin: 20px 20px 0 0;
-        float: left;
     }
     .snipcart-step #snipcart-confirm-promocode {
         height: 28px;
