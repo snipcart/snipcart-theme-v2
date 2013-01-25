@@ -279,6 +279,10 @@
 /* Confirm */
 
     #snipcart-step-content-confirm #snipcart-actions { border-top: 0; }
+    .snipcart-promocodes-list {
+        float: left;
+        margin-right: 20px;
+    }
     .snipcart-step #snipcart-promocode-container {
         margin: 20px 20px 0 0;
     }
@@ -289,7 +293,6 @@
         top: -2px;
     }
     /* Columns */
-        
         #snipcart-step-content-confirm .snipcart-columns { margin: 30px 0; }
 
         #snipcart-step-content-confirm .snipcart-confirm-column { width: 296px; float: left; margin: 0 0 0 30px; }
@@ -326,6 +329,7 @@
         table#snipcart-confirm-prices tr td { padding: 12px 30px 8px 30px; border-top: 1px solid #eeeeee; }
         table#snipcart-confirm-prices tr td span { font-size: 14pt; text-transform: uppercase; color: #333333; font-weight: bold; }
         table#snipcart-confirm-prices tr td.snipcart-price-td-2 { text-align: right; }
+        table#snipcart-confirm-prices tr td.snipcart-price-td-2.snipcart-negative-price span { color: red; }
         table#snipcart-confirm-prices tr.snipcart-total-price-tr td span { color: #0197d0; }
         table#snipcart-confirm-prices tr.snipcart-grand-total-price-tr td { background-color: #cceaf6; padding-top: 26px; padding-bottom: 20px; border-top: 0; }
         table#snipcart-confirm-prices tr.snipcart-grand-total-price-tr td span { font-size: 20pt; color: #0197d0; font-weight: bold; }
