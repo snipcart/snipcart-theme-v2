@@ -105,6 +105,7 @@
     ul#snipcart-steps li span.snipcart-step-number { -webkit-border-radius: 30px; -moz-border-radius: 30px; border-radius: 30px; background-color: #464646; height: 29px; width: 29px; line-height: 29px; text-align: center; margin: 15px 0 0 20px; color: #7d7d7d; font-weight: bold; font-size: 14pt; }
     ul#snipcart-steps li.active span.snipcart-step-number { background-color: #0197d0; color: #6dcff6; }
 
+    ul#snipcart-steps li { cursor: pointer; }
     ul#snipcart-steps li span.snipcart-step-text { width: 80px; margin: 13px 0 0 10px; text-transform: uppercase; color: #8e8e8e; font-weight: bold; line-height: 16px; font-size: 10pt; }
     ul#snipcart-steps li.active span.snipcart-step-text { color: #333333; }
     
