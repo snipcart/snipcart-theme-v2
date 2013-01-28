@@ -120,7 +120,7 @@
 
     #snipcart-form label { text-transform: uppercase; font-weight: bold; display: block; margin-bottom: 9px; }
 
-    #snipcart-form input[type=text], #snipcart-form input[type=password] { width: 245px; background-image: none; display: inline-block; height: 20px; padding: 4px 6px; margin-bottom: 9px; font-size: 14px; line-height: 20px; color: inherit; -webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px; background-color: #ffffff; border: 1px solid #e5e5e5; -webkit-box-shadow: inset 0 1px 1px gainsboro; -moz-box-shadow: inset 0 1px 1px gainsboro; box-shadow: inset 0 1px 1px gainsboro; -webkit-transition: border linear 0.2s, box-shadow linear 0.2s; -moz-transition: border linear 0.2s, box-shadow linear 0.2s; -o-transition: border linear 0.2s, box-shadow linear 0.2s; transition: border linear 0.2s, box-shadow linear 0.2s; }
+    #snipcart-form input[type=text], #snipcart-form input[type=password] { width: 245px; background-image: none; display: inline-block; height: 20px; padding: 4px 6px; margin-bottom: 9px; font-size: 14px; line-height: 20px; color: #555; -webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px; background-color: #ffffff; border: 1px solid #e5e5e5; -webkit-box-shadow: inset 0 1px 1px gainsboro; -moz-box-shadow: inset 0 1px 1px gainsboro; box-shadow: inset 0 1px 1px gainsboro; -webkit-transition: border linear 0.2s, box-shadow linear 0.2s; -moz-transition: border linear 0.2s, box-shadow linear 0.2s; -o-transition: border linear 0.2s, box-shadow linear 0.2s; transition: border linear 0.2s, box-shadow linear 0.2s; }
     #snipcart-form input[type=text].snipcart-has-errors, #snipcart-form input[type=password].snipcart-has-errors { border-color: red; outline: 0; outline: thin dotted \9; /* IE6-9 */ -webkit-box-shadow: inset 0 1px 1px gainsboro, 0 0 8px red; -moz-box-shadow: inset 0 1px 1px gainsboro, 0 0 8px red; box-shadow: inset 0 1px 1px gainsboro, 0 0 8px red; color: red; }
     #snipcart-form input[type=text]:focus, #snipcart-form input[type=password].snipcart-has-errors { border-color: lightblue; outline: 0; outline: thin dotted \9; /* IE6-9 */ -webkit-box-shadow: inset 0 1px 1px gainsboro, 0 0 8px lightblue; -moz-box-shadow: inset 0 1px 1px gainsboro, 0 0 8px lightblue; box-shadow: inset 0 1px 1px gainsboro, 0 0 8px lightblue; }
 
@@ -129,7 +129,7 @@
     #snipcart-form .snipcart-same-as-billing-address { margin: 0 0 20px 30px; }
     #snipcart-form .snipcart-same-as-billing-address a { display: inline-block; height: 17px; line-height: 17px; text-decoration: none; color: inherit; text-transform: uppercase; font-weight: bold; background: url("img/checkbox.png") left center no-repeat; padding-left: 25px; }
     #snipcart-form .snipcart-same-as-billing-address a:hover { color: #333333; }
-    #snipcart-form .snipcart-same-as-billing-address.same a { background-image: url("img/checked.png"); }
+    #snipcart-form .snipcart-same-as-billing-address.same a { background-image: url("img/selected.png"); }
     #snipcart-form .snipcart-form-field {
         position: relative;
         display: block;
@@ -281,11 +281,16 @@
 
     #snipcart-step-content-confirm #snipcart-actions { border-top: 0; }
     .snipcart-promocodes-list {
-        float: left;
         margin-right: 20px;
+    }
+    .snipcart-promocodes-list li {
+        list-style-type: none;
+        text-align: right;
     }
     .snipcart-step #snipcart-promocode-container {
         margin: 20px 20px 0 0;
+        text-align: right;
+        margin-bottom: 20px;
     }
     .snipcart-step #snipcart-confirm-promocode {
         height: 28px;
@@ -340,13 +345,21 @@
 /* Confirm */
 
 /* Thank you */
-    #snipcart-step-content-thankyou { height: 340px; }
+    #snipcart-step-content-thankyou { height: 375px; }
     #snipcart-thankyou-left, #snipcart-thankyou-right { height: inherit; float: left; }
     #snipcart-thankyou-left { width: 663px; border-right: 1px solid #eeeeee; }
     #snipcart-thankyou-right { width: 317px; background-color: #fbfbfb; }
 
-    #snipcart-thankyou-left span.snipcart-title { display: block; margin-top: 170px; text-transform: uppercase; color: #333333; font-size: 24pt; font-weight: bold; text-align: center; }
+    #snipcart-thankyou-left span.snipcart-title { padding-bottom: 10px; display: block; margin-top: 125px; text-transform: uppercase; color: #333333; font-size: 24pt; font-weight: bold; text-align: center; }
     #snipcart-thankyou-left span.snipcart-title span { color: #0197d0; }
+    #snipcart-thankyou-left span.snipcart-subtitle {
+        text-transform: uppercase;
+        font-size: 14px;
+        text-align: center;
+        display: block;
+        font-weight: bold;
+        margin-top: 5px;
+    }
 
     #snipcart-thankyou-right #snipcart-form { padding: 30px 30px 0 30px; }
     #snipcart-thankyou-right span.snipcart-title { display: block; border-bottom: 1px solid #eeeeee; text-transform: uppercase; color: #333333; font-size: 12pt; font-weight: bold; padding-bottom: 10px; margin-bottom: 10px; }
