@@ -54,3 +54,6 @@ table#snipcart-items td.snipcart-item-td-3 span {
     font-weight: bold;
     line-height: inherit;
 }
+.snipcart-print-no-show {
+    display: none;
+}
