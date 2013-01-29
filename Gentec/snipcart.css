@@ -287,9 +287,15 @@
         list-style-type: none;
         text-align: right;
     }
-    .snipcart-step #snipcart-promocode-container {
+    .snipcart-step #snipcart-promocodes {
         margin: 20px 20px 0 0;
         text-align: right;
+        margin-bottom: 20px;
+    }
+
+    .snipcart-step .snipcart-confirm-promocode {
+        text-align: right;
+        margin: 20px 20px 0 0;
         margin-bottom: 20px;
     }
     .snipcart-step #snipcart-confirm-promocode {
@@ -312,7 +318,7 @@
     /* Items */
 
         table#snipcart-confirm-items th { background-color: #fbfbfb; border-top: 1px solid #eeeeee; padding: 8px 0; }
-        table#snipcart-confirm-items th.snipcart-confirm-item-th-1, table#snipcart-confirm-items td.snipcart-confirm-item-td-1 { text-align: left; padding-left: 30px; }
+        table#snipcart-confirm-items th.snipcart-confirm-item-th-1, table#snipcart-confirm-items td.snipcsnipcart-btnart-confirm-item-td-1 { text-align: left; padding-left: 30px; }
         table#snipcart-confirm-items td.snipcart-confirm-item-td-1 { padding-right: 30px; }
 
         table#snipcart-confirm-items span.snipcart-product-name { font-size: 10pt; }
