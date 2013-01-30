@@ -144,6 +144,21 @@
         top: 0;
     }
 
+    #snipcart-form .snipcart-tooltip-content {
+        position: absolute;
+        background-color: #fff;
+        padding: 10px;
+        border: 1px solid #333;
+        border-radius: 10px;
+        -moz-border-radius: 10px;
+        -webkit-border-radius: 10px;
+    }
+    #snipcart-form .snipcart-tooltip-content img {
+        max-width: 100%;
+        display: block;
+        margin: 10px auto 0;
+    }
+
 
 /* Forms */
 
