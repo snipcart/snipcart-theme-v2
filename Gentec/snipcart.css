@@ -191,7 +191,7 @@
 
 /* Items */
 
-    table#snipcart-items th.snipcart-item-th-1, table#snipcart-items td.snipcart-item-td-1 { text-align: left; padding-left: 30px; }
+    table#snipcart-items th.snipcart-item-th-1, table#snipcart-items td.snipcart-item-td-1, table#snipcart-confirm-items td.snipcart-confirm-item-td-1, table#snipcart-confirm-items th.snipcart-confirm-item-td-1 { text-align: left; padding-left: 30px; }
     table#snipcart-items td.snipcart-item-td-1 { padding-right: 30px; }
 
     table#snipcart-items td.snipcart-item-td-2 {
@@ -435,3 +435,21 @@
         background-repeat: no-repeat;
     }
 /* Loading state */
+
+/* Empty cart */
+#snipcart-empty {
+    padding: 30px;
+    font-size: 30px;
+    text-align: center;
+    line-height: 40px;
+}
+#snipcart-shipping-method-error {
+    padding: 30px 30px 10px;
+    font-size: 30px;
+    text-align: center;
+    line-height: 40px;
+}
+#snipcart-shipping-method-errors {
+    padding: 0 30px;
+}
+/* Empty cart */
