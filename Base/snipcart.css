@@ -128,7 +128,7 @@
     ul#snipcart-steps li.active span.snipcart-step-number { background-color: transparent; color: #333; }
 
     ul#snipcart-steps li { cursor: pointer; }
-    ul#snipcart-steps li span.snipcart-step-text { width: 80px; margin: 13px 0 0 4px; text-transform: uppercase; color: #8e8e8e; font-weight: bold; line-height: 16px; font: 14px/16px 'LatoRegular'; }
+    ul#snipcart-steps li span.snipcart-step-text { width: 80px; margin: 13px 0 0 4px; text-transform: uppercase; color: #8e8e8e; font-weight: bold; line-height: 16px; font: 12px/16px 'LatoRegular'; }
     ul#snipcart-steps li.active span.snipcart-step-text { color: #333333; }
     
 /* Steps */
