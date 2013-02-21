@@ -52,7 +52,7 @@
 
     #snipcart-actions { height: 75px; padding: 0 20px 10px; border-top: 1px solid #eeeeee; }
 
-    #snipcart-actions a.snipcart-next, #snipcart-actions a.snipcart-finalize { margin-top: 20px; float: right; }
+    #snipcart-actions a.snipcart-next, #snipcart-actions a.snipcart-finalize { margin-top: 20px; float: right;margin-right: 10px; }
     #snipcart-actions a.snipcart-previous { margin-top: 20px; float: left; }
 
     #snipcart-actions a.snipcart-previous.snipcart-spacing { margin-left: 10px; }
