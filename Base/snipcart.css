@@ -124,11 +124,11 @@
 
     ul#snipcart-steps li span { display: block; float: left; }
     
-    ul#snipcart-steps li span.snipcart-step-number { -webkit-border-radius: 30px; -moz-border-radius: 30px; border-radius: 30px; background-color: transparent; height: 29px; width: 29px; line-height: 29px; text-align: center; margin: 5px 0 0 20px; color: #bbb; font-weight: bold; font: 36pt LatoLight; }
+    ul#snipcart-steps li span.snipcart-step-number { -webkit-border-radius: 30px; -moz-border-radius: 30px; border-radius: 30px; background-color: transparent; height: 29px; width: 29px; line-height: 29px; text-align: center; margin: 5px 0 0 20px; color: #bbb; font-weight: bold; font: 36pt LatoLight, Arial, sans-serif; }
     ul#snipcart-steps li.active span.snipcart-step-number { background-color: transparent; color: #333; }
 
     ul#snipcart-steps li { cursor: pointer; }
-    ul#snipcart-steps li span.snipcart-step-text { width: 80px; margin: 13px 0 0 4px; text-transform: uppercase; color: #8e8e8e; font-weight: bold; line-height: 16px; font: 12px/16px 'LatoRegular'; }
+    ul#snipcart-steps li span.snipcart-step-text { width: 80px; margin: 13px 0 0 4px; text-transform: uppercase; color: #8e8e8e; font-weight: bold; line-height: 16px; font: 12px/16px 'LatoRegular', Arial, sans-serif; }
     ul#snipcart-steps li.active span.snipcart-step-text { color: #333333; }
     
 /* Steps */
