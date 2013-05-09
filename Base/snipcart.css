@@ -522,3 +522,62 @@
         display: none;
     }
 }
+
+#snipcart-main-content #snipcart-current-user {
+    display: block;
+    float: left;
+    line-height: 65px;
+    margin-left: 30px;
+    color: #fff;
+}
+#snipcart-main-content #snipcart-current-user .snipcart-welcome {
+    color: #a5a5a5 !important;
+}
+
+
+#snipcart-main-container .snipcart-errors ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#snipcart-main-container .snipcart-errors {
+    display: block;
+    color: #b94a48;
+    background-color: #f2dede;
+    border: solid 1px #eed3d7;
+    padding: 5px;
+}
+
+#snipcart-main-container #snipcart-forgot-password {
+    padding: 10px;
+}
+
+#snipcart-actions .snipcart-btn {
+    margin-top: 20px;
+    float: left;
+}
+
+#snipcart-forgot-password .snipcart-forgotpassword-description {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+#snipcart-forgot-password input {
+    width: 300px;
+}
+
+#snipcart-main-container #snipcart-reset-password {
+    padding: 10px;
+}
+
+#snipcart-main-container .snipcart-form-error {
+    display: block;
+    color: #b94a48;
+    background-color: #f2dede;
+    border: solid 1px #eed3d7;
+    padding: 5px;
+    width: 245px;
+    margin-top: -5px;
+    margin-bottom: 9px;
+}
