@@ -210,6 +210,11 @@ body.snipcart-open {
         position: relative;
         top: 10px;
     }
+
+    #snipcart-footer #snipcart-powered a {
+        color: #545557;
+        text-decoration: none;
+    }
     
     #snipcart-footer #snipcart-powered .snipcart-big {
         font-size: 10.01pt;
@@ -643,15 +648,7 @@ body.snipcart-open {
     #snipcart-main-container table.snipcart-list .snipcart-item-td-5 {
         border-right: none;
     }
-    #snipcart-main-container table.snipcart-list tr:first-child td {
-        background: rgb(250,250,250); /* Old browsers */
-        background: -moz-linear-gradient(top,  rgba(250,250,250,1) 1%, rgba(255,255,255,1) 5%, rgba(255,255,255,1) 100%); /* FF3.6+ */
-        background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,rgba(250,250,250,1)), color-stop(5%,rgba(255,255,255,1)), color-stop(100%,rgba(255,255,255,1))); /* Chrome,Safari4+ */
-        background: -webkit-linear-gradient(top,  rgba(250,250,250,1) 1%,rgba(255,255,255,1) 5%,rgba(255,255,255,1) 100%); /* Chrome10+,Safari5.1+ */
-        background: -o-linear-gradient(top,  rgba(250,250,250,1) 1%,rgba(255,255,255,1) 5%,rgba(255,255,255,1) 100%); /* Opera 11.10+ */
-        background: -ms-linear-gradient(top,  rgba(250,250,250,1) 1%,rgba(255,255,255,1) 5%,rgba(255,255,255,1) 100%); /* IE10+ */
-        background: linear-gradient(to bottom,  rgba(250,250,250,1) 1%,rgba(255,255,255,1) 5%,rgba(255,255,255,1) 100%); /* W3C */
-    }
+    
     #snipcart-main-container table.snipcart-list td { padding: 20px 0; text-align: center; border-top: 1px solid #eeeeee; }
     #snipcart-main-container table.snipcart-list tr.odd td { background-color: #fbfbfb; }
 
