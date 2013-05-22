@@ -143,8 +143,21 @@ you can use the generic selector below, but it's slower:
 
 /* Modal Window */
 
-    #snipcart-overlay { position: fixed; z-index: 9999; top: 0; left: 0; width: 100%; height: 100%; background-color: #000000; opacity: 0.7; }
-    #snipcart-close { display: block;text-decoration: none; width: 10px; height: 10px; text-indent: -10000px; background: url("img/close.png") left top no-repeat; float: right; margin: 10px 25px 0 0; }
+    #snipcart-overlay {
+        position: fixed; 
+        z-index: 14000; 
+        top: 0; 
+        left: 0; 
+        width: 100%; 
+        height: 100%; 
+        background: -moz-radial-gradient(center, ellipse cover,  rgba(0,0,0,0.2) 0%, rgba(0,0,0,1) 100%); /* FF3.6+ */
+        background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(0,0,0,0.2)), color-stop(100%,rgba(0,0,0,1))); /* Chrome,Safari4+ */
+        background: -webkit-radial-gradient(center, ellipse cover,  rgba(0,0,0,0.2) 0%,rgba(0,0,0,1) 100%); /* Chrome10+,Safari5.1+ */
+        background: -o-radial-gradient(center, ellipse cover,  rgba(0,0,0,0.2) 0%,rgba(0,0,0,1) 100%); /* Opera 12+ */
+        background: -ms-radial-gradient(center, ellipse cover,  rgba(0,0,0,0.2) 0%,rgba(0,0,0,1) 100%); /* IE10+ */
+        background: radial-gradient(ellipse at center,  rgba(0,0,0,0.2) 0%,rgba(0,0,0,1) 100%); /* W3C */
+    }
+    #snipcart-close { display: block;text-decoration: none; width: 10px; height: 10px; text-indent: -10000px; background: url("img/close.png") left top no-repeat; float: right; margin: 10px 25px 0 0; z-index: 10000; position: relative; }
 
 /* Modal Window */
 
@@ -152,6 +165,23 @@ you can use the generic selector below, but it's slower:
     .clear {
         display: block;
         clear: both;
+    }
+    body.snipcart-open {
+        margin: 20px;
+    }
+    body.snipcart-open * {
+        -webkit-filter: blur(1px);
+        -moz-filter: blur(1px);
+        -ms-filter: blur(1px);
+        -o-filter: blur(1px);
+        filter: blur(1px);
+    }
+    body.snipcart-open .snipcart-checkout-container, body.snipcart-open .snipcart-checkout-container * {
+        -webkit-filter: blur(0);
+        -moz-filter: blur(0);
+        -ms-filter: blur(0);
+        -o-filter: blur(0);
+        filter: blur(0);
     }
     #snipcart-footer {
         background: rgb(54,56,58); /* Old browsers */
@@ -185,7 +215,7 @@ you can use the generic selector below, but it's slower:
 
     #snipcart-main-container { position: absolute; top: 60px; width: 996px; margin: 0 auto; z-index: 10000; font-family: Arial !important; color: #a5a5a5 !important; font-size: 10pt; }
 
-    #snipcart-main-container { position: absolute; top: 60px; width: 996px; margin: 0 auto; z-index: 10000; font-family: Arial !important; color: #a5a5a5 !important; font-size: 10pt; }
+    #snipcart-main-container { position: absolute; top: 60px; width: 996px; margin: 0 auto; z-index: 15000; font-family: Arial !important; color: #a5a5a5 !important; font-size: 10pt; }
 
     #snipcart-main-content { background-color: #ffffff; width: 983px; }
 
@@ -437,7 +467,7 @@ you can use the generic selector below, but it's slower:
         width: 245px; 
         background-image: none; 
         display: inline-block; 
-        height: 20px; 
+        height: 28px; 
         padding: 4px 6px; 
         margin-bottom: 9px; 
         font-size: 14px; 
@@ -462,7 +492,21 @@ you can use the generic selector below, but it's slower:
     #snipcart-form input[type=text].snipcart-has-errors, #snipcart-form input[type=password].snipcart-has-errors { border-color: red; outline: 0; outline: thin dotted \9; /* IE6-9 */ -webkit-box-shadow: inset 0 1px 1px gainsboro, 0 0 8px red; -moz-box-shadow: inset 0 1px 1px gainsboro, 0 0 8px red; box-shadow: inset 0 1px 1px gainsboro, 0 0 8px red; color: red; }
     #snipcart-form input[type=text]:focus, #snipcart-form input[type=password].snipcart-has-errors { border-color: #333; outline: 0; outline: thin dotted \9; /* IE6-9 */ -webkit-box-shadow: inset 0 1px 1px gainsboro, 0 0 8px #333; -moz-box-shadow: inset 0 1px 1px gainsboro, 0 0 8px #333; box-shadow: inset 0 1px 1px gainsboro, 0 0 8px #333; }
 
-    #snipcart-form select { width: 260px; margin: 0; display: inline-block; padding: 4px 6px; margin-bottom: 9px; font-size: 14px; line-height: 20px; color: #555555; border: 1px solid #e5e5e5; -webkit-border-radius: 3px; -moz-border-radius: 3px; border-radius: 3px; }
+    #snipcart-form select {
+        width: 260px;
+        height: 35px;
+        margin: 0; 
+        display: inline-block; 
+        padding: 8px 6px; 
+        margin-bottom: 9px; 
+        font-size: 14px; 
+        line-height: 20px; 
+        color: #555555; 
+        border: 1px solid #e5e5e5; 
+        -webkit-border-radius: 3px; 
+        -moz-border-radius: 3px; 
+        border-radius: 3px;
+    }
 
     #snipcart-form .snipcart-same-as-billing-address { margin: 0 0 20px 30px; }
     #snipcart-form .snipcart-same-as-billing-address a { display: inline-block; height: 17px; line-height: 17px; text-decoration: none; color: inherit; font-weight: bold; background: url("img/checkbox.png") left center no-repeat; padding-left: 25px; }
