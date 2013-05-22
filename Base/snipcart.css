@@ -149,7 +149,10 @@ you can use the generic selector below, but it's slower:
 /* Modal Window */
 
 /* General */
-
+    .clear {
+        display: block;
+        clear: both;
+    }
     #snipcart-footer {
         background: rgb(54,56,58); /* Old browsers */
         background: -moz-linear-gradient(top,  rgba(54,56,58,1) 1%, rgba(33,35,36,1) 100%); /* FF3.6+ */
@@ -334,6 +337,9 @@ you can use the generic selector below, but it's slower:
          font: 16px/38px 'brandon_grotesquemedium', sans-serif;
          float: right;
          margin-right: 10px;
+    }
+    #snipcart-header #snipcart-total span.snipcart-amount.snipcart-with-promocode {
+        color: #76d443;
     }
 
     #snipcart-header #snipcart-continue-shopping-link { display: block; text-align: right; margin-top: 8px; display: none; }
@@ -743,26 +749,85 @@ you can use the generic selector below, but it's slower:
         text-align: center;
         padding: 30px 0 20px;
         border-bottom: 1px solid #eaebec;
+        margin: 0;
     }
-    #snipcart-promocodes h4 #snipcart-open-promocodes {
+    #snipcart-promocodes h4 #snipcart-open-promocodes, .snipcart-two-thirds-block h4 #snipcart-open-promocodes {
         margin-left: 10px;
         font: 16px Arial;
         font-weight: bold;
         padding: 0 5px;
         position: relative;
         top: -2px;
+        width: 11px;
     }
     .snipcart-promocode-container div {
         width: 350px;
         margin: 0 auto;
         padding: 20px 0;
+    }
+    .snipcart-promocode-container {
         border-bottom: 1px solid #eaebec;
+        padding-bottom: 15px;
+    }
+    #snipcart-promocodes-dropdown {
+        display: none;
+    }
+    .snipcart-promocode-container div.snipcart-error-message {
+        margin: 0;
+        padding: 0;
+        border: none;
+        color: red;
+        font: 14px 'brandon_grotesquebold', sans-serif;
+        text-transform: uppercase;
+        text-align: center;
+        width: auto;
     }
     .snipcart-promocode-container input[type=text] {
         width: 150px;
         height: 28px;
         position: relative;
         top: 4px;
+    }
+    #snipcart-bottom-confirm {
+        background: rgb(246,246,246); /* Old browsers */
+        background: -moz-linear-gradient(top,  rgba(246,246,246,1) 0%, rgba(251,251,251,1) 5%); /* FF3.6+ */
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(246,246,246,1)), color-stop(5%,rgba(251,251,251,1))); /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(top,  rgba(246,246,246,1) 0%,rgba(251,251,251,1) 5%); /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(top,  rgba(246,246,246,1) 0%,rgba(251,251,251,1) 5%); /* Opera 11.10+ */
+        background: -ms-linear-gradient(top,  rgba(246,246,246,1) 0%,rgba(251,251,251,1) 5%); /* IE10+ */
+        background: linear-gradient(to bottom,  rgba(246,246,246,1) 0%,rgba(251,251,251,1) 5%); /* W3C */
+        border-bottom: 1px solid #e9e9eb;
+    }
+    #snipcart-notice {
+        width: 260px;
+        padding: 20px 30px;
+        border-top: 1px solid #f1f1f2;
+        float: left;
+        font: 12px Arial, sans-serif;
+    }
+    .snipcart-two-thirds-block {
+        width: 660px;
+        border-top: 1px solid #f1f1f2;
+        float: left;
+        border-left: 1px solid #e9eaeb;
+    }
+    .snipcart-two-thirds-block h4 {
+        text-align: center;
+        border-bottom: 1px solid #eaebec;
+        padding: 20px 30px;
+    }
+    #snipcart-bottom-confirm h4 {
+        font: 16px 'brandon_grotesquebold', sans-serif;
+        color: #1c1e21;
+        text-transform: uppercase;
+    }
+    .snipcart-two-thirds-block .snipcart-promocode-container div  {
+        border: none;
+    }
+    .snipcart-two-thirds-block .snipcart-promocode-container {
+        border-bottom: 1px solid #e9eaeb;
+        padding-bottom: 15px;
+        display: none;
     }
     /* Columns */
         #snipcart-step-content-confirm .snipcart-columns { margin: 30px 0; }
@@ -800,21 +865,36 @@ you can use the generic selector below, but it's slower:
         }
 
         table#snipcart-confirm-items td.snipcart-confirm-item-td-4 { text-align: right; padding-right: 30px; width: 90px; }
-        table#snipcart-confirm-items {
-            background-color: #fbfbfb;
-        }
     /* Items */
 
     /* Prices */
 
         table#snipcart-confirm-prices { width: 100%; }
-        table#snipcart-confirm-prices tr td { padding: 12px 30px 8px 30px; border-top: 1px solid #eeeeee; }
-        table#snipcart-confirm-prices tr td span { font-size: 12pt; color: #333333; font-weight: bold; }
+        table#snipcart-confirm-prices tr td { padding: 5px 30px; }
+        table#snipcart-confirm-prices tr td span {
+            font: 14px 'brandon_grotesquebold', sans-serif; 
+            color: #1c1e21;
+            text-transform: uppercase;
+        }
+        table#snipcart-confirm-prices tr td span small {
+            font: 14px 'brandon_grotesquebold', sans-serif; 
+            color: #a1a2a2;
+            text-transform: uppercase;
+        }
         table#snipcart-confirm-prices tr td.snipcart-price-td-2 { text-align: right; }
         table#snipcart-confirm-prices tr td.snipcart-price-td-2.snipcart-negative-price span { color: red; }
         table#snipcart-confirm-prices tr.snipcart-total-price-tr td span { color: #333; }
-        table#snipcart-confirm-prices tr.snipcart-grand-total-price-tr td { background-color: #eee; padding-top: 15px; padding-bottom: 15px; border-top: 0; }
-        table#snipcart-confirm-prices tr.snipcart-grand-total-price-tr td span { font-size: 16pt; color: #333; font-weight: bold; }
+        table#snipcart-confirm-prices tr.snipcart-grand-total-price-tr td {
+            padding-top: 15px; 
+            padding-bottom: 15px; 
+            border-top: 0;
+            border-top: 1px solid #eaebec;
+        }
+        table#snipcart-confirm-prices tr.snipcart-grand-total-price-tr td span {
+            font: 16px 'brandon_grotesquebold', sans-serif;
+            text-transform: uppercase;
+            color: #1c1e21;
+        }
 
     /* Prices */
 
