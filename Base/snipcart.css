@@ -135,6 +135,11 @@ you can use the generic selector below, but it's slower:
 }
 /* Fonts */
 
+body.snipcart-open {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
 /* Container */
 
 	.snipcart-checkout-container { max-width: 90%; margin: 0 auto; }
@@ -426,7 +431,7 @@ you can use the generic selector below, but it's slower:
     ul#snipcart-steps li {
         display: block; 
         height: inherit; 
-        width: 16.22%; 
+        width: 16.4%; 
         float: left;
         border-right: 1px solid #c3c3c3;
         border-bottom: 1px solid #c3c3c3;
@@ -1032,6 +1037,9 @@ you can use the generic selector below, but it's slower:
             width: 25%;
             float: left;
         }
+        table#snipcart-confirm-prices tr td.snipcart-price-td-2 {
+            float: right;
+        }
         table#snipcart-confirm-prices tr td span {
             font: 14px 'brandon_grotesquebold', sans-serif; 
             color: #1c1e21;
@@ -1259,7 +1267,7 @@ you can use the generic selector below, but it's slower:
 #snipcart-bill-me-later {
     position: absolute;
     bottom: 145px;
-    right: 50px;
+    right: 20px;
 }
 @media only screen and (min-width: 768px)
 {
@@ -1312,7 +1320,7 @@ you can use the generic selector below, but it's slower:
     #snipcart-form .snipcart-form-column a.snipcart-mainaction {
         width: 206px;
     }
-    #snipcart-form .snipcart-form-column { width: 296px; float: left; margin-left: 30px; }
+    #snipcart-form .snipcart-form-column { width: 44%; float: left; margin-left: 30px; }
     #snipcart-form .snipcart-form-column3.snipcart-form-column {
         width: 99%;
     }
@@ -1338,7 +1346,7 @@ you can use the generic selector below, but it's slower:
         width: 260px;
     }
     table#snipcart-shipping-methods td.snipcart-shipping-method-td-1 {
-        padding: 0 60px; 
+        padding: 0 60px !important; 
         width: auto;
         float: none;
     }
@@ -1474,8 +1482,9 @@ you can use the generic selector below, but it's slower:
     }
 }
 
-@media only screen and (min-width: 1200px)
+@media only screen and (min-width: 1024px)
 {
+    #snipcart-form .snipcart-form-column { width: 296px; }
     ul#snipcart-steps li#snipcart-confirm-step { width: 157px; }
     .snipcart-checkout-container{
         width: 996px;
