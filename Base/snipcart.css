@@ -137,7 +137,7 @@ you can use the generic selector below, but it's slower:
 
 /* Container */
 
-	.snipcart-checkout-container { width: 996px; margin: 0 auto; }
+	.snipcart-checkout-container { max-width: 90%; margin: 0 auto; }
 
 /* Container */
 
@@ -157,7 +157,18 @@ you can use the generic selector below, but it's slower:
         background: -ms-radial-gradient(center, ellipse cover,  rgba(0,0,0,0.2) 0%,rgba(0,0,0,1) 100%); /* IE10+ */
         background: radial-gradient(ellipse at center,  rgba(0,0,0,0.2) 0%,rgba(0,0,0,1) 100%); /* W3C */
     }
-    #snipcart-close { display: block;text-decoration: none; width: 10px; height: 10px; text-indent: -10000px; background: url("img/close.png") left top no-repeat; float: right; margin: 10px 25px 0 0; z-index: 10000; position: relative; }
+    #snipcart-close {
+        display: block;
+        text-decoration: none;
+        width: 10px; 
+        height: 10px; 
+        text-indent: -10000px; 
+        background: url("img/close.png") left top no-repeat;  
+        z-index: 10000; 
+        position: absolute;
+        top: 10px;
+        right: 10px;
+    }
 
 /* Modal Window */
 
@@ -166,22 +177,8 @@ you can use the generic selector below, but it's slower:
         display: block;
         clear: both;
     }
-    body.snipcart-open {
-        margin: 20px;
-    }
-    body.snipcart-open * {
-        -webkit-filter: blur(1px);
-        -moz-filter: blur(1px);
-        -ms-filter: blur(1px);
-        -o-filter: blur(1px);
-        filter: blur(1px);
-    }
-    body.snipcart-open .snipcart-checkout-container, body.snipcart-open .snipcart-checkout-container * {
-        -webkit-filter: blur(0);
-        -moz-filter: blur(0);
-        -ms-filter: blur(0);
-        -o-filter: blur(0);
-        filter: blur(0);
+    td, th {
+        display: block;
     }
     #snipcart-footer {
         background: rgb(54,56,58); /* Old browsers */
@@ -213,18 +210,25 @@ you can use the generic selector below, but it's slower:
         font-size: 10.01pt;
     }
 
-    #snipcart-main-container { position: absolute; top: 60px; width: 996px; margin: 0 auto; z-index: 10000; font-family: Arial !important; color: #a5a5a5 !important; font-size: 10pt; }
+    #snipcart-main-container {
+         position: absolute; 
+         top: 60px; 
+         width: 90%;
+         margin: 0 auto; 
+         z-index: 15000; 
+         font-family: Arial !important; 
+         color: #a5a5a5 !important; 
+         font-size: 10pt;
+    }
 
-    #snipcart-main-container { position: absolute; top: 60px; width: 996px; margin: 0 auto; z-index: 15000; font-family: Arial !important; color: #a5a5a5 !important; font-size: 10pt; }
-
-    #snipcart-main-content { background-color: #ffffff; width: 983px; }
+    #snipcart-main-content { background-color: #ffffff; width: 100%; }
 
     #snipcart-main-container span.snipcart-clear { display: block; clear: both; }
 
     #snipcart-main-container a.snipcart-btn {
          display: inline-block; 
          background-color: #666; 
-         padding: 0 25px; 
+         padding: 0 5px; 
          color: #ffffff; 
          font-weight: bold; 
          text-decoration: none; 
@@ -254,8 +258,8 @@ you can use the generic selector below, but it's slower:
 
     #snipcart-cartitems-checkout-top {
         position: absolute;
-        top: 36px;
-        right: 45px;
+        top: 45px;
+        right: 20px;
     }
 
     #snipcart-actions {
@@ -280,7 +284,7 @@ you can use the generic selector below, but it's slower:
     #snipcart-global-errors ul { display: block; list-style: none; margin: 0 0 15px 30px; }
     #snipcart-global-errors ul li { display: block; list-style: none; margin: 0 0 5px 0; padding: 0; color: red; text-transform: uppercase; }
 
-    #snipcart-main-container .snipcart-columns { background: url("img/columns.png") left top repeat-y; }
+    
 
     #snipcart-main-container span.snipcart-unit-price, #snipcart-main-container span.snipcart-total-price {
         font: 14px 'brandon_grotesquebold', sans-serif;
@@ -326,11 +330,22 @@ you can use the generic selector below, but it's slower:
         background: linear-gradient(to bottom,  rgba(48,50,52,1) 0%,rgba(30,31,33,1) 100%); /* W3C */
    }
 
-    #snipcart-header #snipcart-title { display: block; float: left; height: inherit; padding-left: 25px; color: #fff; text-transform: uppercase; font-weight: bold; font: 30px/105px brandon_grotesquelight, sans-serif; }
+    #snipcart-header #snipcart-title {
+        display: block; 
+        float: left; 
+        height: inherit; 
+        margin: 10px 30px 0;
+        color: #fff; 
+        text-transform: uppercase; 
+        font-weight: bold; 
+        font: 24px brandon_grotesquelight, sans-serif;
+        text-align: center;
+        position: relative;
+    }
 
     #snipcart-header #snipcart-header-right {
          display: block;
-         width: 200px;
+         width: 115px;
          margin: 0 auto ;
          height: 38px;
          background: rgb(26,27,29); /* Old browsers */
@@ -341,7 +356,7 @@ you can use the generic selector below, but it's slower:
         background: -ms-linear-gradient(top,  rgba(26,27,29,1) 1%,rgba(30,31,33,1) 100%); /* IE10+ */
         background: linear-gradient(to bottom,  rgba(26,27,29,1) 1%,rgba(30,31,33,1) 100%); /* W3C */
          position: relative;
-         top: 35px;
+         top: 45px;
          border-radius: 5px;
          -moz-border-radius: 5px;
          -webkit-border-radius: 5px;
@@ -357,7 +372,13 @@ you can use the generic selector below, but it's slower:
          height: 95%;
     }
     #snipcart-header #snipcart-total span { display: block; height: 50px; float: left; font-weight: bold; }
-    #snipcart-header #snipcart-total span.snipcart-label { width: 95px; color: #898989; text-transform: uppercase; margin-right: 10px; }
+    #snipcart-header #snipcart-total span.snipcart-label {
+        width: 95px; 
+        color: #898989; 
+        text-transform: uppercase; 
+        margin-right: 10px;
+        display: none;
+    }
     #snipcart-header #snipcart-total span.snipcart-label span {
         font: 16px/38px 'brandon_grotesquemedium', sans-serif;
         margin-left: 10px;
@@ -367,6 +388,10 @@ you can use the generic selector below, but it's slower:
          font: 16px/38px 'brandon_grotesquemedium', sans-serif;
          float: right;
          margin-right: 10px;
+         position: absolute;
+         top: 2px;
+         width: 100%;
+         text-align: center;
     }
     #snipcart-header #snipcart-total span.snipcart-amount.snipcart-with-promocode {
         color: #76d443;
@@ -380,12 +405,28 @@ you can use the generic selector below, but it's slower:
 
 /* Steps */
 
-    ul#snipcart-steps { display: block; list-style: none; height: 60px; margin: 0; padding: 0; background: #e1e1e2; /* Old browsers */ background: -moz-linear-gradient(top, #e1e1e2 0%, #fbfbfb 100%); /* FF3.6+ */ background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#e1e1e2), color-stop(100%,#fbfbfb)); /* Chrome,Safari4+ */ background: -webkit-linear-gradient(top, #e1e1e2 0%,#fbfbfb 100%); /* Chrome10+,Safari5.1+ */ background: -o-linear-gradient(top, #e1e1e2 0%,#fbfbfb 100%); /* Opera 11.10+ */ background: -ms-linear-gradient(top, #e1e1e2 0%,#fbfbfb 100%); /* IE10+ */ background: linear-gradient(to bottom, #e1e1e2 0%,#fbfbfb 100%); /* W3C */ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e1e1e2', endColorstr='#fbfbfb',GradientType=0 ); /* IE6-9 */ }
+    ul#snipcart-steps {
+        clear: both;
+        display: block; 
+        list-style: none; 
+        height: 60px; 
+        margin: 0; 
+        padding: 0; 
+        background: rgb(191,191,191); /* Old browsers */
+        background: -moz-linear-gradient(top,  rgba(191,191,191,1) 1%, rgba(224,224,224,1) 100%); /* FF3.6+ */
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,rgba(191,191,191,1)), color-stop(100%,rgba(224,224,224,1))); /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(top,  rgba(191,191,191,1) 1%,rgba(224,224,224,1) 100%); /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(top,  rgba(191,191,191,1) 1%,rgba(224,224,224,1) 100%); /* Opera 11.10+ */
+        background: -ms-linear-gradient(top,  rgba(191,191,191,1) 1%,rgba(224,224,224,1) 100%); /* IE10+ */
+        background: linear-gradient(to bottom,  rgba(191,191,191,1) 1%,rgba(224,224,224,1) 100%); /* W3C */
+        position: relative;
+        top: -10px;
+    }
 
     ul#snipcart-steps li {
         display: block; 
         height: inherit; 
-        width: 164px; 
+        width: 16.22%; 
         float: left;
         border-right: 1px solid #c3c3c3;
         border-bottom: 1px solid #c3c3c3;
@@ -396,6 +437,9 @@ you can use the generic selector below, but it's slower:
         background: -o-linear-gradient(top,  rgba(191,191,191,1) 1%,rgba(224,224,224,1) 100%); /* Opera 11.10+ */
         background: -ms-linear-gradient(top,  rgba(191,191,191,1) 1%,rgba(224,224,224,1) 100%); /* IE10+ */
         background: linear-gradient(to bottom,  rgba(191,191,191,1) 1%,rgba(224,224,224,1) 100%); /* W3C */
+    }
+    ul#snipcart-steps li#snipcart-confirm-step {
+        border-right: none;
     }
 
     ul#snipcart-steps li.active {
@@ -409,9 +453,7 @@ you can use the generic selector below, but it's slower:
         border-bottom: none;
     }
 
-    ul#snipcart-steps li#snipcart-confirm-step { width: 157px; }
-
-    ul#snipcart-steps li span { display: block; float: left; }
+    ul#snipcart-steps li span { display: block; }
     
     ul#snipcart-steps li span.snipcart-step-number {
        -webkit-border-radius: 30px; 
@@ -422,14 +464,19 @@ you can use the generic selector below, but it's slower:
        width: 49px; 
        line-height: 29px; 
        text-align: center; 
-       margin: 9px 0 0 20px; 
+       margin: 18px 0 0 -3px; 
        color: #999; 
        font-weight: bold; 
-       font: 28pt 'Snipcart';
+       font: 22pt 'Snipcart';
+       width: 50px; 
+       margin-left: auto; 
+       margin-right: auto;
     }
     ul#snipcart-steps li.active span.snipcart-step-number { background-color: transparent; color: #333; }
 
-    ul#snipcart-steps li { cursor: pointer; }
+    ul#snipcart-steps li {
+        cursor: pointer;
+    }
     ul#snipcart-steps li span.snipcart-step-text {
         width: 80px;
         margin: 13px 0 0 4px; 
@@ -438,6 +485,7 @@ you can use the generic selector below, but it's slower:
         font-weight: bold; 
         line-height: 16px; 
         font: 12px/16px 'brandon_grotesquebold', Arial, sans-serif;
+        display: none;
     }
     ul#snipcart-steps li.active span.snipcart-step-text { color: #333333; }
     
@@ -447,10 +495,9 @@ you can use the generic selector below, but it's slower:
 
     #snipcart-form { padding: 30px 0; }
 
-    #snipcart-form .snipcart-form-column { width: 296px; float: left; margin-left: 30px; }
+    #snipcart-form .snipcart-form-column { margin-left: 30px; }
     #snipcart-form .snipcart-form-column.snipcart-form-column-3 { border-right: 0; }
     #snipcart-form .snipcart-form-column a.snipcart-mainaction {
-        width: 206px;
         text-align: center;
         margin-top: 20px;
     }
@@ -464,7 +511,7 @@ you can use the generic selector below, but it's slower:
     }
 
     #snipcart-form input[type=text], #snipcart-form input[type=password] {
-        width: 245px; 
+        width: 85%; 
         background-image: none; 
         display: inline-block; 
         height: 28px; 
@@ -493,8 +540,8 @@ you can use the generic selector below, but it's slower:
     #snipcart-form input[type=text]:focus, #snipcart-form input[type=password].snipcart-has-errors { border-color: #333; outline: 0; outline: thin dotted \9; /* IE6-9 */ -webkit-box-shadow: inset 0 1px 1px gainsboro, 0 0 8px #333; -moz-box-shadow: inset 0 1px 1px gainsboro, 0 0 8px #333; box-shadow: inset 0 1px 1px gainsboro, 0 0 8px #333; }
 
     #snipcart-form select {
-        width: 260px;
-        height: 35px;
+        width: 90%;
+        height: 38px;
         margin: 0; 
         display: inline-block; 
         padding: 8px 6px; 
@@ -517,12 +564,12 @@ you can use the generic selector below, but it's slower:
         display: block;
     }
     #snipcart-form select#snipcart-billing-expmonth {
-        width: 125px;
+        width: 43%;
         float: left;
         margin-right: 10px;
     }
     #snipcart-form select#snipcart-billing-expyear {
-        width: 125px;
+        width: 43%;
     }
     #snipcart-form .snipcart-tooltip {
         font: 14px 'brandon_grotesquebold', sans-serif;
@@ -540,6 +587,7 @@ you can use the generic selector below, but it's slower:
         border-radius: 10px;
         -moz-border-radius: 10px;
         -webkit-border-radius: 10px;
+        z-index: 10;
     }
     #snipcart-form .snipcart-tooltip-content img {
         max-width: 100%;
@@ -561,8 +609,35 @@ you can use the generic selector below, but it's slower:
         font: 11px 'brandon_grotesquebold', sans-serif;
         text-transform: uppercase;
         height: 40px;
+        display: none;
     }
-    
+    #snipcart-main-container table.snipcart-list tr {
+        position: relative;
+        display: block;
+        clear: both;
+    }
+    #snipcart-main-container table.snipcart-list .snipcart-item-td-6 {
+        width: 10px;
+        height: 10px;
+        position: absolute;
+        top: 0;
+        right: 15px;
+    }
+    #snipcart-main-container table.snipcart-list .snipcart-item-td-1 {
+        border-bottom: 1px solid #f1f1f2;
+    }
+    #snipcart-main-container table.snipcart-list .snipcart-item-td-3, #snipcart-main-container table.snipcart-list .snipcart-item-td-4, #snipcart-main-container table.snipcart-list .snipcart-item-td-5 {
+        width: 32.33%;
+        float: left;
+        border-right: 1px solid #f1f1f2;
+        height: 20px;
+        margin: 10px 0;
+        border-top: none;
+        background: #fff !important;
+    }
+    #snipcart-main-container table.snipcart-list .snipcart-item-td-5 {
+        border-right: none;
+    }
     #snipcart-main-container table.snipcart-list tr:first-child td {
         background: rgb(250,250,250); /* Old browsers */
         background: -moz-linear-gradient(top,  rgba(250,250,250,1) 1%, rgba(255,255,255,1) 5%, rgba(255,255,255,1) 100%); /* FF3.6+ */
@@ -606,7 +681,10 @@ you can use the generic selector below, but it's slower:
         text-align: left; 
         padding-left: 30px;
     }
-    table#snipcart-items td.snipcart-item-td-1 { padding-right: 30px;  width:445px;}
+    table#snipcart-items th.snipcart-item-th-1 {
+        display: none;
+    }
+    table#snipcart-items td.snipcart-item-td-1 { padding-right: 30px;}
 
     table#snipcart-items td.snipcart-item-td-2 {
         width: 200px;
@@ -657,6 +735,7 @@ you can use the generic selector below, but it's slower:
         display: inline-block;
         float: left;
         margin-right: 12px;
+        display: none;
     }
 
     table#snipcart-items span.snipcart-thumbnail img, span.snipcart-thumbnail-wrapper img {
@@ -671,19 +750,19 @@ you can use the generic selector below, but it's slower:
 
     #snipcart-login-forgotpassword-link {
         color: #a5a5a5;
+        display: block;
     }
     #snipcart-step-content-login #snipcart-form { padding: 0; position: relative; }
 
-    #snipcart-step-content-login .snipcart-form-column.snipcart-form-column1, #snipcart-step-content-login .snipcart-form-column.snipcart-form-column2 { height: 305px; margin-top: 45px; }
-    #snipcart-step-content-login .snipcart-form-column.snipcart-form-column1 { border-right: 1px solid #e1e1e1; }
-    #snipcart-step-content-login .snipcart-form-column.snipcart-form-column1 div { padding-right: 30px; }
+    #snipcart-step-content-login .snipcart-form-column.snipcart-form-column1, #snipcart-step-content-login .snipcart-form-column.snipcart-form-column2 { height: 305px; }
+    #snipcart-step-content-login .snipcart-form-column.snipcart-form-column1 { border-bottom: 1px solid #f1f1f2; margin-right: 30px; margin-bottom: 20px; }
+    
+    #snipcart-step-content-login .snipcart-form-column.snipcart-form-column1 div { padding-right: 30px; }  
 
-    #snipcart-step-content-login .snipcart-form-column.snipcart-form-column2 { width: 266px; }
-
-    #snipcart-step-content-login .snipcart-form-column.snipcart-form-column3 {
-        height: 380px; 
-        width: 336px; 
-        margin-left: 20px;
+    #snipcart-step-content-login .snipcart-form-column.snipcart-form-column3 {   
+        margin-top: 20px;
+        margin-left: 0;
+        padding-bottom: 20px;
         border-left: 1px solid #f1f1f2;
         background: rgb(246,246,246); /* Old browsers */
         background: -moz-linear-gradient(left,  rgba(246,246,246,1) 1%, rgba(251,251,251,1) 5%); /* FF3.6+ */
@@ -693,7 +772,7 @@ you can use the generic selector below, but it's slower:
         background: -ms-linear-gradient(left,  rgba(246,246,246,1) 1%,rgba(251,251,251,1) 5%); /* IE10+ */
         background: linear-gradient(to right,  rgba(246,246,246,1) 1%,rgba(251,251,251,1) 5%); /* W3C */
     }
-    #snipcart-step-content-login .snipcart-form-column.snipcart-form-column3 div { padding: 45px 30px 0 50px; }
+    #snipcart-step-content-login .snipcart-form-column.snipcart-form-column3 div { padding: 45px 30px 0 30px; }
     #snipcart-step-content-login .snipcart-form-column.snipcart-form-column3 p.snipcart-notice {
         margin-top: 20px; 
         font-size: 14px;
@@ -728,10 +807,18 @@ you can use the generic selector below, but it's slower:
 
     table#snipcart-shipping-methods th.snipcart-shipping-method-th-1 { text-align: left; padding-left: 30px; }
     
-    table#snipcart-shipping-methods td.snipcart-shipping-method-td-1 { padding: 0 60px; text-align: left; background: #fbfbfb url("img/checkbox.png") 30px 14px no-repeat; }
-    table#snipcart-shipping-methods tr.selected td.snipcart-shipping-method-td-1 { background: url("img/selected.png") no-repeat 30px center; }
+    table#snipcart-shipping-methods td.snipcart-shipping-method-td-1 {
+        padding: 0 0 0 60px; 
+        text-align: left; 
+        background: #fbfbfb url("img/checkbox.png") 30px 14px no-repeat;
+        width: 45%;
+        float: left;
+    }
+    table#snipcart-shipping-methods tr.selected td.snipcart-shipping-method-td-1 {
+        background: url("img/selected.png") no-repeat 30px center;       
+    }
     
-    table#snipcart-shipping-methods td.snipcart-shipping-method-td-2 { width: 160px; }
+    table#snipcart-shipping-methods td.snipcart-shipping-method-td-2 { width: 25%; float: right; }
     #snipcart-step-content-shipping-method-failure div {
         padding: 25px 25px 0;
     }
@@ -805,10 +892,11 @@ you can use the generic selector below, but it's slower:
         width: 11px;
     }
     .snipcart-promocode-container div {
-        width: 350px;
         margin: 0 auto;
         padding: 20px 0;
+        text-align: center;
     }
+    
     .snipcart-promocode-container {
         border-bottom: 1px solid #eaebec;
         padding-bottom: 15px;
@@ -825,9 +913,11 @@ you can use the generic selector below, but it's slower:
         text-transform: uppercase;
         text-align: center;
         width: auto;
+        position: relative;
+        top: 10px;
     }
     .snipcart-promocode-container input[type=text] {
-        width: 150px;
+        width: 120px;
         height: 28px;
         position: relative;
         top: 4px;
@@ -843,14 +933,14 @@ you can use the generic selector below, but it's slower:
         border-bottom: 1px solid #e9e9eb;
     }
     #snipcart-notice {
-        width: 260px;
-        padding: 20px 30px;
+        width: 80%;
+        padding: 20px 10%;
         border-top: 1px solid #f1f1f2;
         float: left;
         font: 12px Arial, sans-serif;
     }
     .snipcart-two-thirds-block {
-        width: 660px;
+        width: 99%;
         border-top: 1px solid #f1f1f2;
         float: left;
         border-left: 1px solid #e9eaeb;
@@ -876,7 +966,11 @@ you can use the generic selector below, but it's slower:
     /* Columns */
         #snipcart-step-content-confirm .snipcart-columns { margin: 30px 0; }
 
-        #snipcart-step-content-confirm .snipcart-confirm-column { width: 296px; float: left; margin: 0 0 0 30px; }
+        #snipcart-step-content-confirm .snipcart-confirm-column {
+            width: 296px; 
+            float: left; 
+            margin: 0 0 20px 30px;
+        }
         #snipcart-step-content-confirm .snipcart-confirm-column.snipcart-confirm-column-3 { border-right: 0; }
 
         #snipcart-step-content-confirm .snipcart-confirm-column span {
@@ -898,23 +992,46 @@ you can use the generic selector below, but it's slower:
 
         table#snipcart-confirm-items th { background-color: #fbfbfb; border-top: 1px solid #eeeeee; padding: 8px 0; }
         table#snipcart-confirm-items th.snipcart-confirm-item-th-1, table#snipcart-confirm-items td.snipcsnipcart-btnart-confirm-item-td-1 { text-align: left; padding-left: 30px; }
-        table#snipcart-confirm-items td.snipcart-confirm-item-td-1 { padding-right: 30px; width: 445px; }
+        table#snipcart-confirm-items td.snipcart-confirm-item-td-1 {
+            padding-right: 10%; 
+            width: 80%;
+            padding-left: 10%;
+        }
 
         table#snipcart-confirm-items span.snipcart-product-name { font-size: 10pt; }
         table#snipcart-confirm-items span.snipcart-product-id { font-size: 8pt; }
 
         table#snipcart-confirm-items td.snipcart-confirm-item-td-2,
         table#snipcart-confirm-items td.snipcart-confirm-item-td-3 {
-            width: 120px;
+            width: 33%;
+            float: left;
+            border-right: 1px solid #f1f1f2;
+            margin: 10px 0;
         }
 
-        table#snipcart-confirm-items td.snipcart-confirm-item-td-4 { text-align: right; padding-right: 30px; width: 90px; }
+        table#snipcart-confirm-items td.snipcart-confirm-item-td-4 {
+            text-align: center; 
+            padding-right: 0; 
+            width: 33%;
+            float: left;
+            border-right: 1px solid #f1f1f2;
+            margin: 10px 0;
+        }
+        table#snipcart-confirm-items td.snipcart-confirm-item-td-5 {
+            margin: 10px 0;
+            float: left;
+            width: 33%;
+        }
     /* Items */
 
     /* Prices */
 
         table#snipcart-confirm-prices { width: 100%; }
-        table#snipcart-confirm-prices tr td { padding: 5px 30px; }
+        table#snipcart-confirm-prices tr td {
+            padding: 5px 30px;
+            width: 25%;
+            float: left;
+        }
         table#snipcart-confirm-prices tr td span {
             font: 14px 'brandon_grotesquebold', sans-serif; 
             color: #1c1e21;
@@ -945,15 +1062,29 @@ you can use the generic selector below, but it's slower:
 /* Confirm */
 
 /* Thank you */
-    #snipcart-step-content-thankyou { height: 375px; }
+    #snipcart-step-content-thankyou { padding-bottom: 30px; }
     #snipcart-thankyou-left, #snipcart-thankyou-right { height: inherit; float: left; }
-    #snipcart-thankyou-left { width: 663px; border-right: 1px solid #eeeeee; }
+    #snipcart-thankyou-left {
+        border-right: 1px solid #eeeeee;
+    }
     #snipcart-thankyou-right { width: 317px; background-color: #fbfbfb; }
 
-    #snipcart-thankyou-left span.snipcart-title { padding-bottom: 10px; display: block; margin-top: 80px; text-transform: uppercase; color: #333333; font-size: 16pt; font-weight: bold; text-align: center; }
+    #snipcart-thankyou-left span.snipcart-title {
+        padding-bottom: 10px; 
+        display: block; 
+        margin-top: 20px; 
+        text-transform: uppercase; 
+        color: #333333; 
+        font-size: 16pt; 
+        font-weight: bold; 
+        text-align: center;
+        font-family: 'brandon_grotesquebold';
+    }
     #snipcart-thankyou-left span.snipcart-title span { color: #333; }
     #snipcart-thankyou-left span.snipcart-subtitle {
         font-size: 14px;
+        font-family: 'brandon_grotesquebold';
+        text-transform: uppercase;
         text-align: center;
         display: block;
         font-weight: bold;
@@ -1029,6 +1160,9 @@ you can use the generic selector below, but it's slower:
     font-size: 20px;
     text-align: center;
     line-height: 40px;
+    font-size: 12px;
+    font-family: 'brandon_grotesquebold', sans-serif;
+    text-transform: uppercase;
 }
 #snipcart-shipping-method-error {
     padding: 30px 30px 10px;
@@ -1040,6 +1174,380 @@ you can use the generic selector below, but it's slower:
     padding: 0 30px;
 }
 /* Empty cart */
+
+#snipcart-main-content #snipcart-current-user {
+    display: block;
+    position: absolute;
+    top: -18px;
+    right: 50px;
+    line-height: 65px;
+    margin-left: 30px;
+    color: #fff;
+}
+#snipcart-main-content #snipcart-current-user .snipcart-welcome {
+    color: #a5a5a5 !important;
+}
+
+
+#snipcart-main-container .snipcart-errors ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#snipcart-main-container .snipcart-errors {
+    display: block;
+    color: #b94a48;
+    background-color: #f2dede;
+    border: solid 1px #eed3d7;
+    padding: 5px;
+}
+
+#snipcart-main-container #snipcart-forgot-password {
+    padding: 10px;
+}
+
+#snipcart-actions .snipcart-btn {
+    margin-top: 20px;
+    float: left;
+}
+
+#snipcart-forgot-password .snipcart-forgotpassword-description {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-align: center;
+}
+
+#snipcart-forgot-password input {
+    width: 95%;
+    display: block;
+    float: left;
+    margin-right: 10px;
+    height: 28px;
+}
+#forgot-input {
+    width: 100%;
+    margin: 0 auto 20px;
+}
+#snipcart-main-container #snipcart-reset-password {
+    padding: 10px;
+}
+
+#snipcart-main-container .snipcart-form-error {
+    display: block;
+    color: #fff;
+    text-align: center;
+    background: rgb(239,37,58); /* Old browsers */
+    background: -moz-linear-gradient(top,  rgba(239,37,58,1) 0%, rgba(232,20,35,1) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(239,37,58,1)), color-stop(100%,rgba(232,20,35,1))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  rgba(239,37,58,1) 0%,rgba(232,20,35,1) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  rgba(239,37,58,1) 0%,rgba(232,20,35,1) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  rgba(239,37,58,1) 0%,rgba(232,20,35,1) 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  rgba(239,37,58,1) 0%,rgba(232,20,35,1) 100%); /* W3C */
+    border: solid 1px #bc101c;
+    padding: 5px;
+    width: 85%;
+    margin-top: -9px;
+    margin-bottom: 9px;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+}
+#snipcart-step-content-payment-method .snipcart-form-column-3 {
+    margin-bottom: 25px;
+}
+#snipcart-bill-me-later {
+    position: absolute;
+    bottom: 145px;
+    right: 50px;
+}
+@media only screen and (min-width: 768px)
+{
+    td, th {
+        display: table-cell;
+    }
+
+    #snipcart-main-content {
+        width: 100%;
+    }
+    table#snipcart-items th.snipcart-item-th-1 { display: block;}
+     #snipcart-header #snipcart-total span.snipcart-amount {
+         position: static;
+         width: auto;
+         text-align: right;
+    }
+     table#snipcart-items td.snipcart-item-td-1 { width:445px;}
+     ul#snipcart-steps li span.snipcart-step-text {
+        display: block;
+        text-align: center;
+        margin: 13px auto;
+        width: 90%;
+    }
+
+    ul#snipcart-steps li span.snipcart-step-number {
+       -webkit-border-radius: 30px; 
+       -moz-border-radius: 30px; 
+       border-radius: 30px; 
+       background-color: transparent; 
+       height: 29px; 
+       width: 49px; 
+       line-height: 29px; 
+       text-align: center; 
+       margin: 9px auto 0; 
+       color: #999; 
+       font-weight: bold; 
+       font: 28pt 'Snipcart';
+    }
+
+    #snipcart-main-container table.snipcart-list td span.snipcart-thumbnail-wrapper {
+        display: inline-block;
+    }
+    #snipcart-main-container table.snipcart-list tr {
+        display: table-row;
+    }
+    #snipcart-main-container table.snipcart-list th {
+        display: table-cell;
+    }
+
+    #snipcart-form .snipcart-form-column a.snipcart-mainaction {
+        width: 206px;
+    }
+    #snipcart-form .snipcart-form-column { width: 296px; float: left; margin-left: 30px; }
+    #snipcart-form .snipcart-form-column3.snipcart-form-column {
+        width: 99%;
+    }
+    #snipcart-step-content-login .snipcart-form-column.snipcart-form-column1 {
+        border-bottom: none;
+    }
+    #snipcart-form input[type=text], #snipcart-form input[type=password] {
+        width: 245px; 
+    }
+    #snipcart-step-content-login .snipcart-form-column.snipcart-form-column1 { border-right: 1px solid #e1e1e1; }
+    #snipcart-step-content-login .snipcart-form-column.snipcart-form-column1, #snipcart-step-content-login .snipcart-form-column.snipcart-form-column2 { height: 305px; margin-top: 45px; }
+    
+    .snipcart-promocode-container {
+        margin-left: 0;
+    }
+    .snipcart-promocode-container input[type=text] {
+        width: 150px;
+    }
+    #snipcart-main-container .snipcart-form-error {
+        width: 245px;
+    }
+    #snipcart-form select {
+        width: 260px;
+    }
+    table#snipcart-shipping-methods td.snipcart-shipping-method-td-1 {
+        padding: 0 60px; 
+        width: auto;
+        float: none;
+    }
+    table#snipcart-shipping-methods td.snipcart-shipping-method-td-2 { width: 160px; float: none; }
+    #snipcart-form select#snipcart-billing-expmonth {
+        width: 125px;
+        float: left;
+        margin-right: 10px;
+    }
+    #snipcart-form select#snipcart-billing-expyear {
+        width: 125px;
+    }
+    #snipcart-step-content-payment-method .snipcart-form-column-3 {
+        margin-bottom: 0;
+    }
+    #snipcart-bill-me-later {
+        position: static;
+        bottom: 145px;
+        right: 50px;
+    }
+    #snipcart-step-content-confirm .snipcart-confirm-column {
+        margin: 0 0 0 30px;
+    }
+    table#snipcart-confirm-items td.snipcart-confirm-item-td-1 {
+        padding-right: 30px; 
+        width: 445px;
+        padding-left: 30px;
+    }
+    table#snipcart-confirm-items td.snipcart-confirm-item-td-3 {
+        width: 120px;
+        margin: 0;
+        border-right: none;
+        float: none;
+    }
+    table#snipcart-confirm-items td.snipcart-confirm-item-td-4 {
+        text-align: right; 
+        padding-right: 30px; 
+        width: 90px;
+        margin: 0;
+        border-right: none;
+        float: none;
+    }
+    table#snipcart-confirm-items td.snipcart-confirm-item-td-5 {
+        margin: 0;
+        width: auto;
+        float: none;
+    }
+    #snipcart-notice {
+        width: auto;
+        padding: 20px 30px;
+    }
+    .snipcart-promocode-container div {
+        width: 350px;
+        margin: 0 auto;
+        padding: 20px 0;
+        text-align: left;
+    }
+    table#snipcart-confirm-prices tr td {
+        width: auto;
+    }
+    #snipcart-thankyou-left span.snipcart-title {
+        margin-top: 80px; 
+    }
+    #snipcart-main-container table.snipcart-list .snipcart-item-td-3, #snipcart-main-container table.snipcart-list .snipcart-item-td-4, #snipcart-main-container table.snipcart-list .snipcart-item-td-5 {
+        width: 120px;
+        float: none;
+        border-right: none;
+        margin: 0;
+        border-top: 1px solid #eee;
+    }
+    #snipcart-main-container table.snipcart-list .snipcart-item-td-3 {
+        width: 140px
+    }
+    #snipcart-main-container table.snipcart-list tr:first-child td
+    {
+        background: rgb(250,250,250) !important;
+        background: -moz-linear-gradient(top, rgba(250,250,250,1) 1%, rgba(255,255,255,1) 5%, rgba(255,255,255,1) 100%) !important;
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,rgba(250,250,250,1)), color-stop(5%,rgba(255,255,255,1)), color-stop(100%,rgba(255,255,255,1))) !important;
+        background: -webkit-linear-gradient(top, rgba(250,250,250,1) 1%,rgba(255,255,255,1) 5%,rgba(255,255,255,1) 100%) !important;
+        background: -o-linear-gradient(top, rgba(250,250,250,1) 1%,rgba(255,255,255,1) 5%,rgba(255,255,255,1) 100%) !important;
+        background: -ms-linear-gradient(top, rgba(250,250,250,1) 1%,rgba(255,255,255,1) 5%,rgba(255,255,255,1) 100%) !important;
+        background: linear-gradient(to bottom, rgba(250,250,250,1) 1%,rgba(255,255,255,1) 5%,rgba(255,255,255,1) 100%) !important;
+    }
+    #snipcart-main-container table.snipcart-list .snipcart-item-td-6 {
+        position: static;
+        width: 60px;
+    }
+    table#snipcart-shipping-methods tr.selected td.snipcart-shipping-method-td-1 {
+        background: url("img/selected.png") no-repeat 30px center !important;       
+    }
+    table#snipcart-confirm-prices tr td {
+        float: none;
+    }
+    #forgot-input {
+        width: 400px;
+        margin: 0 auto 20px;
+    }
+    #snipcart-forgot-password input {
+        width: 300px;
+    }
+    ul#snipcart-steps {
+        height: 90px;
+    }
+    #snipcart-header #snipcart-title {
+        text-align: left;
+        font: 30px/105px brandon_grotesquelight, sans-serif;
+        padding-left: 25px; 
+        width: auto;
+        top: 0;
+        margin-top: 0;
+    }
+    #snipcart-header #snipcart-header-right {
+        top: 35px;
+        width: 200px;
+    }
+    #snipcart-header #snipcart-total span.snipcart-label {
+        display: block;
+    }
+    #snipcart-cartitems-checkout-top {
+        top: 35px;
+    }
+    #snipcart-main-container a.snipcart-btn {
+        padding: 0 25px;
+    }
+    #snipcart-step-content-confirm .snipcart-confirm-column {
+        width: 25%;
+    }
+    #snipcart-main-container table.snipcart-list td {
+        padding: 20px;
+    }
+    ul#snipcart-steps li {
+        width: 16.55%;
+    }
+}
+
+@media only screen and (min-width: 1200px)
+{
+    ul#snipcart-steps li#snipcart-confirm-step { width: 157px; }
+    .snipcart-checkout-container{
+        width: 996px;
+    }
+    #snipcart-main-container {
+         width: 996px;
+    }
+    #snipcart-main-content { width: 983px; }
+    
+    #snipcart-close {
+        margin: 10px 25px 0 0; 
+    }
+    
+    #snipcart-cartitems-checkout-top {
+        position: absolute;
+        top: 36px;
+        right: 45px;
+    }
+    
+    ul#snipcart-steps li {
+        width: 164px; 
+    }
+    #snipcart-main-container a.snipcart-btn {
+         padding: 0 25px; 
+    }
+    ul#snipcart-steps li span { display: block; float: left;  }
+    ul#snipcart-steps li span.snipcart-step-number {
+        width: auto;
+        margin: 9px 0 0 20px;
+    }
+    ul#snipcart-steps {
+        height: 60px;
+    }
+    ul#snipcart-steps li span.snipcart-step-text {
+        text-align: left;
+        margin: 13px 0 0 4px;
+        width: 80px;
+    }
+
+    #snipcart-form .snipcart-form-column { float: left;}
+    #snipcart-main-container .snipcart-columns { background: url("img/columns.png") left top repeat-y; }
+    #snipcart-step-content-login .snipcart-form-column.snipcart-form-column2 { width: 266px; }
+    #snipcart-step-content-login .snipcart-form-column.snipcart-form-column3 div { padding: 45px 30px 0 50px; }
+    #snipcart-step-content-login .snipcart-form-column.snipcart-form-column3 {
+        width: 336px; 
+        height: 380px;
+        margin-left: 20px;
+        margin-top: 0;
+        padding-bottom: 0;
+    }
+    #snipcart-step-content-login .snipcart-form-column.snipcart-form-column1 { border-bottom: none; margin-right: 0; margin-bottom: 0; }
+    #snipcart-form  .snipcart-form-column#snipcart-form-column3 {
+        width: 296px;
+    }
+    #snipcart-step-content-confirm .snipcart-confirm-column {
+        width: 296px;
+    }
+    #snipcart-notice {
+        width: 260px;
+    }
+    .snipcart-two-thirds-block {
+        width: 660px;
+    }
+    #snipcart-thankyou-left {
+        width: 663px; 
+    }
+    #snipcart-step-content-thankyou { height: 375px; }
+    #snipcart-main-content #snipcart-current-user {
+        top: -10px;
+        right: 60px;
+    }
+}
 
 @media print {
     html body.snipcart-modal-opened *:not(.snipcart-checkout-container *) {
@@ -1102,73 +1610,4 @@ you can use the generic selector below, but it's slower:
     body.snipcart-modal-opened .snipcart-print-no-show {
         display: none;
     }
-}
-
-#snipcart-main-content #snipcart-current-user {
-    display: block;
-    float: left;
-    line-height: 65px;
-    margin-left: 30px;
-    color: #fff;
-}
-#snipcart-main-content #snipcart-current-user .snipcart-welcome {
-    color: #a5a5a5 !important;
-}
-
-
-#snipcart-main-container .snipcart-errors ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
-
-#snipcart-main-container .snipcart-errors {
-    display: block;
-    color: #b94a48;
-    background-color: #f2dede;
-    border: solid 1px #eed3d7;
-    padding: 5px;
-}
-
-#snipcart-main-container #snipcart-forgot-password {
-    padding: 10px;
-}
-
-#snipcart-actions .snipcart-btn {
-    margin-top: 20px;
-    float: left;
-}
-
-#snipcart-forgot-password .snipcart-forgotpassword-description {
-    padding-top: 5px;
-    padding-bottom: 5px;
-}
-
-#snipcart-forgot-password input {
-    width: 300px;
-}
-
-#snipcart-main-container #snipcart-reset-password {
-    padding: 10px;
-}
-
-#snipcart-main-container .snipcart-form-error {
-    display: block;
-    color: #fff;
-    text-align: center;
-    background: rgb(239,37,58); /* Old browsers */
-    background: -moz-linear-gradient(top,  rgba(239,37,58,1) 0%, rgba(232,20,35,1) 100%); /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(239,37,58,1)), color-stop(100%,rgba(232,20,35,1))); /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(top,  rgba(239,37,58,1) 0%,rgba(232,20,35,1) 100%); /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(top,  rgba(239,37,58,1) 0%,rgba(232,20,35,1) 100%); /* Opera 11.10+ */
-    background: -ms-linear-gradient(top,  rgba(239,37,58,1) 0%,rgba(232,20,35,1) 100%); /* IE10+ */
-    background: linear-gradient(to bottom,  rgba(239,37,58,1) 0%,rgba(232,20,35,1) 100%); /* W3C */
-    border: solid 1px #bc101c;
-    padding: 5px;
-    width: 245px;
-    margin-top: -9px;
-    margin-bottom: 9px;
-    border-radius: 3px;
-    -moz-border-radius: 3px;
-    -webkit-border-radius: 3px;
 }
