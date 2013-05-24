@@ -431,7 +431,7 @@ body.snipcart-open {
     ul#snipcart-steps li {
         display: block; 
         height: inherit; 
-        width: 16.4%; 
+        width: 16.3%; 
         float: left;
         border-right: 1px solid #c3c3c3;
         border-bottom: 1px solid #c3c3c3;
@@ -500,7 +500,7 @@ body.snipcart-open {
 
     #snipcart-form { padding: 30px 0; }
 
-    #snipcart-form .snipcart-form-column { margin-left: 30px; }
+    #snipcart-form .snipcart-form-column { margin-left: 30px; margin-right: 30px; }
     #snipcart-form .snipcart-form-column.snipcart-form-column-3 { border-right: 0; }
     #snipcart-form .snipcart-form-column a.snipcart-mainaction {
         text-align: center;
@@ -516,7 +516,7 @@ body.snipcart-open {
     }
 
     #snipcart-form input[type=text], #snipcart-form input[type=password] {
-        width: 85%; 
+        width: 95%; 
         background-image: none; 
         display: inline-block; 
         height: 28px; 
@@ -545,7 +545,7 @@ body.snipcart-open {
     #snipcart-form input[type=text]:focus, #snipcart-form input[type=password].snipcart-has-errors { border-color: #333; outline: 0; outline: thin dotted \9; /* IE6-9 */ -webkit-box-shadow: inset 0 1px 1px gainsboro, 0 0 8px #333; -moz-box-shadow: inset 0 1px 1px gainsboro, 0 0 8px #333; box-shadow: inset 0 1px 1px gainsboro, 0 0 8px #333; }
 
     #snipcart-form select {
-        width: 90%;
+        width: 100%;
         height: 38px;
         margin: 0; 
         display: inline-block; 
@@ -569,12 +569,12 @@ body.snipcart-open {
         display: block;
     }
     #snipcart-form select#snipcart-billing-expmonth {
-        width: 43%;
+        width: 48%;
         float: left;
         margin-right: 10px;
     }
     #snipcart-form select#snipcart-billing-expyear {
-        width: 43%;
+        width: 47%;
     }
     #snipcart-form .snipcart-tooltip {
         font: 14px 'brandon_grotesquebold', sans-serif;
@@ -759,7 +759,7 @@ body.snipcart-open {
     }
     #snipcart-step-content-login #snipcart-form { padding: 0; position: relative; }
 
-    #snipcart-step-content-login .snipcart-form-column.snipcart-form-column1, #snipcart-step-content-login .snipcart-form-column.snipcart-form-column2 { height: 305px; }
+    #snipcart-step-content-login .snipcart-form-column.snipcart-form-column1, #snipcart-step-content-login .snipcart-form-column.snipcart-form-column2 { padding-bottom: 20px; }
     #snipcart-step-content-login .snipcart-form-column.snipcart-form-column1 { border-bottom: 1px solid #f1f1f2; margin-right: 30px; margin-bottom: 20px; }
     
     #snipcart-step-content-login .snipcart-form-column.snipcart-form-column1 div { padding-right: 30px; }  
@@ -1205,10 +1205,9 @@ body.snipcart-open {
 
 #snipcart-main-container .snipcart-errors {
     display: block;
-    color: #b94a48;
-    background-color: #f2dede;
-    border: solid 1px #eed3d7;
-    padding: 5px;
+    color: red;
+    font: 14px 'brandon_grotesqueregular';
+    padding-bottom: 10px;
 }
 
 #snipcart-main-container #snipcart-forgot-password {
@@ -1264,10 +1263,17 @@ body.snipcart-open {
 #snipcart-step-content-payment-method .snipcart-form-column-3 {
     margin-bottom: 25px;
 }
-#snipcart-bill-me-later {
-    position: absolute;
-    bottom: 145px;
-    right: 20px;
+#snipcart-step-content-payment-method .snipcart-form-column-1 {
+    text-align: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #f1f1f2;
+    margin-bottom: 20px;
+}
+#snipcart-reset-password #snipcart-form {
+    margin: 0 30px;
+}
+#snipcart-reset-password .snipcart-errors {
+    margin: 20px 30px 0;
 }
 @media only screen and (min-width: 768px)
 {
@@ -1320,9 +1326,21 @@ body.snipcart-open {
     #snipcart-form .snipcart-form-column a.snipcart-mainaction {
         width: 206px;
     }
-    #snipcart-form .snipcart-form-column { width: 44%; float: left; margin-left: 30px; }
+    #snipcart-form .snipcart-form-column { width: 44%; float: left; margin-left: 30px; margin-right: 0; }
     #snipcart-form .snipcart-form-column3.snipcart-form-column {
         width: 99%;
+    }
+    #snipcart-step-content-payment-method .snipcart-form-column-3 , #snipcart-step-content-payment-method .snipcart-form-column-2 {
+        width: 44%;
+        float: right;
+        clear: right;
+        margin-right: 30px;
+    }
+    #snipcart-step-content-payment-method #snipcart-form select {
+        width: 100%;
+    }
+    #snipcart-step-content-payment-method #snipcart-form input[type=text] {
+        width: 95%;
     }
     #snipcart-step-content-login .snipcart-form-column.snipcart-form-column1 {
         border-bottom: none;
@@ -1331,7 +1349,7 @@ body.snipcart-open {
         width: 245px; 
     }
     #snipcart-step-content-login .snipcart-form-column.snipcart-form-column1 { border-right: 1px solid #e1e1e1; }
-    #snipcart-step-content-login .snipcart-form-column.snipcart-form-column1, #snipcart-step-content-login .snipcart-form-column.snipcart-form-column2 { height: 305px; margin-top: 45px; }
+    #snipcart-step-content-login .snipcart-form-column.snipcart-form-column1, #snipcart-step-content-login .snipcart-form-column.snipcart-form-column2 { margin-top: 45px; }
     
     .snipcart-promocode-container {
         margin-left: 0;
@@ -1352,12 +1370,21 @@ body.snipcart-open {
     }
     table#snipcart-shipping-methods td.snipcart-shipping-method-td-2 { width: 160px; float: none; }
     #snipcart-form select#snipcart-billing-expmonth {
-        width: 125px;
         float: left;
         margin-right: 10px;
+        width: 47%;
     }
     #snipcart-form select#snipcart-billing-expyear {
-        width: 125px;
+        width: 48%;
+    }
+    #snipcart-step-content-payment-method .snipcart-form-column-1 {
+        border-bottom: none;
+        border-right: 1px solid #f1f1f2;
+        height: 200px;
+        margin-top: 50px;
+    }
+    #snipcart-bill-me-later {
+        margin-top: 100px;
     }
     #snipcart-step-content-payment-method .snipcart-form-column-3 {
         margin-bottom: 0;
@@ -1480,10 +1507,36 @@ body.snipcart-open {
     ul#snipcart-steps li {
         width: 16.55%;
     }
+    #snipcart-reset-password #snipcart-form {
+        width: 260px;
+        margin: 0 auto;
+    }
+    #snipcart-reset-password .snipcart-errors {text-align: center;}
 }
 
 @media only screen and (min-width: 1024px)
 {
+    #snipcart-step-content-payment-method .snipcart-form-column-3, #snipcart-step-content-payment-method .snipcart-form-column-2 {
+        margin-right: 0;
+    }
+    #snipcart-step-content-payment-method #snipcart-form select {
+        width: 260px;
+    }
+    #snipcart-step-content-payment-method #snipcart-form input[type=text] {
+        width: 245px;
+    }
+    #snipcart-step-content-payment-method .snipcart-form-column-1 {
+        border-right: none;
+        margin-top: 0;
+    }
+    #snipcart-form select#snipcart-billing-expmonth {
+        width: 125px;
+        float: left;
+        margin-right: 10px;
+    }
+    #snipcart-form select#snipcart-billing-expyear {
+        width: 125px;
+    }
     #snipcart-form .snipcart-form-column { width: 296px; }
     ul#snipcart-steps li#snipcart-confirm-step { width: 157px; }
     .snipcart-checkout-container{
@@ -1555,6 +1608,9 @@ body.snipcart-open {
     #snipcart-main-content #snipcart-current-user {
         top: -10px;
         right: 60px;
+    }
+    ul#snipcart-steps {
+        top: 0;
     }
 }
 
