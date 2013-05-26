@@ -38,7 +38,7 @@
 /* Modal Window */
 
 /* General */
-
+    #snipcart-main-container ul li { margin: 0 0 0 0; }
     #snipcart-main-container { position: absolute; top: 60px; width: 996px; margin: 0 auto; z-index: 10000; font-family: Arial !important; color: #a5a5a5 !important; font-size: 10pt; }
 
     #snipcart-main-container { position: absolute; top: 60px; width: 996px; margin: 0 auto; z-index: 10000; font-family: Arial !important; color: #a5a5a5 !important; font-size: 10pt; }
