@@ -689,7 +689,7 @@ body.snipcart-open {
     table#snipcart-items td.snipcart-item-td-1 { padding-right: 30px;}
 
     table#snipcart-items td.snipcart-item-td-2 {
-        width: 200px;
+        text-align: left;
     }
 
     table#snipcart-items td.snipcart-item-td-3,
@@ -1003,7 +1003,9 @@ body.snipcart-open {
         table#snipcart-confirm-items span.snipcart-product-name { font-size: 10pt; }
         table#snipcart-confirm-items span.snipcart-product-id { font-size: 8pt; }
 
-        table#snipcart-confirm-items td.snipcart-confirm-item-td-2,
+        table#snipcart-confirm-items td.snipcart-confirm-item-td-2 {
+            text-align: left;
+        }
         table#snipcart-confirm-items td.snipcart-confirm-item-td-3 {
             width: 33%;
             float: left;
