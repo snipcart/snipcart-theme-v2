@@ -1,152 +1,141 @@
-﻿/* Fonts */
+﻿/*** Icon Fonts ***/
 
-@font-face {
-	font-family: 'Snipcart';
-	src:url('fonts/snipcart/Snipcart.eot');
-	src:url('fonts/snipcart/Snipcart.eot?#iefix') format('embedded-opentype'),
-		url('fonts/snipcart/Snipcart.woff') format('woff'),
-		url('fonts/snipcart/Snipcart.ttf') format('truetype'),
-		url('fonts/snipcart/Snipcart.svg#Snipcart') format('svg');
-	font-weight: normal;
-	font-style: normal;
-}
-/* Use the following CSS code if you want to use data attributes for inserting your icons */
-[data-icon]:before {
-	font-family: 'Snipcart';
-	content: attr(data-icon);
-	speak: none;
-	font-weight: normal;
-	font-variant: normal;
-	text-transform: none;
-	line-height: 1;
-	-webkit-font-smoothing: antialiased;
-}
+    @font-face {
+	    font-family: 'Snipcart';
+	    src:url('fonts/snipcart/Snipcart.eot');
+	    src:url('fonts/snipcart/Snipcart.eot?#iefix') format('embedded-opentype'),
+		    url('fonts/snipcart/Snipcart.woff') format('woff'),
+		    url('fonts/snipcart/Snipcart.ttf') format('truetype'),
+		    url('fonts/snipcart/Snipcart.svg#Snipcart') format('svg');
+	    font-weight: normal;
+	    font-style: normal;
+    }
 
-/* Use the following CSS code if you want to have a class per icon */
-/*
-Instead of a list of all class selectors,
-you can use the generic selector below, but it's slower:
-[class*="icon-"] {
-*/
-.icon-Snipcart, .icon-Snipcart-2, .icon-Snipcart-3, .icon-Snipcart-4, .icon-Snipcart-5, .icon-Snipcart-6, .icon-Snipcart-7 {
-	font-family: 'Snipcart';
-	speak: none;
-	font-style: normal;
-	font-weight: normal;
-	font-variant: normal;
-	text-transform: none;
-	line-height: 1;
-	-webkit-font-smoothing: antialiased;
-}
-.icon-Snipcart:before {
-	content: "\66";
-}
-.icon-Snipcart-2:before {
-	content: "\65";
-}
-.icon-Snipcart-3:before {
-	content: "\64";
-}
-.icon-Snipcart-4:before {
-	content: "\63";
-}
-.icon-Snipcart-5:before {
-	content: "\62";
-}
-.icon-Snipcart-6:before {
-	content: "\61";
-}
-.icon-Snipcart-7:before {
-	content: "\67";
-}
+    [data-icon]:before {
+	    font-family: 'Snipcart';
+	    content: attr(data-icon);
+	    speak: none;
+	    font-weight: normal;
+	    font-variant: normal;
+	    text-transform: none;
+	    line-height: 1;
+	    -webkit-font-smoothing: antialiased;
+    }
 
-@font-face {
-    font-family: 'LatoRegular';
-    src: url('fonts/Lato-Reg-webfont.eot');
-    src: url('fonts/Lato-Reg-webfont.eot?#iefix') format('embedded-opentype'),
-         url('fonts/Lato-Reg-webfont.woff') format('woff'),
-         url('fonts/Lato-Reg-webfont.ttf') format('truetype'),
-         url('fonts/Lato-Reg-webfont.svg#LatoRegular') format('svg');
-    font-weight: normal;
-    font-style: normal;
+    .icon-Snipcart, .icon-Snipcart-2, .icon-Snipcart-3, .icon-Snipcart-4, .icon-Snipcart-5, .icon-Snipcart-6, .icon-Snipcart-7 {
+	    font-family: 'Snipcart';
+	    speak: none;
+	    font-style: normal;
+	    font-weight: normal;
+	    font-variant: normal;
+	    text-transform: none;
+	    line-height: 1;
+	    -webkit-font-smoothing: antialiased;
+    }
+    .icon-Snipcart:before { content: "\66"; }
+    .icon-Snipcart-2:before { content: "\65"; }
+    .icon-Snipcart-3:before { content: "\64"; }
+    .icon-Snipcart-4:before { content: "\63"; }
+    .icon-Snipcart-5:before { content: "\62"; }
+    .icon-Snipcart-6:before { content: "\61"; }
+    .icon-Snipcart-7:before { content: "\67"; }
 
-}
+/*** / Icon Fonts ***/
 
-@font-face {
-    font-family: 'LatoLight';
-    src: url('fonts/Lato-Lig-webfont.eot');
-    src: url('fonts/Lato-Lig-webfont.eot?#iefix') format('embedded-opentype'),
-         url('fonts/Lato-Lig-webfont.woff') format('woff'),
-         url('fonts/Lato-Lig-webfont.ttf') format('truetype'),
-         url('fonts/Lato-Lig-webfont.svg#LatoLight') format('svg');
-    font-weight: normal;
-    font-style: normal;
+/*** Custom Fonts ***/
 
-}
-@font-face {
-    font-family: 'brandon_grotesqueblack';
-    src: url('fonts/brandon_grotesque/brandon_blk-webfont.eot');
-    src: url('fonts/brandon_grotesque/brandon_blk-webfont.eot?#iefix') format('embedded-opentype'),
-         url('fonts/brandon_grotesque/brandon_blk-webfont.woff') format('woff'),
-         url('fonts/brandon_grotesque/brandon_blk-webfont.ttf') format('truetype'),
-         url('fonts/brandon_grotesque/brandon_blk-webfont.svg#brandon_grotesqueblack') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'brandon_grotesquebold';
-    src: url('fonts/brandon_grotesque/brandon_bld-webfont.eot');
-    src: url('fonts/brandon_grotesque/brandon_bld-webfont.eot?#iefix') format('embedded-opentype'),
-         url('fonts/brandon_grotesque/brandon_bld-webfont.woff') format('woff'),
-         url('fonts/brandon_grotesque/brandon_bld-webfont.ttf') format('truetype'),
-         url('fonts/brandon_grotesque/brandon_bld-webfont.svg#brandon_grotesquebold') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'brandon_grotesquemedium';
-    src: url('fonts/brandon_grotesque/brandon_med-webfont.eot');
-    src: url('fonts/brandon_grotesque/brandon_med-webfont.eot?#iefix') format('embedded-opentype'),
-         url('fonts/brandon_grotesque/brandon_med-webfont.woff') format('woff'),
-         url('fonts/brandon_grotesque/brandon_med-webfont.ttf') format('truetype'),
-         url('fonts/brandon_grotesque/brandon_med-webfont.svg#brandon_grotesquemedium') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'brandon_grotesqueregular';
-    src: url('fonts/brandon_grotesque/brandon_re-webfont.eot');
-    src: url('fonts/brandon_grotesque/brandon_re-webfont.eot?#iefix') format('embedded-opentype'),
-         url('fonts/brandon_grotesque/brandon_re-webfont.woff') format('woff'),
-         url('fonts/brandon_grotesque/brandon_re-webfont.ttf') format('truetype'),
-         url('fonts/brandon_grotesque/brandon_re-webfont.svg#brandon_grotesqueregular') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'brandon_grotesquelight';
-    src: url('fonts/brandon_grotesque/brandon_light-webfont.eot');
-    src: url('fonts/brandon_grotesque/brandon_light-webfont.eot?#iefix') format('embedded-opentype'),
-         url('fonts/brandon_grotesque/brandon_light-webfont.woff') format('woff'),
-         url('fonts/brandon_grotesque/brandon_light-webfont.ttf') format('truetype'),
-         url('fonts/brandon_grotesque/brandon_light-webfont.svg#brandon_grotesquelight') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-/* Fonts */
+    @font-face {
+        font-family: 'LatoRegular';
+        src: url('fonts/Lato-Reg-webfont.eot');
+        src: url('fonts/Lato-Reg-webfont.eot?#iefix') format('embedded-opentype'),
+             url('fonts/Lato-Reg-webfont.woff') format('woff'),
+             url('fonts/Lato-Reg-webfont.ttf') format('truetype'),
+             url('fonts/Lato-Reg-webfont.svg#LatoRegular') format('svg');
+        font-weight: normal;
+        font-style: normal;
 
-body.snipcart-open {
-    padding: 0 !important;
-    margin: 0 !important;
-}
+    }
 
-/* Container */
+    @font-face {
+        font-family: 'LatoLight';
+        src: url('fonts/Lato-Lig-webfont.eot');
+        src: url('fonts/Lato-Lig-webfont.eot?#iefix') format('embedded-opentype'),
+             url('fonts/Lato-Lig-webfont.woff') format('woff'),
+             url('fonts/Lato-Lig-webfont.ttf') format('truetype'),
+             url('fonts/Lato-Lig-webfont.svg#LatoLight') format('svg');
+        font-weight: normal;
+        font-style: normal;
+
+    }
+    @font-face {
+        font-family: 'brandon_grotesqueblack';
+        src: url('fonts/brandon_grotesque/brandon_blk-webfont.eot');
+        src: url('fonts/brandon_grotesque/brandon_blk-webfont.eot?#iefix') format('embedded-opentype'),
+             url('fonts/brandon_grotesque/brandon_blk-webfont.woff') format('woff'),
+             url('fonts/brandon_grotesque/brandon_blk-webfont.ttf') format('truetype'),
+             url('fonts/brandon_grotesque/brandon_blk-webfont.svg#brandon_grotesqueblack') format('svg');
+        font-weight: normal;
+        font-style: normal;
+    }
+    @font-face {
+        font-family: 'brandon_grotesquebold';
+        src: url('fonts/brandon_grotesque/brandon_bld-webfont.eot');
+        src: url('fonts/brandon_grotesque/brandon_bld-webfont.eot?#iefix') format('embedded-opentype'),
+             url('fonts/brandon_grotesque/brandon_bld-webfont.woff') format('woff'),
+             url('fonts/brandon_grotesque/brandon_bld-webfont.ttf') format('truetype'),
+             url('fonts/brandon_grotesque/brandon_bld-webfont.svg#brandon_grotesquebold') format('svg');
+        font-weight: normal;
+        font-style: normal;
+    }
+    @font-face {
+        font-family: 'brandon_grotesquemedium';
+        src: url('fonts/brandon_grotesque/brandon_med-webfont.eot');
+        src: url('fonts/brandon_grotesque/brandon_med-webfont.eot?#iefix') format('embedded-opentype'),
+             url('fonts/brandon_grotesque/brandon_med-webfont.woff') format('woff'),
+             url('fonts/brandon_grotesque/brandon_med-webfont.ttf') format('truetype'),
+             url('fonts/brandon_grotesque/brandon_med-webfont.svg#brandon_grotesquemedium') format('svg');
+        font-weight: normal;
+        font-style: normal;
+    }
+    @font-face {
+        font-family: 'brandon_grotesqueregular';
+        src: url('fonts/brandon_grotesque/brandon_re-webfont.eot');
+        src: url('fonts/brandon_grotesque/brandon_re-webfont.eot?#iefix') format('embedded-opentype'),
+             url('fonts/brandon_grotesque/brandon_re-webfont.woff') format('woff'),
+             url('fonts/brandon_grotesque/brandon_re-webfont.ttf') format('truetype'),
+             url('fonts/brandon_grotesque/brandon_re-webfont.svg#brandon_grotesqueregular') format('svg');
+        font-weight: normal;
+        font-style: normal;
+    }
+    @font-face {
+        font-family: 'brandon_grotesquelight';
+        src: url('fonts/brandon_grotesque/brandon_light-webfont.eot');
+        src: url('fonts/brandon_grotesque/brandon_light-webfont.eot?#iefix') format('embedded-opentype'),
+             url('fonts/brandon_grotesque/brandon_light-webfont.woff') format('woff'),
+             url('fonts/brandon_grotesque/brandon_light-webfont.ttf') format('truetype'),
+             url('fonts/brandon_grotesque/brandon_light-webfont.svg#brandon_grotesquelight') format('svg');
+        font-weight: normal;
+        font-style: normal;
+    }
+
+/*** / Custom Fonts ***/
+
+/*** Main Body ***/
+
+    body.snipcart-open {
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
+/*** / Main Body ***/
+
+/*** Snipcart Holder ***/
 
 	.snipcart-checkout-container { max-width: 90%; margin: 0 auto; }
 
-/* Container */
+/*** / Snipcart Holder ***/
 
-/* Modal Window */
+/*** Modal Window ***/
 
     #snipcart-overlay {
         position: fixed; 
@@ -175,49 +164,13 @@ body.snipcart-open {
         right: 10px;
     }
 
-/* Modal Window */
+/*** / Modal Window ***/
 
-/* General */
-    #snipcart-main-container .clear {
+/*** General Styles ***/
+
+    #snipcart-main-container .clear, #snipcart-main-container span.snipcart-clear {
         display: block;
         clear: both;
-    }
-    #snipcart-main-container td, #snipcart-main-container th {
-        display: block;
-    }
-    #snipcart-footer {
-        background: rgb(54,56,58); /* Old browsers */
-        background: -moz-linear-gradient(top,  rgba(54,56,58,1) 1%, rgba(33,35,36,1) 100%); /* FF3.6+ */
-        background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,rgba(54,56,58,1)), color-stop(100%,rgba(33,35,36,1))); /* Chrome,Safari4+ */
-        background: -webkit-linear-gradient(top,  rgba(54,56,58,1) 1%,rgba(33,35,36,1) 100%); /* Chrome10+,Safari5.1+ */
-        background: -o-linear-gradient(top,  rgba(54,56,58,1) 1%,rgba(33,35,36,1) 100%); /* Opera 11.10+ */
-        background: -ms-linear-gradient(top,  rgba(54,56,58,1) 1%,rgba(33,35,36,1) 100%); /* IE10+ */
-        background: linear-gradient(to bottom,  rgba(54,56,58,1) 1%,rgba(33,35,36,1) 100%); /* W3C */
-        height: 45px;
-        border-top: 1px solid #434648;
-        padding: 0 10px;
-    }
-
-    #snipcart-footer #snipcart-powered {
-        background: url('img/snipcart-footer.png') no-repeat 0 0;
-        padding-left: 25px;
-        text-transform: uppercase;
-        font: 7.42pt/10px 'brandon_grotesqueregular', sans-serif;
-        color: #545557;
-        width: 75px;
-        display: block;
-        text-shadow: -1px 1px 2px rgba(0, 0, 0, 0.3);
-        position: relative;
-        top: 10px;
-    }
-
-    #snipcart-footer #snipcart-powered a {
-        color: #545557;
-        text-decoration: none;
-    }
-    
-    #snipcart-footer #snipcart-powered .snipcart-big {
-        font-size: 10.01pt;
     }
 
     #snipcart-main-container {
@@ -233,101 +186,135 @@ body.snipcart-open {
 
     #snipcart-main-content { background-color: #ffffff; width: 100%; }
 
-    #snipcart-main-container span.snipcart-clear { display: block; clear: both; }
+    /* Errors */
 
-    #snipcart-main-container a.snipcart-btn {
-         display: inline-block; 
-         background-color: #666; 
-         padding: 0 5px; 
-         color: #ffffff; 
-         font-weight: bold; 
-         text-decoration: none; 
-         cursor: pointer; 
-         font: 12px/38px 'brandon_grotesquebold', sans-serif;
-         height: 38px;
-         text-transform: uppercase;
-         border-radius: 3px;
-         -moz-border-radius: 3px;
-         -webkit-border-radius: 3px;
-         -webkit-box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.25);
-        -moz-box-shadow:    0px 1px 5px rgba(0, 0, 0, 0.25);
-        box-shadow:         0px 1px 5px rgba(0, 0, 0, 0.25);
-    }
-    #snipcart-main-container a.snipcart-next, #snipcart-main-container a.snipcart-finalize, #snipcart-main-container a.snipcart-mainaction, #snipcart-main-container a.snipcart-apply-promocode {
-         background: rgb(135,219,87); /* Old browsers */
-        background: -moz-linear-gradient(top,  rgba(135,219,87,1) 1%, rgba(101,203,54,1) 100%); /* FF3.6+ */
-        background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,rgba(135,219,87,1)), color-stop(100%,rgba(101,203,54,1))); /* Chrome,Safari4+ */
-        background: -webkit-linear-gradient(top,  rgba(135,219,87,1) 1%,rgba(101,203,54,1) 100%); /* Chrome10+,Safari5.1+ */
-        background: -o-linear-gradient(top,  rgba(135,219,87,1) 1%,rgba(101,203,54,1) 100%); /* Opera 11.10+ */
-        background: -ms-linear-gradient(top,  rgba(135,219,87,1) 1%,rgba(101,203,54,1) 100%); /* IE10+ */
-        background: linear-gradient(to bottom,  rgba(135,219,87,1) 1%,rgba(101,203,54,1) 100%); /* W3C */
-        border: 1px solid #6eb247;
-        color: #1d1f22;
-        text-shadow: 0px 1px 2px rgba(255, 255, 255, 0.3);
-    }
+        #snipcart-global-errors ul { display: block; list-style: none; margin: 0 0 15px 30px; }
+        #snipcart-global-errors ul li { display: block; list-style: none; margin: 0 0 5px 0; padding: 0; color: red; text-transform: uppercase; }
 
-    #snipcart-cartitems-checkout-top {
-        position: absolute;
-        top: 45px;
-        right: 20px;
-    }
+        #snipcart-main-container .snipcart-errors ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
 
-    #snipcart-actions {
-        height: 75px; 
-        padding: 0 20px 10px;
-        border-top: 1px solid #eeeeee;
-        background: rgb(250,250,250); /* Old browsers */
-        background: -moz-linear-gradient(top,  rgba(250,250,250,1) 1%, rgba(255,255,255,1) 5%, rgba(240,240,240,1) 100%); /* FF3.6+ */
-        background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,rgba(250,250,250,1)), color-stop(5%,rgba(255,255,255,1)), color-stop(100%,rgba(240,240,240,1))); /* Chrome,Safari4+ */
-        background: -webkit-linear-gradient(top,  rgba(250,250,250,1) 1%,rgba(255,255,255,1) 5%,rgba(240,240,240,1) 100%); /* Chrome10+,Safari5.1+ */
-        background: -o-linear-gradient(top,  rgba(250,250,250,1) 1%,rgba(255,255,255,1) 5%,rgba(240,240,240,1) 100%); /* Opera 11.10+ */
-        background: -ms-linear-gradient(top,  rgba(250,250,250,1) 1%,rgba(255,255,255,1) 5%,rgba(240,240,240,1) 100%); /* IE10+ */
-        background: linear-gradient(to bottom,  rgba(250,250,250,1) 1%,rgba(255,255,255,1) 5%,rgba(240,240,240,1) 100%); /* W3C */
-    }
+        #snipcart-main-container .snipcart-errors {
+            display: block;
+            color: red;
+            font: 14px 'brandon_grotesqueregular';
+            padding-bottom: 10px;
+        }
 
-    #snipcart-actions a.snipcart-next, #snipcart-actions a.snipcart-finalize { margin-top: 20px; float: right;margin-right: 10px; }
-    #snipcart-actions a.snipcart-previous { margin-top: 20px; float: left; }
-
-    #snipcart-actions a.snipcart-previous.snipcart-spacing { margin-left: 10px; }
+        #snipcart-main-container .snipcart-form-error {
+            display: block;
+            color: #fff;
+            text-align: center;
+            background: rgb(239,37,58); /* Old browsers */
+            background: -moz-linear-gradient(top,  rgba(239,37,58,1) 0%, rgba(232,20,35,1) 100%); /* FF3.6+ */
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(239,37,58,1)), color-stop(100%,rgba(232,20,35,1))); /* Chrome,Safari4+ */
+            background: -webkit-linear-gradient(top,  rgba(239,37,58,1) 0%,rgba(232,20,35,1) 100%); /* Chrome10+,Safari5.1+ */
+            background: -o-linear-gradient(top,  rgba(239,37,58,1) 0%,rgba(232,20,35,1) 100%); /* Opera 11.10+ */
+            background: -ms-linear-gradient(top,  rgba(239,37,58,1) 0%,rgba(232,20,35,1) 100%); /* IE10+ */
+            background: linear-gradient(to bottom,  rgba(239,37,58,1) 0%,rgba(232,20,35,1) 100%); /* W3C */
+            border: solid 1px #bc101c;
+            padding: 5px;
+            width: 85%;
+            margin-top: -9px;
+            margin-bottom: 9px;
+            border-radius: 3px;
+            -moz-border-radius: 3px;
+            -webkit-border-radius: 3px;
+        }
     
+    /* / Errors */
 
-    #snipcart-global-errors ul { display: block; list-style: none; margin: 0 0 15px 30px; }
-    #snipcart-global-errors ul li { display: block; list-style: none; margin: 0 0 5px 0; padding: 0; color: red; text-transform: uppercase; }
+    /* Buttons */
 
+        #snipcart-main-container a.snipcart-btn {
+            display: inline-block; 
+            background-color: #666; 
+            padding: 0 5px; 
+            color: #ffffff; 
+            font-weight: bold; 
+            text-decoration: none; 
+            cursor: pointer; 
+            font: 12px/38px 'brandon_grotesquebold', sans-serif;
+            height: 38px;
+            text-transform: uppercase;
+            border-radius: 3px;
+            -moz-border-radius: 3px;
+            -webkit-border-radius: 3px;
+            -webkit-box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.25);
+            -moz-box-shadow:    0px 1px 5px rgba(0, 0, 0, 0.25);
+            box-shadow:         0px 1px 5px rgba(0, 0, 0, 0.25);
+        }
+
+        #snipcart-main-container a.snipcart-next, #snipcart-main-container a.snipcart-finalize, #snipcart-main-container a.snipcart-mainaction, #snipcart-main-container a.snipcart-apply-promocode {
+            background: rgb(135,219,87); /* Old browsers */
+            background: -moz-linear-gradient(top,  rgba(135,219,87,1) 1%, rgba(101,203,54,1) 100%); /* FF3.6+ */
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,rgba(135,219,87,1)), color-stop(100%,rgba(101,203,54,1))); /* Chrome,Safari4+ */
+            background: -webkit-linear-gradient(top,  rgba(135,219,87,1) 1%,rgba(101,203,54,1) 100%); /* Chrome10+,Safari5.1+ */
+            background: -o-linear-gradient(top,  rgba(135,219,87,1) 1%,rgba(101,203,54,1) 100%); /* Opera 11.10+ */
+            background: -ms-linear-gradient(top,  rgba(135,219,87,1) 1%,rgba(101,203,54,1) 100%); /* IE10+ */
+            background: linear-gradient(to bottom,  rgba(135,219,87,1) 1%,rgba(101,203,54,1) 100%); /* W3C */
+            border: 1px solid #6eb247;
+            color: #1d1f22;
+            text-shadow: 0px 1px 2px rgba(255, 255, 255, 0.3);
+        }
+
+    /* Buttons */
+
+    /* Bottom bar containing action buttons */
+
+        #snipcart-actions {
+            height: 75px; 
+            padding: 0 20px 10px;
+            border-top: 1px solid #eeeeee;
+            background: rgb(250,250,250); /* Old browsers */
+            background: -moz-linear-gradient(top,  rgba(250,250,250,1) 1%, rgba(255,255,255,1) 5%, rgba(240,240,240,1) 100%); /* FF3.6+ */
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,rgba(250,250,250,1)), color-stop(5%,rgba(255,255,255,1)), color-stop(100%,rgba(240,240,240,1))); /* Chrome,Safari4+ */
+            background: -webkit-linear-gradient(top,  rgba(250,250,250,1) 1%,rgba(255,255,255,1) 5%,rgba(240,240,240,1) 100%); /* Chrome10+,Safari5.1+ */
+            background: -o-linear-gradient(top,  rgba(250,250,250,1) 1%,rgba(255,255,255,1) 5%,rgba(240,240,240,1) 100%); /* Opera 11.10+ */
+            background: -ms-linear-gradient(top,  rgba(250,250,250,1) 1%,rgba(255,255,255,1) 5%,rgba(240,240,240,1) 100%); /* IE10+ */
+            background: linear-gradient(to bottom,  rgba(250,250,250,1) 1%,rgba(255,255,255,1) 5%,rgba(240,240,240,1) 100%); /* W3C */
+        }
+
+        #snipcart-actions a.snipcart-next, #snipcart-actions a.snipcart-finalize { margin-top: 20px; float: right; margin-right: 10px; }
+        #snipcart-actions a.snipcart-previous { margin-top: 20px; float: left; }
+        #snipcart-actions a.snipcart-previous.snipcart-spacing { margin-left: 10px; }
+
+        .snipcart-next-step { display: block; position: absolute; bottom: 15px; right: 35px; font-weight: bold; }
+        .snipcart-previous-step { display: block; position: absolute; bottom: 15px; left: 20px; font-weight: bold; }
+
+        #snipcart-actions .snipcart-btn {
+            margin-top: 20px;
+            float: left;
+        }
     
+    /* Bottom bar containing action buttons */
 
-    #snipcart-main-container span.snipcart-unit-price, #snipcart-main-container span.snipcart-total-price {
-        font: 14px 'brandon_grotesquebold', sans-serif;
-        font-weight: bold;
-        color: #a5a5a5 ;
-    }
+    /* Highlight for unit price and total price */
 
-    #snipcart-main-container span.snipcart-total-price {
-        color: #333;
-    }
-    .snipcart-next-step {
-        display: block;
-        position: absolute;
-        bottom: 15px;
-        right: 35px;
-        font-weight: bold;
-    }
-    .snipcart-previous-step {
-        display: block;
-        position: absolute;
-        bottom: 15px;
-        left: 20px;
-        font-weight: bold;
-    }
-    #snipcart-logged-user {
-        position: absolute;
-        top: 40px;
-        left: 25px;
+        #snipcart-main-container span.snipcart-unit-price, #snipcart-main-container span.snipcart-total-price {
+            font: 14px 'brandon_grotesquebold', sans-serif;
+            font-weight: bold;
+            color: #a5a5a5 ;
+        }
+
+        #snipcart-main-container span.snipcart-total-price { color: #333; }
+    
+    /* Highlight for unit price and total price */
+
+/*** / General Styles ***/
+
+/*** Custom styles for mobile version ***/
+
+    #snipcart-main-container td, #snipcart-main-container th {
+        display: block; /* We want cells to use the full width */
     }
 
-/* General */
+/*** / Custom styles for mobile version ***/
 
-/* Header */
+/*** Header ***/
 
     #snipcart-header { 
         height: 105px;
@@ -343,7 +330,7 @@ body.snipcart-open {
     #snipcart-header #snipcart-title {
         display: block; 
         float: left; 
-        height: inherit; 
+        height: 95px; 
         margin: 10px 30px 0;
         color: #fff; 
         text-transform: uppercase; 
@@ -411,9 +398,26 @@ body.snipcart-open {
     #snipcart-header #snipcart-continue-shopping-link a { color: #9f9f9f; text-decoration: underline; font-size: 9pt; }
     #snipcart-header #snipcart-continue-shopping-link a:hover { color: #9f9f9f; text-decoration: none; }
 
-/* Header */
+    #snipcart-cartitems-checkout-top { position: absolute; top: 45px; right: 20px; }
 
-/* Steps */
+    #snipcart-logged-user { position: absolute; top: 40px; left: 25px; }
+
+    #snipcart-main-content #snipcart-current-user {
+        display: block;
+        position: absolute;
+        top: -18px;
+        right: 50px;
+        line-height: 65px;
+        margin-left: 30px;
+        color: #fff;
+    }
+    #snipcart-main-content #snipcart-current-user .snipcart-welcome {
+        color: #a5a5a5 !important;
+    }
+
+/*** / Header ***/
+
+/*** Steps ***/
 
     ul#snipcart-steps {
         clear: both;
@@ -499,9 +503,9 @@ body.snipcart-open {
     }
     ul#snipcart-steps li.active span.snipcart-step-text { color: #333333; }
     
-/* Steps */
+/*** / Steps ***/
 
-/* Forms */
+/*** Forms ***/
 
     #snipcart-form { padding: 30px 0; }
 
@@ -520,18 +524,11 @@ body.snipcart-open {
         opacity: 0.7;
     }
 
-    #snipcart-main-container input[type=text], #snipcart-main-container input[type=password], #snipcart-main-container select {
-        -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
-        -moz-box-sizing: border-box;    /* Firefox, other Gecko */
-        box-sizing: border-box;         /* Opera/IE 8+ */
-      }
-
     #snipcart-main-container input[type=text], #snipcart-main-container input[type=password] {
-        width: 100%; 
+        width: 95%; 
         background-image: none; 
-        display: inline-block; 
-        height: 38px; 
-        padding: 8px 2%; 
+        display: inline-block;
+        padding: 4px 6px; 
         margin-bottom: 9px; 
         font-size: 14px; 
         line-height: 20px; 
@@ -553,14 +550,14 @@ body.snipcart-open {
         transition: border linear 0.2s, box-shadow linear 0.2s;
     }
     #snipcart-main-container input[type=text].snipcart-has-errors, #snipcart-main-container input[type=password].snipcart-has-errors { border-color: red; outline: 0; outline: thin dotted \9; /* IE6-9 */ -webkit-box-shadow: inset 0 1px 1px gainsboro, 0 0 8px red; -moz-box-shadow: inset 0 1px 1px gainsboro, 0 0 8px red; box-shadow: inset 0 1px 1px gainsboro, 0 0 8px red; color: red; }
-    #snipcart-main-container input[type=text]:focus, #snipcart-main-container input[type=password].snipcart-has-errors { border-color: #333; outline: 0; outline: thin dotted \9; /* IE6-9 */ -webkit-box-shadow: inset 0 1px 1px gainsboro, 0 0 8px #333; -moz-box-shadow: inset 0 1px 1px gainsboro, 0 0 8px #333; box-shadow: inset 0 1px 1px gainsboro, 0 0 8px #333; }
+    #snipcart-main-container input[type=text]:focus, #snipcart-main-container input[type=password]:focus { border-color: #333; outline: 0; outline: thin dotted \9; /* IE6-9 */ -webkit-box-shadow: inset 0 1px 1px gainsboro, 0 0 8px #333; -moz-box-shadow: inset 0 1px 1px gainsboro, 0 0 8px #333; box-shadow: inset 0 1px 1px gainsboro, 0 0 8px #333; }
 
     #snipcart-main-container select {
-        width: 100%;
+        width: 95%;
         height: 38px;
         margin: 0; 
         display: inline-block; 
-        padding: 8px 2%; 
+        padding: 8px 6px;
         margin-bottom: 9px; 
         font-size: 14px; 
         line-height: 20px; 
@@ -611,9 +608,9 @@ body.snipcart-open {
         margin: 10px auto 0;
     }
 
-/* Forms */
+/*** / Forms ***/
 
-/* Lists */
+/*** Lists ***/
 
     #snipcart-main-container table.snipcart-list { width: 100%; clear: both; }
 
@@ -685,9 +682,9 @@ body.snipcart-open {
     }
     #snipcart-main-container table.snipcart-list span.snipcart-confirm-item-quantity { color: #999999; }
 
-/* Lists */
+/*** / Lists ***/
 
-/* Items */
+/*** Items ***/
 
     table#snipcart-items th.snipcart-item-th-1, table#snipcart-items td.snipcart-item-td-1, table#snipcart-confirm-items td.snipcart-confirm-item-td-1, table#snipcart-confirm-items th.snipcart-confirm-item-td-1 {
         text-align: left; 
@@ -764,26 +761,38 @@ body.snipcart-open {
             padding: 0 20px;
         }
 
-        #snipcart-main-container .snipcart-customfield-checkbox label input {
-            margin: 0 10px 0 0;
+        #snipcart-main-container .snipcart-customfield-checkbox input {
+            margin: 0;
             padding: 0;
         }
 
-        #snipcart-main-container .snipcart-customfield-checkbox label span.snipcart-customfield-element {
-            display: inline-block;
+        #snipcart-main-container .snipcart-customfield-checkbox .snipcart-customfield-element, #snipcart-main-container .snipcart-customfield-checkbox label {
+            display: inline;
         }
 
-/* Custom Fields */
+        #snipcart-main-container .snipcart-customfield-checkbox label {
+            margin: 3px 0 0 5px;
+        }
 
-/* Items */
+        #snipcart-main-container .snipcart-item-customfields input[type=text] {
+            width: 93%; /* Little adjustment to fit with select with 95 % width */
+        }
 
-/* Login */
+    /* Custom Fields */
+
+/*** / Items ***/
+
+/*** Login ***/
 
     #snipcart-login-forgotpassword-link {
         color: #a5a5a5;
         display: block;
     }
     #snipcart-step-content-login #snipcart-form { padding: 0; position: relative; }
+
+    #snipcart-step-content-login .snipcart-form-column.snipcart-form-column1 {
+        margin-top: 20px;
+    }
 
     #snipcart-step-content-login .snipcart-form-column.snipcart-form-column1, #snipcart-step-content-login .snipcart-form-column.snipcart-form-column2 { padding-bottom: 20px; }
     #snipcart-step-content-login .snipcart-form-column.snipcart-form-column1 { border-bottom: 1px solid #f1f1f2; margin-right: 30px; margin-bottom: 20px; }
@@ -832,9 +841,50 @@ body.snipcart-open {
         text-transform: uppercase;
     }
 
-/* Login */
+/*** / Login ***/
 
-/* Shipping Methods */
+/*** Forgot Password ***/
+
+    #snipcart-main-container #snipcart-forgot-password {
+        padding: 10px;
+    }
+    
+    #snipcart-forgot-password .snipcart-forgotpassword-description {
+        padding-top: 5px;
+        padding-bottom: 5px;
+        text-align: center;
+    }
+
+    #snipcart-forgot-password input {
+        width: 95%;
+        display: block;
+        float: left;
+        margin-right: 10px;
+        height: 28px;
+    }
+    #forgot-input {
+        width: 100%;
+        margin: 0 auto 20px;
+    }
+
+/*** / Forgot Password ***/
+
+/*** Reset Password ***/
+
+    #snipcart-main-container #snipcart-reset-password {
+        padding: 10px;
+    }
+
+    #snipcart-reset-password #snipcart-form {
+        margin: 0 30px;
+    }
+    #snipcart-reset-password .snipcart-errors {
+        margin: 20px 30px 0;
+    }
+
+/*** / Reset Password ***/
+
+/*** Shipping Methods ***/
 
     table#snipcart-shipping-methods th.snipcart-shipping-method-th-1 { text-align: left; padding-left: 30px; }
     
@@ -860,14 +910,27 @@ body.snipcart-open {
     #snipcart-step-content-shipping-method-failure div#snipcart-actions {
         padding-bottom: 15px;
     }
-/* Shipping Methods */
 
-/* Confirm */
+/*** / Shipping Methods ***/
+
+/*** Payment Methods ***/
+
+    #snipcart-step-content-payment-method .snipcart-form-column-3 {
+        margin-bottom: 25px;
+    }
+    #snipcart-step-content-payment-method .snipcart-form-column-1 {
+        text-align: center;
+        padding-bottom: 20px;
+        border-bottom: 1px solid #f1f1f2;
+        margin-bottom: 20px;
+    }
+
+/*** / Payment Methods ***/
+
+/*** Confirm ***/
 
     #snipcart-step-content-confirm #snipcart-actions { border-top: 0; }
-    .snipcart-promocodes-list {
-        
-    }
+
     .snipcart-promocodes-list ul {
         margin: 0;
     }
@@ -994,7 +1057,9 @@ body.snipcart-open {
         padding-bottom: 15px;
         display: none;
     }
+
     /* Columns */
+
         #snipcart-step-content-confirm .snipcart-columns { margin: 30px 0; }
 
         #snipcart-step-content-confirm .snipcart-confirm-column {
@@ -1055,6 +1120,7 @@ body.snipcart-open {
             float: left;
             width: 33%;
         }
+
     /* Items */
 
     /* Prices */
@@ -1095,9 +1161,10 @@ body.snipcart-open {
 
     /* Prices */
 
-/* Confirm */
+/*** / Confirm ***/
 
-/* Thank you */
+/*** Thank you ***/
+
     #snipcart-step-content-thankyou { padding-bottom: 30px; }
     #snipcart-thankyou-left, #snipcart-thankyou-right { height: inherit; float: left; }
     #snipcart-thankyou-left {
@@ -1130,9 +1197,10 @@ body.snipcart-open {
     #snipcart-thankyou-right span.snipcart-title { display: block; border-bottom: 1px solid #eeeeee; text-transform: uppercase; color: #333333; font-size: 12pt; font-weight: bold; padding-bottom: 10px; margin-bottom: 10px; }
     #snipcart-thankyou-right .snipcart-btn { display: block !important; text-align: center; margin-top: 5px; }
 
-/* Thank you */
+/*** / Thank you ***/
 
-/* Cart items */
+/*** Cart items ***/
+
     #snipcart-sharebyemail-container {
         float: left;
         margin-top: 20px;
@@ -1147,9 +1215,11 @@ body.snipcart-open {
     #snipcart-sharebyemail-container input {
         float: left;
     }
-/* Cart items*/
 
-/* Tipsy jquery plugin */
+/*** / Cart items ***/
+
+/*** Tipsy jquery plugin ***/
+
   .snipcart-tipsy { font-size: 10px; position: absolute; padding: 5px; z-index: 100000; }
   .snipcart-tipsy-inner { background-color: #C00; color: #FFF; max-width: 200px; padding: 5px 8px 4px 8px; text-align: center; }
 
@@ -1175,9 +1245,11 @@ body.snipcart-open {
   .snipcart-tipsy-se .snipcart-tipsy-arrow { bottom: 0; right: 10px; border-top-style: solid; border-bottom: none; border-left-color: transparent; border-right-color: transparent; }
   .snipcart-tipsy-e .snipcart-tipsy-arrow { right: 0; top: 50%; margin-top: -5px; border-left-style: solid; border-right: none; border-top-color: transparent; border-bottom-color: transparent; }
   .snipcart-tipsy-w .snipcart-tipsy-arrow { left: 0; top: 50%; margin-top: -5px; border-right-style: solid; border-left: none; border-top-color: transparent; border-bottom-color: transparent; }
-/* Tipsy jquery plugin */
 
-/* Loading state */
+/*** / Tipsy jquery plugin ***/
+
+/*** Loading state ***/
+
     #snipcart-sub-content.snipcart-loading * {
         display: none;
     }
@@ -1188,136 +1260,90 @@ body.snipcart-open {
         background-position: center center;
         background-repeat: no-repeat;
     }
-/* Loading state */
 
-/* Empty cart */
-#snipcart-empty {
-    padding: 30px;
-    font-size: 20px;
-    text-align: center;
-    line-height: 40px;
-    font-size: 12px;
-    font-family: 'brandon_grotesquebold', sans-serif;
-    text-transform: uppercase;
-}
-#snipcart-shipping-method-error {
-    padding: 30px 30px 10px;
-    font-size: 30px;
-    text-align: center;
-    line-height: 40px;
-}
-#snipcart-shipping-method-errors {
-    padding: 0 30px;
-}
-/* Empty cart */
+/*** / Loading state ***/
 
-#snipcart-main-content #snipcart-current-user {
-    display: block;
-    position: absolute;
-    top: -18px;
-    right: 50px;
-    line-height: 65px;
-    margin-left: 30px;
-    color: #fff;
-}
-#snipcart-main-content #snipcart-current-user .snipcart-welcome {
-    color: #a5a5a5 !important;
-}
+/*** Empty cart ***/
+
+    #snipcart-empty {
+        padding: 30px;
+        font-size: 20px;
+        text-align: center;
+        line-height: 40px;
+        font-size: 12px;
+        font-family: 'brandon_grotesquebold', sans-serif;
+        text-transform: uppercase;
+    }
+    #snipcart-shipping-method-error {
+        padding: 30px 30px 10px;
+        font-size: 30px;
+        text-align: center;
+        line-height: 40px;
+    }
+    #snipcart-shipping-method-errors {
+        padding: 0 30px;
+    }
+
+/*** / Empty cart ***/
+
+/*** Footer ***/
+
+    #snipcart-footer {
+        background: rgb(54,56,58); /* Old browsers */
+        background: -moz-linear-gradient(top,  rgba(54,56,58,1) 1%, rgba(33,35,36,1) 100%); /* FF3.6+ */
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,rgba(54,56,58,1)), color-stop(100%,rgba(33,35,36,1))); /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(top,  rgba(54,56,58,1) 1%,rgba(33,35,36,1) 100%); /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(top,  rgba(54,56,58,1) 1%,rgba(33,35,36,1) 100%); /* Opera 11.10+ */
+        background: -ms-linear-gradient(top,  rgba(54,56,58,1) 1%,rgba(33,35,36,1) 100%); /* IE10+ */
+        background: linear-gradient(to bottom,  rgba(54,56,58,1) 1%,rgba(33,35,36,1) 100%); /* W3C */
+        height: 45px;
+        border-top: 1px solid #434648;
+        padding: 0 10px;
+    }
+
+    #snipcart-footer #snipcart-powered {
+        background: url('img/snipcart-footer.png') no-repeat 0 0;
+        padding-left: 25px;
+        text-transform: uppercase;
+        font: 7.42pt/10px 'brandon_grotesqueregular', sans-serif;
+        color: #545557;
+        width: 75px;
+        display: block;
+        text-shadow: -1px 1px 2px rgba(0, 0, 0, 0.3);
+        position: relative;
+        top: 10px;
+    }
+
+    #snipcart-footer #snipcart-powered a {
+        color: #545557;
+        text-decoration: none;
+    }
+    
+    #snipcart-footer #snipcart-powered .snipcart-big {
+        font-size: 10.01pt;
+    }
+
+/*** / Footer ***/
 
 
-#snipcart-main-container .snipcart-errors ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
-
-#snipcart-main-container .snipcart-errors {
-    display: block;
-    color: red;
-    font: 14px 'brandon_grotesqueregular';
-    padding-bottom: 10px;
-}
-
-#snipcart-main-container #snipcart-forgot-password {
-    padding: 10px;
-}
-
-#snipcart-actions .snipcart-btn {
-    margin-top: 20px;
-    float: left;
-}
-
-#snipcart-forgot-password .snipcart-forgotpassword-description {
-    padding-top: 5px;
-    padding-bottom: 5px;
-    text-align: center;
-}
-
-#snipcart-forgot-password input {
-    width: 95%;
-    display: block;
-    float: left;
-    margin-right: 10px;
-    height: 28px;
-}
-#forgot-input {
-    width: 100%;
-    margin: 0 auto 20px;
-}
-#snipcart-main-container #snipcart-reset-password {
-    padding: 10px;
-}
-
-#snipcart-main-container .snipcart-form-error {
-    display: block;
-    color: #fff;
-    text-align: center;
-    background: rgb(239,37,58); /* Old browsers */
-    background: -moz-linear-gradient(top,  rgba(239,37,58,1) 0%, rgba(232,20,35,1) 100%); /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(239,37,58,1)), color-stop(100%,rgba(232,20,35,1))); /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(top,  rgba(239,37,58,1) 0%,rgba(232,20,35,1) 100%); /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(top,  rgba(239,37,58,1) 0%,rgba(232,20,35,1) 100%); /* Opera 11.10+ */
-    background: -ms-linear-gradient(top,  rgba(239,37,58,1) 0%,rgba(232,20,35,1) 100%); /* IE10+ */
-    background: linear-gradient(to bottom,  rgba(239,37,58,1) 0%,rgba(232,20,35,1) 100%); /* W3C */
-    border: solid 1px #bc101c;
-    padding: 5px;
-    width: 85%;
-    margin-top: -9px;
-    margin-bottom: 9px;
-    border-radius: 3px;
-    -moz-border-radius: 3px;
-    -webkit-border-radius: 3px;
-}
-#snipcart-step-content-payment-method .snipcart-form-column-3 {
-    margin-bottom: 25px;
-}
-#snipcart-step-content-payment-method .snipcart-form-column-1 {
-    text-align: center;
-    padding-bottom: 20px;
-    border-bottom: 1px solid #f1f1f2;
-    margin-bottom: 20px;
-}
-#snipcart-reset-password #snipcart-form {
-    margin: 0 30px;
-}
-#snipcart-reset-password .snipcart-errors {
-    margin: 20px 30px 0;
-}
 @media only screen and (min-width: 768px)
 {
+
     #snipcart-main-container td, #snipcart-main-container th {
-        display: table-cell;
+        display: table-cell; /* We have enough space so we list elems as cells */
     }
 
     #snipcart-main-content {
         width: 100%;
     }
+
     table#snipcart-items th.snipcart-item-th-1 { display: block;}
      #snipcart-header #snipcart-total span.snipcart-amount {
          position: static;
          width: auto;
          text-align: right;
     }
+
      table#snipcart-items td.snipcart-item-td-1 { width:445px;}
      ul#snipcart-steps li span.snipcart-step-text {
         display: block;
@@ -1475,16 +1501,7 @@ body.snipcart-open {
     #snipcart-main-container table.snipcart-list .snipcart-item-td-3 {
         width: 140px
     }
-    #snipcart-main-container table.snipcart-list tr:first-child td
-    {
-        /*background: rgb(250,250,250) !important;
-        background: -moz-linear-gradient(top, rgba(250,250,250,1) 1%, rgba(255,255,255,1) 5%, rgba(255,255,255,1) 100%) !important;
-        background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,rgba(250,250,250,1)), color-stop(5%,rgba(255,255,255,1)), color-stop(100%,rgba(255,255,255,1))) !important;
-        background: -webkit-linear-gradient(top, rgba(250,250,250,1) 1%,rgba(255,255,255,1) 5%,rgba(255,255,255,1) 100%) !important;
-        background: -o-linear-gradient(top, rgba(250,250,250,1) 1%,rgba(255,255,255,1) 5%,rgba(255,255,255,1) 100%) !important;
-        background: -ms-linear-gradient(top, rgba(250,250,250,1) 1%,rgba(255,255,255,1) 5%,rgba(255,255,255,1) 100%) !important;
-        background: linear-gradient(to bottom, rgba(250,250,250,1) 1%,rgba(255,255,255,1) 5%,rgba(255,255,255,1) 100%) !important;*/
-    }
+
     #snipcart-main-container table.snipcart-list .snipcart-item-td-6 {
         position: static;
         width: 60px;
@@ -1541,9 +1558,17 @@ body.snipcart-open {
     }
     #snipcart-reset-password .snipcart-errors {text-align: center;}
 
-    #snipcart-main-container .snipcart-item-customfields {
-        width: 150px;
-    }
+    /* We limit the width of the custom fields */
+
+        #snipcart-main-container .snipcart-item-customfields input[type=text] {
+            width: 170px;
+        }
+
+        #snipcart-main-container .snipcart-item-customfields select {
+            width: 184px;
+        }
+
+    /* We limit the width of the custom fields */
 
 }
 
@@ -1653,6 +1678,7 @@ body.snipcart-open {
 }
 
 @media print {
+
     html body.snipcart-modal-opened *:not(.snipcart-checkout-container *) {
         display: none;
     }
