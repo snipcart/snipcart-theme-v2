@@ -178,11 +178,11 @@ body.snipcart-open {
 /* Modal Window */
 
 /* General */
-    .clear {
+    #snipcart-main-container .clear {
         display: block;
         clear: both;
     }
-    td, th {
+    #snipcart-main-container td, #snipcart-main-container th {
         display: block;
     }
     #snipcart-footer {
@@ -512,7 +512,7 @@ body.snipcart-open {
         margin-top: 20px;
     }
 
-    #snipcart-form label {
+    #snipcart-main-container label {
         font: 11px 'brandon_grotesquebold';
         text-transform: uppercase; 
         display: block;
@@ -520,12 +520,18 @@ body.snipcart-open {
         opacity: 0.7;
     }
 
-    #snipcart-form input[type=text], #snipcart-form input[type=password] {
-        width: 95%; 
+    #snipcart-main-container input[type=text], #snipcart-main-container input[type=password], #snipcart-main-container select {
+        -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+        -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+        box-sizing: border-box;         /* Opera/IE 8+ */
+      }
+
+    #snipcart-main-container input[type=text], #snipcart-main-container input[type=password] {
+        width: 100%; 
         background-image: none; 
         display: inline-block; 
-        height: 28px; 
-        padding: 4px 6px; 
+        height: 38px; 
+        padding: 8px 2%; 
         margin-bottom: 9px; 
         font-size: 14px; 
         line-height: 20px; 
@@ -546,15 +552,15 @@ body.snipcart-open {
         -o-transition: border linear 0.2s, box-shadow linear 0.2s; 
         transition: border linear 0.2s, box-shadow linear 0.2s;
     }
-    #snipcart-form input[type=text].snipcart-has-errors, #snipcart-form input[type=password].snipcart-has-errors { border-color: red; outline: 0; outline: thin dotted \9; /* IE6-9 */ -webkit-box-shadow: inset 0 1px 1px gainsboro, 0 0 8px red; -moz-box-shadow: inset 0 1px 1px gainsboro, 0 0 8px red; box-shadow: inset 0 1px 1px gainsboro, 0 0 8px red; color: red; }
-    #snipcart-form input[type=text]:focus, #snipcart-form input[type=password].snipcart-has-errors { border-color: #333; outline: 0; outline: thin dotted \9; /* IE6-9 */ -webkit-box-shadow: inset 0 1px 1px gainsboro, 0 0 8px #333; -moz-box-shadow: inset 0 1px 1px gainsboro, 0 0 8px #333; box-shadow: inset 0 1px 1px gainsboro, 0 0 8px #333; }
+    #snipcart-main-container input[type=text].snipcart-has-errors, #snipcart-main-container input[type=password].snipcart-has-errors { border-color: red; outline: 0; outline: thin dotted \9; /* IE6-9 */ -webkit-box-shadow: inset 0 1px 1px gainsboro, 0 0 8px red; -moz-box-shadow: inset 0 1px 1px gainsboro, 0 0 8px red; box-shadow: inset 0 1px 1px gainsboro, 0 0 8px red; color: red; }
+    #snipcart-main-container input[type=text]:focus, #snipcart-main-container input[type=password].snipcart-has-errors { border-color: #333; outline: 0; outline: thin dotted \9; /* IE6-9 */ -webkit-box-shadow: inset 0 1px 1px gainsboro, 0 0 8px #333; -moz-box-shadow: inset 0 1px 1px gainsboro, 0 0 8px #333; box-shadow: inset 0 1px 1px gainsboro, 0 0 8px #333; }
 
-    #snipcart-form select {
+    #snipcart-main-container select {
         width: 100%;
         height: 38px;
         margin: 0; 
         display: inline-block; 
-        padding: 8px 6px; 
+        padding: 8px 2%; 
         margin-bottom: 9px; 
         font-size: 14px; 
         line-height: 20px; 
@@ -605,7 +611,6 @@ body.snipcart-open {
         margin: 10px auto 0;
     }
 
-
 /* Forms */
 
 /* Lists */
@@ -636,6 +641,11 @@ body.snipcart-open {
     #snipcart-main-container table.snipcart-list .snipcart-item-td-1 {
         border-bottom: 1px solid #f1f1f2;
     }
+
+    #snipcart-main-container table.snipcart-list .snipcart-item-td-2 {
+        border-bottom: 1px solid #f1f1f2;
+    }
+
     #snipcart-main-container table.snipcart-list .snipcart-item-td-3, #snipcart-main-container table.snipcart-list .snipcart-item-td-4, #snipcart-main-container table.snipcart-list .snipcart-item-td-5 {
         width: 32.33%;
         float: left;
@@ -690,6 +700,7 @@ body.snipcart-open {
 
     table#snipcart-items td.snipcart-item-td-2 {
         text-align: left;
+        
     }
 
     table#snipcart-items td.snipcart-item-td-3,
@@ -746,6 +757,24 @@ body.snipcart-open {
         display: block;
         margin: 0 auto;
     }
+
+    /* Custom Fields */
+
+        #snipcart-main-container .snipcart-item-customfields {
+            padding: 0 20px;
+        }
+
+        #snipcart-main-container .snipcart-customfield-checkbox label input {
+            margin: 0 10px 0 0;
+            padding: 0;
+        }
+
+        #snipcart-main-container .snipcart-customfield-checkbox label span.snipcart-customfield-element {
+            display: inline-block;
+        }
+
+/* Custom Fields */
+
 /* Items */
 
 /* Login */
@@ -1276,7 +1305,7 @@ body.snipcart-open {
 }
 @media only screen and (min-width: 768px)
 {
-    td, th {
+    #snipcart-main-container td, #snipcart-main-container th {
         display: table-cell;
     }
 
@@ -1511,6 +1540,11 @@ body.snipcart-open {
         margin: 0 auto;
     }
     #snipcart-reset-password .snipcart-errors {text-align: center;}
+
+    #snipcart-main-container .snipcart-item-customfields {
+        width: 150px;
+    }
+
 }
 
 @media only screen and (min-width: 1024px)
@@ -1611,6 +1645,11 @@ body.snipcart-open {
     ul#snipcart-steps {
         top: 0;
     }
+
+    #snipcart-main-container .snipcart-item-customfields {
+        width: 200px;
+    }
+
 }
 
 @media print {
