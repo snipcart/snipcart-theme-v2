@@ -186,6 +186,10 @@
 
     #snipcart-main-content { background-color: #ffffff; width: 100%; }
 
+    #snipcart-main-container a {
+        color: #87db57;
+    }
+
     /* Errors */
 
         #snipcart-global-errors ul { display: block; list-style: none; margin: 0 0 15px 30px; }
@@ -202,6 +206,10 @@
             color: red;
             font: 14px 'brandon_grotesqueregular';
             padding-bottom: 10px;
+        }
+
+        #snipcart-main-container .snipcart-errors.snipcart-centered-errors {
+            text-align: center;
         }
 
         #snipcart-main-container .snipcart-form-error {
@@ -310,6 +318,12 @@
 
     #snipcart-main-container td, #snipcart-main-container th {
         display: block; /* We want cells to use the full width */
+    }
+
+    #snipcart-main-container table.snipcart-list .snipcart-no-customfields {
+        border: 0;
+        padding: 0;
+        /* We don't want to see the empty cell on mobile version */
     }
 
 /*** / Custom styles for mobile version ***/
@@ -576,6 +590,7 @@
         position: relative;
         display: block;
     }
+
     #snipcart-form select#snipcart-billing-expmonth {
         width: 48%;
         float: left;
@@ -608,6 +623,27 @@
         margin: 10px auto 0;
     }
 
+    /* Full Width Forms */
+
+        #snipcart-form.snipcart-full-width-form .snipcart-centered-field {
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        #snipcart-form.snipcart-full-width-form .snipcart-centered-field label {
+            font-size: inherit;
+            font-family: inherit;
+            text-transform: none;
+            margin-bottom: 15px;
+        }
+
+        #snipcart-form.snipcart-full-width-form p.snipcart-message {
+            text-align: center;
+            font-weight: bold;
+        }
+
+    /* Full Width Forms */
+
 /*** / Forms ***/
 
 /*** Lists ***/
@@ -635,10 +671,7 @@
         top: 0;
         right: 15px;
     }
-    #snipcart-main-container table.snipcart-list .snipcart-item-td-1 {
-        border-bottom: 1px solid #f1f1f2;
-    }
-
+   
     #snipcart-main-container table.snipcart-list .snipcart-item-td-2 {
         border-bottom: 1px solid #f1f1f2;
     }
@@ -693,11 +726,10 @@
     table#snipcart-items th.snipcart-item-th-1 {
         display: none;
     }
-    table#snipcart-items td.snipcart-item-td-1 { padding-right: 30px;}
+    table#snipcart-items td.snipcart-item-td-1 { padding-right: 30px; }
 
     table#snipcart-items td.snipcart-item-td-2 {
         text-align: left;
-        
     }
 
     table#snipcart-items td.snipcart-item-td-3,
@@ -842,47 +874,6 @@
     }
 
 /*** / Login ***/
-
-/*** Forgot Password ***/
-
-    #snipcart-main-container #snipcart-forgot-password {
-        padding: 10px;
-    }
-    
-    #snipcart-forgot-password .snipcart-forgotpassword-description {
-        padding-top: 5px;
-        padding-bottom: 5px;
-        text-align: center;
-    }
-
-    #snipcart-forgot-password input {
-        width: 95%;
-        display: block;
-        float: left;
-        margin-right: 10px;
-        height: 28px;
-    }
-    #forgot-input {
-        width: 100%;
-        margin: 0 auto 20px;
-    }
-
-/*** / Forgot Password ***/
-
-/*** Reset Password ***/
-
-    #snipcart-main-container #snipcart-reset-password {
-        padding: 10px;
-    }
-
-    #snipcart-reset-password #snipcart-form {
-        margin: 0 30px;
-    }
-    #snipcart-reset-password .snipcart-errors {
-        margin: 20px 30px 0;
-    }
-
-/*** / Reset Password ***/
 
 /*** Shipping Methods ***/
 
@@ -1333,6 +1324,11 @@
         display: table-cell; /* We have enough space so we list elems as cells */
     }
 
+    #snipcart-main-container table.snipcart-list .snipcart-no-customfields {
+        border-top: 1px solid #f1f1f2;
+        /* We want to see the border when the elem is show as cell */
+    }
+
     #snipcart-main-content {
         width: 100%;
     }
@@ -1380,12 +1376,12 @@
     #snipcart-form .snipcart-form-column a.snipcart-mainaction {
         width: 206px;
     }
-    #snipcart-form .snipcart-form-column { width: 44%; float: left; margin-left: 30px; margin-right: 0; }
+    #snipcart-form .snipcart-form-column { width: 43%; float: left; margin-left: 30px; margin-right: 0; }
     #snipcart-form .snipcart-form-column3.snipcart-form-column {
         width: 99%;
     }
     #snipcart-step-content-payment-method .snipcart-form-column-3 , #snipcart-step-content-payment-method .snipcart-form-column-2 {
-        width: 44%;
+        width: 43%;
         float: right;
         clear: right;
         margin-right: 30px;
@@ -1512,13 +1508,6 @@
     table#snipcart-confirm-prices tr td {
         float: none;
     }
-    #forgot-input {
-        width: 400px;
-        margin: 0 auto 20px;
-    }
-    #snipcart-forgot-password input {
-        width: 300px;
-    }
     ul#snipcart-steps {
         height: 90px;
     }
@@ -1549,15 +1538,15 @@
     #snipcart-main-container table.snipcart-list td {
         padding: 20px;
     }
+
+    #snipcart-main-container table.snipcart-list .snipcart-item-td-1 {
+        border-bottom: 1px solid #f1f1f2; /* We a border to the first cell to match the look of other cells */
+    }
+
     ul#snipcart-steps li {
         width: 16.55%;
     }
-    #snipcart-reset-password #snipcart-form {
-        width: 260px;
-        margin: 0 auto;
-    }
-    #snipcart-reset-password .snipcart-errors {text-align: center;}
-
+    
     /* We limit the width of the custom fields */
 
         #snipcart-main-container .snipcart-item-customfields input[type=text] {
