@@ -190,6 +190,13 @@
         color: #87db57;
     }
 
+    #snipcart-main-content h4 {
+        font: 14px 'brandon_grotesquebold', sans-serif;
+        color: #1c1e21;
+        text-transform: uppercase;
+        margin: 0;
+    }
+
     /* Errors */
 
         #snipcart-global-errors ul { display: block; list-style: none; margin: 0 0 15px 30px; }
@@ -269,11 +276,16 @@
             text-shadow: 0px 1px 2px rgba(255, 255, 255, 0.3);
         }
 
+        #snipcart-main-container a.snipcart-btn-alt {
+            background-color: #ebe216;
+            color: #1d1f22;
+        }
+
     /* Buttons */
 
     /* Bottom bar containing action buttons */
 
-        #snipcart-actions {
+        #snipcart-actions, .snipcart-additional-option {
             height: 75px; 
             padding: 0 20px 10px;
             border-top: 1px solid #eeeeee;
@@ -298,6 +310,15 @@
             float: left;
         }
     
+        #snipcart-main-content .snipcart-additional-option .snipcart-btn {
+            float: right;
+            margin: 20px 10px 0 0;
+        }
+
+        #snipcart-main-content .snipcart-additional-option h4 {
+            padding-top: 15px;
+        }
+
     /* Bottom bar containing action buttons */
 
     /* Highlight for unit price and total price */
@@ -909,12 +930,6 @@
     #snipcart-step-content-payment-method .snipcart-form-column-3 {
         margin-bottom: 25px;
     }
-    #snipcart-step-content-payment-method .snipcart-form-column-1 {
-        text-align: center;
-        padding-bottom: 20px;
-        border-bottom: 1px solid #f1f1f2;
-        margin-bottom: 20px;
-    }
 
 /*** / Payment Methods ***/
 
@@ -959,14 +974,11 @@
     }
 
     #snipcart-promocodes h4 {
-        font: 14px 'brandon_grotesquebold', sans-serif;
-        color: #1c1e21;
-        text-transform: uppercase;
         text-align: center;
         padding: 30px 0 20px;
         border-bottom: 1px solid #eaebec;
-        margin: 0;
     }
+
     #snipcart-promocodes h4 #snipcart-open-promocodes, .snipcart-two-thirds-block h4 #snipcart-open-promocodes {
         margin-left: 10px;
         font: 16px Arial;
@@ -1429,20 +1441,9 @@
     }
     #snipcart-step-content-payment-method .snipcart-form-column-1 {
         border-bottom: none;
-        border-right: 1px solid #f1f1f2;
-        height: 200px;
-        margin-top: 50px;
-    }
-    #snipcart-bill-me-later {
-        margin-top: 100px;
     }
     #snipcart-step-content-payment-method .snipcart-form-column-3 {
         margin-bottom: 0;
-    }
-    #snipcart-bill-me-later {
-        position: static;
-        bottom: 145px;
-        right: 50px;
     }
     #snipcart-step-content-confirm .snipcart-confirm-column {
         margin: 0 0 0 30px;
