@@ -1614,7 +1614,7 @@
     ul#snipcart-steps li span { display: block; float: left;  }
     ul#snipcart-steps li span.snipcart-step-number {
         width: auto;
-        margin: 9px 0 0 20px;
+        margin: 9px 0 0 10px;
     }
     ul#snipcart-steps {
         height: 60px;
@@ -1730,3 +1730,13 @@
         display: none;
     }
 }
+
+/* CHUCK ON 2013-06-01 */
+#snipcart-main-content .snipcart-nolimits-form .snipcart-customfield {
+    float: left;
+    width: 285px;
+    padding-left: 20px;
+    padding-top: 5px;
+    padding-right: 20px;
+}
+/* END CHUCK ON 2013-06-01 */
