@@ -1,4 +1,53 @@
-﻿/*** Icon Fonts ***/
+﻿@charset "utf-8";
+/* CSS Document */
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+#snipcart-main-container body, #snipcart-main-container div, #snipcart-main-container span, #snipcart-main-container applet, #snipcart-main-container object, #snipcart-main-container iframe,
+h1, #snipcart-main-container h2, #snipcart-main-container h3, #snipcart-main-container h4, #snipcart-main-container h5, #snipcart-main-container h6, #snipcart-main-container p, #snipcart-main-container blockquote, #snipcart-main-container pre,
+a, #snipcart-main-container abbr, #snipcart-main-container acronym, #snipcart-main-container address, #snipcart-main-container big, #snipcart-main-container cite, #snipcart-main-container code,
+del, #snipcart-main-container dfn, #snipcart-main-container em, #snipcart-main-container img, #snipcart-main-container ins, #snipcart-main-container kbd, #snipcart-main-container q, #snipcart-main-container s, #snipcart-main-container samp,
+small, #snipcart-main-container strike, #snipcart-main-container strong, #snipcart-main-container sub, #snipcart-main-container /* sup, #snipcart-main-container */ tt, #snipcart-main-container var,
+b, #snipcart-main-container u, #snipcart-main-container i, #snipcart-main-container center,
+dl, #snipcart-main-container dt, #snipcart-main-container dd, #snipcart-main-container ol, #snipcart-main-container ul, #snipcart-main-container li,
+fieldset, #snipcart-main-container form, #snipcart-main-container label, #snipcart-main-container legend,
+table, #snipcart-main-container caption, #snipcart-main-container tbody, #snipcart-main-container tfoot, #snipcart-main-container thead, #snipcart-main-container tr, #snipcart-main-container th, #snipcart-main-container td,
+article, #snipcart-main-container aside, #snipcart-main-container canvas, #snipcart-main-container details, #snipcart-main-container embed, #snipcart-main-container 
+figure, #snipcart-main-container figcaption, #snipcart-main-container footer, #snipcart-main-container header, #snipcart-main-container hgroup, #snipcart-main-container 
+menu, #snipcart-main-container nav, #snipcart-main-container output, #snipcart-main-container ruby, #snipcart-main-container section, #snipcart-main-container summary,
+time, #snipcart-main-container mark, #snipcart-main-container audio, #snipcart-main-container video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+#snipcart-main-container article, #snipcart-main-container aside, #snipcart-main-container details, #snipcart-main-container figcaption, #snipcart-main-container figure, #snipcart-main-container 
+footer, #snipcart-main-container header, #snipcart-main-container hgroup, #snipcart-main-container menu, #snipcart-main-container nav, #snipcart-main-container section {
+	display: block;
+}
+#snipcart-main-container ol, #snipcart-main-container ul {
+	list-style: none;
+}
+#snipcart-main-container blockquote, #snipcart-main-container q {
+	quotes: none;
+}
+#snipcart-main-container blockquote:before, #snipcart-main-container blockquote:after,
+q:before, #snipcart-main-container q:after {
+	content: '';
+	content: none;
+}
+#snipcart-main-container table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*** Icon Fonts ***/
 
     @font-face {
 	    font-family: 'Snipcart';
