@@ -11,12 +11,9 @@
 	padding: 0;
 }
 
-#snipcart-main-container * {
-    -webkit-appearance: normal;
-}
-
 #snipcart-main-container select {
     background-color: #fff;
+    -webkit-appearance: normal;
 }
 
 #snipcart-main-container th {
