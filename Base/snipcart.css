@@ -414,6 +414,7 @@
     #snipcart-header #snipcart-total span.snipcart-label span {
         font: 16px/38px 'brandon_grotesquemedium', sans-serif;
         margin-left: 10px;
+        white-space: nowrap;
     }
     #snipcart-header #snipcart-total span.snipcart-amount {
          color: #fff; 
