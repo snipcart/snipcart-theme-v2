@@ -6,10 +6,23 @@
    License: none (public domain)
 */
 
-#snipcart-main-container li{
+#snipcart-main-container li {
 	margin: 0;
 	padding: 0;
 }
+
+#snipcart-main-container * {
+    -webkit-appearance: normal;
+}
+
+#snipcart-main-container select {
+    background-color: #fff;
+}
+
+#snipcart-main-container th {
+    vertical-align: middle;
+}
+
 /* HTML5 display-role reset for older browsers */
 #snipcart-main-container article, #snipcart-main-container aside, #snipcart-main-container details, #snipcart-main-container figcaption, #snipcart-main-container figure, #snipcart-main-container 
 footer, #snipcart-main-container header, #snipcart-main-container hgroup, #snipcart-main-container menu, #snipcart-main-container nav, #snipcart-main-container section {
