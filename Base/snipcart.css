@@ -294,7 +294,7 @@ q:before, #snipcart-main-container q:after {
             font-weight: bold; 
             text-decoration: none; 
             cursor: pointer; 
-            font: 12px/38px 'brandon_grotesquebold', sans-serif;
+            font: 10px/38px 'brandon_grotesquebold', sans-serif;
             height: 38px;
             text-transform: uppercase;
             border-radius: 3px;
@@ -407,34 +407,35 @@ q:before, #snipcart-main-container q:after {
     #snipcart-header #snipcart-title {
         display: block; 
         float: left; 
-        height: 95px; 
-        margin: 10px 30px 0;
+        height: 95px;
         color: #fff; 
         text-transform: uppercase; 
         font-weight: bold; 
         font: 24px brandon_grotesquelight, sans-serif;
         text-align: center;
-        position: relative;
+        position: absolute;
+        top: 10px;
+        left: 30px;
     }
 
     #snipcart-header #snipcart-header-right {
-         display: block;
-         width: 115px;
-         margin: 0 auto ;
-         height: 38px;
-         background: rgb(26,27,29); /* Old browsers */
+        display: inline-block;
+        height: 38px;
+        background: rgb(26,27,29); /* Old browsers */
         background: -moz-linear-gradient(top,  rgba(26,27,29,1) 1%, rgba(30,31,33,1) 100%); /* FF3.6+ */
         background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,rgba(26,27,29,1)), color-stop(100%,rgba(30,31,33,1))); /* Chrome,Safari4+ */
         background: -webkit-linear-gradient(top,  rgba(26,27,29,1) 1%,rgba(30,31,33,1) 100%); /* Chrome10+,Safari5.1+ */
         background: -o-linear-gradient(top,  rgba(26,27,29,1) 1%,rgba(30,31,33,1) 100%); /* Opera 11.10+ */
         background: -ms-linear-gradient(top,  rgba(26,27,29,1) 1%,rgba(30,31,33,1) 100%); /* IE10+ */
         background: linear-gradient(to bottom,  rgba(26,27,29,1) 1%,rgba(30,31,33,1) 100%); /* W3C */
-         position: relative;
-         top: 45px;
-         border-radius: 5px;
-         -moz-border-radius: 5px;
-         -webkit-border-radius: 5px;
-         border: 1px solid #2e3031;
+        position: relative;
+        margin-top: 45px;
+        border-radius: 5px;
+        -moz-border-radius: 5px;
+        -webkit-border-radius: 5px;
+        border: 1px solid #2e3031;
+        margin-left: 25px;
+
     }
     
     #snipcart-header #snipcart-total {
@@ -447,7 +448,6 @@ q:before, #snipcart-main-container q:after {
     }
     #snipcart-header #snipcart-total span { display: block; height: 50px; float: left; font-weight: bold; }
     #snipcart-header #snipcart-total span.snipcart-label {
-        width: 95px; 
         color: #898989; 
         text-transform: uppercase; 
         margin-right: 10px;
@@ -461,10 +461,7 @@ q:before, #snipcart-main-container q:after {
     #snipcart-header #snipcart-total span.snipcart-amount {
          color: #fff; 
          font: 16px/38px 'brandon_grotesquemedium', sans-serif;
-         float: right;
          margin-right: 10px;
-         position: absolute;
-         top: 2px;
          width: 100%;
          text-align: center;
     }
@@ -517,8 +514,7 @@ q:before, #snipcart-main-container q:after {
 
     ul#snipcart-steps li {
         display: block; 
-        height: inherit; 
-        width: 16.3%; 
+        height: inherit;
         float: left;
         border-right: 1px solid #c3c3c3;
         border-bottom: 1px solid #c3c3c3;
@@ -529,6 +525,30 @@ q:before, #snipcart-main-container q:after {
         background: -o-linear-gradient(top,  rgba(191,191,191,1) 1%,rgba(224,224,224,1) 100%); /* Opera 11.10+ */
         background: -ms-linear-gradient(top,  rgba(191,191,191,1) 1%,rgba(224,224,224,1) 100%); /* IE10+ */
         background: linear-gradient(to bottom,  rgba(191,191,191,1) 1%,rgba(224,224,224,1) 100%); /* W3C */
+        -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+        -moz-box-sizing: border-box; /* Firefox, other Gecko */
+        box-sizing: border-box; /* Opera/IE 8+ */
+    }
+    ul#snipcart-steps.nb-4 li {
+        width: 25%;
+    }
+    ul#snipcart-steps.nb-5 li {
+        width: 20%;
+    }
+    ul#snipcart-steps.nb-6 li {
+        width: 16.66%;
+    }
+    ul#snipcart-steps.nb-7 li {
+        width: 14.28%;
+    }
+    ul#snipcart-steps.nb-8 li {
+        width: 12.5%;
+    }
+    ul#snipcart-steps.nb-9 li {
+        width: 11.11%;
+    }
+    ul#snipcart-steps.nb-10 li {
+        width: 25%;
     }
     ul#snipcart-steps li#snipcart-confirm-step {
         border-right: none;
@@ -576,7 +596,7 @@ q:before, #snipcart-main-container q:after {
         color: #8e8e8e; 
         font-weight: bold; 
         line-height: 16px; 
-        font: 12px/16px 'brandon_grotesquebold', Arial, sans-serif;
+        font: 10px/16px 'brandon_grotesquebold', Arial, sans-serif;
         display: none;
     }
     ul#snipcart-steps li.active span.snipcart-step-text { color: #333333; }
@@ -1377,9 +1397,24 @@ q:before, #snipcart-main-container q:after {
 
 /*** / Footer ***/
 
+@media only screen and (min-width: 480px)
+{
+    #snipcart-header{
+       text-align: center;
+    }
+    #snipcart-header #snipcart-header-right {
+        margin-left: 0;
+    }
+    #snipcart-main-container a.snipcart-btn {
+        font-size: 12px;
+    }
+}
 
 @media only screen and (min-width: 768px)
 {
+    #snipcart-header #snipcart-header-right {
+        margin-top: 35px;
+    }
 
     #snipcart-main-container td, #snipcart-main-container th {
         display: table-cell; /* We have enough space so we list elems as cells */
@@ -1561,20 +1596,20 @@ q:before, #snipcart-main-container q:after {
     ul#snipcart-steps {
         height: 90px;
     }
+    #snipcart-header {
+        position: relative;
+    }
     #snipcart-header #snipcart-title {
         text-align: left;
         font: 30px/105px brandon_grotesquelight, sans-serif;
         padding-left: 25px; 
         width: auto;
         top: 0;
-        margin-top: 0;
-    }
-    #snipcart-header #snipcart-header-right {
-        top: 35px;
-        width: 200px;
+
+        position: absolute;
     }
     #snipcart-header #snipcart-total span.snipcart-label {
-        display: block;
+        display: inline;
     }
     #snipcart-cartitems-checkout-top {
         top: 35px;
@@ -1585,16 +1620,9 @@ q:before, #snipcart-main-container q:after {
     #snipcart-step-content-confirm .snipcart-confirm-column {
         width: 25%;
     }
-    #snipcart-main-container table.snipcart-list td {
-        padding: 20px;
-    }
 
     #snipcart-main-container table.snipcart-list .snipcart-item-td-1 {
         border-bottom: 1px solid #f1f1f2; /* We a border to the first cell to match the look of other cells */
-    }
-
-    ul#snipcart-steps li {
-        width: 16.55%;
     }
     
     /* We limit the width of the custom fields */
@@ -1635,7 +1663,6 @@ q:before, #snipcart-main-container q:after {
         width: 125px;
     }
     #snipcart-form .snipcart-form-column { width: 296px; }
-    ul#snipcart-steps li#snipcart-confirm-step { width: 157px; }
     .snipcart-checkout-container{
         width: 996px;
     }
@@ -1652,10 +1679,6 @@ q:before, #snipcart-main-container q:after {
         position: absolute;
         top: 36px;
         right: 45px;
-    }
-    
-    ul#snipcart-steps li {
-        width: 164px; 
     }
     #snipcart-main-container a.snipcart-btn {
          padding: 0 25px; 
