@@ -318,10 +318,6 @@ q:before, #snipcart-main-container q:after {
             text-shadow: 0px 1px 2px rgba(255, 255, 255, 0.3);
         }
 
-        #snipcart-main-container a.snipcart-btn-alt {
-            background-color: #ebe216;
-            color: #1d1f22;
-        }
 
     /* Buttons */
 
@@ -478,13 +474,13 @@ q:before, #snipcart-main-container q:after {
     #snipcart-logged-user { position: absolute; top: 40px; left: 25px; }
 
     #snipcart-main-content #snipcart-current-user {
-        display: block;
-        position: absolute;
-        top: -18px;
-        right: 50px;
-        line-height: 65px;
-        margin-left: 30px;
         color: #fff;
+    }
+    #snipcart-main-content #snipcart-current-user #snipcart-user-infos {
+        background-color: #333;
+        margin-bottom: 10px;
+        padding: 10px 5%;
+        width: 90%;
     }
     #snipcart-main-content #snipcart-current-user .snipcart-welcome {
         color: #a5a5a5 !important;
@@ -623,7 +619,7 @@ q:before, #snipcart-main-container q:after {
     }
 
     #snipcart-main-container input[type=text], #snipcart-main-container input[type=password] {
-        width: 95%; 
+        width: 50%; 
         background-image: none; 
         display: inline-block;
         padding: 4px 6px; 
@@ -881,14 +877,12 @@ q:before, #snipcart-main-container q:after {
             margin: 0;
             padding: 0;
         }
-
-        #snipcart-main-container .snipcart-customfield-checkbox .snipcart-customfield-element, #snipcart-main-container .snipcart-customfield-checkbox label {
-            display: inline;
-        }
         #snipcart-main-container .snipcart-customfield-checkbox .snipcart-customfield-element, #snipcart-main-container .snipcart-customfield-checkbox label, #snipcart-main-container .snipcart-customfield-checkbox .snipcart-customfield-element span {
-            display: inline;
+            display: inline-block;
         }
-
+        .snipcart-customfield-checkbox .snipcart-customfield-element {
+            margin-bottom: 10px;
+        }
         #snipcart-main-container .snipcart-customfield-checkbox label {
             margin: 3px 0 0 5px;
         }
@@ -1067,9 +1061,6 @@ q:before, #snipcart-main-container q:after {
         border-bottom: 1px solid #eaebec;
         padding-bottom: 15px;
     }
-    #snipcart-promocodes-dropdown {
-        display: none;
-    }
     .snipcart-promocode-container div.snipcart-error-message {
         margin: 0;
         padding: 0;
@@ -1127,7 +1118,6 @@ q:before, #snipcart-main-container q:after {
     .snipcart-two-thirds-block .snipcart-promocode-container {
         border-bottom: 1px solid #e9eaeb;
         padding-bottom: 15px;
-        display: none;
     }
 
     /* Columns */
@@ -1641,6 +1631,9 @@ q:before, #snipcart-main-container q:after {
 
 @media only screen and (min-width: 1024px)
 {
+    #snipcart-main-content #snipcart-current-user #snipcart-user-infos {
+        margin-bottom: 0;
+    }
     #snipcart-step-content-payment-method .snipcart-form-column-3, #snipcart-step-content-payment-method .snipcart-form-column-2 {
         margin-right: 0;
     }
@@ -1740,10 +1733,6 @@ q:before, #snipcart-main-container q:after {
 }
 
 @media print {
-
-    html body.snipcart-modal-opened *:not(.snipcart-checkout-container *) {
-        display: none;
-    }
 
     body.snipcart-modal-opened #snipcart-modal {
         position: static;
