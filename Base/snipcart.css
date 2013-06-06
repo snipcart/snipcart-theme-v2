@@ -480,7 +480,6 @@ q:before, #snipcart-main-container q:after {
         background-color: #333;
         margin-bottom: 10px;
         padding: 10px 5%;
-        width: 90%;
     }
     #snipcart-main-content #snipcart-current-user .snipcart-welcome {
         color: #a5a5a5 !important;
@@ -619,7 +618,7 @@ q:before, #snipcart-main-container q:after {
     }
 
     #snipcart-main-container input[type=text], #snipcart-main-container input[type=password] {
-        width: 50%; 
+        width: 95%; 
         background-image: none; 
         display: inline-block;
         padding: 4px 6px; 
