@@ -1733,60 +1733,60 @@ q:before, #snipcart-main-container q:after {
 
 @media print {
 
-    body.snipcart-modal-opened #snipcart-modal {
+    body.snipcart-open #snipcart-modal {
         position: static;
     }
 
-    body.snipcart-modal-opened #snipcart-overlay {
+    body.snipcart-open #snipcart-overlay {
         display: none;
     }
 
-    body.snipcart-modal-opened #snipcart-actions {
+    body.snipcart-open #snipcart-actions {
         display: none;
     }
 
-    body.snipcart-modal-opened .snipcart-checkout-container .snipcart-add-quantity, 
-    body.snipcart-modal-opened .snipcart-checkout-container .snipcart-minus-quantity, 
-    body.snipcart-modal-opened .snipcart-checkout-container .snipcart-remove-item, 
-    body.snipcart-modal-opened .snipcart-checkout-container #snipcart-logged-user, 
-    body.snipcart-modal-opened .snipcart-checkout-container #snipcart-continue-shopping-link {
+    body.snipcart-open .snipcart-checkout-container .snipcart-add-quantity, 
+    body.snipcart-open .snipcart-checkout-container .snipcart-minus-quantity, 
+    body.snipcart-open .snipcart-checkout-container .snipcart-remove-item, 
+    body.snipcart-open .snipcart-checkout-container #snipcart-logged-user, 
+    body.snipcart-open .snipcart-checkout-container #snipcart-continue-shopping-link {
         display: none !important;
     }
 
-    body.snipcart-modal-opened table#snipcart-items td.snipcart-item-td-3 span {
+    body.snipcart-open table#snipcart-items td.snipcart-item-td-3 span {
         border: none;
         background-color: inherit;
     }
 
-    body.snipcart-modal-opened #snipcart-header #snipcart-title {
+    body.snipcart-open #snipcart-header #snipcart-title {
         line-height: inherit;
         display: none;
     }
 
-    body.snipcart-modal-opened #snipcart-main-container span.snipcart-total-price {
+    body.snipcart-open #snipcart-main-container span.snipcart-total-price {
         color: inherit;
         font-weight: bold;
     }
 
-    body.snipcart-modal-opened #snipcart-header #snipcart-total span.snipcart-label {
+    body.snipcart-open #snipcart-header #snipcart-total span.snipcart-label {
         width: auto;
     }
 
-    body.snipcart-modal-opened #snipcart-header {
+    body.snipcart-open #snipcart-header {
         height: auto;
     }
 
-    body.snipcart-modal-opened #snipcart-header #snipcart-total span.snipcart-label span {
+    body.snipcart-open #snipcart-header #snipcart-total span.snipcart-label span {
         margin-top: 0;
     }
 
-    body.snipcart-modal-opened #snipcart-header #snipcart-total span.snipcart-amount {
+    body.snipcart-open #snipcart-header #snipcart-total span.snipcart-amount {
         font-size: inherit;
         color: inherit;
         font-weight: bold;
         line-height: inherit;
     }
-    body.snipcart-modal-opened .snipcart-print-no-show {
+    body.snipcart-open .snipcart-print-no-show {
         display: none;
     }
 }
