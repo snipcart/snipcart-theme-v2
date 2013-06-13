@@ -305,7 +305,7 @@ q:before, #snipcart-main-container q:after {
             box-shadow:         0px 1px 5px rgba(0, 0, 0, 0.25);
         }
 
-        #snipcart-main-container a.snipcart-next, #snipcart-main-container a.snipcart-finalize, #snipcart-main-container a.snipcart-mainaction, #snipcart-main-container a.snipcart-apply-promocode {
+        #snipcart-main-container a.snipcart-next, #snipcart-main-container a.snipcart-finalize, #snipcart-main-container a.snipcart-mainaction {
             background: rgb(135,219,87); /* Old browsers */
             background: -moz-linear-gradient(top,  rgba(135,219,87,1) 1%, rgba(101,203,54,1) 100%); /* FF3.6+ */
             background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,rgba(135,219,87,1)), color-stop(100%,rgba(101,203,54,1))); /* Chrome,Safari4+ */
@@ -798,7 +798,8 @@ q:before, #snipcart-main-container q:after {
 
 /*** Items ***/
 
-    table#snipcart-items th.snipcart-item-th-1, table#snipcart-items td.snipcart-item-td-1, table#snipcart-confirm-items td.snipcart-confirm-item-td-1, table#snipcart-confirm-items th.snipcart-confirm-item-td-1 {
+    table#snipcart-items th.snipcart-item-th-1,
+    table#snipcart-items td.snipcart-item-td-1 {
         text-align: left; 
         padding-left: 30px;
     }
@@ -892,7 +893,68 @@ q:before, #snipcart-main-container q:after {
 
     /* Custom Fields */
 
+    /* Items at confirm step */
+
+        #snipcart-step-content-confirm table#snipcart-items th {
+            background-color: #fbfbfb;
+            border-top: 1px solid #eeeeee;
+        }
+
+    /* Items at confirm step */
+
 /*** / Items ***/
+
+/*** Promo Codes ***/
+
+    #snipcart-promocodes {
+        background: rgb(247,247,247); /* Old browsers */
+        background: -moz-linear-gradient(top,  rgba(247,247,247,1) 0%, rgba(251,251,251,1) 5%); /* FF3.6+ */
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(247,247,247,1)), color-stop(5%,rgba(251,251,251,1))); /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(top,  rgba(247,247,247,1) 0%,rgba(251,251,251,1) 5%); /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(top,  rgba(247,247,247,1) 0%,rgba(251,251,251,1) 5%); /* Opera 11.10+ */
+        background: -ms-linear-gradient(top,  rgba(247,247,247,1) 0%,rgba(251,251,251,1) 5%); /* IE10+ */
+        background: linear-gradient(to bottom,  rgba(247,247,247,1) 0%,rgba(251,251,251,1) 5%); /* W3C */
+    }
+
+    #snipcart-promocodes .snipcart-promocode-form {
+        border-bottom: 1px solid #eaebec;
+        padding: 10px 20px;
+        text-align: center;
+    }
+
+    #snipcart-promocodes .snipcart-promocodes-list ul {
+        margin: 0;
+    }
+
+    #snipcart-promocodes .snipcart-promocodes-list li {
+        list-style-type: none;
+        border-bottom: 1px solid #eaebec;
+        padding: 10px 30px 10px;
+        text-transform: uppercase;
+        font: 14px 'brandon_grotesquebold', sans-serif;
+    }
+    
+    #snipcart-promocodes .snipcart-promocodes-list strong {
+        color: #76d443;
+    }         
+
+    #snipcart-promocodes div.snipcart-error-message {
+        margin: 0;
+        padding: 10px 30px;
+        color: red;
+        font: 14px 'brandon_grotesquebold', sans-serif;
+        border-bottom: 1px solid #eaebec;
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+    #snipcart-promocodes .snipcart-promocode-form input[type=text] {
+        width: 97%;
+        height: 29px;
+        display: block;
+    }
+
+/*** / Promo Codes ***/
 
 /*** Login ***/
 
@@ -996,129 +1058,8 @@ q:before, #snipcart-main-container q:after {
 
     #snipcart-step-content-confirm .snipcart-confirm-custom-field-name {
         font-weight: bold;
-    }
-    #snipcart-step-content-confirm #snipcart-actions { border-top: 0; }
-
-    .snipcart-promocodes-list ul {
-        margin: 0;
-    }
-    #snipcart-main-container .snipcart-promocodes-list li {
-        list-style-type: none;
-        border-bottom: 1px solid #eaebec;
-        padding: 10px 30px 20px;
-        text-transform: uppercase;
-        font: 14px 'brandon_grotesquebold', sans-serif;
-    }
-    .snipcart-step #snipcart-promocodes {
-        background: rgb(247,247,247); /* Old browsers */
-        background: -moz-linear-gradient(top,  rgba(247,247,247,1) 0%, rgba(251,251,251,1) 5%); /* FF3.6+ */
-        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(247,247,247,1)), color-stop(5%,rgba(251,251,251,1))); /* Chrome,Safari4+ */
-        background: -webkit-linear-gradient(top,  rgba(247,247,247,1) 0%,rgba(251,251,251,1) 5%); /* Chrome10+,Safari5.1+ */
-        background: -o-linear-gradient(top,  rgba(247,247,247,1) 0%,rgba(251,251,251,1) 5%); /* Opera 11.10+ */
-        background: -ms-linear-gradient(top,  rgba(247,247,247,1) 0%,rgba(251,251,251,1) 5%); /* IE10+ */
-        background: linear-gradient(to bottom,  rgba(247,247,247,1) 0%,rgba(251,251,251,1) 5%); /* W3C */
-    }
-
-    #snipcart-promocodes strong {
-        color: #ff3532;
-    }
-
-    .snipcart-step .snipcart-confirm-promocode {
-        text-align: right;
-        margin: 20px 20px 0 0;
-        margin-bottom: 20px;
-    }
-    .snipcart-step #snipcart-confirm-promocode {
-        height: 28px;
-        margin-bottom: 0;
-        position: relative;
-        top: -2px;
-    }
-
-    #snipcart-promocodes h4 {
-        text-align: center;
-        padding: 30px 0 20px;
-        border-bottom: 1px solid #eaebec;
-    }
-
-    #snipcart-promocodes h4 #snipcart-open-promocodes, .snipcart-two-thirds-block h4 #snipcart-open-promocodes {
-        margin-left: 10px;
-        font: 16px Arial;
-        font-weight: bold;
-        padding: 0 5px;
-        position: relative;
-        top: -2px;
-        width: 11px;
-    }
-    .snipcart-promocode-container div {
-        margin: 0 auto;
-        padding: 20px 0;
-        text-align: center;
-    }
+    }    
     
-    .snipcart-promocode-container {
-        border-bottom: 1px solid #eaebec;
-        padding-bottom: 15px;
-    }
-    .snipcart-promocode-container div.snipcart-error-message {
-        margin: 0;
-        padding: 0;
-        border: none;
-        color: red;
-        font: 14px 'brandon_grotesquebold', sans-serif;
-        text-transform: uppercase;
-        text-align: center;
-        width: auto;
-        position: relative;
-        top: 10px;
-    }
-    .snipcart-promocode-container input[type=text] {
-        width: 120px;
-        height: 28px;
-        position: relative;
-        top: 4px;
-    }
-    #snipcart-bottom-confirm {
-        background: rgb(246,246,246); /* Old browsers */
-        background: -moz-linear-gradient(top,  rgba(246,246,246,1) 0%, rgba(251,251,251,1) 5%); /* FF3.6+ */
-        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(246,246,246,1)), color-stop(5%,rgba(251,251,251,1))); /* Chrome,Safari4+ */
-        background: -webkit-linear-gradient(top,  rgba(246,246,246,1) 0%,rgba(251,251,251,1) 5%); /* Chrome10+,Safari5.1+ */
-        background: -o-linear-gradient(top,  rgba(246,246,246,1) 0%,rgba(251,251,251,1) 5%); /* Opera 11.10+ */
-        background: -ms-linear-gradient(top,  rgba(246,246,246,1) 0%,rgba(251,251,251,1) 5%); /* IE10+ */
-        background: linear-gradient(to bottom,  rgba(246,246,246,1) 0%,rgba(251,251,251,1) 5%); /* W3C */
-        border-bottom: 1px solid #e9e9eb;
-    }
-    #snipcart-notice {
-        width: 80%;
-        padding: 20px 10%;
-        border-top: 1px solid #f1f1f2;
-        float: left;
-        font: 12px Arial, sans-serif;
-    }
-    .snipcart-two-thirds-block {
-        width: 99%;
-        border-top: 1px solid #f1f1f2;
-        float: left;
-        border-left: 1px solid #e9eaeb;
-    }
-    .snipcart-two-thirds-block h4 {
-        text-align: center;
-        border-bottom: 1px solid #eaebec;
-        padding: 20px 30px;
-    }
-    #snipcart-bottom-confirm h4 {
-        font: 16px 'brandon_grotesquebold', sans-serif;
-        color: #1c1e21;
-        text-transform: uppercase;
-    }
-    .snipcart-two-thirds-block .snipcart-promocode-container div  {
-        border: none;
-    }
-    .snipcart-two-thirds-block .snipcart-promocode-container {
-        border-bottom: 1px solid #e9eaeb;
-        padding-bottom: 15px;
-    }
-
     /* Columns */
 
         #snipcart-step-content-confirm .snipcart-columns { margin: 30px 0; }
@@ -1145,55 +1086,28 @@ q:before, #snipcart-main-container q:after {
 
     /* Columns */
 
-    /* Items */
-
-        table#snipcart-confirm-items th { background-color: #fbfbfb; border-top: 1px solid #eeeeee; padding: 8px 0; }
-        table#snipcart-confirm-items th.snipcart-confirm-item-th-1, table#snipcart-confirm-items td.snipcsnipcart-btnart-confirm-item-td-1 { text-align: left; padding-left: 30px; }
-        table#snipcart-confirm-items td.snipcart-confirm-item-td-1 {
-            padding-right: 10%; 
-            width: 80%;
-            padding-left: 10%;
-        }
-
-        table#snipcart-confirm-items span.snipcart-product-name { font-size: 10pt; }
-        table#snipcart-confirm-items span.snipcart-product-id { font-size: 8pt; }
-
-        table#snipcart-confirm-items td.snipcart-confirm-item-td-2 {
-            text-align: left;
-        }
-        table#snipcart-confirm-items td.snipcart-confirm-item-td-3 {
-            width: 33%;
-            float: left;
-            border-right: 1px solid #f1f1f2;
-            margin: 10px 0;
-        }
-
-        table#snipcart-confirm-items td.snipcart-confirm-item-td-4 {
-            text-align: center; 
-            padding-right: 0; 
-            width: 33%;
-            float: left;
-            border-right: 1px solid #f1f1f2;
-            margin: 10px 0;
-        }
-        table#snipcart-confirm-items td.snipcart-confirm-item-td-5 {
-            margin: 10px 0;
-            float: left;
-            width: 33%;
-        }
-
-    /* Items */
-
     /* Prices */
+
+        #snipcart-bottom-confirm {
+            background: rgb(246,246,246); /* Old browsers */
+            background: -moz-linear-gradient(top,  rgba(246,246,246,1) 0%, rgba(251,251,251,1) 5%); /* FF3.6+ */
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(246,246,246,1)), color-stop(5%,rgba(251,251,251,1))); /* Chrome,Safari4+ */
+            background: -webkit-linear-gradient(top,  rgba(246,246,246,1) 0%,rgba(251,251,251,1) 5%); /* Chrome10+,Safari5.1+ */
+            background: -o-linear-gradient(top,  rgba(246,246,246,1) 0%,rgba(251,251,251,1) 5%); /* Opera 11.10+ */
+            background: -ms-linear-gradient(top,  rgba(246,246,246,1) 0%,rgba(251,251,251,1) 5%); /* IE10+ */
+            background: linear-gradient(to bottom,  rgba(246,246,246,1) 0%,rgba(251,251,251,1) 5%); /* W3C */
+            border-bottom: 1px solid #e9e9eb;            
+        }
+
+        #snipcart-order-totals {
+            padding-top: 12px;
+        }
 
         table#snipcart-confirm-prices { width: 100%; }
         table#snipcart-confirm-prices tr td {
-            padding: 5px 30px;
-            width: 25%;
-            float: left;
-        }
-        table#snipcart-confirm-prices tr td.snipcart-price-td-2 {
-            float: right;
+            display: table-cell;
+            padding: 0 30px 10px 30px;
+            vertical-align: top;
         }
         table#snipcart-confirm-prices tr td span {
             font: 14px 'brandon_grotesquebold', sans-serif; 
@@ -1201,23 +1115,18 @@ q:before, #snipcart-main-container q:after {
             text-transform: uppercase;
         }
         table#snipcart-confirm-prices tr td span small {
-            font: 14px 'brandon_grotesquebold', sans-serif; 
             color: #a1a2a2;
-            text-transform: uppercase;
         }
-        table#snipcart-confirm-prices tr td.snipcart-price-td-2 { text-align: right; }
-        table#snipcart-confirm-prices tr td.snipcart-price-td-2.snipcart-negative-price span { color: red; }
+        table#snipcart-confirm-prices tr td.snipcart-price-td-2 { text-align: right; white-space: nowrap; }
+        table#snipcart-confirm-prices tr td.snipcart-price-td-2.snipcart-negative-price span { color: #76d443; }
         table#snipcart-confirm-prices tr.snipcart-total-price-tr td span { color: #333; }
         table#snipcart-confirm-prices tr.snipcart-grand-total-price-tr td {
             padding-top: 15px; 
-            padding-bottom: 15px; 
-            border-top: 0;
+            padding-bottom: 15px;
             border-top: 1px solid #eaebec;
         }
         table#snipcart-confirm-prices tr.snipcart-grand-total-price-tr td span {
             font: 16px 'brandon_grotesquebold', sans-serif;
-            text-transform: uppercase;
-            color: #1c1e21;
         }
 
     /* Prices */
@@ -1486,12 +1395,6 @@ q:before, #snipcart-main-container q:after {
     #snipcart-step-content-login .snipcart-form-column.snipcart-form-column1 { border-right: 1px solid #e1e1e1; }
     #snipcart-step-content-login .snipcart-form-column.snipcart-form-column1, #snipcart-step-content-login .snipcart-form-column.snipcart-form-column2 { margin-top: 45px; }
     
-    .snipcart-promocode-container {
-        margin-left: 0;
-    }
-    .snipcart-promocode-container input[type=text] {
-        width: 150px;
-    }
     #snipcart-main-container .snipcart-form-error {
         width: 245px;
     }
@@ -1521,43 +1424,6 @@ q:before, #snipcart-main-container q:after {
     #snipcart-step-content-confirm .snipcart-confirm-column {
         margin: 0 0 0 30px;
     }
-    table#snipcart-confirm-items td.snipcart-confirm-item-td-1 {
-        padding-right: 30px; 
-        width: 445px;
-        padding-left: 30px;
-    }
-    table#snipcart-confirm-items td.snipcart-confirm-item-td-3 {
-        width: 120px;
-        margin: 0;
-        border-right: none;
-        float: none;
-    }
-    table#snipcart-confirm-items td.snipcart-confirm-item-td-4 {
-        text-align: right; 
-        padding-right: 30px; 
-        width: 90px;
-        margin: 0;
-        border-right: none;
-        float: none;
-    }
-    table#snipcart-confirm-items td.snipcart-confirm-item-td-5 {
-        margin: 0;
-        width: auto;
-        float: none;
-    }
-    #snipcart-notice {
-        width: auto;
-        padding: 20px 30px;
-    }
-    .snipcart-promocode-container div {
-        width: 350px;
-        margin: 0 auto;
-        padding: 20px 0;
-        text-align: left;
-    }
-    table#snipcart-confirm-prices tr td {
-        width: auto;
-    }
     #snipcart-thankyou-left span.snipcart-title {
         margin-top: 80px; 
     }
@@ -1579,9 +1445,7 @@ q:before, #snipcart-main-container q:after {
     table#snipcart-shipping-methods tr.selected td.snipcart-shipping-method-td-1 {
         background: url("img/selected.png") no-repeat 30px center !important;       
     }
-    table#snipcart-confirm-prices tr td {
-        float: none;
-    }
+
     ul#snipcart-steps {
         height: 90px;
     }
@@ -1625,6 +1489,21 @@ q:before, #snipcart-main-container q:after {
         }
 
     /* We limit the width of the custom fields */
+
+    /* Adjust the promo code format */
+
+        #snipcart-promocodes .snipcart-promocode-form {
+            padding: 10px 30px;
+        }
+
+        #snipcart-promocodes .snipcart-promocode-form input[type=text] {
+            width: 250px;
+            height: 29px;
+            display: inline-block;
+            margin: 0 7px 0 0;
+        }
+
+    /* We want the promo code form on same line */
 
 }
 
@@ -1706,13 +1585,7 @@ q:before, #snipcart-main-container q:after {
     }
     #snipcart-step-content-confirm .snipcart-confirm-column {
         width: 296px;
-    }
-    #snipcart-notice {
-        width: 260px;
-    }
-    .snipcart-two-thirds-block {
-        width: 660px;
-    }
+    }    
     #snipcart-thankyou-left {
         width: 663px; 
     }
