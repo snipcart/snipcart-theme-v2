@@ -20,6 +20,9 @@
 }
 
 /* HTML5 display-role reset for older browsers */
+#snipcart-main-container, #snipcart-main-container p {
+    line-height: normal;
+}
 #snipcart-main-container article, #snipcart-main-container aside, #snipcart-main-container details, #snipcart-main-container figcaption, #snipcart-main-container figure, #snipcart-main-container 
 footer, #snipcart-main-container header, #snipcart-main-container hgroup, #snipcart-main-container menu, #snipcart-main-container nav, #snipcart-main-container section {
 	display: block;
