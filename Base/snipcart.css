@@ -484,6 +484,12 @@ q:before, #snipcart-main-container q:after {
         margin-bottom: 10px;
         padding: 10px 5%;
     }
+    #snipcart-main-content #snipcart-global-notices.snipcart-error {
+        margin-bottom: 0px;
+        padding: 10px 5%;
+        background-color: red;
+        color: white;
+    }
     #snipcart-main-content #snipcart-current-user .snipcart-welcome {
         color: #a5a5a5 !important;
     }
