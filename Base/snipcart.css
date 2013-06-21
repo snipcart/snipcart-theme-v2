@@ -1,47 +1,4 @@
 ﻿@charset "utf-8";
-/* CSS Document */
-
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-
-#snipcart-main-container li {
-	margin: 0;
-	padding: 0;
-}
-
-#snipcart-main-container select {
-    background-color: #fff;
-}
-
-#snipcart-main-container th {
-    vertical-align: middle;
-}
-
-/* HTML5 display-role reset for older browsers */
-#snipcart-main-container, #snipcart-main-container p {
-    line-height: normal;
-}
-#snipcart-main-container article, #snipcart-main-container aside, #snipcart-main-container details, #snipcart-main-container figcaption, #snipcart-main-container figure, #snipcart-main-container 
-footer, #snipcart-main-container header, #snipcart-main-container hgroup, #snipcart-main-container menu, #snipcart-main-container nav, #snipcart-main-container section {
-	display: block;
-}
-#snipcart-main-container ol, #snipcart-main-container ul {
-	list-style: none;
-}
-#snipcart-main-container blockquote, #snipcart-main-container q {
-	quotes: none;
-}
-#snipcart-main-container blockquote:before, #snipcart-main-container blockquote:after,
-q:before, #snipcart-main-container q:after {
-	content: '';
-	content: none;
-}
-#snipcart-main-container table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
 
 /*** Icon Fonts ***/
 
@@ -165,6 +122,58 @@ q:before, #snipcart-main-container q:after {
 
 /*** / Custom Fonts ***/
 
+/*** Styles Resetting ***/
+
+    #snipcart-main-container div,
+    #snipcart-main-container span,
+    #snipcart-main-container h1,
+    #snipcart-main-container h2,
+    #snipcart-main-container h3,
+    #snipcart-main-container h4,
+    #snipcart-main-container p,
+    #snipcart-main-container a,
+    #snipcart-main-container em,
+    #snipcart-main-container img,
+    #snipcart-main-container small,
+    #snipcart-main-container strong,
+    #snipcart-main-container ol,
+    #snipcart-main-container ul,
+    #snipcart-main-container li,
+    #snipcart-main-container fieldset,
+    #snipcart-main-container form,
+    #snipcart-main-container label,
+    #snipcart-main-container legend,
+    #snipcart-main-container table,
+    #snipcart-main-container caption,
+    #snipcart-main-container tbody,
+    #snipcart-main-container tfoot,
+    #snipcart-main-container thead,
+    #snipcart-main-container tr,
+    #snipcart-main-container th,
+    #snipcart-main-container td {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-size: 100%;
+        font: inherit;
+        line-height: normal;
+    }
+
+    #snipcart-main-container table {
+        border-collapse: collapse;
+        border-spacing: 0;
+    }
+
+    #snipcart-main-container table th, #snipcart-main-container table td {
+        vertical-align: middle;
+    }
+
+    #snipcart-main-container ol, #snipcart-main-container ul {
+	    list-style: none;
+    }
+
+/*** Styles Resetting ***/
+
 /*** Main Body ***/
 
     body.snipcart-open {
@@ -213,7 +222,7 @@ q:before, #snipcart-main-container q:after {
 
 /*** General Styles ***/
 
-    #snipcart-main-container .clear, #snipcart-main-container span.snipcart-clear {
+    #snipcart-main-container span.snipcart-clear {
         display: block;
         clear: both;
     }
@@ -231,6 +240,12 @@ q:before, #snipcart-main-container q:after {
 
     #snipcart-main-content { background-color: #ffffff; width: 100%; }
 
+    #snipcart-main-container .snipcart-has-fl-elems:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
     #snipcart-main-container a {
         color: #87db57;
     }
@@ -242,50 +257,34 @@ q:before, #snipcart-main-container q:after {
         margin: 0;
     }
 
-    /* Errors */
+    #snipcart-main-container .snipcart-full-width-text {
+        padding: 50px 30px;
+    }
 
-        #snipcart-global-errors ul { display: block; list-style: none; margin: 0 0 15px 30px; }
-        #snipcart-global-errors ul li { display: block; list-style: none; margin: 0 0 5px 0; padding: 0; color: red; text-transform: uppercase; }
+    #snipcart-main-container .snipcart-full-width-text span.snipcart-title {
+        padding-bottom: 10px; 
+        display: block; 
+        margin-top: 20px; 
+        text-transform: uppercase; 
+        color: #333333; 
+        font-size: 16pt; 
+        font-weight: bold; 
+        text-align: center;
+        font-family: 'brandon_grotesquebold';
+    }
+    #snipcart-main-container .snipcart-full-width-text span.snipcart-title span { color: #333; }
+    #snipcart-main-container .snipcart-full-width-text span.snipcart-subtitle {
+        font-size: 14px;
+        font-family: 'brandon_grotesquebold';
+        text-transform: uppercase;
+        text-align: center;
+        display: block;
+        font-weight: bold;
+    }
 
-        #snipcart-main-container .snipcart-errors ul {
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        #snipcart-main-container .snipcart-errors {
-            display: block;
-            color: red;
-            font: 14px 'brandon_grotesqueregular';
-            padding-bottom: 10px;
-        }
-
-        #snipcart-main-container .snipcart-errors.snipcart-centered-errors {
-            text-align: center;
-        }
-
-        #snipcart-main-container .snipcart-form-error {
-            display: block;
-            color: #fff;
-            text-align: center;
-            background: rgb(239,37,58); /* Old browsers */
-            background: -moz-linear-gradient(top,  rgba(239,37,58,1) 0%, rgba(232,20,35,1) 100%); /* FF3.6+ */
-            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(239,37,58,1)), color-stop(100%,rgba(232,20,35,1))); /* Chrome,Safari4+ */
-            background: -webkit-linear-gradient(top,  rgba(239,37,58,1) 0%,rgba(232,20,35,1) 100%); /* Chrome10+,Safari5.1+ */
-            background: -o-linear-gradient(top,  rgba(239,37,58,1) 0%,rgba(232,20,35,1) 100%); /* Opera 11.10+ */
-            background: -ms-linear-gradient(top,  rgba(239,37,58,1) 0%,rgba(232,20,35,1) 100%); /* IE10+ */
-            background: linear-gradient(to bottom,  rgba(239,37,58,1) 0%,rgba(232,20,35,1) 100%); /* W3C */
-            border: solid 1px #bc101c;
-            padding: 5px;
-            width: 85%;
-            margin-top: -9px;
-            margin-bottom: 9px;
-            border-radius: 3px;
-            -moz-border-radius: 3px;
-            -webkit-border-radius: 3px;
-        }
-    
-    /* / Errors */
+    #snipcart-main-container .snipcart-centered-text {
+        text-align: center;
+    }  
 
     /* Buttons */
 
@@ -321,14 +320,13 @@ q:before, #snipcart-main-container q:after {
             text-shadow: 0px 1px 2px rgba(255, 255, 255, 0.3);
         }
 
-
     /* Buttons */
 
     /* Bottom bar containing action buttons */
 
-        #snipcart-actions, .snipcart-additional-option {
+        div#snipcart-actions, div.snipcart-additional-option {
             height: 75px; 
-            padding: 0 20px 10px;
+            padding: 0 20px;
             border-top: 1px solid #eeeeee;
             background: rgb(250,250,250); /* Old browsers */
             background: -moz-linear-gradient(top,  rgba(250,250,250,1) 1%, rgba(255,255,255,1) 5%, rgba(240,240,240,1) 100%); /* FF3.6+ */
@@ -339,7 +337,7 @@ q:before, #snipcart-main-container q:after {
             background: linear-gradient(to bottom,  rgba(250,250,250,1) 1%,rgba(255,255,255,1) 5%,rgba(240,240,240,1) 100%); /* W3C */
         }
 
-        #snipcart-actions a.snipcart-next, #snipcart-actions a.snipcart-finalize { margin-top: 20px; float: right; margin-right: 10px; }
+        #snipcart-actions a.snipcart-next, #snipcart-actions a.snipcart-finalize { margin-top: 20px; float: right; }
         #snipcart-actions a.snipcart-previous { margin-top: 20px; float: left; }
         #snipcart-actions a.snipcart-previous.snipcart-spacing { margin-left: 10px; }
 
@@ -376,23 +374,10 @@ q:before, #snipcart-main-container q:after {
 
 /*** / General Styles ***/
 
-/*** Custom styles for mobile version ***/
-
-    #snipcart-main-container td, #snipcart-main-container th {
-        display: block; /* We want cells to use the full width */
-    }
-
-    #snipcart-main-container table.snipcart-list .snipcart-no-customfields {
-        border: 0;
-        padding: 0;
-        /* We don't want to see the empty cell on mobile version */
-    }
-
-/*** / Custom styles for mobile version ***/
-
 /*** Header ***/
 
     #snipcart-header { 
+        position: relative;
         height: 105px;
         background: rgb(48,50,52); /* Old browsers */
         background: -moz-linear-gradient(top,  rgba(48,50,52,1) 0%, rgba(30,31,33,1) 100%); /* FF3.6+ */
@@ -414,10 +399,10 @@ q:before, #snipcart-main-container q:after {
         text-align: center;
         position: absolute;
         top: 10px;
-        left: 30px;
+        left: 20px;
     }
 
-    #snipcart-header #snipcart-header-right {
+    #snipcart-header #snipcart-header-total {
         display: inline-block;
         height: 38px;
         background: rgb(26,27,29); /* Old browsers */
@@ -433,37 +418,40 @@ q:before, #snipcart-main-container q:after {
         -moz-border-radius: 5px;
         -webkit-border-radius: 5px;
         border: 1px solid #2e3031;
-        margin-left: 25px;
-
+        margin-left: 20px;
     }
     
     #snipcart-header #snipcart-total {
         display: block;
         border: 1px solid #17181a;
         border-radius: 6px;
-         -moz-border-radius: 6px;
-         -webkit-border-radius: 6px;
-         height: 95%;
+        -moz-border-radius: 6px;
+        -webkit-border-radius: 6px;
+        height: 95%;
     }
-    #snipcart-header #snipcart-total span { display: block; height: 50px; float: left; font-weight: bold; }
+    #snipcart-header #snipcart-total span {
+         display: block;
+         float: left;
+         font-weight: bold;
+         text-transform: uppercase;
+         font: 16px/38px 'brandon_grotesquemedium', sans-serif;
+    }
+    
     #snipcart-header #snipcart-total span.snipcart-label {
         color: #898989; 
-        text-transform: uppercase; 
-        margin-right: 10px;
-        display: none;
+        display: none;        
     }
+
     #snipcart-header #snipcart-total span.snipcart-label span {
-        font: 16px/38px 'brandon_grotesquemedium', sans-serif;
         margin-left: 10px;
         white-space: nowrap;
     }
+
     #snipcart-header #snipcart-total span.snipcart-amount {
-         color: #fff; 
-         font: 16px/38px 'brandon_grotesquemedium', sans-serif;
-         margin-right: 10px;
-         width: 100%;
-         text-align: center;
+         color: #fff;
+         margin: 0 10px;
     }
+
     #snipcart-header #snipcart-total span.snipcart-amount.snipcart-with-promocode {
         color: #76d443;
     }
@@ -513,7 +501,6 @@ q:before, #snipcart-main-container q:after {
         background: -ms-linear-gradient(top,  rgba(191,191,191,1) 1%,rgba(224,224,224,1) 100%); /* IE10+ */
         background: linear-gradient(to bottom,  rgba(191,191,191,1) 1%,rgba(224,224,224,1) 100%); /* W3C */
         position: relative;
-        top: -10px;
     }
 
     ul#snipcart-steps li {
@@ -572,72 +559,116 @@ q:before, #snipcart-main-container q:after {
     ul#snipcart-steps li span { display: block; }
     
     ul#snipcart-steps li span.snipcart-step-number {
-       -webkit-border-radius: 30px; 
-       -moz-border-radius: 30px; 
-       border-radius: 30px; 
+       -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+        -moz-box-sizing: border-box; /* Firefox, other Gecko */
+        box-sizing: border-box; /* Opera/IE 8+ */
        background-color: transparent; 
        height: 29px; 
-       width: 49px; 
+       width: 100%; 
        line-height: 29px; 
        text-align: center; 
-       margin: 18px 0 0 -3px; 
+       margin: 18px 0 0 0; 
        color: #999; 
        font-weight: bold; 
        font: 22pt 'Snipcart';
-       width: 50px; 
-       margin-left: auto; 
-       margin-right: auto;
     }
-    ul#snipcart-steps li.active span.snipcart-step-number { background-color: transparent; color: #333; }
+    ul#snipcart-steps li.active span.snipcart-step-number { color: #333; }
 
     ul#snipcart-steps li {
         cursor: pointer;
     }
-    ul#snipcart-steps li span.snipcart-step-text {
-        width: 80px;
-        margin: 13px 0 0 4px; 
-        text-transform: uppercase; 
-        color: #8e8e8e; 
-        font-weight: bold; 
-        line-height: 16px; 
-        font: 10px/16px 'brandon_grotesquebold', Arial, sans-serif;
-        display: none;
+    ul#snipcart-steps li span.snipcart-step-text {        
+        display: none; /* No text on mobile version */
     }
     ul#snipcart-steps li.active span.snipcart-step-text { color: #333333; }
     
 /*** / Steps ***/
 
-/*** Forms ***/
+/*** Columns ***/
 
-    #snipcart-form { padding: 30px 0; }
-
-    #snipcart-form .snipcart-form-column { margin-left: 30px; margin-right: 30px; }
-    #snipcart-form .snipcart-form-column.snipcart-form-column-3 { border-right: 0; }
-    #snipcart-form .snipcart-form-column a.snipcart-mainaction {
-        text-align: center;
-        margin-top: 20px;
+    #snipcart-main-content .snipcart-columns {
+        margin: 20px 0;
+    }
+    
+    #snipcart-main-content .snipcart-column {
+        padding: 0 20px;
     }
 
+    #snipcart-main-content .snipcart-column.highligthed {   
+        background: rgb(246,246,246); /* Old browsers */
+        background: -moz-linear-gradient(left,  rgba(246,246,246,1) 1%, rgba(251,251,251,1) 5%); /* FF3.6+ */
+        background: -webkit-gradient(linear, left top, right top, color-stop(1%,rgba(246,246,246,1)), color-stop(5%,rgba(251,251,251,1))); /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(left,  rgba(246,246,246,1) 1%,rgba(251,251,251,1) 5%); /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(left,  rgba(246,246,246,1) 1%,rgba(251,251,251,1) 5%); /* Opera 11.10+ */
+        background: -ms-linear-gradient(left,  rgba(246,246,246,1) 1%,rgba(251,251,251,1) 5%); /* IE10+ */
+        background: linear-gradient(to right,  rgba(246,246,246,1) 1%,rgba(251,251,251,1) 5%); /* W3C */
+    }    
+    #snipcart-main-content .snipcart-column span.snipcart-title {
+        text-transform: uppercase; 
+        display: block; 
+        padding: 20px 0 0 0;
+        font: 16px 'brandon_grotesquebold', sans-serif; 
+        color: #333333;
+    }
+
+    /* Boxed columns */
+
+        #snipcart-main-content .snipcart-columns.snipcart-boxed-columns {
+            margin: 0;
+        }
+
+        #snipcart-main-content .snipcart-columns.snipcart-boxed-columns .snipcart-action {
+            display: block;
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        #snipcart-main-content .snipcart-columns.snipcart-boxed-columns .snipcart-column-2 {
+            border-top: 1px solid #f1f1f2;
+        }
+
+        #snipcart-main-content .snipcart-boxed-columns .snipcart-column {
+            padding-bottom: 20px;
+        }
+
+    /* Boxed columns */
+
+/*** / Columns ***/
+
+/*** Forms ***/
+    
     #snipcart-main-container label {
         font: 11px 'brandon_grotesquebold';
         text-transform: uppercase; 
         display: block;
         color: #333;
         opacity: 0.7;
+        margin-top: 10px;      
     }
 
-    #snipcart-main-container input[type=text], #snipcart-main-container input[type=password] {
-        width: 95%; 
-        background-image: none; 
-        display: inline-block;
-        padding: 4px 6px; 
-        margin-bottom: 9px; 
+    #snipcart-main-container input[type=text], 
+    #snipcart-main-container input[type=password],  
+    #snipcart-main-container select {
+        -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+        -moz-box-sizing: border-box; /* Firefox, other Gecko */
+        box-sizing: border-box; /* Opera/IE 8+ */
+        width: 100%;
+        height: 38px;
+        display: block;
+        padding: 8px 6px;
+        margin: 5px 0 0 0;
         font-size: 14px; 
         line-height: 20px; 
         color: #555; 
+        background-image: none; 
+        background-color: white;
         -webkit-border-radius: 3px; 
         -moz-border-radius: 3px; 
         border-radius: 3px; 
+        border: 1px solid #e5e5e5;
+    }
+
+    #snipcart-main-container input[type=text], #snipcart-main-container input[type=password] {                       
         background: rgb(246,246,246); /* Old browsers */
         background: -moz-radial-gradient(center, ellipse cover,  rgba(246,246,246,1) 0%, rgba(255,255,255,1) 5%); /* FF3.6+ */
         background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(246,246,246,1)), color-stop(5%,rgba(255,255,255,1))); /* Chrome,Safari4+ */
@@ -645,7 +676,6 @@ q:before, #snipcart-main-container q:after {
         background: -o-radial-gradient(center, ellipse cover,  rgba(246,246,246,1) 0%,rgba(255,255,255,1) 5%); /* Opera 12+ */
         background: -ms-radial-gradient(center, ellipse cover,  rgba(246,246,246,1) 0%,rgba(255,255,255,1) 5%); /* IE10+ */
         background: radial-gradient(ellipse at center,  rgba(246,246,246,1) 0%,rgba(255,255,255,1) 5%); /* W3C */
-        border: 1px solid #e5e5e5; 
         -webkit-transition: border linear 0.2s, box-shadow linear 0.2s; 
         -moz-transition: border linear 0.2s, box-shadow linear 0.2s; 
         -o-transition: border linear 0.2s, box-shadow linear 0.2s; 
@@ -654,64 +684,29 @@ q:before, #snipcart-main-container q:after {
     #snipcart-main-container input[type=text].snipcart-has-errors, #snipcart-main-container input[type=password].snipcart-has-errors { border-color: red; outline: 0; outline: thin dotted \9; /* IE6-9 */ -webkit-box-shadow: inset 0 1px 1px gainsboro, 0 0 8px red; -moz-box-shadow: inset 0 1px 1px gainsboro, 0 0 8px red; box-shadow: inset 0 1px 1px gainsboro, 0 0 8px red; color: red; }
     #snipcart-main-container input[type=text]:focus, #snipcart-main-container input[type=password]:focus { border-color: #333; outline: 0; outline: thin dotted \9; /* IE6-9 */ -webkit-box-shadow: inset 0 1px 1px gainsboro, 0 0 8px #333; -moz-box-shadow: inset 0 1px 1px gainsboro, 0 0 8px #333; box-shadow: inset 0 1px 1px gainsboro, 0 0 8px #333; }
 
-    #snipcart-main-container select {
-        width: 95%;
-        height: 38px;
-        margin: 0; 
-        display: inline-block; 
-        padding: 8px 6px;
-        margin-bottom: 9px; 
-        font-size: 14px; 
-        line-height: 20px; 
-        color: #555555; 
-        border: 1px solid #e5e5e5; 
-        -webkit-border-radius: 3px; 
-        -moz-border-radius: 3px; 
-        border-radius: 3px;
-    }
-
-    #snipcart-form .snipcart-same-as-billing-address { margin: 0 0 20px 30px; }
-    #snipcart-form .snipcart-same-as-billing-address a { display: inline-block; height: 17px; line-height: 17px; text-decoration: none; color: inherit; font-weight: bold; background: url("img/checkbox.png") left center no-repeat; padding-left: 25px; }
-    #snipcart-form .snipcart-same-as-billing-address a:hover { color: #333333; }
-    #snipcart-form .snipcart-same-as-billing-address.same a { background-image: url("img/selected.png"); }
-    #snipcart-form .snipcart-form-field {
+    #snipcart-main-container .snipcart-same-as-billing-address { margin: 20px 0 0 20px; }
+    #snipcart-main-container .snipcart-same-as-billing-address a { display: inline-block; height: 17px; line-height: 17px; text-decoration: none; color: inherit; font-weight: bold; background: url("img/checkbox.png") left center no-repeat; padding-left: 25px; }
+    #snipcart-main-container .snipcart-same-as-billing-address a:hover { color: #333333; }
+    #snipcart-main-container .snipcart-same-as-billing-address.same a { background-image: url("img/selected.png"); }
+    #snipcart-main-container .snipcart-form-field {
         position: relative;
         display: block;
     }
 
-    #snipcart-form select#snipcart-billing-expmonth {
-        width: 48%;
+    #snipcart-main-container select#snipcart-billing-expmonth,
+    #snipcart-main-container select#snipcart-billing-expyear {
         float: left;
-        margin-right: 10px;
+        width: 49%;        
     }
-    #snipcart-form select#snipcart-billing-expyear {
-        width: 47%;
-    }
-    #snipcart-form .snipcart-tooltip {
-        font: 14px 'brandon_grotesquebold', sans-serif;
-        color: #26282a;
-        position: absolute;
-        right: 40px;
-        top: 0;
-    }
-
-    #snipcart-form .snipcart-tooltip-content {
-        position: absolute;
-        background-color: #fff;
-        padding: 10px;
-        border: 1px solid #333;
-        border-radius: 10px;
-        -moz-border-radius: 10px;
-        -webkit-border-radius: 10px;
-        z-index: 10;
-    }
-    #snipcart-form .snipcart-tooltip-content img {
-        max-width: 100%;
-        display: block;
-        margin: 10px auto 0;
+    #snipcart-main-container select#snipcart-billing-expyear {
+        margin-left: 2%;
     }
 
     /* Full Width Forms */
+
+        #snipcart-form.snipcart-full-width-form {
+            padding: 10px 0 20px 0;
+        }
 
         #snipcart-form.snipcart-full-width-form .snipcart-centered-field {
             text-align: center;
@@ -732,6 +727,79 @@ q:before, #snipcart-main-container q:after {
 
     /* Full Width Forms */
 
+    /* Errors */
+
+        #snipcart-global-errors ul { display: block; list-style: none; margin: 0 0 15px 30px; }
+        #snipcart-global-errors ul li { display: block; list-style: none; margin: 0 0 5px 0; padding: 0; color: red; text-transform: uppercase; }
+
+        #snipcart-main-container .snipcart-errors ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        #snipcart-main-container .snipcart-errors {
+            display: block;
+            color: red;
+            font: 14px 'brandon_grotesqueregular';
+        }
+
+        #snipcart-main-container .snipcart-errors.snipcart-centered-errors {
+            text-align: center;
+        }
+
+        #snipcart-main-container span.snipcart-form-error {
+            -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+            -moz-box-sizing: border-box; /* Firefox, other Gecko */
+            box-sizing: border-box; /* Opera/IE 8+ */
+            display: block;
+            color: #fff;
+            text-align: center;
+            background: rgb(239,37,58); /* Old browsers */
+            background: -moz-linear-gradient(top,  rgba(239,37,58,1) 0%, rgba(232,20,35,1) 100%); /* FF3.6+ */
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(239,37,58,1)), color-stop(100%,rgba(232,20,35,1))); /* Chrome,Safari4+ */
+            background: -webkit-linear-gradient(top,  rgba(239,37,58,1) 0%,rgba(232,20,35,1) 100%); /* Chrome10+,Safari5.1+ */
+            background: -o-linear-gradient(top,  rgba(239,37,58,1) 0%,rgba(232,20,35,1) 100%); /* Opera 11.10+ */
+            background: -ms-linear-gradient(top,  rgba(239,37,58,1) 0%,rgba(232,20,35,1) 100%); /* IE10+ */
+            background: linear-gradient(to bottom,  rgba(239,37,58,1) 0%,rgba(232,20,35,1) 100%); /* W3C */
+            border: solid 1px #bc101c;
+            padding: 5px;
+            width: 100%;
+            border-radius: 3px;
+            -moz-border-radius: 3px;
+            -webkit-border-radius: 3px;
+        }
+    
+    /* / Errors */
+
+    /* Tooltip */
+
+        #snipcart-form .snipcart-tooltip {
+            font: 14px 'brandon_grotesquebold', sans-serif;
+            color: #26282a;
+            position: absolute;
+            right: 40px;
+            top: 0;
+        }
+
+        #snipcart-form .snipcart-tooltip-content {
+            position: absolute;
+            background-color: #fff;
+            padding: 10px;
+            border: 1px solid #333;
+            border-radius: 10px;
+            -moz-border-radius: 10px;
+            -webkit-border-radius: 10px;
+            z-index: 10;
+        }
+        #snipcart-form .snipcart-tooltip-content img {
+            max-width: 100%;
+            display: block;
+            margin: 10px auto 0;
+        }
+
+    /* / Tooltip */
+
 /*** / Forms ***/
 
 /*** Lists ***/
@@ -744,112 +812,107 @@ q:before, #snipcart-main-container q:after {
         opacity: 0.7; 
         font: 11px 'brandon_grotesquebold', sans-serif;
         text-transform: uppercase;
-        height: 40px;
-        display: none;
-    }
-    #snipcart-main-container table.snipcart-list tr {
-        position: relative;
-        display: block;
-        clear: both;
-    }
-    #snipcart-main-container table.snipcart-list .snipcart-item-td-6 {
-        width: 10px;
-        height: 10px;
-        position: absolute;
-        top: 0;
-        right: 15px;
-    }
-   
-    #snipcart-main-container table.snipcart-list .snipcart-item-td-2 {
-        border-bottom: 1px solid #f1f1f2;
+        height: 40px;        
     }
 
-    #snipcart-main-container table.snipcart-list .snipcart-item-td-3, #snipcart-main-container table.snipcart-list .snipcart-item-td-4, #snipcart-main-container table.snipcart-list .snipcart-item-td-5 {
-        width: 32.33%;
-        float: left;
-        border-right: 1px solid #f1f1f2;
-        height: 20px;
-        margin: 10px 0;
-        border-top: none;
-        background: #fff !important;
+    #snipcart-main-container table.snipcart-list .snipcart-th-left,
+    #snipcart-main-container table.snipcart-list .snipcart-td-left {
+        text-align: left;
+        padding-left: 20px;
     }
-    #snipcart-main-container table.snipcart-list .snipcart-item-td-5 {
-        border-right: none;
+
+    #snipcart-main-container table.snipcart-list .snipcart-th-right,
+    #snipcart-main-container table.snipcart-list .snipcart-td-right {
+        text-align: right;
+        padding-right: 20px;
     }
     
-    #snipcart-main-container table.snipcart-list td { padding: 20px 0; text-align: center; border-top: 1px solid #eeeeee; }
+    #snipcart-main-container table.snipcart-list td { padding: 20px 0; text-align: center; border-top: 1px solid #f1f1f2; }
     #snipcart-main-container table.snipcart-list tr.odd td { background-color: #fbfbfb; }
-
     #snipcart-main-container table.snipcart-list td span { display: block; }
-
-    #snipcart-main-container table.snipcart-list span.snipcart-product-name {
+      
+    #snipcart-main-container table.snipcart-list span.snipcart-product-name,
+    #snipcart-main-container table.snipcart-list span.snipcart-shipping-method-name,
+    #snipcart-main-container table.snipcart-list span.snipcart-shipping-method-price,
+    #snipcart-main-container table.snipcart-list span.snipcart-confirm-item-quantity,
+    #snipcart-main-container table.snipcart-list span.snipcart-confirm-item-price,
+    #snipcart-main-container table.snipcart-list span.snipcart-confirm-item-total-price
+    {
         color: #333333; 
         font: 14px 'brandon_grotesquebold', sans-serif;
         text-transform: uppercase;
     }
-    #snipcart-main-container table.snipcart-list span.snipcart-product-id { font-weight: bold; color: #979797; font-size: 10pt; }
-    #snipcart-main-container table.snipcart-list span.snipcart-shipping-method-name {
-        font: 14px 'brandon_grotesquebold', sans-serif; 
-        color: #333333;
-        text-transform: uppercase;
+    #snipcart-main-container table.snipcart-list span.snipcart-product-id,
+    #snipcart-main-container table.snipcart-list span.snipcart-shipping-method-time 
+    {
+         font-weight: bold; color: #979797; font-size: 10pt;
     }
-    #snipcart-main-container table.snipcart-list span.snipcart-shipping-method-time { font-weight: bold; color: #979797; font-size: 10pt; }
-    #snipcart-main-container table.snipcart-list span.snipcart-shipping-method-price,
-    #snipcart-main-container table.snipcart-list span.snipcart-confirm-item-quantity,
-    #snipcart-main-container table.snipcart-list span.snipcart-confirm-item-price,
-    #snipcart-main-container table.snipcart-list span.snipcart-confirm-item-total-price {
-         font: 14px 'brandon_grotesquebold';
-         color: #333;
-    }
+
     #snipcart-main-container table.snipcart-list span.snipcart-confirm-item-quantity { color: #999999; }
 
 /*** / Lists ***/
 
 /*** Items ***/
 
-    table#snipcart-items th.snipcart-item-th-1,
-    table#snipcart-items td.snipcart-item-td-1 {
-        text-align: left; 
-        padding-left: 30px;
+    #snipcart-main-container table#snipcart-items tr {
+        position: relative;
+        display: block;
+        clear: both;
     }
-    table#snipcart-items th.snipcart-item-th-1 {
-        display: none;
-    }
-    table#snipcart-items td.snipcart-item-td-1 { padding-right: 30px; }
 
-    table#snipcart-items td.snipcart-item-td-2 {
+    #snipcart-main-container table#snipcart-items th {
+        display: none; /* No heading on mobile */
+    }
+
+    #snipcart-main-container table#snipcart-items td {
+        display: block; /* We want cells to use the full width */
+    }
+
+    #snipcart-main-container table#snipcart-items td.snipcart-td-1 {
+         padding-right: 20px;
+         border-top: 0;
+         border-bottom: 1px solid #f1f1f2;
+    }
+
+    #snipcart-main-container table#snipcart-items td.snipcart-td-2 {
         text-align: left;
+        padding: 10px 20px 20px 20px;
+        border-bottom: 1px solid #f1f1f2;
     }
 
-    table#snipcart-items td.snipcart-item-td-3,
-    table#snipcart-items td.snipcart-item-td-4,
-    table#snipcart-items td.snipcart-item-td-5 {
-        width: 120px;
+    #snipcart-main-container table#snipcart-items td.snipcart-td-2.snipcart-no-customfields {
+        border: 0;
+        padding: 0;
+        /* We don't want to see the empty cell on mobile version */
     }
 
-    table#snipcart-items td.snipcart-item-td-3 a,
-    table#snipcart-items td.snipcart-item-td-3 span {
-        display: inline-block;
+    #snipcart-main-container table#snipcart-items td.snipcart-td-3,
+    #snipcart-main-container table#snipcart-items td.snipcart-td-4,
+    #snipcart-main-container table#snipcart-items td.snipcart-td-5 {
+        -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+        -moz-box-sizing: border-box; /* Firefox, other Gecko */
+        box-sizing: border-box; /* Opera/IE 8+ */
+        width: 33.33333333333%;
+        float: left;
+        border-right: 1px solid #f1f1f2;
+        margin: 10px 0;
+        border-top: none;
+        background: #fff !important;
+    }   
+
+    #snipcart-main-container table#snipcart-items .snipcart-td-5 {
+        border-right: none;
     }
 
-    table#snipcart-items td.snipcart-item-td-3 { width: 140px; }
-    table#snipcart-items td.snipcart-item-td-3 a { height: 15px; width: 15px; font-family: Arial; font-size: 13pt; -webkit-border-radius: 30px; -moz-border-radius: 30px; border-radius: 30px; background-color: #e8e8e8; color: #1c1e21; line-height: 17px; text-align: center; text-decoration: none; }
-    table#snipcart-items td.snipcart-item-td-3 a.snipcart-minus-quantity { line-height: 13px; }
-
-    table#snipcart-items td.snipcart-item-td-3 span {
-        color: #333333; 
-        font-weight: bold; 
-        font: 14px 'brandon_grotesquebold', sans-serif; 
-        padding: 5px; 
-        margin: 0 5px; 
-        -webkit-border-radius: 5px; 
-        -moz-border-radius: 5px; 
-        border-radius: 5px; 
-        background-color: #ffffff;
+    #snipcart-main-container table#snipcart-items td.snipcart-td-6 {
+        width: 10px;
+        height: 10px;
+        position: absolute;
+        top: 0;
+        right: 15px;
     }
 
-    table#snipcart-items td.snipcart-item-td-6 { width: 60px; }
-    table#snipcart-items td.snipcart-item-td-6 a {
+    #snipcart-main-container table#snipcart-items td.snipcart-td-6 a {
         display: block; 
         width: 9px; 
         height: 9px; 
@@ -857,54 +920,65 @@ q:before, #snipcart-main-container q:after {
         background: url('img/remove-item.png') no-repeat 0 0;
     }
 
-    table#snipcart-items span.snipcart-product-description {
+    #snipcart-main-container table#snipcart-items .snipcart-item-quantity-triggers {
+        display: inline-block;
+    }
+
+    #snipcart-main-container table#snipcart-items .snipcart-item-quantity-triggers a,
+    #snipcart-main-container table#snipcart-items .snipcart-item-quantity-triggers span {
+        display: block;    
+        float: left;
+        height: 17px;
+        line-height: 17px;
+    }
+
+    #snipcart-main-container table#snipcart-items .snipcart-item-quantity-triggers a {
+         padding: 0 5px;
+         font-family: Arial;
+         font-size: 13pt;
+         -webkit-border-radius: 30px;
+         -moz-border-radius: 30px;
+         border-radius: 30px;
+         background-color: #e8e8e8;
+         color: #1c1e21;
+         text-align: center;
+         text-decoration: none;
+         height: 17px;
+         line-height: 19px;
+    }
+
+    #snipcart-main-container table#snipcart-items .snipcart-item-quantity-triggers a.snipcart-minus-quantity {
+        line-height: 14px;
+        /* The minus sign looks better when higher in the circle */
+    }
+
+    #snipcart-main-container table#snipcart-items .snipcart-item-quantity-triggers span {
+        color: #333333; 
+        font-weight: bold; 
+        font: 14px 'brandon_grotesquebold', sans-serif; 
+        margin: 0 8px;
+        background-color: #ffffff;
+    }
+
+    #snipcart-main-container table#snipcart-items span.snipcart-product-description {
         font-size: 9pt;    
     }
-    #snipcart-main-container table.snipcart-list td span.snipcart-thumbnail-wrapper {
-        width: 90px;
+    #snipcart-main-container table#snipcart-items span.snipcart-thumbnail-wrapper {
+        width: 75px;
         height: 65px;
-        display: inline-block;
         float: left;
-        margin-right: 12px;
         display: none;
     }
 
-    table#snipcart-items span.snipcart-thumbnail img, span.snipcart-thumbnail-wrapper img {
+    #snipcart-main-container table#snipcart-items span.snipcart-thumbnail img, #snipcart-main-container table#snipcart-items span.snipcart-thumbnail-wrapper img {
         max-width: 100%;
         max-height: 100%;
         display: block;
-        margin: 0 auto;
     }
-
-    /* Custom Fields */
-
-        #snipcart-main-container .snipcart-item-customfields {
-            padding: 0 20px;
-        }
-
-        #snipcart-main-container .snipcart-customfield-checkbox input {
-            margin: 0;
-            padding: 0;
-        }
-        #snipcart-main-container .snipcart-customfield-checkbox .snipcart-customfield-element, #snipcart-main-container .snipcart-customfield-checkbox label, #snipcart-main-container .snipcart-customfield-checkbox .snipcart-customfield-element span {
-            display: inline-block;
-        }
-        .snipcart-customfield-checkbox .snipcart-customfield-element {
-            margin-bottom: 10px;
-        }
-        #snipcart-main-container .snipcart-customfield-checkbox label {
-            margin: 3px 0 0 5px;
-        }
-
-        #snipcart-main-container .snipcart-item-customfields input[type=text] {
-            width: 93%; /* Little adjustment to fit with select with 95 % width */
-        }
-
-    /* Custom Fields */
 
     /* Items at confirm step */
 
-        #snipcart-step-content-confirm table#snipcart-items th {
+        #snipcart-step-content-confirm #snipcart-main-container table#snipcart-items th {
             background-color: #fbfbfb;
             border-top: 1px solid #eeeeee;
         }
@@ -912,6 +986,30 @@ q:before, #snipcart-main-container q:after {
     /* Items at confirm step */
 
 /*** / Items ***/
+
+/* Custom Fields */
+
+    #snipcart-main-container .snipcart-customfield-checkbox {
+        margin-top: 10px;
+    }
+    
+    #snipcart-main-container .snipcart-customfield-checkbox input {
+        margin: 0;
+        padding: 0;
+    }
+    #snipcart-main-container .snipcart-customfield-checkbox .snipcart-customfield-element,
+    #snipcart-main-container .snipcart-customfield-checkbox label,
+    #snipcart-main-container .snipcart-customfield-checkbox .snipcart-customfield-element span {
+        display: inline-block;
+    }
+    .snipcart-customfield-checkbox .snipcart-customfield-element {
+        margin-bottom: 10px;
+    }
+    #snipcart-main-container .snipcart-customfield-checkbox label {
+        margin: 3px 0 0 5px;
+    }
+
+/* Custom Fields */
 
 /*** Promo Codes ***/
 
@@ -929,6 +1027,10 @@ q:before, #snipcart-main-container q:after {
         border-bottom: 1px solid #eaebec;
         padding: 10px 20px;
         text-align: center;
+    }
+
+    #snipcart-promocodes .snipcart-promocode-form input[type=text] {
+        margin-bottom: 10px;
     }
 
     #snipcart-promocodes .snipcart-promocodes-list ul {
@@ -957,111 +1059,16 @@ q:before, #snipcart-main-container q:after {
         text-align: center;
     }
 
-    #snipcart-promocodes .snipcart-promocode-form input[type=text] {
-        width: 97%;
-        height: 29px;
-        display: block;
-    }
-
 /*** / Promo Codes ***/
 
-/*** Login ***/
-
-    #snipcart-login-forgotpassword-link {
-        color: #a5a5a5;
-        display: block;
-    }
-    #snipcart-step-content-login #snipcart-form { padding: 0; position: relative; }
-
-    #snipcart-step-content-login .snipcart-form-column.snipcart-form-column1 {
-        margin-top: 20px;
-    }
-
-    #snipcart-step-content-login .snipcart-form-column.snipcart-form-column1, #snipcart-step-content-login .snipcart-form-column.snipcart-form-column2 { padding-bottom: 20px; }
-    #snipcart-step-content-login .snipcart-form-column.snipcart-form-column1 { border-bottom: 1px solid #f1f1f2; margin-right: 30px; margin-bottom: 20px; }
-    
-    #snipcart-step-content-login .snipcart-form-column.snipcart-form-column1 div { padding-right: 30px; }  
-
-    #snipcart-step-content-login .snipcart-form-column.snipcart-form-column3 {   
-        margin-top: 20px;
-        margin-left: 0;
-        padding-bottom: 20px;
-        border-left: 1px solid #f1f1f2;
-        background: rgb(246,246,246); /* Old browsers */
-        background: -moz-linear-gradient(left,  rgba(246,246,246,1) 1%, rgba(251,251,251,1) 5%); /* FF3.6+ */
-        background: -webkit-gradient(linear, left top, right top, color-stop(1%,rgba(246,246,246,1)), color-stop(5%,rgba(251,251,251,1))); /* Chrome,Safari4+ */
-        background: -webkit-linear-gradient(left,  rgba(246,246,246,1) 1%,rgba(251,251,251,1) 5%); /* Chrome10+,Safari5.1+ */
-        background: -o-linear-gradient(left,  rgba(246,246,246,1) 1%,rgba(251,251,251,1) 5%); /* Opera 11.10+ */
-        background: -ms-linear-gradient(left,  rgba(246,246,246,1) 1%,rgba(251,251,251,1) 5%); /* IE10+ */
-        background: linear-gradient(to right,  rgba(246,246,246,1) 1%,rgba(251,251,251,1) 5%); /* W3C */
-    }
-    #snipcart-step-content-login .snipcart-form-column.snipcart-form-column3 div { padding: 45px 30px 0 30px; }
-    #snipcart-step-content-login .snipcart-form-column.snipcart-form-column3 p.snipcart-notice {
-        margin-top: 20px; 
-        font-size: 14px;
-    }
-
-    #snipcart-step-content-login .snipcart-form-column span.snipcart-title {
-        text-transform: uppercase; 
-        display: block; 
-        margin-bottom: 10px; 
-        padding-bottom: 10px; 
-        font: 16px 'brandon_grotesquebold', sans-serif; 
-        color: #333333;
-    }
-    #snipcart-step-content-login #snipcart-form .snipcart-next { display: block; text-align: center; margin-top: 5px; }
-
-    #snipcart-step-content-login #snipcart-login-sep-label {
-        display: block; 
-        width: 20px; 
-        height: 20px; 
-        color: red; 
-        position: absolute; 
-        top: 46px; 
-        right: 314px; 
-        color: #ffffff; 
-        font-weight: bold; 
-        text-transform: uppercase;
-    }
-
-/*** / Login ***/
-
 /*** Shipping Methods ***/
-
-    table#snipcart-shipping-methods th.snipcart-shipping-method-th-1 { text-align: left; padding-left: 30px; }
     
-    table#snipcart-shipping-methods td.snipcart-shipping-method-td-1 {
-        padding: 0 0 0 60px; 
-        text-align: left; 
-        background: #fbfbfb url("img/checkbox.png") 30px 14px no-repeat;
-        width: 45%;
-        float: left;
-    }
-    table#snipcart-shipping-methods tr.selected td.snipcart-shipping-method-td-1 {
-        background: url("img/selected.png") no-repeat 30px center;       
-    }
-    
-    table#snipcart-shipping-methods td.snipcart-shipping-method-td-2 { width: 25%; float: right; }
-    #snipcart-step-content-shipping-method-failure div {
-        padding: 25px 25px 0;
-    }
-
-    #snipcart-step-content-shipping-method-failure ul {
-        padding: 0 25px 25px;
-    }
-    #snipcart-step-content-shipping-method-failure div#snipcart-actions {
-        padding-bottom: 15px;
+    table#snipcart-shipping-methods tr.selected td.snipcart-td-1 {
+        background: url("img/selected.png") no-repeat 20px center !important;  
+        padding-left: 50px     
     }
 
 /*** / Shipping Methods ***/
-
-/*** Payment Methods ***/
-
-    #snipcart-step-content-payment-method .snipcart-form-column-3 {
-        margin-bottom: 25px;
-    }
-
-/*** / Payment Methods ***/
 
 /*** Confirm ***/
 
@@ -1076,7 +1083,7 @@ q:before, #snipcart-main-container q:after {
         #snipcart-step-content-confirm .snipcart-confirm-column {
             width: 296px; 
             float: left; 
-            margin: 0 0 20px 30px;
+            margin: 0 0 20px 0;
         }
         #snipcart-step-content-confirm .snipcart-confirm-column.snipcart-confirm-column-3 { border-right: 0; }
 
@@ -1091,7 +1098,7 @@ q:before, #snipcart-main-container q:after {
             color: #333333;
             font: 16px 'brandon_grotesquebold', sans-serif;
             text-transform: uppercase;
-        }
+        }        
 
     /* Columns */
 
@@ -1141,42 +1148,6 @@ q:before, #snipcart-main-container q:after {
     /* Prices */
 
 /*** / Confirm ***/
-
-/*** Thank you ***/
-
-    #snipcart-step-content-thankyou { padding-bottom: 30px; }
-    #snipcart-thankyou-left, #snipcart-thankyou-right { height: inherit; float: left; }
-    #snipcart-thankyou-left {
-        border-right: 1px solid #eeeeee;
-    }
-    #snipcart-thankyou-right { width: 317px; background-color: #fbfbfb; }
-
-    #snipcart-thankyou-left span.snipcart-title {
-        padding-bottom: 10px; 
-        display: block; 
-        margin-top: 20px; 
-        text-transform: uppercase; 
-        color: #333333; 
-        font-size: 16pt; 
-        font-weight: bold; 
-        text-align: center;
-        font-family: 'brandon_grotesquebold';
-    }
-    #snipcart-thankyou-left span.snipcart-title span { color: #333; }
-    #snipcart-thankyou-left span.snipcart-subtitle {
-        font-size: 14px;
-        font-family: 'brandon_grotesquebold';
-        text-transform: uppercase;
-        text-align: center;
-        display: block;
-        font-weight: bold;
-    }
-
-    #snipcart-thankyou-right #snipcart-form { padding: 30px 30px 0 30px; }
-    #snipcart-thankyou-right span.snipcart-title { display: block; border-bottom: 1px solid #eeeeee; text-transform: uppercase; color: #333333; font-size: 12pt; font-weight: bold; padding-bottom: 10px; margin-bottom: 10px; }
-    #snipcart-thankyou-right .snipcart-btn { display: block !important; text-align: center; margin-top: 5px; }
-
-/*** / Thank you ***/
 
 /*** Cart items ***/
 
@@ -1244,30 +1215,17 @@ q:before, #snipcart-main-container q:after {
 
 /*** Empty cart ***/
 
-    #snipcart-empty {
-        padding: 30px;
-        font-size: 20px;
-        text-align: center;
-        line-height: 40px;
-        font-size: 12px;
+    #snipcart-step-content-emptycart .snipcart-full-width-text p {
+        font-size: 18px;
         font-family: 'brandon_grotesquebold', sans-serif;
         text-transform: uppercase;
-    }
-    #snipcart-shipping-method-error {
-        padding: 30px 30px 10px;
-        font-size: 30px;
-        text-align: center;
-        line-height: 40px;
-    }
-    #snipcart-shipping-method-errors {
-        padding: 0 30px;
     }
 
 /*** / Empty cart ***/
 
 /*** Footer ***/
 
-    #snipcart-footer {
+    div#snipcart-footer {
         background: rgb(54,56,58); /* Old browsers */
         background: -moz-linear-gradient(top,  rgba(54,56,58,1) 1%, rgba(33,35,36,1) 100%); /* FF3.6+ */
         background: -webkit-gradient(linear, left top, left bottom, color-stop(1%,rgba(54,56,58,1)), color-stop(100%,rgba(33,35,36,1))); /* Chrome,Safari4+ */
@@ -1306,11 +1264,8 @@ q:before, #snipcart-main-container q:after {
 
 @media only screen and (min-width: 480px)
 {
-    #snipcart-header{
+    #snipcart-header {
        text-align: center;
-    }
-    #snipcart-header #snipcart-header-right {
-        margin-left: 0;
     }
     #snipcart-main-container a.snipcart-btn {
         font-size: 12px;
@@ -1319,298 +1274,196 @@ q:before, #snipcart-main-container q:after {
 
 @media only screen and (min-width: 768px)
 {
-    #snipcart-header #snipcart-header-right {
-        margin-top: 35px;
-    }
 
-    #snipcart-main-container td, #snipcart-main-container th {
-        display: table-cell; /* We have enough space so we list elems as cells */
-    }
-
-    #snipcart-main-container table.snipcart-list .snipcart-no-customfields {
-        border-top: 1px solid #f1f1f2;
-        /* We want to see the border when the elem is show as cell */
-    }
-
-    #snipcart-main-content {
-        width: 100%;
-    }
-
-    table#snipcart-items th.snipcart-item-th-1 { display: block;}
-     #snipcart-header #snipcart-total span.snipcart-amount {
-         position: static;
-         width: auto;
-         text-align: right;
-    }
-
-     table#snipcart-items td.snipcart-item-td-1 { width:445px;}
-     ul#snipcart-steps li span.snipcart-step-text {
-        display: block;
-        text-align: center;
-        margin: 13px auto;
-        width: 90%;
-    }
-
-    ul#snipcart-steps li span.snipcart-step-number {
-       -webkit-border-radius: 30px; 
-       -moz-border-radius: 30px; 
-       border-radius: 30px; 
-       background-color: transparent; 
-       height: 29px; 
-       width: 49px; 
-       line-height: 29px; 
-       text-align: center; 
-       margin: 9px auto 0; 
-       color: #999; 
-       font-weight: bold; 
-       font: 28pt 'Snipcart';
-    }
-
-    #snipcart-main-container table.snipcart-list td span.snipcart-thumbnail-wrapper {
-        display: inline-block;
-    }
-    #snipcart-main-container table.snipcart-list tr {
-        display: table-row;
-    }
-    #snipcart-main-container table.snipcart-list th {
-        display: table-cell;
-    }
-
-    #snipcart-form .snipcart-form-column a.snipcart-mainaction {
-        width: 206px;
-    }
-    #snipcart-form .snipcart-form-column { width: 43%; float: left; margin-left: 30px; margin-right: 0; }
-    #snipcart-form .snipcart-form-column3.snipcart-form-column {
-        width: 99%;
-    }
-    #snipcart-step-content-payment-method .snipcart-form-column-3 , #snipcart-step-content-payment-method .snipcart-form-column-2 {
-        width: 43%;
-        float: right;
-        clear: right;
-        margin-right: 30px;
-    }
-    #snipcart-step-content-payment-method #snipcart-form select {
-        width: 100%;
-    }
-    #snipcart-step-content-payment-method #snipcart-form input[type=text] {
-        width: 95%;
-    }
-    #snipcart-step-content-login .snipcart-form-column.snipcart-form-column1 {
-        border-bottom: none;
-    }
-    #snipcart-form input[type=text], #snipcart-form input[type=password] {
-        width: 245px; 
-    }
-    #snipcart-step-content-login .snipcart-form-column.snipcart-form-column1 { border-right: 1px solid #e1e1e1; }
-    #snipcart-step-content-login .snipcart-form-column.snipcart-form-column1, #snipcart-step-content-login .snipcart-form-column.snipcart-form-column2 { margin-top: 45px; }
+    /*** General Styles ***/
     
-    #snipcart-main-container .snipcart-form-error {
-        width: 245px;
-    }
-    #snipcart-form select {
-        width: 260px;
-    }
-    table#snipcart-shipping-methods td.snipcart-shipping-method-td-1 {
-        padding: 0 60px !important; 
-        width: auto;
-        float: none;
-    }
-    table#snipcart-shipping-methods td.snipcart-shipping-method-td-2 { width: 160px; float: none; }
-    #snipcart-form select#snipcart-billing-expmonth {
-        float: left;
-        margin-right: 10px;
-        width: 47%;
-    }
-    #snipcart-form select#snipcart-billing-expyear {
-        width: 48%;
-    }
-    #snipcart-step-content-payment-method .snipcart-form-column-1 {
-        border-bottom: none;
-    }
-    #snipcart-step-content-payment-method .snipcart-form-column-3 {
-        margin-bottom: 0;
-    }
-    #snipcart-step-content-confirm .snipcart-confirm-column {
-        margin: 0 0 0 30px;
-    }
-    #snipcart-thankyou-left span.snipcart-title {
-        margin-top: 80px; 
-    }
-    #snipcart-main-container table.snipcart-list .snipcart-item-td-3, #snipcart-main-container table.snipcart-list .snipcart-item-td-4, #snipcart-main-container table.snipcart-list .snipcart-item-td-5 {
-        width: 120px;
-        float: none;
-        border-right: none;
-        margin: 0;
-        border-top: 1px solid #eee;
-    }
-    #snipcart-main-container table.snipcart-list .snipcart-item-td-3 {
-        width: 140px
-    }
-
-    #snipcart-main-container table.snipcart-list .snipcart-item-td-6 {
-        position: static;
-        width: 60px;
-    }
-    table#snipcart-shipping-methods tr.selected td.snipcart-shipping-method-td-1 {
-        background: url("img/selected.png") no-repeat 30px center !important;       
-    }
-
-    ul#snipcart-steps {
-        height: 90px;
-    }
-    #snipcart-header {
-        position: relative;
-    }
-    #snipcart-header #snipcart-title {
-        text-align: left;
-        font: 30px/105px brandon_grotesquelight, sans-serif;
-        padding-left: 25px; 
-        width: auto;
-        top: 0;
-
-        position: absolute;
-    }
-    #snipcart-header #snipcart-total span.snipcart-label {
-        display: inline;
-    }
-    #snipcart-cartitems-checkout-top {
-        top: 35px;
-    }
-    #snipcart-main-container a.snipcart-btn {
-        padding: 0 25px;
-    }
-    #snipcart-step-content-confirm .snipcart-confirm-column {
-        width: 25%;
-    }
-
-    #snipcart-main-container table.snipcart-list .snipcart-item-td-1 {
-        border-bottom: 1px solid #f1f1f2; /* We a border to the first cell to match the look of other cells */
-    }
-    
-    /* We limit the width of the custom fields */
-
-        #snipcart-main-container .snipcart-item-customfields input[type=text] {
-            width: 170px;
+        #snipcart-main-container a.snipcart-btn {
+            padding: 0 25px; /* Larger buttons */
         }
 
-        #snipcart-main-container .snipcart-item-customfields select {
-            width: 184px;
+        #snipcart-main-container td, #snipcart-main-container th {
+            display: table-cell; /* We have enough space so we list elems as cells */
         }
 
-    /* We limit the width of the custom fields */
-
-    /* Adjust the promo code format */
-
-        #snipcart-promocodes .snipcart-promocode-form {
-            padding: 10px 30px;
+        #snipcart-main-container table.snipcart-list .snipcart-no-customfields {
+            border-top: 1px solid #f1f1f2;
+            /* We want to see the border when the elem is show as cell */
         }
+
+    /*** / General Styles ***/
+
+    /*** Header ***/
+       
+        #snipcart-header #snipcart-header-total {
+            margin-top: 35px; /* We want the total to be slightly higher to align with the larger title */
+        }
+
+        #snipcart-header #snipcart-title {
+            text-align: left;
+            font: 30px/105px brandon_grotesquelight, sans-serif;
+            padding-left: 25px; 
+            width: auto;
+            top: 0;
+
+            position: absolute;
+        }
+        #snipcart-header #snipcart-total span.snipcart-label {
+            display: inline;
+        }
+
+        #snipcart-cartitems-checkout-top {
+            top: 35px; /* We want the checkout button to be slightly higher to align with the larger title */
+        }
+
+    /*** / Header ***/
+
+    /*** Steps ***/
+
+        ul#snipcart-steps {
+            height: 90px;
+        }
+
+        ul#snipcart-steps li span.snipcart-step-text {
+            -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+            -moz-box-sizing: border-box; /* Firefox, other Gecko */
+            box-sizing: border-box; /* Opera/IE 8+ */
+            display: block;
+            text-align: center;
+            margin: 13px 0 0 0;
+            padding: 0 2px;
+            width: 100%;
+            text-transform: uppercase; 
+            color: #8e8e8e; 
+            font-weight: bold; 
+            line-height: 16px; 
+            font: 10px/16px 'brandon_grotesquebold', Arial, sans-serif;
+        }
+
+        ul#snipcart-steps li span.snipcart-step-number {
+           margin: 9px 0 0 0; 
+           font: 28pt 'Snipcart';
+        }
+
+    /*** / Steps ***/
+
+    /*** Columns ***/
+        
+        /* We split the columns (33% each) */
+
+        #snipcart-main-content .snipcart-columns {
+            overflow: hidden;
+        }
+
+        #snipcart-main-content div.snipcart-column
+        {
+            float: left;
+            width: 33.33333333333%;
+            -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+            -moz-box-sizing: border-box; /* Firefox, other Gecko */
+            box-sizing: border-box; /* Opera/IE 8+ */
+            margin-bottom: -99989px;
+            padding-bottom: 99999px !important;
+        }          
+
+        #snipcart-main-content div.snipcart-column-2,
+        #snipcart-main-content div.snipcart-column-3
+        {
+            border-left: 1px solid #f1f1f2;
+        }
+
+        /* Boxed Columns */
+            
+            #snipcart-main-content .snipcart-boxed-columns div.snipcart-column-2 {
+                border-top : 0;
+            }
+
+        /* / Boxed Columns */
+
+    /*** / Columns ***/
+
+    /*** Promo Codes ***/
+
+        /* We want the promo code form on same line */
 
         #snipcart-promocodes .snipcart-promocode-form input[type=text] {
             width: 250px;
-            height: 29px;
             display: inline-block;
             margin: 0 7px 0 0;
         }
 
-    /* We want the promo code form on same line */
+    /*** / Promo Codes ***/
+    
+    /*** Items ***/
 
+        #snipcart-main-container table#snipcart-items tr {
+            display: table-row;
+        }
+
+        #snipcart-main-container table#snipcart-items tr th, #snipcart-main-container table#snipcart-items tr td {
+            display: table-cell;            
+        }
+              
+        #snipcart-main-container table#snipcart-items td span.snipcart-thumbnail-wrapper {
+            display: inline-block;
+        }
+        
+        #snipcart-main-container table#snipcart-items td.snipcart-td-1,
+        #snipcart-main-container table#snipcart-items td.snipcart-td-2,
+        #snipcart-main-container table#snipcart-items td.snipcart-td-2.snipcart-no-customfields
+        {
+             border-top: 1px solid #eee;
+        }    
+        
+        #snipcart-main-container table#snipcart-items td.snipcart-td-2 {
+            width: 160px;
+        } 
+
+        #snipcart-main-container table#snipcart-items td.snipcart-td-3,
+        #snipcart-main-container table#snipcart-items td.snipcart-td-4,
+        #snipcart-main-container table#snipcart-items td.snipcart-td-5 {
+            float: none;
+            width: 120px;            
+            border-right: none;
+            margin: 0;
+            border-top: 1px solid #eee;
+        }
+        #snipcart-main-container table#snipcart-items td.snipcart-td-3 {
+            width: 140px
+        }
+
+        #snipcart-main-container table#snipcart-items td.snipcart-td-6 {
+            position: static;
+            width: 60px;
+        }
+       
+    /*** / Items ***/        
+    
 }
 
 @media only screen and (min-width: 1024px)
 {
-    #snipcart-main-content #snipcart-current-user #snipcart-user-infos {
-        margin-bottom: 0;
-    }
-    #snipcart-step-content-payment-method .snipcart-form-column-3, #snipcart-step-content-payment-method .snipcart-form-column-2 {
-        margin-right: 0;
-    }
-    #snipcart-step-content-payment-method #snipcart-form select {
-        width: 260px;
-    }
-    #snipcart-step-content-payment-method #snipcart-form input[type=text] {
-        width: 245px;
-    }
-    #snipcart-step-content-payment-method .snipcart-form-column-1 {
-        border-right: none;
-        margin-top: 0;
-    }
-    #snipcart-form select#snipcart-billing-expmonth {
-        width: 125px;
-        float: left;
-        margin-right: 10px;
-    }
-    #snipcart-form select#snipcart-billing-expyear {
-        width: 125px;
-    }
-    #snipcart-form .snipcart-form-column { width: 296px; }
-    .snipcart-checkout-container{
-        width: 996px;
-    }
-    #snipcart-main-container {
-         width: 996px;
-    }
-    #snipcart-main-content { width: 983px; }
-    
-    #snipcart-close {
-        margin: 10px 25px 0 0; 
-    }
-    
-    #snipcart-cartitems-checkout-top {
-        position: absolute;
-        top: 36px;
-        right: 45px;
-    }
-    #snipcart-main-container a.snipcart-btn {
-         padding: 0 25px; 
-    }
-    ul#snipcart-steps li span { display: block; float: left;  }
-    ul#snipcart-steps li span.snipcart-step-number {
-        width: auto;
-        margin: 9px 0 0 10px;
-    }
-    ul#snipcart-steps {
-        height: 60px;
-    }
-    ul#snipcart-steps li span.snipcart-step-text {
-        text-align: left;
-        margin: 13px 0 0 4px;
-        width: 80px;
-    }
+    /*** Steps ***/
 
-    #snipcart-form .snipcart-form-column { float: left;}
-    #snipcart-main-container .snipcart-columns { background: url("img/columns.png") left top repeat-y; }
-    #snipcart-step-content-login .snipcart-form-column.snipcart-form-column2 { width: 266px; }
-    #snipcart-step-content-login .snipcart-form-column.snipcart-form-column3 div { padding: 45px 30px 0 50px; }
-    #snipcart-step-content-login .snipcart-form-column.snipcart-form-column3 {
-        width: 336px; 
-        height: 380px;
-        margin-left: 20px;
-        margin-top: 0;
-        padding-bottom: 0;
-    }
-    #snipcart-step-content-login .snipcart-form-column.snipcart-form-column1 { border-bottom: none; margin-right: 0; margin-bottom: 0; }
-    #snipcart-form  .snipcart-form-column#snipcart-form-column3 {
-        width: 296px;
-    }
-    #snipcart-step-content-confirm .snipcart-confirm-column {
-        width: 296px;
-    }    
-    #snipcart-thankyou-left {
-        width: 663px; 
-    }
-    #snipcart-step-content-thankyou { height: 375px; }
-    #snipcart-main-content #snipcart-current-user {
-        top: -10px;
-        right: 60px;
-    }
-    ul#snipcart-steps {
-        top: 0;
-    }
+        ul#snipcart-steps {
+            height: 60px;
+        }
 
-    #snipcart-main-container .snipcart-item-customfields {
-        width: 200px;
-    }
+        ul#snipcart-steps li span {
+            float: left; /* Icon and text on the same line */
+        }
 
+        ul#snipcart-steps li span.snipcart-step-text {
+            text-align: left;
+            margin: 13px 0 0 3px;
+            width: 80px; /* We want the text to wrap */
+        }
+        
+        ul#snipcart-steps li span.snipcart-step-number {
+            width: auto;
+            margin: 9px 0 0 10px;
+        }
+
+    /*** / Steps ***/
 }
 
 @media print {
@@ -1635,7 +1488,7 @@ q:before, #snipcart-main-container q:after {
         display: none !important;
     }
 
-    body.snipcart-open table#snipcart-items td.snipcart-item-td-3 span {
+    body.snipcart-open table#snipcart-items td.snipcart-td-3 span {
         border: none;
         background-color: inherit;
     }
@@ -1672,13 +1525,3 @@ q:before, #snipcart-main-container q:after {
         display: none;
     }
 }
-
-/* CHUCK ON 2013-06-01 */
-#snipcart-main-content .snipcart-nolimits-form .snipcart-customfield {
-    float: left;
-    width: 285px;
-    padding-left: 20px;
-    padding-top: 5px;
-    padding-right: 20px;
-}
-/* END CHUCK ON 2013-06-01 */
