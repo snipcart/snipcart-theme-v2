@@ -469,8 +469,7 @@
     }
     #snipcart-main-content #snipcart-current-user #snipcart-user-infos {
         background-color: #333;
-        margin-bottom: 10px;
-        padding: 10px 5%;
+        padding: 10px 20px;
     }
     #snipcart-main-content #snipcart-global-notices.snipcart-error {
         margin-bottom: 0px;
@@ -605,8 +604,7 @@
     }    
     #snipcart-main-content .snipcart-column span.snipcart-title {
         text-transform: uppercase; 
-        display: block; 
-        padding: 20px 0 0 0;
+        display: block;         
         font: 16px 'brandon_grotesquebold', sans-serif; 
         color: #333333;
     }
@@ -615,6 +613,11 @@
 
         #snipcart-main-content .snipcart-columns.snipcart-boxed-columns {
             margin: 0;
+        }
+
+        #snipcart-main-content .snipcart-columns.snipcart-boxed-columns .snipcart-column span.snipcart-title {
+            padding-top: 20px;
+            /* We add some padding because the box is right next to the top */
         }
 
         #snipcart-main-content .snipcart-columns.snipcart-boxed-columns .snipcart-action {
@@ -870,13 +873,20 @@
 
     #snipcart-main-container table#snipcart-items td.snipcart-td-1 {
          padding-right: 20px;
-         border-top: 0;
+         border-top: 1px solid #f1f1f2;
          border-bottom: 1px solid #f1f1f2;
+    }
+
+    #snipcart-main-container #snipcart-step-content-cart-content table#snipcart-items tr:first-child td.snipcart-td-1,
+    #snipcart-main-container #snipcart-step-content-cart-items table#snipcart-items tr:first-child td.snipcart-td-1 {
+       /* We don't want the top border for this specific step since it's close to the top */
+       border-top: 0;
     }
 
     #snipcart-main-container table#snipcart-items td.snipcart-td-2 {
         text-align: left;
         padding: 10px 20px 20px 20px;
+        border-top: 0;
         border-bottom: 1px solid #f1f1f2;
     }
 
@@ -970,7 +980,8 @@
         display: none;
     }
 
-    #snipcart-main-container table#snipcart-items span.snipcart-thumbnail img, #snipcart-main-container table#snipcart-items span.snipcart-thumbnail-wrapper img {
+    #snipcart-main-container table#snipcart-items span.snipcart-thumbnail img,
+    #snipcart-main-container table#snipcart-items span.snipcart-thumbnail-wrapper img {
         max-width: 100%;
         max-height: 100%;
         display: block;
@@ -978,7 +989,7 @@
 
     /* Items at confirm step */
 
-        #snipcart-step-content-confirm #snipcart-main-container table#snipcart-items th {
+        #snipcart-main-container #snipcart-step-content-confirm table#snipcart-items th {
             background-color: #fbfbfb;
             border-top: 1px solid #eeeeee;
         }
@@ -987,7 +998,7 @@
 
 /*** / Items ***/
 
-/* Custom Fields */
+/*** Custom Fields ***/
 
     #snipcart-main-container .snipcart-customfield-checkbox {
         margin-top: 10px;
@@ -1009,7 +1020,16 @@
         margin: 3px 0 0 5px;
     }
 
-/* Custom Fields */
+    #snipcart-main-container .snipcart-confirm-custom-field {
+        margin-top: 10px;
+    }
+
+    #snipcart-main-container .snipcart-confirm-custom-field span.snipcart-confirm-custom-field-name {
+        display: block;
+        font-weight: bold;
+    }
+
+/*** / Custom Fields ***/
 
 /*** Promo Codes ***/
 
@@ -1063,44 +1083,33 @@
 
 /*** Shipping Methods ***/
     
-    table#snipcart-shipping-methods tr.selected td.snipcart-td-1 {
-        background: url("img/selected.png") no-repeat 20px center !important;  
-        padding-left: 50px     
+    #snipcart-main-container table#snipcart-shipping-methods tr td.snipcart-td-1 {
+        background: url("img/checkbox.png") no-repeat 20px center;  
+        padding-left: 50px;     
+    }
+
+    #snipcart-main-container table#snipcart-shipping-methods tr.selected td.snipcart-td-1 {
+        background-image: url("img/selected.png");    
     }
 
 /*** / Shipping Methods ***/
 
 /*** Confirm ***/
 
-    #snipcart-step-content-confirm .snipcart-confirm-custom-field-name {
-        font-weight: bold;
-    }    
-    
-    /* Columns */
+    /* Adress infos */
 
-        #snipcart-step-content-confirm .snipcart-columns { margin: 30px 0; }
-
-        #snipcart-step-content-confirm .snipcart-confirm-column {
-            width: 296px; 
-            float: left; 
-            margin: 0 0 20px 0;
+        #snipcart-main-container #snipcart-step-content-confirm .snipcart-column span {
+            display: block;
+            padding-bottom: 3px;
         }
-        #snipcart-step-content-confirm .snipcart-confirm-column.snipcart-confirm-column-3 { border-right: 0; }
 
-        #snipcart-step-content-confirm .snipcart-confirm-column span {
-            display: block; 
-            color: #999999; 
-            font-weight:  bold; 
-            font: 11px 'brandon_grotesquebold', sans-serif;
-            text-transform: uppercase;
+        #snipcart-main-container #snipcart-step-content-confirm .snipcart-column-2,
+        #snipcart-main-container #snipcart-step-content-confirm .snipcart-column-3
+        {
+            margin-top: 20px;
         }
-        #snipcart-step-content-confirm .snipcart-confirm-column span.snipcart-title {
-            color: #333333;
-            font: 16px 'brandon_grotesquebold', sans-serif;
-            text-transform: uppercase;
-        }        
 
-    /* Columns */
+    /* Adress infos */
 
     /* Prices */
 
@@ -1121,10 +1130,14 @@
 
         table#snipcart-confirm-prices { width: 100%; }
         table#snipcart-confirm-prices tr td {
-            display: table-cell;
-            padding: 0 30px 10px 30px;
+            padding: 0 20px 10px 20px;
             vertical-align: top;
         }
+
+        table#snipcart-confirm-prices tr:first-child td {
+            padding-top: 10px;
+        }
+
         table#snipcart-confirm-prices tr td span {
             font: 14px 'brandon_grotesquebold', sans-serif; 
             color: #1c1e21;
@@ -1400,7 +1413,7 @@
         }
 
         #snipcart-main-container table#snipcart-items tr th, #snipcart-main-container table#snipcart-items tr td {
-            display: table-cell;            
+            display: table-cell;     
         }
               
         #snipcart-main-container table#snipcart-items td span.snipcart-thumbnail-wrapper {
@@ -1409,14 +1422,25 @@
         
         #snipcart-main-container table#snipcart-items td.snipcart-td-1,
         #snipcart-main-container table#snipcart-items td.snipcart-td-2,
-        #snipcart-main-container table#snipcart-items td.snipcart-td-2.snipcart-no-customfields
+        #snipcart-main-container table#snipcart-items td.snipcart-td-2.snipcart-no-customfields,
+        #snipcart-main-container #snipcart-step-content-cart-items table#snipcart-items tr:first-child td.snipcart-td-1,
+        #snipcart-main-container #snipcart-step-content-cart-content table#snipcart-items tr:first-child td.snipcart-td-1
         {
              border-top: 1px solid #eee;
-        }    
-        
-        #snipcart-main-container table#snipcart-items td.snipcart-td-2 {
-            width: 160px;
         } 
+        
+        #snipcart-main-container #snipcart-step-content-cart-items table#snipcart-items td.snipcart-td-2,
+        #snipcart-main-container #snipcart-step-content-cart-content table#snipcart-items td.snipcart-td-2 {
+            /* We limit the width in order to have decent looking input fields */
+            width: 160px;
+            padding-left: 0;
+            padding-right: 0;
+        } 
+
+        #snipcart-main-container table#snipcart-items td.snipcart-td-2.snipcart-no-customfields {
+            /* We want to to use smallest width when no custom fields to show */
+            width: auto !important;
+        }
 
         #snipcart-main-container table#snipcart-items td.snipcart-td-3,
         #snipcart-main-container table#snipcart-items td.snipcart-td-4,
@@ -1437,6 +1461,21 @@
         }
        
     /*** / Items ***/        
+
+    /*** Confirm ***/
+
+        /* Adress infos */
+
+            #snipcart-main-container #snipcart-step-content-confirm .snipcart-column-2,
+            #snipcart-main-container #snipcart-step-content-confirm .snipcart-column-3
+            {
+                margin-top: 0;
+                /* No margin needed because the columns are on the same line */
+            }
+
+        /* / Adress infos */
+
+    /*** / Confirm ***/
     
 }
 
