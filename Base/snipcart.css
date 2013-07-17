@@ -1033,7 +1033,7 @@ q:before, #snipcart-main-container q:after {
     table#snipcart-shipping-methods td.snipcart-shipping-method-td-1 {
         padding: 0 0 0 60px; 
         text-align: left; 
-        background: #fbfbfb url("img/checkbox.png") 30px 14px no-repeat;
+        background: #fbfbfb url("img/checkbox.png") 30px center no-repeat;
         width: 45%;
         float: left;
     }
