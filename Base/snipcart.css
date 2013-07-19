@@ -185,7 +185,7 @@
 
 /*** Snipcart Holder ***/
 
-	.snipcart-checkout-container { max-width: 90%; margin: 0 auto; }
+	.snipcart-checkout-container {width: 90%; max-width: 996px; margin: 0 auto; }
 
 /*** / Snipcart Holder ***/
 
@@ -230,7 +230,8 @@
     #snipcart-main-container {
          position: absolute; 
          top: 60px; 
-         width: 90%;
+         max-width: 996px;
+        width: 90%;
          margin: 0 auto; 
          z-index: 15000; 
          font-family: Arial !important; 
@@ -460,7 +461,7 @@
     #snipcart-header #snipcart-continue-shopping-link a { color: #9f9f9f; text-decoration: underline; font-size: 9pt; }
     #snipcart-header #snipcart-continue-shopping-link a:hover { color: #9f9f9f; text-decoration: none; }
 
-    #snipcart-cartitems-checkout-top { position: absolute; top: 45px; right: 20px; }
+    #snipcart-cartitems-continue-top { position: absolute; top: 45px; right: 20px; }
 
     #snipcart-logged-user { position: absolute; top: 40px; left: 25px; }
 
