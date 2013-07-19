@@ -287,6 +287,10 @@
         text-align: center;
     }  
 
+    #snipcart-main-container .snipcart-top-spacing {
+        padding-top: 10px;
+    }
+
     /* Buttons */
 
         #snipcart-main-container a.snipcart-btn {
@@ -325,7 +329,7 @@
 
     /* Bottom bar containing action buttons */
 
-        div#snipcart-actions, div.snipcart-additional-option {
+        #snipcart-main-container div#snipcart-actions, #snipcart-main-container div.snipcart-additional-option {
             height: 75px; 
             padding: 0 20px;
             border-top: 1px solid #eeeeee;
@@ -338,25 +342,35 @@
             background: linear-gradient(to bottom,  rgba(250,250,250,1) 1%,rgba(255,255,255,1) 5%,rgba(240,240,240,1) 100%); /* W3C */
         }
 
-        #snipcart-actions a.snipcart-next, #snipcart-actions a.snipcart-finalize { margin-top: 20px; float: right; }
-        #snipcart-actions a.snipcart-previous { margin-top: 20px; float: left; }
-        #snipcart-actions a.snipcart-previous.snipcart-spacing { margin-left: 10px; }
+        #snipcart-main-container #snipcart-actions a.snipcart-next,
+        #snipcart-main-container #snipcart-actions a.snipcart-finalize { margin-top: 20px; float: right; }
+        #snipcart-main-container #snipcart-actions a.snipcart-previous { margin-top: 20px; float: left; }
+        #snipcart-main-container #snipcart-actions a.snipcart-previous.snipcart-spacing { margin-left: 10px; }
 
-        .snipcart-next-step { display: block; position: absolute; bottom: 15px; right: 35px; font-weight: bold; }
-        .snipcart-previous-step { display: block; position: absolute; bottom: 15px; left: 20px; font-weight: bold; }
+        #snipcart-main-container .snipcart-next-step { display: block; position: absolute; bottom: 15px; right: 35px; font-weight: bold; }
+        #snipcart-main-container .snipcart-previous-step { display: block; position: absolute; bottom: 15px; left: 20px; font-weight: bold; }
 
-        #snipcart-actions .snipcart-btn {
+        #snipcart-main-container #snipcart-actions .snipcart-btn {
             margin-top: 20px;
             float: left;
         }
     
-        #snipcart-main-content .snipcart-additional-option .snipcart-btn {
+        #snipcart-main-container .snipcart-additional-option .snipcart-btn {
             float: right;
-            margin: 20px 10px 0 0;
+            margin-top: 20px;
         }
 
-        #snipcart-main-content .snipcart-additional-option h4 {
+        #snipcart-main-container .snipcart-additional-option h4 {
             padding-top: 15px;
+        }
+
+        #snipcart-main-container div.snipcart-additional-option#snipcart-cvc-content {
+            height: auto;
+            padding-bottom: 10px;
+        }
+
+        #snipcart-main-container div.snipcart-additional-option#snipcart-cvc-content p {
+            padding-top: 10px;
         }
 
     /* Bottom bar containing action buttons */
@@ -706,6 +720,14 @@
         margin-left: 2%;
     }
 
+    #snipcart-main-container a#snipcart-cvc-trigger {
+        font: 14px 'brandon_grotesquebold', sans-serif;
+        color: #26282a;
+        position: absolute;
+        right: 10px;
+        top: 0;
+    }
+
     /* Full Width Forms */
 
         #snipcart-form.snipcart-full-width-form {
@@ -775,34 +797,6 @@
         }
     
     /* / Errors */
-
-    /* Tooltip */
-
-        #snipcart-form .snipcart-tooltip {
-            font: 14px 'brandon_grotesquebold', sans-serif;
-            color: #26282a;
-            position: absolute;
-            right: 40px;
-            top: 0;
-        }
-
-        #snipcart-form .snipcart-tooltip-content {
-            position: absolute;
-            background-color: #fff;
-            padding: 10px;
-            border: 1px solid #333;
-            border-radius: 10px;
-            -moz-border-radius: 10px;
-            -webkit-border-radius: 10px;
-            z-index: 10;
-        }
-        #snipcart-form .snipcart-tooltip-content img {
-            max-width: 100%;
-            display: block;
-            margin: 10px auto 0;
-        }
-
-    /* / Tooltip */
 
 /*** / Forms ***/
 
