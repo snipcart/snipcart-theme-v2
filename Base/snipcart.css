@@ -373,6 +373,10 @@
             padding-top: 10px;
         }
 
+        #snipcart-main-container div.snipcart-additional-option#snipcart-cvc-content img {
+            max-width: 100%;
+        }
+
     /* Bottom bar containing action buttons */
 
     /* Highlight for unit price and total price */
