@@ -1227,7 +1227,8 @@
 
 /*** Empty cart ***/
 
-    #snipcart-step-content-emptycart .snipcart-full-width-text p {
+    #snipcart-step-content-emptycart .snipcart-full-width-text p,
+    #snipcart-blocked .snipcart-full-width-text p {
         font-size: 18px;
         font-family: 'brandon_grotesquebold', sans-serif;
         text-transform: uppercase;
