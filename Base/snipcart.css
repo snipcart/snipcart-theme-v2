@@ -1091,6 +1091,10 @@
         background-image: url("img/selected.png");    
     }
 
+    #snipcart-main-container table#snipcart-shipping-methods td {
+        cursor: pointer;  
+    }
+
 /*** / Shipping Methods ***/
 
 /*** Confirm ***/
