@@ -1250,31 +1250,26 @@
         background: -o-linear-gradient(top,  rgba(54,56,58,1) 1%,rgba(33,35,36,1) 100%); /* Opera 11.10+ */
         background: -ms-linear-gradient(top,  rgba(54,56,58,1) 1%,rgba(33,35,36,1) 100%); /* IE10+ */
         background: linear-gradient(to bottom,  rgba(54,56,58,1) 1%,rgba(33,35,36,1) 100%); /* W3C */
-        height: 45px;
+        height: 35px;
         border-top: 1px solid #434648;
         padding: 0 10px;
     }
 
     #snipcart-footer #snipcart-powered {
-        background: url('img/snipcart-footer.png') no-repeat 0 0;
+        background: url('img/snipcart-footer.png') no-repeat left center;
         padding-left: 25px;
         text-transform: uppercase;
         font: 7.42pt/10px 'brandon_grotesqueregular', sans-serif;
         color: #545557;
-        width: 75px;
         display: block;
         text-shadow: -1px 1px 2px rgba(0, 0, 0, 0.3);
-        position: relative;
-        top: 10px;
+        height: 35px;
+        line-height: 35px;    
     }
 
     #snipcart-footer #snipcart-powered a {
         color: #545557;
         text-decoration: none;
-    }
-    
-    #snipcart-footer #snipcart-powered .snipcart-big {
-        font-size: 10.01pt;
     }
 
 /*** / Footer ***/
