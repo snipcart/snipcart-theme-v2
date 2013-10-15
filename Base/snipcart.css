@@ -589,6 +589,7 @@
        color: #999; 
        font-weight: bold; 
        font: 22pt 'Snipcart';
+        background-image: none;
     }
     ul#snipcart-steps li.active span.snipcart-step-number { color: #333; }
 
