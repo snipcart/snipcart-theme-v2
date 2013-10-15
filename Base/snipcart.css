@@ -716,6 +716,15 @@
         display: block;
     }
 
+    #snipcart-main-container .snipcart-checkbox-field input {
+        float: left;
+        margin-right: 10px;
+        margin-top: 10px;
+    }
+    #snipcart-main-container .snipcart-checkbox-field label {
+        float: left;
+    }
+
     #snipcart-main-container select#snipcart-billing-expmonth,
     #snipcart-main-container select#snipcart-billing-expyear {
         float: left;
