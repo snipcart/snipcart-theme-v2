@@ -185,7 +185,7 @@
 
 /*** Snipcart Holder ***/
 
-	.snipcart-checkout-container {width: 90%; max-width: 996px; margin: 0 auto; }
+	.snipcart-checkout-container {width: 90%; margin-left: 5%; position: fixed; top: 0%; z-index: 20000; height: 80%;}
 
 /*** / Snipcart Holder ***/
 
@@ -221,14 +221,17 @@
 /*** / Modal Window ***/
 
 /*** General Styles ***/
-
+    #snipcart-modal
+    {
+        height: 100%;
+    }
     #snipcart-main-container span.snipcart-clear {
         display: block;
         clear: both;
     }
 
     #snipcart-main-container {
-         position: absolute; 
+         position: relative; 
          top: 60px; 
          max-width: 996px;
         width: 90%;
@@ -237,6 +240,8 @@
          font-family: Arial !important; 
          color: #a5a5a5 !important; 
          font-size: 10pt;
+         height: 100%;
+        overflow-y: auto;
     }
 
     #snipcart-main-content { background-color: #ffffff; width: 100%; }
