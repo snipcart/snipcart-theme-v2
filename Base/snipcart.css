@@ -216,7 +216,7 @@
         z-index: 10000; 
         position: absolute;
         top: 10px;
-        right: 10px;
+        right: 25px;
     }
 
 /*** / Modal Window ***/
@@ -242,7 +242,12 @@
          color: #a5a5a5 !important; 
          font-size: 10pt;
          height: 100%;
+    }
+
+    #snipcart-sub-content {
+        max-height: 500px; /* TODO remove and set with js */
         overflow-y: auto;
+
     }
 
     #snipcart-main-content { background-color: #ffffff; width: 100%; }
