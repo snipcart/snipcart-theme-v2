@@ -490,7 +490,7 @@
     #snipcart-header #snipcart-continue-shopping-link a { color: #9f9f9f; text-decoration: underline; font-size: 9pt; }
     #snipcart-header #snipcart-continue-shopping-link a:hover { color: #9f9f9f; text-decoration: none; }
 
-    #snipcart-cartitems-continue-top { position: absolute; top: 35px; right: 20px; }
+    #snipcart-main-container #snipcart-cartitems-continue-top {display: none; position: absolute; top: 35px; right: 20px; }
 
     #snipcart-logged-user { position: absolute; top: 40px; left: 25px; }
 
@@ -1309,6 +1309,11 @@
 
 @media only screen and (min-width: 768px)
 {
+        #snipcart-main-container #snipcart-cartitems-continue-top 
+        {
+            display: block
+        }
+
         #snipcart-close {
             top: 10px;
             right: 10px;
