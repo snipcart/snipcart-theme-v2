@@ -215,7 +215,7 @@
         background: url("img/close.png") left top no-repeat;  
         z-index: 10000; 
         position: absolute;
-        top: 10px;
+        top: 25px;
         right: 25px;
     }
 
@@ -244,10 +244,8 @@
          height: 100%;
     }
 
-    #snipcart-sub-content {
-        max-height: 500px; /* TODO remove and set with js */
+    #snipcart-sub-content .snipcart-step-container {
         overflow-y: auto;
-
     }
 
     #snipcart-main-content { background-color: #ffffff; width: 100%; }
@@ -406,9 +404,13 @@
 
 /*** Header ***/
 
+    #snipcart-main-container #snipcart-header {
+        padding: 10px;
+    }
     #snipcart-header { 
         position: relative;
-        height: 105px;
+        height: 40px;
+        padding: 20px;
         background: rgb(48,50,52); /* Old browsers */
         background: -moz-linear-gradient(top,  rgba(48,50,52,1) 0%, rgba(30,31,33,1) 100%); /* FF3.6+ */
         background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(48,50,52,1)), color-stop(100%,rgba(30,31,33,1))); /* Chrome,Safari4+ */
@@ -419,7 +421,7 @@
    }
 
     #snipcart-header #snipcart-title {
-        display: block; 
+        display: none; 
         float: left; 
         height: 95px;
         color: #fff; 
@@ -443,12 +445,11 @@
         background: -ms-linear-gradient(top,  rgba(26,27,29,1) 1%,rgba(30,31,33,1) 100%); /* IE10+ */
         background: linear-gradient(to bottom,  rgba(26,27,29,1) 1%,rgba(30,31,33,1) 100%); /* W3C */
         position: relative;
-        margin-top: 45px;
+        margin-top: 0px;
         border-radius: 5px;
         -moz-border-radius: 5px;
         -webkit-border-radius: 5px;
         border: 1px solid #2e3031;
-        margin-left: 20px;
     }
     
     #snipcart-header #snipcart-total {
@@ -469,7 +470,6 @@
     
     #snipcart-header #snipcart-total span.snipcart-label {
         color: #898989; 
-        display: none;        
     }
 
     #snipcart-header #snipcart-total span.snipcart-label span {
@@ -490,7 +490,7 @@
     #snipcart-header #snipcart-continue-shopping-link a { color: #9f9f9f; text-decoration: underline; font-size: 9pt; }
     #snipcart-header #snipcart-continue-shopping-link a:hover { color: #9f9f9f; text-decoration: none; }
 
-    #snipcart-cartitems-continue-top { position: absolute; top: 45px; right: 20px; }
+    #snipcart-cartitems-continue-top { position: absolute; top: 35px; right: 20px; }
 
     #snipcart-logged-user { position: absolute; top: 40px; left: 25px; }
 
@@ -609,6 +609,7 @@
     }
     ul#snipcart-steps li span.snipcart-step-text {        
         display: none; /* No text on mobile version */
+        word-wrap: break-word;
     }
     ul#snipcart-steps li.active span.snipcart-step-text { color: #333333; }
     
@@ -1300,6 +1301,7 @@
     #snipcart-header {
        text-align: center;
     }
+
     #snipcart-main-container a.snipcart-btn {
         font-size: 12px;
     }
@@ -1307,9 +1309,20 @@
 
 @media only screen and (min-width: 768px)
 {
-
+        #snipcart-close {
+            top: 10px;
+            right: 10px;
+        }
     /*** General Styles ***/
-    
+        #snipcart-main-container #snipcart-header {
+            height: 105px;
+            padding: 0;
+        }
+
+        #snipcart-header #snipcart-title {
+            display: block;
+        }
+
         #snipcart-main-container a.snipcart-btn {
             padding: 0 25px; /* Larger buttons */
         }
@@ -1329,6 +1342,7 @@
        
         #snipcart-header #snipcart-header-total {
             margin-top: 35px; /* We want the total to be slightly higher to align with the larger title */
+            margin-left: 20px;
         }
 
         #snipcart-header #snipcart-title {
@@ -1370,6 +1384,7 @@
             font-weight: bold; 
             line-height: 16px; 
             font: 10px/16px 'brandon_grotesquebold', Arial, sans-serif;
+            word-wrap: break-word;
         }
 
         ul#snipcart-steps li span.snipcart-step-number {
@@ -1514,12 +1529,13 @@
         ul#snipcart-steps li span.snipcart-step-text {
             text-align: left;
             margin: 13px 0 0 3px;
-            width: 80px; /* We want the text to wrap */
+            width: 70px; /* We want the text to wrap */
+            word-wrap: break-word;
         }
         
         ul#snipcart-steps li span.snipcart-step-number {
             width: auto;
-            margin: 9px 0 0 10px;
+            margin: 9px 0 0 5px;
         }
 
     /*** / Steps ***/
@@ -1582,5 +1598,12 @@
     }
     body.snipcart-open .snipcart-print-no-show {
         display: none;
+    }
+}
+
+
+@media only screen and (min-width: 1280px) {
+    ul#snipcart-steps li span.snipcart-step-text {
+        width: 80px; /* We want the text to wrap */
     }
 }
