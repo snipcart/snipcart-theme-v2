@@ -609,7 +609,6 @@
     }
     ul#snipcart-steps li span.snipcart-step-text {        
         display: none; /* No text on mobile version */
-        word-wrap: break-word;
     }
     ul#snipcart-steps li.active span.snipcart-step-text { color: #333333; }
     
@@ -1389,7 +1388,6 @@
             font-weight: bold; 
             line-height: 16px; 
             font: 10px/16px 'brandon_grotesquebold', Arial, sans-serif;
-            word-wrap: break-word;
         }
 
         ul#snipcart-steps li span.snipcart-step-number {
@@ -1535,7 +1533,6 @@
             text-align: left;
             margin: 13px 0 0 3px;
             width: 70px; /* We want the text to wrap */
-            word-wrap: break-word;
         }
         
         ul#snipcart-steps li span.snipcart-step-number {
