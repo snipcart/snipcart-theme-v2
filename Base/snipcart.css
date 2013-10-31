@@ -995,10 +995,11 @@
         font-size: 9pt;    
     }
     #snipcart-main-container table#snipcart-items span.snipcart-thumbnail-wrapper {
-        width: 75px;
+        width: 65px;
         height: 65px;
         float: left;
         display: none;
+        margin-right: 10px;
     }
 
     #snipcart-main-container table#snipcart-items span.snipcart-thumbnail img,
