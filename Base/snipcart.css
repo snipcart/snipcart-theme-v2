@@ -664,6 +664,11 @@
         color: #333333;
     }
 
+    #snipcart-main-content .snipcart-paymentsby-paypal {
+        text-align: center;
+        padding-top: 20px;
+    }
+
     /* Boxed columns */
 
         #snipcart-main-content .snipcart-columns.snipcart-boxed-columns {
