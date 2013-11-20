@@ -271,6 +271,15 @@
         padding: 50px 30px;
     }
 
+    #snipcart-main-container .snipcart-comments-box {
+        padding: 0px 50px;
+    }
+
+    #snipcart-main-container .snipcart-comments-box textarea {
+        width: 100%;
+        padding: 0px;
+    }
+
     #snipcart-main-container .snipcart-full-width-text span.snipcart-title {
         padding-bottom: 10px; 
         display: block; 
