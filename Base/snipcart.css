@@ -3,36 +3,36 @@
 /*** Icon Fonts ***/
 
     @font-face {
-	    font-family: 'Snipcart';
-	    src:url('fonts/snipcart/Snipcart.eot');
-	    src:url('fonts/snipcart/Snipcart.eot?#iefix') format('embedded-opentype'),
-		    url('fonts/snipcart/Snipcart.woff') format('woff'),
-		    url('fonts/snipcart/Snipcart.ttf') format('truetype'),
-		    url('fonts/snipcart/Snipcart.svg#Snipcart') format('svg');
-	    font-weight: normal;
-	    font-style: normal;
+        font-family: 'Snipcart';
+        src:url('fonts/snipcart/Snipcart.eot');
+        src:url('fonts/snipcart/Snipcart.eot?#iefix') format('embedded-opentype'),
+            url('fonts/snipcart/Snipcart.woff') format('woff'),
+            url('fonts/snipcart/Snipcart.ttf') format('truetype'),
+            url('fonts/snipcart/Snipcart.svg#Snipcart') format('svg');
+        font-weight: normal;
+        font-style: normal;
     }
 
     [data-icon]:before {
-	    font-family: 'Snipcart';
-	    content: attr(data-icon);
-	    speak: none;
-	    font-weight: normal;
-	    font-variant: normal;
-	    text-transform: none;
-	    line-height: 1;
-	    -webkit-font-smoothing: antialiased;
+        font-family: 'Snipcart';
+        content: attr(data-icon);
+        speak: none;
+        font-weight: normal;
+        font-variant: normal;
+        text-transform: none;
+        line-height: 1;
+        -webkit-font-smoothing: antialiased;
     }
 
     .icon-Snipcart, .icon-Snipcart-2, .icon-Snipcart-3, .icon-Snipcart-4, .icon-Snipcart-5, .icon-Snipcart-6, .icon-Snipcart-7 {
-	    font-family: 'Snipcart';
-	    speak: none;
-	    font-style: normal;
-	    font-weight: normal;
-	    font-variant: normal;
-	    text-transform: none;
-	    line-height: 1;
-	    -webkit-font-smoothing: antialiased;
+        font-family: 'Snipcart';
+        speak: none;
+        font-style: normal;
+        font-weight: normal;
+        font-variant: normal;
+        text-transform: none;
+        line-height: 1;
+        -webkit-font-smoothing: antialiased;
     }
     .icon-Snipcart:before { content: "\66"; }
     .icon-Snipcart-2:before { content: "\65"; }
@@ -169,7 +169,7 @@
     }
 
     #snipcart-main-container ol, #snipcart-main-container ul {
-	    list-style: none;
+        list-style: none;
     }
 
 /*** Styles Resetting ***/
@@ -186,7 +186,7 @@
 
 /*** Snipcart Holder ***/
 
-	.snipcart-checkout-container {width: 90%; margin-left: 5%; position: fixed; top: 0%; z-index: 20000; height: 80%;}
+    .snipcart-checkout-container {width: 90%; margin-left: 5%; position: fixed; top: 0%; z-index: 20000; height: 80%;}
 
 /*** / Snipcart Holder ***/
 
@@ -623,6 +623,30 @@
     
 /*** / Steps ***/
 
+
+/*** Paypal Express ***/
+#snipcart-main-container #snipcart-paypal-express-loading {
+    text-align: center;
+    margin-top: 30px;
+    padding-bottom: 30px;
+}
+
+#snipcart-main-container #snipcart-paypal-express-loading.snipcart-loading {
+    padding-top: 100px;
+    background-color: #fff;
+    background-image: url(img/ajax-loader.gif);
+    background-position: top center;
+    background-repeat: no-repeat;
+}
+
+#snipcart-main-container #snipcart-paypal-express-loading.snipcart-error {
+    color: red;
+    font-weight: bold;
+}
+
+/*** / Paypal Express ***/
+
+
 /*** Columns ***/
 
     #snipcart-main-content .snipcart-columns {
@@ -647,6 +671,11 @@
         display: block;         
         font: 16px 'brandon_grotesquebold', sans-serif; 
         color: #333333;
+    }
+
+    #snipcart-main-content .snipcart-paymentsby-paypal {
+        text-align: center;
+        padding-top: 20px;
     }
 
     /* Boxed columns */
