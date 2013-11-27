@@ -1333,6 +1333,8 @@
     #snipcart-footer #snipcart-powered a {
         color: #545557;
         text-decoration: none;
+        display: block;
+        padding: 10px 0;
     }
 
 /*** / Footer ***/
