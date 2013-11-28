@@ -268,7 +268,7 @@
     }
 
     #snipcart-main-container .snipcart-full-width-text {
-        padding: 50px 30px;
+        padding: 20px 30px;
     }
 
     #snipcart-main-container .snipcart-comments-box {
@@ -283,14 +283,35 @@
     #snipcart-main-container .snipcart-full-width-text span.snipcart-title {
         padding-bottom: 10px; 
         display: block; 
-        margin-top: 20px; 
         text-transform: uppercase; 
         color: #333333; 
-        font-size: 16pt; 
+        font-size: 12pt; 
         font-weight: bold; 
         text-align: center;
         font-family: 'brandon_grotesquebold';
     }
+
+    #snipcart-main-container #snipcart-generic-errors ul li strong {
+        font-weight: bold;
+    }
+
+    #snipcart-main-container #snipcart-generic-errors ul li {
+        text-align: left;
+        list-style-type: disc;
+        padding: 5px 0;
+    }
+
+    #snipcart-main-container #snipcart-generic-errors ul {
+        padding-left: 40px;
+    }
+    
+    #snipcart-main-container .snipcart-comments-box label {
+        font-size: 13px;
+        margin-bottom: 5px;
+        text-transform: none;
+        font-family: Arial
+    }
+
     #snipcart-main-container .snipcart-full-width-text span.snipcart-title span { color: #333; }
     #snipcart-main-container .snipcart-full-width-text span.snipcart-subtitle {
         font-size: 14px;
