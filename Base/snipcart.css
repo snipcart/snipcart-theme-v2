@@ -1002,7 +1002,7 @@
         right: 15px;
     }
 
-    #snipcart-main-container table#snipcart-items td.snipcart-td-6 a {
+    #snipcart-main-container table#snipcart-items td.snipcart-td-6 a.snipcart-remove-item {
         display: block; 
         width: 9px; 
         height: 9px; 
