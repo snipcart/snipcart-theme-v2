@@ -1003,11 +1003,17 @@
     }
 
     #snipcart-main-container table#snipcart-items td.snipcart-td-6 a.snipcart-remove-item {
-        display: block; 
+        display: inline-block;
         width: 9px; 
-        height: 9px; 
+        height: 9px;
+        margin-top: 5px;
         text-indent: -9999px;
         background: url('img/remove-item.png') no-repeat 0 0;
+    }
+
+    #snipcart-main-container table#snipcart-items td.snipcart-td-6 .snipcart-item-quantity-triggers {
+        float: right;
+        margin-right: 20px
     }
 
     #snipcart-main-container table#snipcart-items .snipcart-item-quantity-triggers {
