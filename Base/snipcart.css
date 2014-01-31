@@ -3,6 +3,14 @@
 /*** Icon Fonts ***/
 
     @font-face {
+	    font-family: 'Snipcart';
+	    src:url('fonts/snipcart/Snipcart.eot');
+	    src:url('fonts/snipcart/Snipcart.eot?#iefix') format('embedded-opentype'),
+		    url('fonts/snipcart/Snipcart.woff') format('woff'),
+		    url('fonts/snipcart/Snipcart.ttf') format('truetype'),
+		    url('fonts/snipcart/Snipcart.svg#Snipcart') format('svg');
+	    font-weight: normal;
+	    font-style: normal;
         font-family: 'Snipcart';
         src:url('fonts/snipcart/Snipcart.eot');
         src:url('fonts/snipcart/Snipcart.eot?#iefix') format('embedded-opentype'),
@@ -14,6 +22,14 @@
     }
 
     [data-icon]:before {
+	    font-family: 'Snipcart';
+	    content: attr(data-icon);
+	    speak: none;
+	    font-weight: normal;
+	    font-variant: normal;
+	    text-transform: none;
+	    line-height: 1;
+	    -webkit-font-smoothing: antialiased;
         font-family: 'Snipcart';
         content: attr(data-icon);
         speak: none;
@@ -25,6 +41,14 @@
     }
 
     .icon-Snipcart, .icon-Snipcart-2, .icon-Snipcart-3, .icon-Snipcart-4, .icon-Snipcart-5, .icon-Snipcart-6, .icon-Snipcart-7 {
+	    font-family: 'Snipcart';
+	    speak: none;
+	    font-style: normal;
+	    font-weight: normal;
+	    font-variant: normal;
+	    text-transform: none;
+	    line-height: 1;
+	    -webkit-font-smoothing: antialiased;
         font-family: 'Snipcart';
         speak: none;
         font-style: normal;
@@ -169,6 +193,7 @@
     }
 
     #snipcart-main-container ol, #snipcart-main-container ul {
+	    list-style: none;
         list-style: none;
     }
 
@@ -187,7 +212,7 @@
 
 /*** Snipcart Holder ***/
 
-    .snipcart-checkout-container {width: 90%; margin-left: 5%; position: fixed; top: 0%; z-index: 20000; height: 80%;}
+	.snipcart-checkout-container {right: 0; top: 0; position: fixed; bottom: 0; left: 0; overflow-x: auto; z-index: 1040; padding: 58px 0; height: auto; margin-left: 0; width: auto;}
 
 /*** / Snipcart Holder ***/
 
@@ -226,6 +251,9 @@
     #snipcart-modal
     {
         height: 100%;
+        position: relative;
+        width: auto;
+        z-index: 1050;
     }
     #snipcart-main-container span.snipcart-clear {
         display: block;
@@ -234,9 +262,10 @@
 
     #snipcart-main-container {
          position: relative; 
-         top: 60px; 
+         outline: 0 none;
+         top: auto;
+         width: auto;
          max-width: 996px;
-        width: 90%;
          margin: 0 auto; 
          z-index: 15000; 
          font-family: Arial !important; 
@@ -247,6 +276,7 @@
 
     #snipcart-sub-content .snipcart-step-container {
         overflow-y: auto;
+        max-height: none !important;
     }
 
     #snipcart-main-content { background-color: #ffffff; width: 100%; }
@@ -269,6 +299,7 @@
     }
 
     #snipcart-main-container .snipcart-full-width-text {
+        padding: 50px 30px;
         padding: 20px 30px;
     }
 
@@ -284,8 +315,10 @@
     #snipcart-main-container .snipcart-full-width-text span.snipcart-title {
         padding-bottom: 10px; 
         display: block; 
+        margin-top: 20px; 
         text-transform: uppercase; 
         color: #333333; 
+        font-size: 16pt; 
         font-size: 12pt; 
         font-weight: bold; 
         text-align: center;
@@ -1003,17 +1036,18 @@
     }
 
     #snipcart-main-container table#snipcart-items td.snipcart-td-6 a.snipcart-remove-item {
-        display: inline-block;
+        display: block; 
         width: 9px; 
-        height: 9px;
-        margin-top: 5px;
+        height: 9px; 
         text-indent: -9999px;
         background: url('img/remove-item.png') no-repeat 0 0;
+        float: left;
     }
 
-    #snipcart-main-container table#snipcart-items td.snipcart-td-6 .snipcart-item-quantity-triggers {
-        float: right;
-        margin-right: 20px
+    #snipcart-main-container table#snipcart-items td.snipcart-td-6 a.snipcart-duplicate-item {
+        margin-top: 15px;
+        position: relative;
+        right: 4px;
     }
 
     #snipcart-main-container table#snipcart-items .snipcart-item-quantity-triggers {
@@ -1347,9 +1381,13 @@
         color: #a5a5a5;
     }
     #snipcart-footer #snipcart-powered {
+        background: url('img/snipcart-footer.png') no-repeat left center;
+        padding-left: 25px;
         background: url('img/lock.png') no-repeat left 3px;
         padding-left: 30px;
         text-transform: uppercase;
+        font: 7.42pt/10px 'brandon_grotesqueregular', sans-serif;
+        color: #545557;
         font: 8.42pt/11px 'brandon_grotesqueregular', sans-serif;
         color: #767676;
         display: block;
@@ -1388,6 +1426,10 @@
         #snipcart-close {
             top: 10px;
             right: 10px;
+        }
+        #snipcart-main-container table#snipcart-items td.snipcart-td-6 a.snipcart-duplicate-item {
+            margin-top: 0;
+            right: 0;
         }
     /*** General Styles ***/
         #snipcart-main-container #snipcart-header {
@@ -1587,6 +1629,22 @@
 
     /*** / Confirm ***/
     
+}
+
+@media (max-width: 800px) {
+  .snipcart-checkout-container {
+    margin-left: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+  }
+}
+@media (max-width: 767px) {
+  #snipcart-main-container {
+    top: 8px;
+  }
 }
 
 @media only screen and (min-width: 1024px)
