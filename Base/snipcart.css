@@ -220,8 +220,12 @@
         background: -ms-radial-gradient(center, ellipse cover,  rgba(0,0,0,0.2) 0%,rgba(0,0,0,1) 100%); /* IE10+ */
         background: radial-gradient(ellipse at center,  rgba(0,0,0,0.2) 0%,rgba(0,0,0,1) 100%); /* W3C */
 	    right: 0;
-        top: 0; position: 
-        fixed; bottom: 0; left: 0; overflow-x: auto; z-index: 1040; padding: 58px 0; height: auto; margin-left: 0; width: auto;
+        top: 0; position: fixed; 
+        bottom: 0; 
+        left: 0; 
+        overflow-x: auto; 
+        z-index: 1040; 
+        padding: 25px 0; height: auto; margin-left: 0; width: auto;
 	}
 
 /*** / Snipcart Holder ***/
