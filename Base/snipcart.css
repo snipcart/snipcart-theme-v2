@@ -494,6 +494,7 @@
     #snipcart-header #snipcart-title {
         display: none; 
         float: left; 
+        min-width: 300px;
         height: 95px;
         color: #fff; 
         text-transform: uppercase; 
@@ -1446,6 +1447,7 @@
 
         #snipcart-header #snipcart-title {
             display: block;
+            min-width: 300px;
         }
 
         #snipcart-main-container a.snipcart-btn {
@@ -1476,7 +1478,8 @@
             padding-left: 25px; 
             width: auto;
             top: 0;
-
+            
+            min-width: 300px;
             position: absolute;
         }
         #snipcart-header #snipcart-total span.snipcart-label {
@@ -1710,6 +1713,7 @@
     body.snipcart-open #snipcart-header #snipcart-title {
         line-height: inherit;
         display: none;
+        min-width: 300px;
     }
 
     body.snipcart-open #snipcart-main-container span.snipcart-total-price {
