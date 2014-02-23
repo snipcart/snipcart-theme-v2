@@ -210,6 +210,34 @@
 
 /*** / Main Body ***/
 
+/*** Flash messages ***/
+    #snipcart-main-container #snipcart-flash-messages > li {
+        padding: 10px 20px;
+        border-bottom: solid 1px rgba(0, 0, 0, 0.5);
+    }
+    
+    #snipcart-main-container #snipcart-flash-messages > li.snipcart-flash-success {
+        background-color: #77D544;
+        color: #333;
+    }
+    
+    #snipcart-main-container #snipcart-flash-messages > li.snipcart-flash-warn {
+        background-color: #FFEC16;
+        color: #333;
+    }
+
+    #snipcart-main-container #snipcart-flash-messages > li.snipcart-flash-error {
+        background-color: #FF0600;
+        color: #333;
+    }
+    
+    #snipcart-main-container #snipcart-flash-messages > li:last-child {
+        box-shadow: 0 2px 0 rgba(0, 0, 0, 0.5);
+        border-bottom: none;
+    }
+
+/*** /Flash messages ***/
+
 /*** Snipcart Holder ***/
 
 	.snipcart-checkout-container {
