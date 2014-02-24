@@ -492,10 +492,14 @@
         #snipcart-main-container span.snipcart-unit-price, #snipcart-main-container span.snipcart-total-price {
             font: 14px 'brandon_grotesquebold', sans-serif;
             font-weight: bold;
-            color: #a5a5a5 ;
+            color: #a5a5a5;
+            text-align: right;
+            padding-right: 20px;
         }
 
-        #snipcart-main-container span.snipcart-total-price { color: #333; }
+        #snipcart-main-container span.snipcart-total-price {
+            color: #333;
+        }
     
     /* Highlight for unit price and total price */
 
@@ -590,7 +594,13 @@
     #snipcart-header #snipcart-continue-shopping-link a { color: #9f9f9f; text-decoration: underline; font-size: 9pt; }
     #snipcart-header #snipcart-continue-shopping-link a:hover { color: #9f9f9f; text-decoration: none; }
 
-    #snipcart-main-container #snipcart-cartitems-continue-top {display: none; position: absolute; top: 35px; right: 20px; }
+    #snipcart-main-container #snipcart-cartitems-continue-top,
+    #snipcart-main-container .snipcart-btn-top-right {
+        display: none; 
+        position: absolute; 
+        top: 35px; 
+        right: 20px;
+    }
 
     #snipcart-logged-user { position: absolute; top: 40px; left: 25px; }
 
