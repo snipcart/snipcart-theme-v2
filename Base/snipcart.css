@@ -775,7 +775,6 @@
     }
 
     #snipcart-main-content .snipcart-paymentsby-paypal {
-        text-align: center;
         padding-top: 20px;
     }
 
@@ -1576,7 +1575,16 @@
             box-sizing: border-box; /* Opera/IE 8+ */
             margin-bottom: -99989px;
             padding-bottom: 99999px !important;
-        }          
+        } 
+        
+        #snipcart-main-content div.snipcart-column.snipcart-column-right {
+            float: right;
+            text-align: right;
+        }
+
+        #snipcart-main-content div.snipcart-column.snipcart-column-right img {
+            max-height: 50px;
+        }
 
         #snipcart-main-content div.snipcart-column-2,
         #snipcart-main-content div.snipcart-column-3
