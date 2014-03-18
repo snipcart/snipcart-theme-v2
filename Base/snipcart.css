@@ -401,7 +401,8 @@
 
     /* Buttons */
 
-        #snipcart-main-container a.snipcart-btn {
+        #snipcart-main-container a.snipcart-btn,
+        #snipcart-main-container button.snipcart-btn {
             display: inline-block; 
             background-color: #666; 
             padding: 0 5px; 
@@ -988,6 +989,10 @@
         padding-right: 20px;
     }
     
+    #snipcart-main-container table.snipcart-list .snipcart-td-right.snipcart-pad-right {
+        padding-right: 60px;
+    }
+
     #snipcart-main-container table.snipcart-list td { padding: 20px 0; text-align: center; border-top: 1px solid #f1f1f2; }
     #snipcart-main-container table.snipcart-list tr.odd td { background-color: #fbfbfb; }
     #snipcart-main-container table.snipcart-list td span { display: block; }
@@ -997,7 +1002,8 @@
     #snipcart-main-container table.snipcart-list span.snipcart-shipping-method-price,
     #snipcart-main-container table.snipcart-list span.snipcart-confirm-item-quantity,
     #snipcart-main-container table.snipcart-list span.snipcart-confirm-item-price,
-    #snipcart-main-container table.snipcart-list span.snipcart-confirm-item-total-price
+    #snipcart-main-container table.snipcart-list span.snipcart-confirm-item-total-price,
+    #snipcart-main-container table.snipcart-list span.snipcart-title
     {
         color: #333333; 
         font: 14px 'brandon_grotesquebold', sans-serif;
@@ -1456,7 +1462,8 @@
        text-align: center;
     }
 
-    #snipcart-main-container a.snipcart-btn {
+    #snipcart-main-container a.snipcart-btn,
+    #snipcart-main-container button.snipcart-btn {
         font-size: 12px;
     }
 }
@@ -1487,7 +1494,8 @@
             min-width: 300px;
         }
 
-        #snipcart-main-container a.snipcart-btn {
+        #snipcart-main-container a.snipcart-btn,
+        #snipcart-main-container button.snipcart-btn {
             padding: 0 25px; /* Larger buttons */
         }
 
