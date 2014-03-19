@@ -501,6 +501,10 @@
         #snipcart-main-container span.snipcart-total-price {
             color: #333;
         }
+
+        #snipcart-main-container span.snipcart-total-price.snipcart-saved-amount {
+            color: #76d443;
+        }
     
     /* Highlight for unit price and total price */
 
@@ -1037,8 +1041,6 @@
 
     #snipcart-main-container table#snipcart-items td.snipcart-td-1 {
          padding-right: 20px;
-         border-top: 1px solid #f1f1f2;
-         border-bottom: 1px solid #f1f1f2;
     }
 
     #snipcart-main-container #snipcart-step-content-cart-content table#snipcart-items tr:first-child td.snipcart-td-1,
@@ -1051,7 +1053,6 @@
         text-align: left;
         padding: 10px 20px 20px 20px;
         border-top: 0;
-        border-bottom: 1px solid #f1f1f2;
     }
 
     #snipcart-main-container table#snipcart-items td.snipcart-td-2.snipcart-no-customfields {
@@ -1499,6 +1500,10 @@
             padding: 0 25px; /* Larger buttons */
         }
 
+        #snipcart-main-container button.snipcart-btn {
+            border: none;
+        }
+
         #snipcart-main-container td, #snipcart-main-container th {
             display: table-cell; /* We have enough space so we list elems as cells */
         }
@@ -1614,10 +1619,25 @@
 
         /* We want the promo code form on same line */
 
-        #snipcart-promocodes .snipcart-promocode-form input[type=text] {
-            width: 250px;
+        #snipcart-main-container #snipcart-apply-discount {
+            padding: 10px 20px;
+            text-align: right;
+        }
+
+        #snipcart-main-container #snipcart-apply-discount input[type=text] {
             display: inline-block;
             margin: 0 7px 0 0;
+        }
+
+        #snipcart-main-container #snipcart-apply-discount div {
+            float: right;
+            width: 250px;
+            margin-right: 10px;
+            margin-bottom: 10px;
+        }
+
+        #snipcart-main-container #snipcart-apply-discount button {
+            float: right;
         }
 
     /*** / Promo Codes ***/
