@@ -1031,6 +1031,15 @@
         clear: both;
     }
 
+    #snipcart-main-container table#snipcart-items tbody.snipcart-subtotal,
+    #snipcart-main-container table#snipcart-items tbody.snipcart-totals {
+        background-color: #fbfbfb;
+    }
+
+    #snipcart-main-container table#snipcart-items tbody.snipcart-totals tr.snipcart-grand-total .snipcart-total-price {
+        font-size: larger;
+    }
+
     #snipcart-main-container table#snipcart-items th {
         display: none; /* No heading on mobile */
     }
