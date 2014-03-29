@@ -1032,12 +1032,28 @@
     }
 
     #snipcart-main-container table#snipcart-items tbody.snipcart-subtotal,
-    #snipcart-main-container table#snipcart-items tbody.snipcart-totals {
+    #snipcart-main-container table#snipcart-items tbody.snipcart-total,
+    #snipcart-main-container table#snipcart-items tbody.snipcart-fees {
         background-color: #fbfbfb;
     }
 
-    #snipcart-main-container table#snipcart-items tbody.snipcart-totals tr.snipcart-grand-total .snipcart-total-price {
-        font-size: larger;
+    #snipcart-main-container table#snipcart-items tbody.snipcart-discounts tr td {
+        padding: 10px 0 10px 20px;
+    }
+
+    #snipcart-main-container table#snipcart-items tbody.snipcart-fees tr td {
+        padding: 5px 0 5px 20px;
+        border: none;
+    }
+
+    #snipcart-main-container table#snipcart-items tbody.snipcart-subtotal tr td {
+        border-top: 1px solid #eee;
+        border-bottom: 1px solid #eee;
+    }
+    
+    #snipcart-main-container table#snipcart-items tbody.snipcart-subtotal tr td span,
+    #snipcart-main-container table#snipcart-items tbody.snipcart-total tr td span {
+        font-size: 18px;
     }
 
     #snipcart-main-container table#snipcart-items th {
