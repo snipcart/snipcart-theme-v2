@@ -1849,3 +1849,20 @@
         width: 80px; /* We want the text to wrap */
     }
 }
+
+body {
+  background: #888;
+}
+
+#snipcart-main-container table.snipcart-list td.snipcart-td-loading {
+    width: 30px;
+    padding-right: 10px;
+}
+
+#snipcart-main-container .snipcart-td-loading.snipcart-loading .snipcart-loader {
+    width: 20px;
+    height: 16px;
+    background-image: url(img/small-loader.gif);
+    background-repeat: no-repeat;
+    background-position: center center;
+}
