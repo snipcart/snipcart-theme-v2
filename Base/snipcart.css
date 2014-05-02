@@ -1869,10 +1869,6 @@
     }
 }
 
-body {
-  background: #888;
-}
-
 #snipcart-main-container table.snipcart-list td.snipcart-td-loading {
     width: 30px;
     padding-right: 10px;
