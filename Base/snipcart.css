@@ -1861,8 +1861,9 @@ body {
 
 #snipcart-main-container .snipcart-td-loading.snipcart-loading .snipcart-loader {
     width: 20px;
-    height: 16px;
-    background-image: url(img/small-loader.gif);
+    height: 20px;
+    background-image: url(img/ajax-loader.gif);
     background-repeat: no-repeat;
     background-position: center center;
+    background-size: 20px 20px;
 }
