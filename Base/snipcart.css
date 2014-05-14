@@ -228,7 +228,7 @@
 
     #snipcart-main-container #snipcart-flash-messages > li.snipcart-flash-error {
         background-color: #FF0600;
-        color: #333;
+        color: #fff;
     }
     
     #snipcart-main-container #snipcart-flash-messages > li:last-child {
