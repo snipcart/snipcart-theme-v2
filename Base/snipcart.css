@@ -780,7 +780,8 @@
     }
 
     #snipcart-main-content .snipcart-paymentsby-paypal {
-        padding-top: 20px;
+        padding-bottom: 20px;
+        text-align: center;
     }
 
     /* Boxed columns */
