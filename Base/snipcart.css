@@ -215,12 +215,12 @@
         padding: 10px 20px;
         border-bottom: solid 1px rgba(0, 0, 0, 0.5);
     }
-    
+
     #snipcart-main-container #snipcart-flash-messages > li.snipcart-flash-success {
         background-color: #77D544;
         color: #333;
     }
-    
+
     #snipcart-main-container #snipcart-flash-messages > li.snipcart-flash-warn {
         background-color: #FFEC16;
         color: #333;
@@ -230,7 +230,7 @@
         background-color: #FF0600;
         color: #fff;
     }
-    
+
     #snipcart-main-container #snipcart-flash-messages > li:last-child {
         box-shadow: 0 2px 0 rgba(0, 0, 0, 0.5);
         border-bottom: none;
@@ -259,8 +259,6 @@
 /*** / Snipcart Holder ***/
 
 /*** Modal Window ***/
-
-
 
 /*** / Snipcart Holder ***/
 
@@ -373,7 +371,7 @@
     #snipcart-main-container #snipcart-generic-errors ul {
         padding-left: 40px;
     }
-    
+
     #snipcart-main-container .snipcart-comments-box label {
         font-size: 13px;
         margin-bottom: 5px;
@@ -463,7 +461,7 @@
             margin-top: 20px;
             float: left;
         }
-    
+
         #snipcart-main-container .snipcart-additional-option .snipcart-btn {
             float: right;
             margin-top: 20px;
@@ -505,7 +503,7 @@
         #snipcart-main-container span.snipcart-total-price.snipcart-saved-amount {
             color: #76d443;
         }
-    
+
     /* Highlight for unit price and total price */
 
 /*** / General Styles ***/
@@ -560,7 +558,7 @@
         -webkit-border-radius: 5px;
         border: 1px solid #2e3031;
     }
-    
+
     #snipcart-header #snipcart-total {
         display: block;
         border: 1px solid #17181a;
@@ -576,7 +574,7 @@
          text-transform: uppercase;
          font: 16px/38px 'brandon_grotesquemedium', sans-serif;
     }
-    
+
     #snipcart-header #snipcart-total span.snipcart-label {
         color: #898989; 
     }
@@ -701,7 +699,7 @@
     }
 
     ul#snipcart-steps li span { display: block; }
-    
+
     ul#snipcart-steps li span.snipcart-step-number {
        -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
         -moz-box-sizing: border-box; /* Firefox, other Gecko */
@@ -726,9 +724,8 @@
         display: none; /* No text on mobile version */
     }
     ul#snipcart-steps li.active span.snipcart-step-text { color: #333333; }
-    
-/*** / Steps ***/
 
+/*** / Steps ***/
 
 /*** Paypal Express ***/
 #snipcart-main-container #snipcart-paypal-express-loading {
@@ -752,13 +749,12 @@
 
 /*** / Paypal Express ***/
 
-
 /*** Columns ***/
 
     #snipcart-main-content .snipcart-columns {
         margin: 20px 0;
     }
-    
+
     #snipcart-main-content .snipcart-column {
         padding: 0 20px;
     }
@@ -814,7 +810,7 @@
 /*** / Columns ***/
 
 /*** Forms ***/
-    
+
     #snipcart-main-container label {
         font: 11px 'brandon_grotesquebold';
         text-transform: uppercase; 
@@ -964,7 +960,7 @@
             -moz-border-radius: 3px;
             -webkit-border-radius: 3px;
         }
-    
+
     /* / Errors */
 
 /*** / Forms ***/
@@ -993,7 +989,7 @@
         text-align: right;
         padding-right: 20px;
     }
-    
+
     #snipcart-main-container table.snipcart-list .snipcart-td-right.snipcart-pad-right {
         padding-right: 60px;
     }
@@ -1001,7 +997,7 @@
     #snipcart-main-container table.snipcart-list td { padding: 20px 0; text-align: center; border-top: 1px solid #f1f1f2; }
     #snipcart-main-container table.snipcart-list tr.odd td { background-color: #fbfbfb; }
     #snipcart-main-container table.snipcart-list td span { display: block; }
-      
+
     #snipcart-main-container table.snipcart-list span.snipcart-product-name,
     #snipcart-main-container table.snipcart-list span.snipcart-shipping-method-name,
     #snipcart-main-container table.snipcart-list span.snipcart-shipping-method-price,
@@ -1051,7 +1047,7 @@
         border-top: 1px solid #eee;
         border-bottom: 1px solid #eee;
     }
-    
+
     #snipcart-main-container table#snipcart-items tbody.snipcart-subtotal tr td span,
     #snipcart-main-container table#snipcart-items tbody.snipcart-total tr td span {
         font-size: 18px;
@@ -1202,7 +1198,7 @@
     #snipcart-main-container .snipcart-customfield-checkbox {
         margin-top: 10px;
     }
-    
+
     #snipcart-main-container .snipcart-customfield-checkbox input {
         margin: 0;
         padding: 0;
@@ -1263,7 +1259,7 @@
         text-transform: uppercase;
         font: 14px 'brandon_grotesquebold', sans-serif;
     }
-    
+
     #snipcart-promocodes .snipcart-promocodes-list strong {
         color: #76d443;
     }         
@@ -1281,7 +1277,7 @@
 /*** / Promo Codes ***/
 
 /*** Shipping Methods ***/
-    
+
     #snipcart-main-container table#snipcart-shipping-methods tr td.snipcart-td-1 {
         background: url("img/checkbox.png") no-repeat 20px center;  
         padding-left: 50px;     
@@ -1391,18 +1387,18 @@
 
   /* Rounded corners */
   .snipcart-tipsy-inner { border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px; }
-  
+
   /* Uncomment for shadow */
   /*.tipsy-inner { box-shadow: 0 0 5px #000000; -webkit-box-shadow: 0 0 5px #000000; -moz-box-shadow: 0 0 5px #000000; }*/
-  
+
   .snipcart-tipsy-arrow { position: absolute; width: 0; height: 0; line-height: 0; border: 5px dashed #000; }
-  
+
   /* Rules to colour arrows */
   .snipcart-tipsy-arrow-n { border-bottom-color: #C00; }
   .snipcart-tipsy-arrow-s { border-top-color: #C00; }
   .snipcart-tipsy-arrow-e { border-left-color: #C00; }
   .snipcart-tipsy-arrow-w { border-right-color: #C00; }
-  
+
   .snipcart-tipsy-n .snipcart-tipsy-arrow { top: 0px; left: 50%; margin-left: -5px; border-bottom-style: solid; border-top: none; border-left-color: transparent; border-right-color: transparent; }
   .snipcart-tipsy-nw .snipcart-tipsy-arrow { top: 0; left: 10px; border-bottom-style: solid; border-top: none; border-left-color: transparent; border-right-color: transparent;}
   .snipcart-tipsy-ne .snipcart-tipsy-arrow { top: 0; right: 10px; border-bottom-style: solid; border-top: none;  border-left-color: transparent; border-right-color: transparent;}
@@ -1433,7 +1429,7 @@
         background-position: center 40px;
         min-height: 0;
     }
-    
+
     #snipcart-main-container .snipcart-loading #snipcart-loading-message {
         padding-top: 160px;
         padding-bottom: 20px;
@@ -1561,7 +1557,7 @@
     /*** / General Styles ***/
 
     /*** Header ***/
-       
+
         #snipcart-header #snipcart-header-total {
             margin-top: 35px; /* We want the total to be slightly higher to align with the larger title */
             margin-left: 20px;
@@ -1573,7 +1569,7 @@
             padding-left: 25px; 
             width: auto;
             top: 0;
-            
+
             min-width: 300px;
             position: absolute;
         }
@@ -1617,7 +1613,7 @@
     /*** / Steps ***/
 
     /*** Columns ***/
-        
+
         /* We split the columns (33% each) */
 
         #snipcart-main-content .snipcart-columns {
@@ -1634,7 +1630,7 @@
             margin-bottom: -99989px;
             padding-bottom: 99999px !important;
         } 
-        
+
         #snipcart-main-content div.snipcart-column.snipcart-column-right {
             float: right;
             text-align: right;
@@ -1651,7 +1647,7 @@
         }
 
         /* Boxed Columns */
-            
+
             #snipcart-main-content .snipcart-boxed-columns div.snipcart-column-2 {
                 border-top : 0;
             }
@@ -1686,7 +1682,7 @@
         }
 
     /*** / Promo Codes ***/
-    
+
     /*** Items ***/
 
         #snipcart-main-container table#snipcart-items tr {
@@ -1696,11 +1692,11 @@
         #snipcart-main-container table#snipcart-items tr th, #snipcart-main-container table#snipcart-items tr td {
             display: table-cell;     
         }
-              
+
         #snipcart-main-container table#snipcart-items td span.snipcart-thumbnail-wrapper {
             display: inline-block;
         }
-        
+
         #snipcart-main-container table#snipcart-items td.snipcart-td-1,
         #snipcart-main-container table#snipcart-items td.snipcart-td-2,
         #snipcart-main-container table#snipcart-items td.snipcart-td-2.snipcart-no-customfields,
@@ -1709,7 +1705,7 @@
         {
              border-top: 1px solid #eee;
         } 
-        
+
         #snipcart-main-container #snipcart-step-content-cart-items table#snipcart-items td.snipcart-td-2,
         #snipcart-main-container #snipcart-step-content-cart-content table#snipcart-items td.snipcart-td-2 {
             /* We limit the width in order to have decent looking input fields */
@@ -1740,7 +1736,7 @@
             position: static;
             width: 60px;
         }
-       
+
     /*** / Items ***/        
 
     /*** Confirm ***/
@@ -1757,7 +1753,7 @@
         /* / Adress infos */
 
     /*** / Confirm ***/
-    
+
 }
 
 @media (max-width: 800px) {
@@ -1793,7 +1789,7 @@
             margin: 13px 0 0 3px;
             width: 70px; /* We want the text to wrap */
         }
-        
+
         ul#snipcart-steps li span.snipcart-step-number {
             width: auto;
             margin: 9px 0 0 5px;
@@ -1862,7 +1858,6 @@
         display: none;
     }
 }
-
 
 @media only screen and (min-width: 1280px) {
     ul#snipcart-steps li span.snipcart-step-text {
