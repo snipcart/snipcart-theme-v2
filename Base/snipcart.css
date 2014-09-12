@@ -181,6 +181,9 @@
         font-size: 100%;
         font: inherit;
         line-height: normal;
+        box-sizing: content-box;
+        -webkit-box-sizing: content-box;
+        -mox-box-sizing: content-box;
     }
 
     #snipcart-main-container table {
@@ -724,6 +727,22 @@
         display: none; /* No text on mobile version */
     }
     ul#snipcart-steps li.active span.snipcart-step-text { color: #333333; }
+
+    #snipcart-main-container #snipcart-apply-discount {
+        padding: 10px 20px;
+    }
+
+    #snipcart-main-container #snipcart-apply-discount div {
+        float: right;
+        width: 150px;
+        margin-bottom: 10px;
+        position: relative;
+        top: -4px;
+    }
+
+    #snipcart-main-container #snipcart-apply-discount button {
+        float: right;
+    }
 
 /*** / Steps ***/
 
@@ -1675,6 +1694,7 @@
             width: 250px;
             margin-right: 10px;
             margin-bottom: 10px;
+            top: 0;
         }
 
         #snipcart-main-container #snipcart-apply-discount button {
