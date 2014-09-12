@@ -1791,11 +1791,6 @@
       top: 0;
   }
 }
-@media (max-width: 767px) {
-  #snipcart-main-container {
-    top: 8px;
-  }
-}
 
 @media only screen and (min-width: 1024px)
 {
