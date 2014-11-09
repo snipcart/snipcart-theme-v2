@@ -988,13 +988,18 @@
     #snipcart-main-container table.snipcart-list { width: 100%; clear: both; }
 
     #snipcart-main-container table.snipcart-list th {
-        text-align: center; 
+        text-align: center;
         color: #333;
-        opacity: 0.7; 
+        opacity: 0.7;
         font: 11px 'brandon_grotesquebold', sans-serif;
         text-transform: uppercase;
-        height: 40px;        
+        height: 40px;
     }
+
+    #snipcart-main-container table.snipcart-list .snipcart-td-pad-right {
+        padding-right: 20px;
+    }
+    
 
     #snipcart-main-container table.snipcart-list .snipcart-th-left,
     #snipcart-main-container table.snipcart-list .snipcart-td-left {
@@ -1009,7 +1014,7 @@
     #snipcart-main-container table.snipcart-list .snipcart-th-right,
     #snipcart-main-container table.snipcart-list .snipcart-td-right {
         text-align: right;
-        padding-right: 20px;
+        
     }
 
     #snipcart-main-container table.snipcart-list .snipcart-td-right.snipcart-pad-right {
@@ -1789,10 +1794,15 @@
     width: 100%;
     padding: 0;
   }
+  
   #snipcart-main-container {
       padding: 0;
       top: 0;
   }
+
+    #snipcart-main-container input[type=text] {
+        font-size: 16px;
+    }
 }
 
 @media only screen and (min-width: 1024px)
