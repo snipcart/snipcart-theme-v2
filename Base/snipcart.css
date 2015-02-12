@@ -235,8 +235,7 @@
     }
 
     #snipcart-main-container #snipcart-flash-messages > li:last-child {
-        box-shadow: 0 2px 0 rgba(0, 0, 0, 0.5);
-        border-bottom: none;
+        border-bottom: solid 1px #292B2D;
     }
 
 /*** /Flash messages ***/
