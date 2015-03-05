@@ -1,3 +1,35 @@
-﻿#snipcart-main-container {
-    color: black;
+﻿@import '_app.scss';
+
+#snipcart-main-container {
+
+    #snipcart-upcoming-payments {
+        h2 {
+            color: #333333;
+            font: 18px 'brandon_grotesquebold', sans-serif;
+            text-transform: uppercase;
+            padding-left: 10px;
+        }
+
+        table tr td {
+            vertical-align: top;
+
+            &.snipcart-td-3 {
+                padding-right: 40px;
+
+                > .snipcart-total-price {
+                    font-size: 18px;
+                }
+            }
+        }
+
+        table tr th {
+            &.snipcart-th-3 {
+                padding-right: 40px;
+            }
+        }
+
+        dd {
+            margin-bottom: 5px;
+        }
+    }
 }
