@@ -1,6 +1,24 @@
 ﻿@import '_app.scss';
 
+
+.snipcart-hide-for-small {
+    @media #{$small-up} {
+        display: none;
+    }
+}
+
 #snipcart-main-container {
+
+    table.snipcart-list {
+        .snipcart-td-last, .snipcart-th-last {
+            padding-right: 20px;
+        }
+
+        td strong {
+            font-weight: bold;
+            color: #333;
+        }
+    }
 
     #snipcart-upcoming-payments {
         h2 {
@@ -30,6 +48,12 @@
 
         dd {
             margin-bottom: 5px;
+        }
+    }
+
+    #snipcart-current-user {
+        nav {
+            float: right;
         }
     }
 }
