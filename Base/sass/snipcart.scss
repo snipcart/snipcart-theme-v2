@@ -9,6 +9,22 @@
 
 #snipcart-main-container {
 
+    dl.snipcart-def-list {
+        dd {
+            float: left;
+            margin-right: 10px;
+            padding: 5px 0;
+            margin-left: 0;
+        }
+        dt {
+            padding: 5px 0;
+        }
+    }
+
+    .snipcart-container-content {
+        padding: 20px;
+    }
+
     table.snipcart-list {
         .snipcart-td-last, .snipcart-th-last {
             padding-right: 20px;
