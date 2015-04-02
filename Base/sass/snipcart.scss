@@ -73,3 +73,87 @@
         }
     }
 }
+
+/*** User Menu ***/
+
+#snipcart-user-menu {
+
+    .snip-menu-control {
+        cursor: pointer;
+        @include user-select(none);
+
+        &.snip-control-active, &:hover {
+            color: #999;
+
+            .snipcart-burger-icon,
+            .snipcart-burger-icon:before,
+            .snipcart-burger-icon:after {
+                background: #999;
+            }
+        }
+    }
+
+    .snipcart-burger-icon {
+        background: white;
+        width: 20px;
+        height: 3px;
+        position: relative;
+        display: inline-block;
+        vertical-align: middle;
+        margin-left: .5em;
+        border-radius: 6px;
+
+        &:before, &:after {
+            content: "";
+            position: absolute;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: white;
+            border-radius: 6px;
+        }
+
+        &:before {
+            top: -6px;
+        }
+
+        &:after {
+            bottom: -6px;
+        }
+    }
+
+    .snip-user-menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background: #555;
+        color: #fff;
+        z-index: 2;
+
+        li {
+            padding: .75em 1.5em;
+            border-top: 1px solid #666;
+            display: block;
+
+            &:first-child {
+                border: 0;
+            }
+        }
+
+        a {
+            cursor: pointer;
+            display: block;
+            color: #87db57;
+
+            &:hover {
+                color: darken(#87db57, 20%);
+            }
+        }
+    }
+
+}
+
+
+
+/*** / User Menu ***/

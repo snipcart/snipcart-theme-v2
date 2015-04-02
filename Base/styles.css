@@ -1,4 +1,4 @@
-@charset "utf-8";
+﻿@charset "utf-8";
 
 /*** Icon Fonts ***/
 
@@ -614,6 +614,7 @@
     #snipcart-main-content #snipcart-current-user #snipcart-user-infos {
         background-color: #333;
         padding: 10px 20px;
+        position: relative;
     }
     #snipcart-main-content #snipcart-global-notices.snipcart-error {
         margin-bottom: 0px;
