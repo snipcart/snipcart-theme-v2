@@ -40,7 +40,7 @@
         -webkit-font-smoothing: antialiased;
     }
 
-    .icon-Snipcart, .icon-Snipcart-2, .icon-Snipcart-3, .icon-Snipcart-4, .icon-Snipcart-5, .icon-Snipcart-6, .icon-Snipcart-7 {
+    .icon-Snipcart, .icon-Snipcart-2, .icon-Snipcart-3, .icon-Snipcart-4, .icon-Snipcart-5, .icon-Snipcart-6, .icon-Snipcart-7, .icon-snipcart-close {
         font-family: 'Snipcart';
         speak: none;
         font-style: normal;
@@ -65,6 +65,7 @@
     .icon-Snipcart-5:before { content: "\62"; }
     .icon-Snipcart-6:before { content: "\61"; }
     .icon-Snipcart-7:before { content: "\67"; }
+    .icon-snipcart-close:before { content: '\68'; }
 
 /*** / Icon Fonts ***/
 
@@ -267,16 +268,21 @@
 /*** Modal Window ***/
 
     #snipcart-close {
-        display: block;
         text-decoration: none;
-        width: 10px; 
-        height: 10px; 
-        text-indent: -10000px; 
-        background: url("img/close.png") left top no-repeat;  
         z-index: 10000; 
         position: absolute;
         top: 25px;
         right: 25px;
+    }
+
+    #snipcart-close span {
+        position: absolute;
+        text-indent: -100000px;
+    }
+
+    #snipcart-close i {
+        color: white;
+        font-size: 22px;
     }
 
 /*** / Modal Window ***/
@@ -612,9 +618,10 @@
         color: #fff;
     }
     #snipcart-main-content #snipcart-current-user #snipcart-user-infos {
-        background-color: #333;
-        padding: 10px 20px;
+        padding: 10px 44px 10px 10px;
         position: relative;
+        text-align: center;
+        background: #1a1b1d;
     }
     #snipcart-main-content #snipcart-global-notices.snipcart-error {
         margin-bottom: 0px;
