@@ -267,12 +267,13 @@
 
 /*** Modal Window ***/
 
-    #snipcart-close {
+    a#snipcart-close {
         text-decoration: none;
         z-index: 10000; 
         position: absolute;
-        top: 25px;
-        right: 25px;
+        padding: 8px;
+        top: 8px;
+        right: 2px;
     }
 
     #snipcart-close span {
@@ -282,7 +283,7 @@
 
     #snipcart-close i {
         color: white;
-        font-size: 22px;
+        font-size: 28px;
     }
 
 /*** / Modal Window ***/
@@ -618,7 +619,7 @@
         color: #fff;
     }
     #snipcart-main-content #snipcart-current-user #snipcart-user-infos {
-        padding: 10px 44px 10px 10px;
+        padding: 16px 44px 16px 10px;
         position: relative;
         text-align: center;
         background: #1a1b1d;
@@ -1551,10 +1552,16 @@
             display: block
         }
 
-        #snipcart-close {
+        a#snipcart-close {
             top: 10px;
             right: 10px;
+            padding: 0;
         }
+
+        #snipcart-close i {
+            font-size: 22px;
+        }
+
         #snipcart-main-container table#snipcart-items td.snipcart-td-6 a.snipcart-duplicate-item {
             margin-top: 0;
             right: 0;
@@ -1618,6 +1625,10 @@
     /*** / Header ***/
 
     /*** Steps ***/
+
+        #snipcart-main-content #snipcart-current-user #snipcart-user-infos {
+            padding: 10px 44px 10px 10px;
+        }
 
         ul#snipcart-steps {
             height: 90px;
