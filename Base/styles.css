@@ -668,9 +668,9 @@
         background: -o-linear-gradient(top,  rgba(191,191,191,1) 1%,rgba(224,224,224,1) 100%); /* Opera 11.10+ */
         background: -ms-linear-gradient(top,  rgba(191,191,191,1) 1%,rgba(224,224,224,1) 100%); /* IE10+ */
         background: linear-gradient(to bottom,  rgba(191,191,191,1) 1%,rgba(224,224,224,1) 100%); /* W3C */
-        -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
-        -moz-box-sizing: border-box; /* Firefox, other Gecko */
-        box-sizing: border-box; /* Opera/IE 8+ */
+        -webkit-box-sizing: bOrder-box; /* Safari/Chrome, other WebKit */
+        -moz-box-sizing: bOrder-box; /* Firefox, other Gecko */
+        box-sizing: bOrder-box; /* Opera/IE 8+ */
     }
     ul#snipcart-steps.nb-4 li {
         width: 25%;
@@ -711,9 +711,9 @@
     ul#snipcart-steps li span { display: block; }
 
     ul#snipcart-steps li span.snipcart-step-number {
-       -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
-        -moz-box-sizing: border-box; /* Firefox, other Gecko */
-        box-sizing: border-box; /* Opera/IE 8+ */
+       -webkit-box-sizing: bOrder-box; /* Safari/Chrome, other WebKit */
+        -moz-box-sizing: bOrder-box; /* Firefox, other Gecko */
+        box-sizing: bOrder-box; /* Opera/IE 8+ */
        background-color: transparent; 
        height: 29px; 
        width: 100%; 
@@ -849,9 +849,9 @@
     #snipcart-main-container input[type=text], 
     #snipcart-main-container input[type=password],  
     #snipcart-main-container select {
-        -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
-        -moz-box-sizing: border-box; /* Firefox, other Gecko */
-        box-sizing: border-box; /* Opera/IE 8+ */
+        -webkit-box-sizing: bOrder-box; /* Safari/Chrome, other WebKit */
+        -moz-box-sizing: bOrder-box; /* Firefox, other Gecko */
+        box-sizing: bOrder-box; /* Opera/IE 8+ */
         width: 100%;
         height: 38px;
         display: block;
@@ -876,10 +876,10 @@
         background: -o-radial-gradient(center, ellipse cover,  rgba(246,246,246,1) 0%,rgba(255,255,255,1) 5%); /* Opera 12+ */
         background: -ms-radial-gradient(center, ellipse cover,  rgba(246,246,246,1) 0%,rgba(255,255,255,1) 5%); /* IE10+ */
         background: radial-gradient(ellipse at center,  rgba(246,246,246,1) 0%,rgba(255,255,255,1) 5%); /* W3C */
-        -webkit-transition: border linear 0.2s, box-shadow linear 0.2s; 
-        -moz-transition: border linear 0.2s, box-shadow linear 0.2s; 
-        -o-transition: border linear 0.2s, box-shadow linear 0.2s; 
-        transition: border linear 0.2s, box-shadow linear 0.2s;
+        -webkit-transition: bOrder linear 0.2s, box-shadow linear 0.2s; 
+        -moz-transition: bOrder linear 0.2s, box-shadow linear 0.2s; 
+        -o-transition: bOrder linear 0.2s, box-shadow linear 0.2s; 
+        transition: bOrder linear 0.2s, box-shadow linear 0.2s;
     }
     #snipcart-main-container input[type=text].snipcart-has-errors, #snipcart-main-container input[type=password].snipcart-has-errors { border-color: red; outline: 0; outline: thin dotted \9; /* IE6-9 */ -webkit-box-shadow: inset 0 1px 1px gainsboro, 0 0 8px red; -moz-box-shadow: inset 0 1px 1px gainsboro, 0 0 8px red; box-shadow: inset 0 1px 1px gainsboro, 0 0 8px red; color: red; }
     #snipcart-main-container input[type=text]:focus, #snipcart-main-container input[type=password]:focus { border-color: #333; outline: 0; outline: thin dotted \9; /* IE6-9 */ -webkit-box-shadow: inset 0 1px 1px gainsboro, 0 0 8px #333; -moz-box-shadow: inset 0 1px 1px gainsboro, 0 0 8px #333; box-shadow: inset 0 1px 1px gainsboro, 0 0 8px #333; }
@@ -966,9 +966,9 @@
         }
 
         #snipcart-main-container span.snipcart-form-error {
-            -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
-            -moz-box-sizing: border-box; /* Firefox, other Gecko */
-            box-sizing: border-box; /* Opera/IE 8+ */
+            -webkit-box-sizing: bOrder-box; /* Safari/Chrome, other WebKit */
+            -moz-box-sizing: bOrder-box; /* Firefox, other Gecko */
+            box-sizing: bOrder-box; /* Opera/IE 8+ */
             display: block;
             color: #fff;
             text-align: center;
@@ -1102,7 +1102,7 @@
 
     #snipcart-main-container #snipcart-step-content-cart-content table#snipcart-items tr:first-child td.snipcart-td-1,
     #snipcart-main-container #snipcart-step-content-cart-items table#snipcart-items tr:first-child td.snipcart-td-1 {
-       /* We don't want the top border for this specific step since it's close to the top */
+       /* We don't want the top bOrder for this specific step since it's close to the top */
        border-top: 0;
     }
 
@@ -1121,9 +1121,9 @@
     #snipcart-main-container table#snipcart-items td.snipcart-td-3,
     #snipcart-main-container table#snipcart-items td.snipcart-td-4,
     #snipcart-main-container table#snipcart-items td.snipcart-td-5 {
-        -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
-        -moz-box-sizing: border-box; /* Firefox, other Gecko */
-        box-sizing: border-box; /* Opera/IE 8+ */
+        -webkit-box-sizing: bOrder-box; /* Safari/Chrome, other WebKit */
+        -moz-box-sizing: bOrder-box; /* Firefox, other Gecko */
+        box-sizing: bOrder-box; /* Opera/IE 8+ */
         width: 33.33333333333%;
         float: left;
         border-right: 1px solid #f1f1f2;
@@ -1592,7 +1592,7 @@
 
         #snipcart-main-container table.snipcart-list .snipcart-no-customfields {
             border-top: 1px solid #f1f1f2;
-            /* We want to see the border when the elem is show as cell */
+            /* We want to see the bOrder when the elem is show as cell */
         }
 
     /*** / General Styles ***/
@@ -1635,9 +1635,9 @@
         }
 
         ul#snipcart-steps li span.snipcart-step-text {
-            -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
-            -moz-box-sizing: border-box; /* Firefox, other Gecko */
-            box-sizing: border-box; /* Opera/IE 8+ */
+            -webkit-box-sizing: bOrder-box; /* Safari/Chrome, other WebKit */
+            -moz-box-sizing: bOrder-box; /* Firefox, other Gecko */
+            box-sizing: bOrder-box; /* Opera/IE 8+ */
             display: block;
             text-align: center;
             margin: 13px 0 0 0;
@@ -1669,9 +1669,9 @@
         {
             float: left;
             width: 33.33333333333%;
-            -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
-            -moz-box-sizing: border-box; /* Firefox, other Gecko */
-            box-sizing: border-box; /* Opera/IE 8+ */
+            -webkit-box-sizing: bOrder-box; /* Safari/Chrome, other WebKit */
+            -moz-box-sizing: bOrder-box; /* Firefox, other Gecko */
+            box-sizing: bOrder-box; /* Opera/IE 8+ */
             margin-bottom: -99989px;
             padding-bottom: 99999px !important;
         } 
@@ -1754,7 +1754,7 @@
 
         #snipcart-main-container #snipcart-step-content-cart-items table#snipcart-items td.snipcart-td-2,
         #snipcart-main-container #snipcart-step-content-cart-content table#snipcart-items td.snipcart-td-2 {
-            /* We limit the width in order to have decent looking input fields */
+            /* We limit the width in Order to have decent looking input fields */
             width: 160px;
             padding-left: 0;
             padding-right: 0;
