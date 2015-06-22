@@ -7,7 +7,20 @@
     }
 }
 
+
 #snipcart-main-container {
+
+    .snipcart-test-mode-flag {
+        float: right;
+        display: block;
+        background-color: yellow;
+        opacity: 0.5;
+        color: black;
+        padding: 5px;
+        margin-top: 4px;
+        border-radius: 2px;
+        margin-right: 10px;
+    }
 
     dl.snipcart-def-list {
         dd {
