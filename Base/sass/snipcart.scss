@@ -11,15 +11,18 @@
 #snipcart-main-container {
 
     .snipcart-test-mode-flag {
-        float: right;
         display: block;
+        position:absolute;
+        top: 5px;
+        left: 5px;
+        z-index: 10;
         background-color: yellow;
-        opacity: 0.5;
+        opacity: 0.7;
         color: black;
-        padding: 5px;
-        margin-top: 4px;
-        border-radius: 2px;
-        margin-right: 10px;
+        padding: 2px;
+        border-radius: 1px;
+        font-size: 10px;
+        text-transform: uppercase;
     }
 
     dl.snipcart-def-list {
