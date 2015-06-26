@@ -83,11 +83,89 @@
         }
     }
 
+    #snipcart-upcoming-payments-list tr td {
+        position: relative;
+    }
+
+    a.snipcart-btn.snipcart-show-upcoming-payment-details {
+        padding: 10px;
+        font-size: 20px;
+        height: auto;
+        line-height: 11px;
+        margin-left: 10px;
+
+        &:before {
+            content: "+";
+            display: inline-block;
+            width: 10px;
+            text-align: center;
+            text-indent: 0;
+        }
+
+        &.snipcart-hide-details {
+        
+            &:before {
+                content: "-";
+            }
+        }
+    }
+
+    .snipcart-upcoming-payment-details {
+        display: inline-block;
+        padding: 10px 20px;
+        border-radius: 3px;
+        text-align: center;
+        position: absolute;
+        background-color: #ddd;
+        bottom: 70px;
+        right: 10px;
+        text-align: center;
+        display: none;
+
+        &:after {
+            content: "";
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            -webkit-transform: translateX(-50%);
+            -moz-transform: translateX(-50%);
+            border-width: 15px 15px 0;
+            border-style: solid;
+            border-color: #ddd transparent;
+            display: block;
+            width: 0;
+        }
+
+        dl {
+            margin: 0;
+        }
+
+        dd,
+        dt {
+            margin-left: 0;
+            margin-right: 0;
+
+            span.snipcart-total-price {
+                text-align: center;
+            }
+        }
+
+        dt {
+            color: #666;
+        }
+    }
+
     #snipcart-current-user {
         nav {
             float: left;
         }
     }
+
+    table.snipcart-list td span.hidden {
+        display: none;
+    }
+
 }
 
 /*** User Menu ***/
