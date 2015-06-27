@@ -7,7 +7,6 @@
     }
 }
 
-
 #snipcart-main-container {
 
     .snipcart-test-mode-flag {
@@ -53,10 +52,12 @@
     }
 
     #snipcart-upcoming-payments {
+        > div {
           border-top: 1px solid #aaa;
           padding-top: 10px;
           border-bottom: 1px solid #aaa;
           background-color: #eee;
+        }
 
         h2 {
             color: #333333;
@@ -93,14 +94,15 @@
     }
 
     a.snipcart-btn.snipcart-show-upcoming-payment-details {
-        padding: 10px;
-        font-size: 20px;
+        padding: 5px;
+        font-size: 14px;
         height: auto;
         line-height: 11px;
         margin-left: 10px;
+        margin-top: 2px;
 
         &:before {
-            content: "+";
+            content: "?";
             display: inline-block;
             width: 10px;
             text-align: center;
@@ -123,7 +125,7 @@
         position: absolute;
         background-color: #ccc;
         bottom: 70px;
-        right: 10px;
+        right: 5px;
         text-align: center;
         display: none;
 
