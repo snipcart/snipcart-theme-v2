@@ -1075,7 +1075,7 @@
 
     #snipcart-main-container table#snipcart-items tbody.snipcart-fees tr td {
         padding: 5px 0 5px 20px;
-        border: none;
+        border-top: solid 1px #eee;
     }
 
     #snipcart-main-container table#snipcart-items tbody.snipcart-subtotal tr td {
