@@ -9,6 +9,37 @@
 
 #snipcart-main-container {
 
+    .snipcart-btn-fullwidth {
+        width: 100%;
+    }
+
+    #snipcart-step-content-login {
+        display: flex;
+        flex-direction: column;
+
+        @media only screen and (min-width: 768px) {
+            display: block;
+        }
+    }
+
+    #snipcart-guest-checkout-container {
+        order: 3;
+        @media only screen and (min-width: 768px) {
+            float: right;
+            width: 33.3%;
+        }
+    }
+
+    #snipcart-login-forms {
+        overflow: hidden;
+        > div {
+            @media only screen and (min-width: 768px) {
+                float: left;
+                width: 50%;
+            }
+        }
+    }
+
     .snipcart-test-mode-flag {
         display: block;
         position:absolute;
