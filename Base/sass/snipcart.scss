@@ -217,9 +217,11 @@
     .snipcart-table-header-color{
 
         th {
-            background: #a5a5a5;
         }
-
+        .snipcart-grand-total {
+            font-size: larger;
+            font-weight: bold;
+        }
         .snipcart-th-left,
         .snipcart-td-left {
             padding-left: 10px;
