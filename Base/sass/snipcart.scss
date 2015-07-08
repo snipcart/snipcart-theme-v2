@@ -58,12 +58,13 @@
     dl.snipcart-def-list {
         dd {
             float: left;
+            clear: left;
             margin-right: 10px;
-            padding: 5px 0;
+            padding-bottom: 3px;
             margin-left: 0;
         }
         dt {
-            padding: 5px 0;
+            padding-bottom: 3px;
         }
     }
 
@@ -202,6 +203,40 @@
 
     table.snipcart-list td span.hidden {
         display: none;
+    }
+
+    h2.snipcart-invoices-title {
+        text-transform: uppercase;
+        text-align: center;
+        background-color: #333;
+        color: #fff;
+        font: 16px 'brandon_grotesquelight', sans-serif;
+        padding: 5px;
+    }
+
+    .snipcart-table-header-color{
+
+        th {
+            background: #a5a5a5;
+        }
+
+        .snipcart-th-left,
+        .snipcart-td-left {
+            padding-left: 10px;
+        }
+
+        .snipcart-th-right,
+        .snipcart-td-right {
+            padding-right: 10px;
+        }
+    }
+
+    .snipcart-def-list {
+
+        dd {
+            width: 90px;
+            clear: both;
+        }
     }
 }
 
