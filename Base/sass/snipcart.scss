@@ -1,13 +1,4 @@
-﻿@import '_app.scss';
-
-
-.snipcart-hide-for-small {
-    @media #{$small-up} {
-        display: none;
-    }
-}
-
-#snipcart-main-container {
+﻿#snipcart-main-container {
 
     #snipcart-header {
         &.snipcart-total-hidden {
@@ -369,7 +360,6 @@
     .snip-menu-control {
         cursor: pointer;
         color: #999;
-        @include user-select(none);
 
         &.snip-control-active, &:hover {
             color: #fff;

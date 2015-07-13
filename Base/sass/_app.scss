@@ -1,7 +1,4 @@
-﻿@import '../../../Coffee/vendors/bourbon/app/assets/stylesheets/_bourbon.scss';
-@import '../../../Coffee/vendors/neat/app/assets/stylesheets/_neat.scss';
-
-// Here we define the lower and upper bounds for each media size
+﻿// Here we define the lower and upper bounds for each media size
 $small-range: (0em, 40em); /* 0, 640px */
 $medium-range: (40.063em, 64em); /* 641px, 1024px */
 $large-range: (64.063em, 90em); /* 1025px, 1440px */
