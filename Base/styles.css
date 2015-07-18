@@ -282,6 +282,7 @@
     }
 
     #snipcart-close i {
+        font-family: Snipcart !important;
         color: white;
         font-size: 28px;
     }
