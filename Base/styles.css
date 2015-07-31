@@ -494,6 +494,11 @@
             max-width: 100%;
         }
 
+        .paypal-button {
+            float: right;
+            margin-top: 25px!Important;
+        }
+
     /* Bottom bar containing action buttons */
 
     /* Highlight for unit price and total price */
