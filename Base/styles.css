@@ -837,6 +837,16 @@
             padding-bottom: 20px;
         }
 
+        .confirm-container {
+            width: 40%!Important;
+            margin-left: 300px!Important;
+            border: none!Important;
+        }
+
+        .confirm-button {
+            width: 100% !Important;
+        }
+
     /* Boxed columns */
 
 /*** / Columns ***/
