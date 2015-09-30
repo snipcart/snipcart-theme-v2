@@ -507,7 +507,7 @@
             font: 14px 'brandon_grotesquebold', sans-serif;
             font-weight: bold;
             color: #a5a5a5;
-            text-align: right;
+            text-align: center;
         }
 
         #snipcart-main-container span.snipcart-total-price {
@@ -745,12 +745,13 @@
         padding: 10px 20px;
     }
 
-    #snipcart-main-container #snipcart-apply-discount div {
+    #snipcart-main-container #snipcart-apply-discount > div {
         float: right;
         width: 150px;
         margin-bottom: 10px;
         position: relative;
         top: -4px;
+        margin-right: 8px;
     }
 
     #snipcart-main-container #snipcart-apply-discount button {
@@ -789,6 +790,7 @@
 
     #snipcart-main-content .snipcart-column {
         padding: 0 20px;
+        -webkit-overflow-scrolling: touch;
     }
 
     #snipcart-main-content .snipcart-column.highligthed {   
@@ -1162,11 +1164,15 @@
 
     #snipcart-main-container table#snipcart-items td.snipcart-td-6 a.snipcart-remove-item {
         display: block; 
-        width: 9px; 
-        height: 9px; 
-        text-indent: -9999px;
-        background: url('img/remove-item.png') no-repeat 0 0;
         float: left;
+        color: transparent;
+    }
+
+    #snipcart-main-container table#snipcart-items td.snipcart-td-6 a.snipcart-remove-item:before {
+        content: '\68';
+        font-family: "Snipcart";
+        color: red;
+        font-size: 26px;
     }
 
     #snipcart-main-container table#snipcart-items td.snipcart-td-6 a.snipcart-duplicate-item {
@@ -1707,6 +1713,14 @@
             border-left: 1px solid #f1f1f2;
         }
 
+        #snipcart-main-container table.snipcart-list td.snipcart-td-loading {
+            border-top: 1px solid #eee!important;
+        }
+
+        #snipcart-main-container span.snipcart-unit-price, #snipcart-main-container span.snipcart-total-price {
+            text-align: right;
+        }
+
         /* Boxed Columns */
 
             #snipcart-main-content .snipcart-boxed-columns div.snipcart-column-2 {
@@ -1935,6 +1949,7 @@
 #snipcart-main-container table.snipcart-list td.snipcart-td-loading {
     width: 30px;
     padding-right: 10px;
+    border-top: 0;
 }
 
 #snipcart-main-container .snipcart-td-loading.snipcart-loading .snipcart-loader {
