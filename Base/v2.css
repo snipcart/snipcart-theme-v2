@@ -1,0 +1,83 @@
+/**
+    Used to clear floating elements within a container
+**/
+/**
+    CUSTOM FONT FAMILY
+
+    We don't want to load many fonts on your site so we stay classic.
+    You can add your custom fonts here and/or define your own fonts family variables.
+*/
+/**
+    FONT HELPERS
+
+    If you use custom fonts and you don't want browser side weighted fonts:
+    - remove font-weight (or add font-weight: normal for example)
+    - add your font-family. Ex: font-family: 'myFont-bold';
+*/
+/**
+    FONT SIZES
+*/
+/*------------------------------------*    SMALL
+\*------------------------------------*/
+/*------------------------------------*    MEDIUM
+\*------------------------------------*/
+/*------------------------------------*    NORMAL
+\*------------------------------------*/
+/*------------------------------------*    LARGE
+\*------------------------------------*/
+/**
+    MEDIA QUERIES
+
+    Where all media queries' variables are defined
+*/
+/**
+    RESET
+
+    We reset to default value for each elements used in snipcart.
+    Your style must not impact our style.
+*/
+#snipcart-main-container {
+  font-family: Arial, sans-serif; }
+  #snipcart-main-container div,
+  #snipcart-main-container span,
+  #snipcart-main-container h1,
+  #snipcart-main-container h2,
+  #snipcart-main-container h3,
+  #snipcart-main-container h4,
+  #snipcart-main-container p,
+  #snipcart-main-container a,
+  #snipcart-main-container em,
+  #snipcart-main-container img,
+  #snipcart-main-container small,
+  #snipcart-main-container strong,
+  #snipcart-main-container ol,
+  #snipcart-main-container ul,
+  #snipcart-main-container li,
+  #snipcart-main-container fieldset,
+  #snipcart-main-container form,
+  #snipcart-main-container label,
+  #snipcart-main-container legend,
+  #snipcart-main-container table,
+  #snipcart-main-container caption,
+  #snipcart-main-container tbody,
+  #snipcart-main-container tfoot,
+  #snipcart-main-container thead,
+  #snipcart-main-container tr,
+  #snipcart-main-container th,
+  #snipcart-main-container td {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    line-height: normal;
+    box-sizing: content-box; }
+  #snipcart-main-container table {
+    border-collapse: collapse;
+    border-spacing: 0; }
+  #snipcart-main-container th,
+  #snipcart-main-container td {
+    vertical-align: middle; }
+  #snipcart-main-container ol,
+  #snipcart-main-container ul {
+    list-style: none; }

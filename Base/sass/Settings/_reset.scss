@@ -1,0 +1,60 @@
+﻿/**
+    RESET
+
+    We reset to default value for each elements used in snipcart.
+    Your style must not impact our style.
+*/
+#snipcart-main-container {
+    font-family: $font-base;
+
+    div,
+    span,
+    h1,
+    h2,
+    h3,
+    h4,
+    p,
+    a,
+    em,
+    img,
+    small,
+    strong,
+    ol,
+    ul,
+    li,
+    fieldset,
+    form,
+    label,
+    legend,
+    table,
+    caption,
+    tbody,
+    tfoot,
+    thead,
+    tr,
+    th,
+    td {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-size: 100%;
+        font: inherit;
+        line-height: normal;
+        box-sizing: content-box;
+    }
+
+    table {
+        border-collapse: collapse;
+        border-spacing: 0;
+    }
+
+    th,
+    td {
+        vertical-align: middle;
+    }
+
+    ol,
+    ul {
+        list-style: none;
+    }
+}

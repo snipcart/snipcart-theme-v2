@@ -1,0 +1,10 @@
+﻿/**
+    Used to clear floating elements within a container
+**/
+@mixin clearfix {
+    &::after {
+        clear: both;
+        content: "";
+        display: table;
+    }
+}
