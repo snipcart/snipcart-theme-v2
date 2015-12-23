@@ -2,5 +2,29 @@
 
 @import "Settings/_fonts.scss";
 @import "Settings/_mediaQueries.scss";
+@import "Settings/_colors.scss";
 
-@import "Settings/_reset.scss";
+.snip-layout {
+    background: radial-gradient(ellipse at center, rgba(0, 0, 0, .2) 0%, rgba(0, 0, 0, 1) 100%);
+    
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1040;
+
+    overflow-x: auto;
+    
+    font-size: 16px;
+    font-family: $font-base;
+    color: #a5a5a5 !important;
+    padding: 1.5em 0;
+
+    @import "Settings/_icons.scss";
+
+    @import "Settings/_reset.scss";
+
+    @import "Components/_layout.scss";
+    @import "Components/_header.scss";
+}

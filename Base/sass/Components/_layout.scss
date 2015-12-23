@@ -1,0 +1,40 @@
+﻿/**
+    LAYOUT
+*/
+
+/*------------------------------------*\
+    LOCAL VARIABLES
+\*------------------------------------*/
+
+
+
+/*------------------------------------*\
+    STYLE
+\*------------------------------------*/
+
+.snip-layout__main-container {
+    position: relative;
+    max-width: 62.25em;
+    margin: 0 auto;
+    z-index: 15000;
+    padding-bottom: 1.5em;
+}
+
+.snip-layout__close {
+    text-decoration: none;
+    z-index: 10000;
+    position: absolute;
+    padding: 8px;
+    top: 8px;
+    right: 2px;
+    top: 10px;
+    right: 10px;
+    padding: 0;
+    color: $base--primary;
+    font-size: 1.25em;
+}
+
+.snip-layout__close-label {
+    position: absolute;
+    text-indent: -100000px;
+}

@@ -8,6 +8,21 @@ $font-base: Arial, sans-serif;
 
 
 /**
+    ICONS FONT
+*/
+@font-face {
+    font-family: 'Snipcart';
+    src:url('fonts/snipcart/Snipcart.eot');
+    src:url('fonts/snipcart/Snipcart.eot?#iefix') format('embedded-opentype'),
+        url('fonts/snipcart/Snipcart.woff') format('woff'),
+        url('fonts/snipcart/Snipcart.ttf') format('truetype'),
+        url('fonts/snipcart/Snipcart.svg#Snipcart') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+/**
     FONT HELPERS
 
     If you use custom fonts and you don't want browser side weighted fonts:
