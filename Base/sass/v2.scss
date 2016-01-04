@@ -1,9 +1,20 @@
-﻿@import "Tools/_mixins.scss";
+﻿/**
+    SNIPCART V2
 
+    We strongly use BEM methodology
+    Every rule must be written within .snip-layout class
+    Every class name must be prefix with "snip-"
+*/
+
+// Global mixins, functions
+@import "Tools/_mixins.scss";
+
+// Global settings, mostly variables
 @import "Settings/_fonts.scss";
 @import "Settings/_mediaQueries.scss";
 @import "Settings/_colors.scss";
 
+// Base layout
 .snip-layout {
     background: radial-gradient(ellipse at center, rgba(0, 0, 0, .2) 0%, rgba(0, 0, 0, 1) 100%);
     
@@ -21,10 +32,14 @@
     color: #a5a5a5 !important;
     padding: 1.5em 0;
 
+    // Compound settings and reset
     @import "Settings/_icons.scss";
-
     @import "Settings/_reset.scss";
 
+    // Components
     @import "Components/_layout.scss";
     @import "Components/_header.scss";
+    @import "Components/_footer.scss";
+    @import "Components/_action.scss";
+    @import "Components/_button.scss";
 }

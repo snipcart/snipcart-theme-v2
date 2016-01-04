@@ -14,32 +14,47 @@
 
 .snip-header {
     position: relative;
-    background: linear-gradient(to bottom, rgba(48, 50, 52, 1) 0%, rgba(30, 31, 33, 1) 100%);
+    background: rgba(30, 31, 33, 1);
     text-align: center;
     height: 105px;
     padding: 0;
-}
-
-.snip-header__title {
-    display: none;
-    float: left;
-    min-width: 300px;
-    height: 95px;
     color: $base--primary;
     text-transform: uppercase;
     font-weight: bold;
-    font: 24px brandon_grotesquelight, sans-serif;
-    text-align: center;
+}
+
+.snip-header__title {
+    float: left;
+    height: 95px;
     position: absolute;
-    top: 10px;
     left: 20px;
     display: block;
-    min-width: 300px;
     text-align: left;
-    font: 30px/105px brandon_grotesquelight, sans-serif;
+    font-size: 30px;
+    line-height: 105px;
     padding-left: 25px;
     width: auto;
     top: 0;
     min-width: 300px;
-    position: absolute;
+}
+
+.snip-header__total {
+    display: inline-block;
+    height: 38px;
+    line-height: 38px;
+    background: rgb(11,11,11);
+    position: relative;
+    border-radius: 5px;
+    margin-top: 35px;
+    margin-left: 20px;
+}
+
+.snip-header__total-label {
+    color: #898989;
+    margin-left: 10px;
+    white-space: nowrap;
+}
+
+.snip-header__total-amount {
+    margin: 0 10px;
 }

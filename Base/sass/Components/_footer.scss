@@ -1,0 +1,37 @@
+﻿/**
+    FOOTER
+*/
+
+/*------------------------------------*\
+    LOCAL VARIABLES
+\*------------------------------------*/
+
+
+
+/*------------------------------------*\
+    STYLE
+\*------------------------------------*/
+
+.snip-footer {
+    background: rgba(30, 31, 33, 1);
+    height: 35px;
+    padding: 2px 10px;
+    text-transform: uppercase;
+}
+
+.snip-footer__copyright {
+    background: url('img/lock.png') no-repeat left 3px;
+    padding-left: 30px;
+
+    font-size: 11px;
+    height: 35px;
+    line-height: 35px;
+
+    color: #545557;
+    text-decoration: none;
+    display: block;
+}
+
+.snip-footer__highlight {
+    color: #a5a5a5;
+}

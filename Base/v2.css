@@ -1,4 +1,11 @@
 /**
+    SNIPCART V2
+
+    We strongly use BEM methodology
+    Every rule must be written within .snip-layout class
+    Every class name must be prefix with "snip-"
+*/
+/**
     Used to clear floating elements within a container
 **/
 /**
@@ -20,7 +27,7 @@
 /**
     FONT HELPERS
 
-    If you use custom fonts and you don't want browser side weighted fonts:
+    If you use custom fonts and you don't want browser side weighted/italic fonts:
     - remove font-weight (or add font-weight: normal for example)
     - add your font-family. Ex: font-family: 'myFont-bold';
 */
@@ -100,6 +107,27 @@
   /*------------------------------------*    LOCAL VARIABLES
 \*------------------------------------*/
   /*------------------------------------*    STYLE
+\*------------------------------------*/
+  /**
+    FOOTER
+*/
+  /*------------------------------------*    LOCAL VARIABLES
+\*------------------------------------*/
+  /*------------------------------------*    STYLE
+\*------------------------------------*/
+  /**
+    ACTION
+*/
+  /*------------------------------------*    LOCAL VARIABLES
+\*------------------------------------*/
+  /*------------------------------------*    STYLE
+\*------------------------------------*/
+  /**
+    BUTTON
+*/
+  /*------------------------------------*    LOCAL VARIABLES
+\*------------------------------------*/
+  /*------------------------------------*    STYLE
 \*------------------------------------*/ }
   .snip-layout .snip-ico {
     font-family: 'Snipcart';
@@ -174,48 +202,95 @@
     max-width: 62.25em;
     margin: 0 auto;
     z-index: 15000;
-    padding-bottom: 1.5em; }
+    background: white; }
   .snip-layout .snip-layout__close {
     text-decoration: none;
     z-index: 10000;
     position: absolute;
     padding: 8px;
-    top: 8px;
-    right: 2px;
     top: 10px;
     right: 10px;
     padding: 0;
     color: #fff;
-    font-size: 1.25em; }
+    font-size: 1.5em; }
   .snip-layout .snip-layout__close-label {
     position: absolute;
     text-indent: -100000px; }
   .snip-layout .snip-header {
     position: relative;
-    background: -webkit-linear-gradient(top, #303234 0%, #1e1f21 100%);
-    background: linear-gradient(to bottom, #303234 0%, #1e1f21 100%);
+    background: #1e1f21;
     text-align: center;
     height: 105px;
-    padding: 0; }
-  .snip-layout .snip-header__title {
-    display: none;
-    float: left;
-    min-width: 300px;
-    height: 95px;
+    padding: 0;
     color: #fff;
     text-transform: uppercase;
-    font-weight: bold;
-    font: 24px brandon_grotesquelight, sans-serif;
-    text-align: center;
+    font-weight: bold; }
+  .snip-layout .snip-header__title {
+    float: left;
+    height: 95px;
     position: absolute;
-    top: 10px;
     left: 20px;
     display: block;
-    min-width: 300px;
     text-align: left;
-    font: 30px/105px brandon_grotesquelight, sans-serif;
+    font-size: 30px;
+    line-height: 105px;
     padding-left: 25px;
     width: auto;
     top: 0;
-    min-width: 300px;
-    position: absolute; }
+    min-width: 300px; }
+  .snip-layout .snip-header__total {
+    display: inline-block;
+    height: 38px;
+    line-height: 38px;
+    background: #0b0b0b;
+    position: relative;
+    border-radius: 5px;
+    margin-top: 35px;
+    margin-left: 20px; }
+  .snip-layout .snip-header__total-label {
+    color: #898989;
+    margin-left: 10px;
+    white-space: nowrap; }
+  .snip-layout .snip-header__total-amount {
+    margin: 0 10px; }
+  .snip-layout .snip-footer {
+    background: #1e1f21;
+    height: 35px;
+    padding: 2px 10px;
+    text-transform: uppercase; }
+  .snip-layout .snip-footer__copyright {
+    background: url("img/lock.png") no-repeat left 3px;
+    padding-left: 30px;
+    font-size: 11px;
+    height: 35px;
+    line-height: 35px;
+    color: #545557;
+    text-decoration: none;
+    display: block; }
+  .snip-layout .snip-footer__highlight {
+    color: #a5a5a5; }
+  .snip-layout .snip-actions {
+    padding: 20px;
+    border-top: 1px solid #eeeeee; }
+    .snip-layout .snip-actions::after {
+      clear: both;
+      content: "";
+      display: table; }
+  .snip-layout .snip-btn {
+    display: inline-block;
+    background-color: #666;
+    padding: 0 25px;
+    color: #ffffff;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 12px;
+    line-height: 38px;
+    height: 38px;
+    text-transform: uppercase;
+    border-radius: 3px; }
+  .snip-layout .snip-btn--highlight {
+    background: #87db57;
+    color: #1d1f22; }
+  .snip-layout .snip-btn--right {
+    float: right; }
