@@ -1,0 +1,42 @@
+﻿/**
+    PRODUCT
+*/
+
+/*------------------------------------*\
+    LOCAL VARIABLES
+\*------------------------------------*/
+
+
+
+/*------------------------------------*\
+    STYLE
+\*------------------------------------*/
+
+.snip-product__thumbnail {
+    width: 65px;
+    height: 65px;
+    float: left;
+    margin-right: 10px;
+
+    img {
+        max-height: 100%;
+        max-width: 100%;
+    }
+}
+
+.snip-product__name {
+    color: #333333;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: .5em;
+    overflow: hidden;
+}
+
+.snip-product__description {
+    font-size: 12px;
+    overflow: hidden;
+}
+
+.snip-product__remove {
+
+}

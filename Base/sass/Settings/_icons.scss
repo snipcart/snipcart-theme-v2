@@ -5,8 +5,28 @@
     You can also use your own icon set. There's many online services to generate your iconfont (fontello, glyphter, icomoon, ...).
 */
 
+/*------------------------------------*\
+    GLOBAL VARIABLES
+\*------------------------------------*/
+
+$snip-ico__font: "Snipcart";
+
+$snip-ico--credit-cart: "\66";
+$snip-ico--truck: "\65";
+$snip-ico--letter: "\64";
+$snip-ico--receipt: "\63";
+$snip-ico--checklist: "\62";
+$snip-ico--basket: "\61";
+$snip-ico--check: "\67";
+$snip-ico--close: "\68";
+
+
+/*------------------------------------*\
+    STYLE
+\*------------------------------------*/
+
 .snip-ico {
-    font-family: 'Snipcart';
+    font-family: $snip-ico__font;
     speak: none;
     font-style: normal;
     font-weight: normal;
@@ -16,11 +36,11 @@
     -webkit-font-smoothing: antialiased;
 }
 
-.snip-ico--credit-cart:before { content: "\66"; }
-.snip-ico--truck:before { content: "\65"; }
-.snip-ico--letter:before { content: "\64"; }
-.snip-ico--receipt:before { content: "\63"; }
-.snip-ico--checklist:before { content: "\62"; }
-.snip-ico--basket:before { content: "\61"; }
-.snip-ico--check:before { content: "\67"; }
-.snip-ico--close:before { content: '\68'; }
+.snip-ico--credit-cart:before { content: $snip-ico--credit-cart; }
+.snip-ico--truck:before { content: $snip-ico--truck; }
+.snip-ico--letter:before { content: $snip-ico--letter; }
+.snip-ico--receipt:before { content: $snip-ico--receipt; }
+.snip-ico--checklist:before { content: $snip-ico--checklist; }
+.snip-ico--basket:before { content: $snip-ico--basket; }
+.snip-ico--check:before { content: $snip-ico--check; }
+.snip-ico--close:before { content: $snip-ico--close; }

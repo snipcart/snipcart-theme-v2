@@ -88,6 +88,10 @@
     We use icons font. You can use them with css pseudo elements.
     You can also use your own icon set. There's many online services to generate your iconfont (fontello, glyphter, icomoon, ...).
 */
+  /*------------------------------------*    GLOBAL VARIABLES
+\*------------------------------------*/
+  /*------------------------------------*    STYLE
+\*------------------------------------*/
   /**
     RESET
 
@@ -128,9 +132,37 @@
   /*------------------------------------*    LOCAL VARIABLES
 \*------------------------------------*/
   /*------------------------------------*    STYLE
+\*------------------------------------*/
+  /**
+    TABLE
+*/
+  /*------------------------------------*    LOCAL VARIABLES
+\*------------------------------------*/
+  /*------------------------------------*    STYLE
+\*------------------------------------*/
+  /**
+    PRODUCT
+*/
+  /*------------------------------------*    LOCAL VARIABLES
+\*------------------------------------*/
+  /*------------------------------------*    STYLE
+\*------------------------------------*/
+  /**
+    QUANTITY TRIGGER
+*/
+  /*------------------------------------*    LOCAL VARIABLES
+\*------------------------------------*/
+  /*------------------------------------*    STYLE
+\*------------------------------------*/
+  /**
+    LOADER
+*/
+  /*------------------------------------*    LOCAL VARIABLES
+\*------------------------------------*/
+  /*------------------------------------*    STYLE
 \*------------------------------------*/ }
   .snip-layout .snip-ico {
-    font-family: 'Snipcart';
+    font-family: "Snipcart";
     speak: none;
     font-style: normal;
     font-weight: normal;
@@ -139,21 +171,21 @@
     line-height: 1;
     -webkit-font-smoothing: antialiased; }
   .snip-layout .snip-ico--credit-cart:before {
-    content: "\66"; }
+    content: "f"; }
   .snip-layout .snip-ico--truck:before {
-    content: "\65"; }
+    content: "e"; }
   .snip-layout .snip-ico--letter:before {
-    content: "\64"; }
+    content: "d"; }
   .snip-layout .snip-ico--receipt:before {
-    content: "\63"; }
+    content: "c"; }
   .snip-layout .snip-ico--checklist:before {
-    content: "\62"; }
+    content: "b"; }
   .snip-layout .snip-ico--basket:before {
-    content: "\61"; }
+    content: "a"; }
   .snip-layout .snip-ico--check:before {
-    content: "\67"; }
+    content: "g"; }
   .snip-layout .snip-ico--close:before {
-    content: '\68'; }
+    content: "h"; }
   .snip-layout div,
   .snip-layout span,
   .snip-layout h1,
@@ -290,7 +322,79 @@
     text-transform: uppercase;
     border-radius: 3px; }
   .snip-layout .snip-btn--highlight {
-    background: #87db57;
+    background: #efe778;
     color: #1d1f22; }
   .snip-layout .snip-btn--right {
     float: right; }
+  .snip-layout .snip-table {
+    width: 100%;
+    text-align: left;
+    font-size: 14px; }
+    .snip-layout .snip-table td, .snip-layout .snip-table th, .snip-layout .snip-table tr {
+      padding: inherit;
+      border: inherit; }
+  .snip-layout .snip-table__header {
+    text-transform: uppercase;
+    font-size: 11px;
+    padding: 10px 20px;
+    border-bottom: 1px solid #eeeeee; }
+  .snip-layout .snip-table__body {
+    padding: 20px; }
+  .snip-layout .snip-table__cell--center {
+    text-align: center; }
+  .snip-layout .snip-table__cell--right {
+    text-align: right; }
+  .snip-layout .snip-table__cell--bold {
+    font-weight: bold; }
+  .snip-layout .snip-table__cell--highlight {
+    font-weight: bold;
+    color: #333; }
+  .snip-layout .snip-product__thumbnail {
+    width: 65px;
+    height: 65px;
+    float: left;
+    margin-right: 10px; }
+    .snip-layout .snip-product__thumbnail img {
+      max-height: 100%;
+      max-width: 100%; }
+  .snip-layout .snip-product__name {
+    color: #333333;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: .5em;
+    overflow: hidden; }
+  .snip-layout .snip-product__description {
+    font-size: 12px;
+    overflow: hidden; }
+  .snip-layout .snip-quantity-trigger {
+    color: #333333;
+    font-weight: bold;
+    margin: 0 auto;
+    display: table; }
+  .snip-layout .snip-quantity-trigger__text {
+    display: table-cell;
+    padding: 0 5px; }
+  .snip-layout .snip-quantity-trigger__btn {
+    font-size: 18px;
+    border-radius: 30px;
+    background-color: #e8e8e8;
+    color: #1c1e21;
+    text-align: center;
+    text-decoration: none;
+    height: 1em;
+    width: 1em;
+    line-height: 1em;
+    font-weight: 400;
+    display: table-cell; }
+    .snip-layout .snip-quantity-trigger__btn:hover {
+      background-color: #efe778; }
+  .snip-layout .snip-quantity-trigger__btn--minus {
+    line-height: 14px; }
+  .snip-layout .snip-loader.js-active {
+    background-image: url(img/ajax-loader.gif);
+    background-repeat: no-repeat;
+    background-position: center center; }
+  .snip-layout .snip-loader--table.js-active {
+    background-size: 20px 20px;
+    width: 20px;
+    height: 20px; }

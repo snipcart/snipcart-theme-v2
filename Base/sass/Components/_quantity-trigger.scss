@@ -1,0 +1,46 @@
+﻿/**
+    QUANTITY TRIGGER
+*/
+
+/*------------------------------------*\
+    LOCAL VARIABLES
+\*------------------------------------*/
+
+
+/*------------------------------------*\
+    STYLE
+\*------------------------------------*/
+
+.snip-quantity-trigger {
+    color: #333333;
+    font-weight: bold;
+    margin: 0 auto;
+    display: table;
+}
+
+.snip-quantity-trigger__text {
+    display: table-cell;
+    padding: 0 5px;
+}
+
+.snip-quantity-trigger__btn {
+    font-size: 18px;
+    border-radius: 30px;
+    background-color: #e8e8e8;
+    color: #1c1e21;
+    text-align: center;
+    text-decoration: none;
+    height: 1em;
+    width: 1em;
+    line-height: 1em;
+    font-weight: 400;
+    display: table-cell;
+
+    &:hover {
+        background-color: #efe778;
+    }
+}
+
+.snip-quantity-trigger__btn--minus {
+    line-height: 14px;
+}

@@ -1,0 +1,51 @@
+﻿/**
+    TABLE
+*/
+
+/*------------------------------------*\
+    LOCAL VARIABLES
+\*------------------------------------*/
+
+
+/*------------------------------------*\
+    STYLE
+\*------------------------------------*/
+
+.snip-table {
+    width: 100%;
+    text-align: left;
+    font-size: 14px;
+
+    td, th, tr {
+        padding: inherit;
+        border: inherit;
+    }
+}
+
+.snip-table__header {
+    text-transform: uppercase;
+    font-size: 11px;
+    padding: 10px 20px;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.snip-table__body {
+    padding: 20px;
+}
+
+.snip-table__cell--center {
+    text-align: center;
+}
+
+.snip-table__cell--right {
+    text-align: right;
+}
+
+.snip-table__cell--bold {
+    font-weight: bold;
+}
+
+.snip-table__cell--highlight {
+    font-weight: bold;
+    color: #333;
+}
