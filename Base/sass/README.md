@@ -2,9 +2,9 @@
 
 - Important: use BEM methodology
 	- Prefix all classes with *snip-* as we shall avoid conflict with the user's stylesheet
-	- For *Elements* use *__*
-	- For *Modifiers* use *--*
-	- Try to prevent nested *Elements* or *Modifiers* (e.g .snip-*blockName*__*elementName*__*nestedElementName*)
+	- For *Elements* use __
+	- For *Modifiers* use --
+	- Try to prevent nested *Elements* or *Modifiers* (e.g `.snip-blockName__elementName__nestedElementName`)
 
 - Alphabetize declarations (it's not the smarter way, but it's the easier way)
 - Indent all block content
