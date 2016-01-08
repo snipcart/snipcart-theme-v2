@@ -4,6 +4,8 @@
     We strongly use BEM methodology
     Every rule must be written within .snip-layout class
     Every class name must be prefix with "snip-"
+
+    IMPORTANT you have to include snipcart's stylesheet AFTER all your stylesheets
 */
 
 // Global mixins, functions
@@ -46,4 +48,5 @@
     @import "Components/_product.scss";
     @import "Components/_quantity-trigger.scss";
     @import "Components/_loader.scss";
+    @import "Components/_form.scss";
 }

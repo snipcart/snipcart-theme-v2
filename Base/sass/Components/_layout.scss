@@ -36,3 +36,19 @@
     position: absolute;
     text-indent: -100000px;
 }
+
+.snip-layout__loading {
+
+    &:before {
+        content: "";
+        background: url(img/ajax-loader.gif) no-repeat center center;
+        display: block;
+        height: 160px;
+    }
+
+    padding-bottom: 30px;
+    text-transform: uppercase;
+    color: #333;
+    font-weight: bold;
+    text-align: center;
+}

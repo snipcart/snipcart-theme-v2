@@ -1,0 +1,37 @@
+﻿/**
+    FORM
+*/
+
+/*------------------------------------*\
+    LOCAL VARIABLES
+\*------------------------------------*/
+
+
+
+/*------------------------------------*\
+    STYLE
+\*------------------------------------*/
+
+.snip-form--right {
+    float: right;
+    margin-right: 1em;
+}
+
+.snip-form__field--big {
+    display: block;
+    padding: 8px 6px;
+    font-size: 14px;
+    color: #555;
+    background: white;
+    border-radius: 3px;
+    border: 1px solid #e5e5e5;
+}
+
+.snip-form__error {
+    color: #fff;
+    text-align: center;
+    background: red;
+    padding: 5px;
+    border-radius: 3px;
+    font-size: 14px;
+}

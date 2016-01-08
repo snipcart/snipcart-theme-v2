@@ -1,5 +1,9 @@
 ﻿/**
     TABLE
+
+    [1]. Special jedi's mind trick, thanks to inheritance, we only style tbody or thead elements.
+         Since we can't define `padding` or `border` for tbody, thead, tr elements, it's easier.
+         And for mobile block table behavior, style is already set for those elements. 
 */
 
 /*------------------------------------*\
@@ -16,6 +20,7 @@
     text-align: left;
     font-size: 14px;
 
+    /* [1] */
     td, th, tr {
         padding: inherit;
         border: inherit;
@@ -26,11 +31,11 @@
     text-transform: uppercase;
     font-size: 11px;
     padding: 10px 20px;
-    border-bottom: 1px solid #eeeeee;
 }
 
 .snip-table__body {
     padding: 20px;
+    border-top: 1px solid #eee;
 }
 
 .snip-table__cell--center {
@@ -48,4 +53,9 @@
 .snip-table__cell--highlight {
     font-weight: bold;
     color: #333;
+}
+
+.snip-table__cell--success {
+    font-weight: bold;
+    color: #76d443;
 }

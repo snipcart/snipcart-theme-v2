@@ -4,10 +4,15 @@
     We strongly use BEM methodology
     Every rule must be written within .snip-layout class
     Every class name must be prefix with "snip-"
+
+    IMPORTANT you have to include snipcart's stylesheet AFTER all your stylesheets
 */
 /**
-    Used to clear floating elements within a container
+    MIXINS
+
+    [1]. Used to clear floating elements within a container
 **/
+/* [1] */
 /**
     CUSTOM FONT FAMILY
 
@@ -135,6 +140,10 @@
 \*------------------------------------*/
   /**
     TABLE
+
+    [1]. Special jedi's mind trick, thanks to inheritance, we only style tbody or thead elements.
+         Since we can't define `padding` or `border` for tbody, thead, tr elements, it's easier.
+         And for mobile block table behavior, style is already set for those elements. 
 */
   /*------------------------------------*    LOCAL VARIABLES
 \*------------------------------------*/
@@ -156,6 +165,13 @@
 \*------------------------------------*/
   /**
     LOADER
+*/
+  /*------------------------------------*    LOCAL VARIABLES
+\*------------------------------------*/
+  /*------------------------------------*    STYLE
+\*------------------------------------*/
+  /**
+    FORM
 */
   /*------------------------------------*    LOCAL VARIABLES
 \*------------------------------------*/
@@ -219,7 +235,7 @@
     font-size: 100%;
     font: inherit;
     line-height: normal;
-    box-sizing: content-box; }
+    box-sizing: border-box; }
   .snip-layout table {
     border-collapse: collapse;
     border-spacing: 0; }
@@ -229,6 +245,13 @@
   .snip-layout ol,
   .snip-layout ul {
     list-style: none; }
+  .snip-layout input,
+  .snip-layout select {
+    height: auto;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; }
   .snip-layout .snip-layout__main-container {
     position: relative;
     max-width: 62.25em;
@@ -248,6 +271,17 @@
   .snip-layout .snip-layout__close-label {
     position: absolute;
     text-indent: -100000px; }
+  .snip-layout .snip-layout__loading {
+    padding-bottom: 30px;
+    text-transform: uppercase;
+    color: #333;
+    font-weight: bold;
+    text-align: center; }
+    .snip-layout .snip-layout__loading:before {
+      content: "";
+      background: url(img/ajax-loader.gif) no-repeat center center;
+      display: block;
+      height: 160px; }
   .snip-layout .snip-header {
     position: relative;
     background: #1e1f21;
@@ -287,7 +321,6 @@
     margin: 0 10px; }
   .snip-layout .snip-footer {
     background: #1e1f21;
-    height: 35px;
     padding: 2px 10px;
     text-transform: uppercase; }
   .snip-layout .snip-footer__copyright {
@@ -320,7 +353,9 @@
     line-height: 38px;
     height: 38px;
     text-transform: uppercase;
-    border-radius: 3px; }
+    border-radius: 3px;
+    outline: 0;
+    border: 0; }
   .snip-layout .snip-btn--highlight {
     background: #efe778;
     color: #1d1f22; }
@@ -329,17 +364,18 @@
   .snip-layout .snip-table {
     width: 100%;
     text-align: left;
-    font-size: 14px; }
+    font-size: 14px;
+    /* [1] */ }
     .snip-layout .snip-table td, .snip-layout .snip-table th, .snip-layout .snip-table tr {
       padding: inherit;
       border: inherit; }
   .snip-layout .snip-table__header {
     text-transform: uppercase;
     font-size: 11px;
-    padding: 10px 20px;
-    border-bottom: 1px solid #eeeeee; }
+    padding: 10px 20px; }
   .snip-layout .snip-table__body {
-    padding: 20px; }
+    padding: 20px;
+    border-top: 1px solid #eee; }
   .snip-layout .snip-table__cell--center {
     text-align: center; }
   .snip-layout .snip-table__cell--right {
@@ -349,6 +385,9 @@
   .snip-layout .snip-table__cell--highlight {
     font-weight: bold;
     color: #333; }
+  .snip-layout .snip-table__cell--success {
+    font-weight: bold;
+    color: #76d443; }
   .snip-layout .snip-product__thumbnail {
     width: 65px;
     height: 65px;
@@ -423,3 +462,21 @@
     background-size: 20px 20px;
     width: 20px;
     height: 20px; }
+  .snip-layout .snip-form--right {
+    float: right;
+    margin-right: 1em; }
+  .snip-layout .snip-form__field--big {
+    display: block;
+    padding: 8px 6px;
+    font-size: 14px;
+    color: #555;
+    background: white;
+    border-radius: 3px;
+    border: 1px solid #e5e5e5; }
+  .snip-layout .snip-form__error {
+    color: #fff;
+    text-align: center;
+    background: red;
+    padding: 5px;
+    border-radius: 3px;
+    font-size: 14px; }

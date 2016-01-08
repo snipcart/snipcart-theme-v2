@@ -1,6 +1,10 @@
 ﻿/**
-    Used to clear floating elements within a container
+    MIXINS
+
+    [1]. Used to clear floating elements within a container
 **/
+
+/* [1] */
 @mixin clearfix {
     &::after {
         clear: both;
