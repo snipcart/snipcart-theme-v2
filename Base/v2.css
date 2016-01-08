@@ -366,6 +366,12 @@
   .snip-layout .snip-product__description {
     font-size: 12px;
     overflow: hidden; }
+  .snip-layout .snip-product__remove {
+    float: left;
+    font-size: 26px;
+    margin: -4px 5px 0 0;
+    color: red;
+    text-decoration: none; }
   .snip-layout .snip-product__customfields {
     max-width: 200px; }
   .snip-layout .snip-product__customfield {
@@ -380,6 +386,11 @@
   .snip-layout .snip-product__customfields-checkbox {
     float: left;
     margin: 0 0.5em 0.75em 0; }
+  .snip-layout .snip-product__empty {
+    font-size: 18px;
+    text-transform: uppercase;
+    padding: 1em 2em;
+    text-align: center; }
   .snip-layout .snip-quantity-trigger {
     color: #333333;
     font-weight: bold;

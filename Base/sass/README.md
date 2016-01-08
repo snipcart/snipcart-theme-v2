@@ -5,6 +5,9 @@
 	- For *Elements* use __
 	- For *Modifiers* use --
 	- Try to prevent nested *Elements* or *Modifiers* (e.g `.snip-blockName__elementName__nestedElementName`)
+	- For every *Block* you must create a new scss file *_blockName.scss*. Separate words by a hyphen.
+	- Use *$snip-* prefix for global sass variables
+	- Use *$_fileName-* prefix for local sass variables
 
 - Alphabetize declarations (it's not the smarter way, but it's the easier way)
 - Indent all block content

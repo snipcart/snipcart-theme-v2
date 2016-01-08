@@ -38,7 +38,11 @@
 }
 
 .snip-product__remove {
-
+    float: left;
+    font-size: 26px;
+    margin: -4px 5px 0 0;
+    color: red;
+    text-decoration: none;
 }
 
 .snip-product__customfields {
@@ -61,4 +65,11 @@
 .snip-product__customfields-checkbox {
     float: left;
     margin: 0 .5em .75em 0;
+}
+
+.snip-product__empty {
+    font-size: 18px;
+    text-transform: uppercase;
+    padding: 1em 2em;
+    text-align: center;
 }
