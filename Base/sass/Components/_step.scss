@@ -1,0 +1,70 @@
+﻿/**
+    STEP
+*/
+
+/*------------------------------------*\
+    LOCAL VARIABLES
+\*------------------------------------*/
+
+
+
+/*------------------------------------*\
+    STYLE
+\*------------------------------------*/
+
+.snip-steps {
+    clear: both;
+    display: block;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    height: 60px;
+    background: #ccc;
+}
+
+.snip-step__item {
+    display: table;
+    height: inherit;
+    float: left;
+    border-bottom: 1px solid #bbb;
+    background: #ccc;
+    cursor: pointer;
+    width: 14.285714%;
+    color: #999;
+    user-select: none;
+
+    + .snip-step__item {
+        border-left: 1px solid #bbb;
+    }
+
+    &.active {
+        color: #333;
+        border-bottom-color: #fff;
+        background: #fff;
+    }
+}
+
+.snip-step__nb {
+    text-align: center;
+    padding: 0 .25em;
+    font-size: 38px;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.snip-step__label {
+    padding: 0 2px;
+    text-transform: uppercase;
+    font-weight: bold;
+    line-height: 16px;
+    font-size: 10px;
+    line-height: 16px;
+    text-align: left;
+    margin: 13px 0 0 3px;
+    overflow: hidden;
+    font-weight: bold;
+    display: table-cell;
+    vertical-align: middle;
+    width: 66.666666%;
+}

@@ -1,0 +1,28 @@
+﻿/**
+    COLUMNS
+*/
+
+/*------------------------------------*\
+    LOCAL VARIABLES
+\*------------------------------------*/
+
+
+
+/*------------------------------------*\
+    STYLE
+\*------------------------------------*/
+
+.snip-cols {
+    @include clearfix;
+    display: flex;
+}
+
+.snip-col {
+    width: 33.333333%;
+    float: left;
+    padding: .25em 1.25em;
+
+    + .snip-col {
+        border-left: 1px solid #f1f1f2;
+    }
+}
