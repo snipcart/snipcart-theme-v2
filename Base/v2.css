@@ -212,6 +212,13 @@
   /*------------------------------------*    LOCAL VARIABLES
 \*------------------------------------*/
   /*------------------------------------*    STYLE
+\*------------------------------------*/
+  /**
+    FLASH
+*/
+  /*------------------------------------*    LOCAL VARIABLES
+\*------------------------------------*/
+  /*------------------------------------*    STYLE
 \*------------------------------------*/ }
   .snip-layout .snip-ico {
     font-family: "Snipcart";
@@ -680,6 +687,8 @@
     color: red;
     font-size: 14px;
     margin-bottom: 1em; }
+  .snip-layout .snip-error__text--centered {
+    text-align: center; }
   .snip-layout .snip-error__title {
     text-transform: uppercase;
     color: #333;
@@ -699,11 +708,12 @@
     text-transform: uppercase;
     font-size: 14px; }
   .snip-layout .snip-static {
-    background: #fafafa;
     padding: 1em 15%;
-    border-top: 1px solid #eee;
     font-size: 14px;
     text-align: center; }
+  .snip-layout .snip-static--highlight {
+    background: #fafafa;
+    border-top: 1px solid #eee; }
   .snip-layout .snip-static__title {
     font-weight: bold;
     text-transform: uppercase;
@@ -765,3 +775,15 @@
     color: #333;
     font-weight: bold;
     margin-bottom: 5px; }
+  .snip-layout .snip-flash__item {
+    padding: 10px 20px;
+    border-bottom: 1px solid #333; }
+  .snip-layout .snip-flash__item--success {
+    background-color: #77D544;
+    color: #333; }
+  .snip-layout .snip-flash__item--warn {
+    background-color: #FFEC16;
+    color: #333; }
+  .snip-layout .snip-flash__item--error {
+    background-color: #FF0600;
+    color: #fff; }

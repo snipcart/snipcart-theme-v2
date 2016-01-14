@@ -1,0 +1,33 @@
+﻿/**
+    FLASH
+*/
+
+/*------------------------------------*\
+    LOCAL VARIABLES
+\*------------------------------------*/
+
+
+
+/*------------------------------------*\
+    STYLE
+\*------------------------------------*/
+
+.snip-flash__item {
+    padding: 10px 20px;
+    border-bottom: 1px solid #333;
+}
+
+.snip-flash__item--success {
+    background-color: #77D544;
+    color: #333;
+}
+
+.snip-flash__item--warn {
+    background-color: #FFEC16;
+    color: #333;
+}
+
+.snip-flash__item--error {
+    background-color: #FF0600;
+    color: #fff;
+}
