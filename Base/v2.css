@@ -85,7 +85,8 @@
   overflow-x: auto;
   font-size: 16px;
   font-family: Arial, sans-serif;
-  color: #a5a5a5 !important;
+  line-height: normal;
+  color: #999 !important;
   padding: 1.5em 0;
   /**
     ICON
@@ -190,6 +191,27 @@
   /*------------------------------------*    LOCAL VARIABLES
 \*------------------------------------*/
   /*------------------------------------*    STYLE
+\*------------------------------------*/
+  /**
+    ERROR
+*/
+  /*------------------------------------*    LOCAL VARIABLES
+\*------------------------------------*/
+  /*------------------------------------*    STYLE
+\*------------------------------------*/
+  /**
+    STATIC
+*/
+  /*------------------------------------*    LOCAL VARIABLES
+\*------------------------------------*/
+  /*------------------------------------*    STYLE
+\*------------------------------------*/
+  /**
+    TOOLTIP
+*/
+  /*------------------------------------*    LOCAL VARIABLES
+\*------------------------------------*/
+  /*------------------------------------*    STYLE
 \*------------------------------------*/ }
   .snip-layout .snip-ico {
     font-family: "Snipcart";
@@ -242,13 +264,16 @@
   .snip-layout thead,
   .snip-layout tr,
   .snip-layout th,
-  .snip-layout td {
+  .snip-layout td,
+  .snip-layout dl,
+  .snip-layout dt,
+  .snip-layout dd {
     margin: 0;
     padding: 0;
     border: 0;
     font-size: 100%;
     font: inherit;
-    line-height: normal;
+    line-height: inherit;
     box-sizing: border-box; }
   .snip-layout table {
     border-collapse: collapse;
@@ -321,6 +346,13 @@
       height: 160px; }
   .snip-layout .snip-layout__content {
     padding: 2em 0; }
+  .snip-layout .snip-layout__content--highlight {
+    border-top: 1px solid #bbb;
+    border-bottom: 1px solid #bbb;
+    background-color: #f8f8f8;
+    padding: 1em 0; }
+  .snip-layout .snip-layout__content--bordered {
+    border-bottom: 1px solid #eeeeee; }
   .snip-layout .snip-header {
     position: relative;
     background: #1e1f21;
@@ -395,6 +427,10 @@
     border-radius: 3px;
     outline: 0;
     border: 0; }
+  .snip-layout .snip-btn--small {
+    height: auto;
+    padding: 5px;
+    line-height: normal; }
   .snip-layout .snip-btn--highlight {
     background: #efe778;
     color: #1d1f22; }
@@ -402,6 +438,10 @@
     float: left; }
   .snip-layout .snip-btn--right {
     float: right; }
+  .snip-layout .snip-btn--full {
+    margin-top: 1em;
+    display: block;
+    text-align: center; }
   .snip-layout .snip-table {
     width: 100%;
     text-align: left;
@@ -410,13 +450,24 @@
     .snip-layout .snip-table td, .snip-layout .snip-table th, .snip-layout .snip-table tr {
       padding: inherit;
       border: inherit; }
+      .snip-layout .snip-table td:empty, .snip-layout .snip-table th:empty, .snip-layout .snip-table tr:empty {
+        width: 0;
+        padding: 0; }
   .snip-layout .snip-table__header {
     text-transform: uppercase;
     font-size: 11px;
     padding: 10px 20px; }
+    .snip-layout .snip-table__header ~ .snip-table__header {
+      border-top: 1px solid #eee; }
   .snip-layout .snip-table__body {
     padding: 20px;
     border-top: 1px solid #eee; }
+  .snip-layout .snip-table__body--small {
+    padding: 6px 20px 6px 40px;
+    background: #f8f8f8; }
+  .snip-layout .snip-table__body--big {
+    font-size: 18px;
+    padding: 22px 20px 22px 22px; }
   .snip-layout .snip-table__cell--center {
     text-align: center; }
   .snip-layout .snip-table__cell--right {
@@ -429,6 +480,21 @@
   .snip-layout .snip-table__cell--success {
     font-weight: bold;
     color: #76d443; }
+  .snip-layout .snip-product {
+    background: #fafafa;
+    padding: 2em 1.25em;
+    border-top: 1px solid #eee; }
+    .snip-layout .snip-product::after {
+      clear: both;
+      content: "";
+      display: table; }
+  .snip-layout .snip-product--selectable {
+    cursor: pointer; }
+  .snip-layout .snip-product--selectable-item {
+    padding-left: 32px;
+    background: url("img/checkbox.png") no-repeat 0 center; }
+    .snip-layout .snip-product--selectable-item.js-selected {
+      background-image: url("img/selected.png"); }
   .snip-layout .snip-product__thumbnail {
     width: 65px;
     height: 65px;
@@ -441,11 +507,13 @@
     color: #333333;
     text-transform: uppercase;
     font-weight: bold;
-    margin-bottom: .5em;
     overflow: hidden; }
   .snip-layout .snip-product__description {
     font-size: 12px;
-    overflow: hidden; }
+    overflow: hidden;
+    margin-top: .5em; }
+  .snip-layout .snip-product__important {
+    font-weight: bold; }
   .snip-layout .snip-product__remove {
     float: left;
     font-size: 26px;
@@ -494,6 +562,9 @@
     background-size: 20px 20px;
     width: 20px;
     height: 20px; }
+  .snip-layout .snip-form--small {
+    padding: 2em 15%;
+    text-align: center; }
   .snip-layout .snip-form--right {
     float: right;
     margin-right: 1em; }
@@ -502,12 +573,19 @@
     .snip-layout .snip-form__container + .snip-form__container {
       margin-top: 1em; }
   .snip-layout .snip-form__label {
-    color: #999;
+    color: #666;
     font-size: 12px;
     text-transform: uppercase;
     display: block;
     overflow: hidden;
     margin: 0 0 0.5em 0; }
+  .snip-layout .snip-form__description {
+    margin: 1em 0; }
+  .snip-layout .snip-form__help {
+    float: right;
+    color: #333;
+    font-size: 12px;
+    font-weight: bold; }
   .snip-layout .snip-form__field--big {
     display: block;
     padding: 8px 6px;
@@ -516,6 +594,11 @@
     background: white;
     border-radius: 3px;
     border: 1px solid #e5e5e5; }
+  .snip-layout .snip-form__select--small {
+    width: 49%;
+    float: left; }
+    .snip-layout .snip-form__select--small ~ .snip-form__select--small {
+      margin-left: 2%; }
   .snip-layout .snip-form__error {
     color: #fff;
     text-align: center;
@@ -586,3 +669,99 @@
     padding: 0.25em 1.25em; }
     .snip-layout .snip-col + .snip-col {
       border-left: 1px solid #f1f1f2; }
+  .snip-layout .snip-col--right {
+    -webkit-box-ordinal-group: 3;
+    -webkit-order: 2;
+    -ms-flex-order: 2;
+    order: 2; }
+  .snip-layout .snip-error {
+    padding: 2em 15%; }
+  .snip-layout .snip-error__text {
+    color: red;
+    font-size: 14px;
+    margin-bottom: 1em; }
+  .snip-layout .snip-error__title {
+    text-transform: uppercase;
+    color: #333;
+    font-weight: bold;
+    text-align: center;
+    margin: 1em 0; }
+  .snip-layout .snip-error__list {
+    list-style: disc inside;
+    margin: 2em 0;
+    font-size: 14px; }
+  .snip-layout .snip-error__list-item {
+    padding: .25em 0; }
+  .snip-layout .snip-error__textarea {
+    width: 100%; }
+  .snip-layout .snip-error__feedback {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 14px; }
+  .snip-layout .snip-static {
+    background: #fafafa;
+    padding: 1em 15%;
+    border-top: 1px solid #eee;
+    font-size: 14px;
+    text-align: center; }
+  .snip-layout .snip-static__title {
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #333;
+    font-size: 1em; }
+  .snip-layout .snip-static__title--main {
+    margin: 0.5em 20px 1em; }
+  .snip-layout .snip-static__content {
+    line-height: 1.6;
+    font-size: 12px;
+    margin-top: 1em; }
+  .snip-layout .snip-static__item {
+    max-width: 100%; }
+    .snip-layout .snip-static__item ~ .snip-static__item {
+      margin-top: 1.5em; }
+  .snip-layout .snip-static__link {
+    text-decoration: underline;
+    color: #999;
+    display: inline-block;
+    margin-top: .25em; }
+    .snip-layout .snip-static__link:hover {
+      color: #333; }
+  .snip-layout .snip-tooltip {
+    padding: 10px 20px;
+    border-radius: 3px;
+    text-align: center;
+    position: absolute;
+    background-color: #ccc;
+    bottom: 100%;
+    right: 0;
+    text-align: center;
+    display: none;
+    margin-bottom: 15px; }
+    .snip-layout .snip-tooltip:after {
+      content: "";
+      position: absolute;
+      bottom: -15px;
+      left: 50%;
+      -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+      transform: translateX(-50%);
+      border-width: 15px 15px 0;
+      border-style: solid;
+      border-color: #ccc transparent;
+      display: block;
+      width: 0; }
+  .snip-layout .snip-tooltip__toggle:before {
+    content: "?";
+    display: block;
+    width: 1.5em;
+    text-align: center; }
+  .snip-layout .snip-tooltip__toggle.js-active:before {
+    content: "-"; }
+  .snip-layout .snip-tooltip__container {
+    position: relative; }
+  .snip-layout .snip-tooltip__list {
+    color: #666; }
+  .snip-layout .snip-tooltip__item {
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 5px; }

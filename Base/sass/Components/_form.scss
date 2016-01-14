@@ -12,6 +12,11 @@
     STYLE
 \*------------------------------------*/
 
+.snip-form--small {
+    padding: 2em 15%;
+    text-align: center;
+}
+
 .snip-form--right {
     float: right;
     margin-right: 1em;
@@ -26,12 +31,23 @@
 }
 
 .snip-form__label {
-    color: #999;
+    color: #666;
     font-size: 12px;
     text-transform: uppercase;
     display: block;
     overflow: hidden;
     margin: 0 0 .5em 0;
+}
+
+.snip-form__description {
+    margin: 1em 0;
+}
+
+.snip-form__help {
+    float: right;
+    color: #333;
+    font-size: 12px;
+    font-weight: bold;
 }
 
 .snip-form__field--big {
@@ -42,6 +58,15 @@
     background: white;
     border-radius: 3px;
     border: 1px solid #e5e5e5;
+}
+
+.snip-form__select--small {
+    width: 49%;
+    float: left;
+
+    ~ .snip-form__select--small {
+        margin-left: 2%;
+    }
 }
 
 .snip-form__error {

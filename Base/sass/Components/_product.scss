@@ -12,6 +12,26 @@
     STYLE
 \*------------------------------------*/
 
+.snip-product {
+    @include clearfix;
+    background: #fafafa;
+    padding: 2em 1.25em;
+    border-top: 1px solid #eee;
+}
+
+.snip-product--selectable {
+    cursor: pointer;
+}
+
+.snip-product--selectable-item {
+    padding-left: 32px;
+    background: url("img/checkbox.png") no-repeat 0 center;
+
+    &.js-selected {
+        background-image: url("img/selected.png");
+    }
+}
+
 .snip-product__thumbnail {
     width: 65px;
     height: 65px;
@@ -28,13 +48,17 @@
     color: #333333;
     text-transform: uppercase;
     font-weight: bold;
-    margin-bottom: .5em;
     overflow: hidden;
 }
 
 .snip-product__description {
     font-size: 12px;
     overflow: hidden;
+    margin-top: .5em;
+}
+
+.snip-product__important {
+    font-weight: bold;
 }
 
 .snip-product__remove {

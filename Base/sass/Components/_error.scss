@@ -1,0 +1,51 @@
+﻿/**
+    ERROR
+*/
+
+/*------------------------------------*\
+    LOCAL VARIABLES
+\*------------------------------------*/
+
+
+
+/*------------------------------------*\
+    STYLE
+\*------------------------------------*/
+
+.snip-error {
+    padding: 2em 15%;
+}
+
+.snip-error__text {
+    color: red;
+    font-size: 14px;
+    margin-bottom: 1em;
+}
+
+.snip-error__title {
+    text-transform: uppercase;
+    color: #333;
+    font-weight: bold;
+    text-align: center;
+    margin: 1em 0;
+}
+
+.snip-error__list {
+    list-style: disc inside;
+    margin: 2em 0;
+    font-size: 14px;
+}
+
+.snip-error__list-item {
+    padding: .25em 0;
+}
+
+.snip-error__textarea {
+    width: 100%;
+}
+
+.snip-error__feedback {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 14px;
+}

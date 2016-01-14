@@ -56,3 +56,14 @@
 .snip-layout__content {
     padding: 2em 0;
 }
+
+.snip-layout__content--highlight {
+    border-top: 1px solid #bbb;
+    border-bottom: 1px solid #bbb;
+    background-color: #f8f8f8;
+    padding: 1em 0;
+}
+
+.snip-layout__content--bordered {
+    border-bottom: 1px solid #eeeeee;
+}

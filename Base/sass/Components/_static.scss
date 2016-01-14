@@ -1,0 +1,58 @@
+﻿/**
+    STATIC
+*/
+
+/*------------------------------------*\
+    LOCAL VARIABLES
+\*------------------------------------*/
+
+
+
+/*------------------------------------*\
+    STYLE
+\*------------------------------------*/
+
+.snip-static {
+    background: #fafafa;
+    padding: 1em 15%;
+    border-top: 1px solid #eee;
+    font-size: 14px;
+    text-align: center;
+}
+
+.snip-static__title {
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #333;
+    font-size: 1em;
+}
+
+.snip-static__title--main {
+    margin: .5em 20px 1em;
+
+}
+
+.snip-static__content {
+    line-height: 1.6;
+    font-size: 12px;
+    margin-top: 1em;
+}
+
+.snip-static__item {
+    max-width: 100%;
+
+    ~ .snip-static__item {
+        margin-top: 1.5em;
+    }
+}
+
+.snip-static__link {
+    text-decoration: underline;
+    color: #999;
+    display: inline-block;
+    margin-top: .25em;
+
+    &:hover {
+        color: #333;
+    }
+}

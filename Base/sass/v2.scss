@@ -31,7 +31,8 @@
     
     font-size: 16px;
     font-family: $font-base;
-    color: #a5a5a5 !important;
+    line-height: normal;
+    color: #999 !important;
     padding: 1.5em 0;
 
     // Compound settings and reset
@@ -51,4 +52,7 @@
     @import "Components/_form.scss";
     @import "Components/_step.scss";
     @import "Components/_cols.scss";
+    @import "Components/_error.scss";
+    @import "Components/_static.scss";
+    @import "Components/_tooltip.scss";
 }

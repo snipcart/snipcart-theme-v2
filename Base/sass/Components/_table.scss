@@ -24,6 +24,11 @@
     td, th, tr {
         padding: inherit;
         border: inherit;
+
+        &:empty {
+            width: 0;
+            padding: 0;
+        }
     }
 }
 
@@ -31,11 +36,25 @@
     text-transform: uppercase;
     font-size: 11px;
     padding: 10px 20px;
+    
+    ~ .snip-table__header {
+        border-top: 1px solid #eee;
+    }
 }
 
 .snip-table__body {
     padding: 20px;
     border-top: 1px solid #eee;
+}
+
+.snip-table__body--small {
+    padding: 6px 20px 6px 40px;
+    background: #f8f8f8;
+}
+
+.snip-table__body--big {
+    font-size: 18px;
+    padding: 22px 20px 22px 22px;
 }
 
 .snip-table__cell--center {

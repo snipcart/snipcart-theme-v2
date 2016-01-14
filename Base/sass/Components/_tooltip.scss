@@ -1,0 +1,68 @@
+﻿/**
+    TOOLTIP
+*/
+
+/*------------------------------------*\
+    LOCAL VARIABLES
+\*------------------------------------*/
+
+
+
+/*------------------------------------*\
+    STYLE
+\*------------------------------------*/
+
+.snip-tooltip {
+    padding: 10px 20px;
+    border-radius: 3px;
+    text-align: center;
+    position: absolute;
+    background-color: #ccc;
+    bottom: 100%;
+    right: 0;
+    text-align: center;
+    display: none;
+    margin-bottom: 15px;
+
+    &:after {
+        content: "";
+        position: absolute;
+        bottom: -15px;
+        left: 50%;
+        transform: translateX(-50%);
+        border-width: 15px 15px 0;
+        border-style: solid;
+        border-color: #ccc transparent;
+        display: block;
+        width: 0;
+    }
+}
+
+.snip-tooltip__toggle {
+    &:before {
+        content: "?";
+        display: block;
+        width: 1.5em;
+        text-align: center;
+    }
+
+    &.js-active {
+        &:before {
+            content: "-";
+        }
+    }
+}
+
+.snip-tooltip__container {
+    position: relative;
+}
+
+.snip-tooltip__list {
+    color: #666;
+}
+
+.snip-tooltip__item {
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 5px;
+}

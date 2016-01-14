@@ -29,6 +29,12 @@
     border: 0;
 }
 
+.snip-btn--small {
+    height: auto;
+    padding: 5px;
+    line-height: normal;
+}
+
 .snip-btn--highlight {
     background: #efe778;
     color: #1d1f22;
@@ -40,4 +46,10 @@
 
 .snip-btn--right {
     float: right;
+}
+
+.snip-btn--full {
+    margin-top: 1em;
+    display: block;
+    text-align: center;
 }
