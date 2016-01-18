@@ -10,6 +10,17 @@
     LOCAL VARIABLES
 \*------------------------------------*/
 
+$_table-font-size--small: .714em;
+$_table-font-size--base: .875em;
+$_table-font-size--large: 1.286em;
+
+$_table-border: 1px solid $gallery;
+
+$_table-color--highlight: $mine-shaft--lighter;
+$_table-color--success: $atlantis;
+
+$_table-background--highlight: $alabaster;
+
 
 /*------------------------------------*\
     STYLE
@@ -18,7 +29,7 @@
 .snip-table {
     width: 100%;
     text-align: left;
-    font-size: 14px;
+    font-size: $_table-font-size--base;
 
     /* [1] */
     td, th, tr {
@@ -34,27 +45,27 @@
 
 .snip-table__header {
     text-transform: uppercase;
-    font-size: 11px;
-    padding: 10px 20px;
+    font-size: $_table-font-size--small;
+    padding: 1em 2em;
     
     ~ .snip-table__header {
-        border-top: 1px solid #eee;
+        border-top: $_table-border;
     }
 }
 
 .snip-table__body {
-    padding: 20px;
-    border-top: 1px solid #eee;
+    padding: 1.429em;
+    border-top: $_table-border;
 }
 
 .snip-table__body--small {
-    padding: 6px 20px 6px 40px;
-    background: #f8f8f8;
+    padding: .429em 1.429em .429em 2.857em;
+    background: $_table-background--highlight;
 }
 
 .snip-table__body--big {
-    font-size: 18px;
-    padding: 22px 20px 22px 22px;
+    font-size: $_table-font-size--large;
+    padding: 1.222em 1.111em 1.222em 1.222em;
 }
 
 .snip-table__cell--center {
@@ -71,10 +82,10 @@
 
 .snip-table__cell--highlight {
     font-weight: bold;
-    color: #333;
+    color: $_table-color--highlight;
 }
 
 .snip-table__cell--success {
     font-weight: bold;
-    color: #76d443;
+    color: $_table-color--success;
 }

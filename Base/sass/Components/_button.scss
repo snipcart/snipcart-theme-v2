@@ -6,6 +6,14 @@
     LOCAL VARIABLES
 \*------------------------------------*/
 
+$_btn-size: 38px;
+
+$_btn-font-size: 38px;
+
+$_btn-color--highlight: $mine-shaft;
+
+$_btn-background: $emperor;
+$_btn-background--highlight: $manz;
 
 
 /*------------------------------------*\
@@ -14,15 +22,15 @@
 
 .snip-btn {
     display: inline-block;
-    background-color: #666;
-    padding: 0 25px;
-    color: #ffffff;
+    background-color: $_btn-background;
+    padding: 0 2.083em;
+    color: $base--primary;
     font-weight: bold;
     text-decoration: none;
     cursor: pointer;
     font-size: 12px;
-    line-height: 38px;
-    height: 38px;
+    line-height: $_btn-size;
+    height: $_btn-size;
     text-transform: uppercase;
     border-radius: 3px;
     outline: 0;
@@ -31,13 +39,13 @@
 
 .snip-btn--small {
     height: auto;
-    padding: 5px;
+    padding: .417em;
     line-height: normal;
 }
 
 .snip-btn--highlight {
-    background: #efe778;
-    color: #1d1f22;
+    background: $_btn-background--highlight;
+    color: $_btn-color--highlight;
 }
 
 .snip-btn--left {

@@ -6,18 +6,25 @@
     LOCAL VARIABLES
 \*------------------------------------*/
 
+$_tooltip-padding: 10px 20px;
 
+$_tooltip-background: $silver--lighter;
+$_tooltip-border-color: $silver--lighter transparent;
+$_tooltip-label-color: $emperor;
+$_tooltip-text-color: $cod-grey;
+
+$_tooltip-text-closed: "?";
+$_tooltip-text-opened: "-";
 
 /*------------------------------------*\
     STYLE
 \*------------------------------------*/
 
 .snip-tooltip {
-    padding: 10px 20px;
+    padding: $_tooltip-padding;
     border-radius: 3px;
-    text-align: center;
     position: absolute;
-    background-color: #ccc;
+    background-color: $_tooltip-background;
     bottom: 100%;
     right: 0;
     text-align: center;
@@ -32,7 +39,7 @@
         transform: translateX(-50%);
         border-width: 15px 15px 0;
         border-style: solid;
-        border-color: #ccc transparent;
+        border-color: $_tooltip-border-color;
         display: block;
         width: 0;
     }
@@ -40,7 +47,7 @@
 
 .snip-tooltip__toggle {
     &:before {
-        content: "?";
+        content: $_tooltip-text-closed;
         display: block;
         width: 1.5em;
         text-align: center;
@@ -48,7 +55,7 @@
 
     &.js-active {
         &:before {
-            content: "-";
+            content: $_tooltip-text-opened;
         }
     }
 }
@@ -58,11 +65,11 @@
 }
 
 .snip-tooltip__list {
-    color: #666;
+    color: $_tooltip-label-color;
 }
 
 .snip-tooltip__item {
-    color: #333;
+    color: $_tooltip-text-color;
     font-weight: bold;
     margin-bottom: 5px;
 }

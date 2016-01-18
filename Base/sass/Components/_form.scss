@@ -6,7 +6,17 @@
     LOCAL VARIABLES
 \*------------------------------------*/
 
+$_form-label-color: $dusty-gray;
 
+$_form-font-size--small: 12px;
+$_form-font-size--smaller: 14px;
+
+$_form-color--highlight: $mine-shaft--lighter;
+
+$_form-border: 1px solid $gallery;
+
+$_form-error-color: $base--primary;
+$_form-error-background: $red;
 
 /*------------------------------------*\
     STYLE
@@ -31,8 +41,8 @@
 }
 
 .snip-form__label {
-    color: #666;
-    font-size: 12px;
+    color: $_form-label-color;
+    font-size: $_form-font-size--small;
     text-transform: uppercase;
     display: block;
     overflow: hidden;
@@ -45,19 +55,19 @@
 
 .snip-form__help {
     float: right;
-    color: #333;
-    font-size: 12px;
+    color: $_form-color--highlight;
+    font-size: $_form-font-size--small;
     font-weight: bold;
 }
 
 .snip-form__field--big {
     display: block;
-    padding: 8px 6px;
-    font-size: 14px;
-    color: #555;
-    background: white;
+    padding: .571em .429em;
+    font-size: $_form-font-size--smaller;
+    color: $_form-color--highlight;
+    background: $base--primary;
     border-radius: 3px;
-    border: 1px solid #e5e5e5;
+    border: $_form-border;
 }
 
 .snip-form__select--small {
@@ -70,10 +80,10 @@
 }
 
 .snip-form__error {
-    color: #fff;
+    color: $_form-error-color;
     text-align: center;
-    background: red;
-    padding: 5px;
+    background: $_form-error-background;
+    padding: .357em;
     border-radius: 3px;
-    font-size: 14px;
+    font-size: $_form-font-size--smaller;
 }

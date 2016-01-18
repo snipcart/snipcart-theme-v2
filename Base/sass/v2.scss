@@ -8,6 +8,10 @@
     IMPORTANT you have to include snipcart's stylesheet AFTER all your stylesheets
 */
 
+/*------------------------------------*\
+    GLOBAL IMPORTS
+\*------------------------------------*/
+
 // Global mixins, functions
 @import "Tools/_mixins.scss";
 
@@ -15,6 +19,32 @@
 @import "Settings/_fonts.scss";
 @import "Settings/_mediaQueries.scss";
 @import "Settings/_colors.scss";
+
+
+/*------------------------------------*\
+    LOCAL VARIABLES
+\*------------------------------------*/
+
+$_base-color: $dusty-gray;
+
+$_base-font-size: 16px;
+
+$_base-padding: 1.5em 0;
+
+$_base-z-index: 1040;
+
+
+/*------------------------------------*\
+    STYLE
+\*------------------------------------*/
+
+// Body override
+body.snip-open {
+    padding: 0 !important;
+    margin: 0 !important;
+    overflow: hidden !important;
+    height: auto !important;
+}
 
 // Base layout
 .snip-layout {
@@ -25,15 +55,15 @@
     right: 0;
     bottom: 0;
     left: 0;
-    z-index: 1040;
+    z-index: $_base-z-index;
 
     overflow-x: auto;
     
-    font-size: 16px;
+    font-size: $_base-font-size;
     font-family: $font-base;
     line-height: normal;
-    color: #999 !important;
-    padding: 1.5em 0;
+    color: $_base-color;
+    padding: $_base-padding;
 
     // Compound settings and reset
     @import "Settings/_icons.scss";

@@ -6,7 +6,17 @@
     LOCAL VARIABLES
 \*------------------------------------*/
 
+$_layout-background: $base--primary;
 
+$_layout-border: 1px solid $gallery;
+
+$_layout-close-color: $base--primary;
+$_layout-close-font-size: 1.5em;
+
+$_layout-loading-color: $mine-shaft--lighter;
+
+$_layout-content-background: $alabaster;
+$_layout-content-border: 1px solid $silver;
 
 /*------------------------------------*\
     STYLE
@@ -17,19 +27,19 @@
     max-width: 62.25em;
     margin: 0 auto;
     z-index: 15000;
-    background: white;
+    background: $_layout-background;
 }
 
 .snip-layout__close {
     text-decoration: none;
     z-index: 10000;
     position: absolute;
-    padding: 8px;
-    top: 10px;
-    right: 10px;
+    padding: .333em;
+    top: .208em;
+    right: .417em;
     padding: 0;
-    color: $base--primary;
-    font-size: 1.5em;
+    color: $_layout-close-color;
+    font-size: $_layout-close-font-size;
 }
 
 .snip-layout__close-label {
@@ -48,7 +58,7 @@
 
     padding-bottom: 30px;
     text-transform: uppercase;
-    color: #333;
+    color: $_layout-loading-color;
     font-weight: bold;
     text-align: center;
 }
@@ -58,12 +68,12 @@
 }
 
 .snip-layout__content--highlight {
-    border-top: 1px solid #bbb;
-    border-bottom: 1px solid #bbb;
-    background-color: #f8f8f8;
+    border-top: $_layout-content-border;
+    border-bottom: $_layout-content-border;
+    background-color: $_layout-content-background;
     padding: 1em 0;
 }
 
 .snip-layout__content--bordered {
-    border-bottom: 1px solid #eeeeee;
+    border-bottom: $_layout-border;
 }

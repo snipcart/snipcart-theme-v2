@@ -6,6 +6,10 @@
     LOCAL VARIABLES
 \*------------------------------------*/
 
+$_error-font-size: 14px;
+
+$_error-color: $red;
+$_error-text-color: $mine-shaft--lighter;
 
 
 /*------------------------------------*\
@@ -17,8 +21,8 @@
 }
 
 .snip-error__text {
-    color: red;
-    font-size: 14px;
+    color: $_error-color;
+    font-size: $_error-font-size;
     margin-bottom: 1em;
 }
 
@@ -28,7 +32,7 @@
 
 .snip-error__title {
     text-transform: uppercase;
-    color: #333;
+    color: $_error-text-color;
     font-weight: bold;
     text-align: center;
     margin: 1em 0;
@@ -37,7 +41,7 @@
 .snip-error__list {
     list-style: disc inside;
     margin: 2em 0;
-    font-size: 14px;
+    font-size: $_error-font-size;
 }
 
 .snip-error__list-item {
@@ -51,5 +55,5 @@
 .snip-error__feedback {
     text-align: center;
     text-transform: uppercase;
-    font-size: 14px;
+    font-size: $_error-font-size;
 }

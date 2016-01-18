@@ -6,7 +6,19 @@
     LOCAL VARIABLES
 \*------------------------------------*/
 
+$_product-font-size--base: 14px;
+$_product-font-size--large: 20px;
+$_product-font-size--icon: 30px;
 
+$_product-background: $alabaster;
+$_product-border: 1px solid $gallery;
+
+$_product-color--highlight: $mine-shaft--lighter;
+$_product-color--error: $red;
+
+$_product-thumbnail-size: 65px;
+
+$_product-customfield-size: 200px;
 
 /*------------------------------------*\
     STYLE
@@ -14,9 +26,10 @@
 
 .snip-product {
     @include clearfix;
-    background: #fafafa;
+    background: $_product-background;
     padding: 2em 1.25em;
-    border-top: 1px solid #eee;
+    border-top: $_product-border;
+    font-size: $_product-font-size--base;
 }
 
 .snip-product--selectable {
@@ -24,7 +37,7 @@
 }
 
 .snip-product--selectable-item {
-    padding-left: 32px;
+    padding-left: 2.286em;
     background: url("img/checkbox.png") no-repeat 0 center;
 
     &.js-selected {
@@ -33,10 +46,10 @@
 }
 
 .snip-product__thumbnail {
-    width: 65px;
-    height: 65px;
+    width: $_product-thumbnail-size;
+    height: $_product-thumbnail-size;
     float: left;
-    margin-right: 10px;
+    margin-right: .714em;
 
     img {
         max-height: 100%;
@@ -45,14 +58,14 @@
 }
 
 .snip-product__name {
-    color: #333333;
+    color: $_product-color--highlight;
     text-transform: uppercase;
     font-weight: bold;
     overflow: hidden;
 }
 
 .snip-product__description {
-    font-size: 12px;
+    font-size: $_product-font-size--base;
     overflow: hidden;
     margin-top: .5em;
 }
@@ -63,14 +76,14 @@
 
 .snip-product__remove {
     float: left;
-    font-size: 26px;
-    margin: -4px 5px 0 0;
-    color: red;
+    font-size: $_product-font-size--icon;
+    margin: -.154em .192em 0 0;
+    color: $_product-color--error;
     text-decoration: none;
 }
 
 .snip-product__customfields {
-    max-width: 200px;
+    max-width: $_product-customfield-size;
 }
 
 .snip-product__customfields-checkbox {
@@ -79,7 +92,7 @@
 }
 
 .snip-product__empty {
-    font-size: 18px;
+    font-size: $_product-font-size--large;
     text-transform: uppercase;
     padding: 1em 2em;
     text-align: center;

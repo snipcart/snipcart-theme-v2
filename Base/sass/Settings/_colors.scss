@@ -14,103 +14,61 @@
     BASE
 \*------------------------------------*/
 
-// White
 // 255, 255, 255
-// Used for main content background and standard color when dark background
 $base--primary: #fff;
 
-// Black
-// 0, 0, 0
-// Used for tipsy and for some dark shadows and gradient
-$base--secondary: #000;
+
+/*------------------------------------*\
+    GRAY / GREY
+\*------------------------------------*/
+
+// rgb: 17, 17, 17
+$cod-grey: #111;
+
+// rgb: 34, 34, 34
+$mine-shaft: #222;
+
+// rgb: 51, 51, 51
+$mine-shaft--lighter: #333;
+
+// rgb: 85, 85, 85
+$emperor: #555;
+
+// rgb: 153, 153, 153
+$dusty-gray: #999;
+
+// rgb: 187, 187, 187
+$silver: #bbb;
+
+// rgb: 204, 204, 204
+$silver--lighter: #ccc;
+
+// rgb: 238, 238, 238
+$gallery: #eee;
+
+// rgb: 248, 248, 248
+$alabaster: #f8f8f8;
+
+
+/*------------------------------------*\
+    YELLOW
+\*------------------------------------*/
+
+// rgb: 239, 231, 120
+$manz: #efe778;
+
 
 /*------------------------------------*\
     GREEN
 \*------------------------------------*/
 
-// Conifer
-// 135, 219, 87
-// Used for links and link buttons
-$link: #87db57;
+// rgb: 118, 212, 67
+$atlantis: #76d443;
 
-// Atlantis
-// 119, 213, 68
-// Used to highlight amound, promotions and success
-$highlight-success: #76d443;
 
 /*------------------------------------*\
-    REDS
+    RED
 \*------------------------------------*/
 
-// Guardsman Red
-// 204, 0, 0
-// Used for Tipsy plugin main color
-$tipsy-color: #c00;
-
-// Alizarin Crimson
-// 239, 37, 58
-// Used for all errors
-$error: #ef253a;
-
-/*------------------------------------*\
-    YELLOWS
-\*------------------------------------*/
-
-// Broom
-// 255, 236, 22
-// Used for warning flash messages
-$warning: #ffec16;
-
-/*------------------------------------*\
-    GREYS
-\*------------------------------------*/
-
-// Cod Gray
-// 17, 17, 17
-// Used for header total, user menu, standard dark text color
-$aside-background: #111;
-$strong-text: #111;
-
-// Mine Shaft
-// 34, 34, 34
-// Used for footer and header background, flash message border
-$layout-background: #222;
-$flash-border: #222;
-
-// Mine Shaft
-// 51, 51, 51
-// Used for content base grey text, user menu border
-$content-text: #333;
-$usermenu-border: #333;
-
-// Dove Gray
-// 102, 102, 102
-// Used for button background, footer main color, form main color, steps main color
-$main-color: #666;
-
-// Dusty Gray
-// 153, 153, 153
-// Used for header main color, user menu color, list color
-$layout-text: #999;
-
-// Silver Chalice
-// 170, 170, 170
-// Used for highlight grey text
-$highlight-text: #aaa;
-$step-border: #aaa;
-
-// Silver
-// 204, 204, 204
-// Used for step background
-$step: #ccc;
-
-// Gallery
-// 238, 238, 238
-// Used for borders, active step
-$border: #eee;
-$active-step: #eee;
-
-// Wild Sand
-// 246, 246, 246
-// Used for highlight block
-$highlight-blocks: #f6f6f6;
+// rgb: 255, 17, 0
+$red: #f10;

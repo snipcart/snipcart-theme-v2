@@ -6,7 +6,17 @@
     LOCAL VARIABLES
 \*------------------------------------*/
 
+$_header-background: $mine-shaft;
+$_header-background--highlight: $cod-grey;
 
+$_header-height: 105px;
+$_header-total-height: 38px;
+
+$_header-color: $base--primary;
+$_header-label-color: $dusty-gray;
+
+$_header-font-size--small: 14px;
+$_header-font-size--large: 30px;
 
 /*------------------------------------*\
     STYLE
@@ -14,47 +24,51 @@
 
 .snip-header {
     position: relative;
-    background: rgba(30, 31, 33, 1);
+    background: $_header-background;
     text-align: center;
-    height: 105px;
-    padding: 0;
-    color: $base--primary;
+    height: $_header-height;
+    color: $_header-color;
     text-transform: uppercase;
     font-weight: bold;
 }
 
+.snip-header__user {
+    background: $_header-background--highlight;
+    padding: .714em 1.429em;
+    text-align: center;
+    font-size: $_header-font-size--small;
+}
+
+.snip-header__user-mail {
+    color: $_header-color;
+}
+
 .snip-header__title {
-    float: left;
-    height: 95px;
     position: absolute;
-    left: 20px;
-    display: block;
+    left: 1.25em;
     text-align: left;
-    font-size: 30px;
-    line-height: 105px;
-    padding-left: 25px;
-    width: auto;
-    top: 0;
-    min-width: 300px;
+    font-size: $_header-font-size--large;
+    line-height: $_header-height;
 }
 
 .snip-header__total {
     display: inline-block;
-    height: 38px;
-    line-height: 38px;
-    background: rgb(11,11,11);
-    position: relative;
+    height: $_header-total-height;
+    line-height: $_header-total-height;
+    background: $_header-background--highlight;
     border-radius: 5px;
-    margin-top: 35px;
-    margin-left: 20px;
+    padding: 0 .625em;
+    margin-top: 2.188em;
 }
 
 .snip-header__total-label {
-    color: #898989;
-    margin-left: 10px;
-    white-space: nowrap;
+    color: $_header-label-color;
+    margin-right: .625em;
 }
 
-.snip-header__total-amount {
-    margin: 0 10px;
+.snip-header__continue {
+    margin-top: -1.188em;
+    position: absolute;
+    top: 50%;
+    right: 1.25em;
 }

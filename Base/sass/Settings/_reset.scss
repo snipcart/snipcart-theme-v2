@@ -4,6 +4,23 @@
     We reset to default value for each elements used in snipcart.
     Your style must not impact our style.
 */
+
+/*------------------------------------*\
+    LOCAL VARIABLES
+\*------------------------------------*/
+
+$_reset-form-color: $emperor;
+$_reset-form-background-color: $base--primary;
+
+$_reset-form-font-size: 14px;
+
+$_reset-form-border: 1px solid $gallery;
+$_reset-form-border-color-focus: $mine-shaft--lighter;
+
+/*------------------------------------*\
+    STYLE
+\*------------------------------------*/
+
 div,
 span,
 h1,
@@ -75,17 +92,17 @@ select {
     box-sizing: border-box;
     display: block;
     width: 100%;
-    padding: 8px 6px;
+    padding: .571em .429em;
     margin: 0;
-    font-size: 14px;
-    color: #555;
-    background: white;
+    font-size: $_reset-form-font-size;
+    color: $_reset-form-color;
+    background: $_reset-form-background-color;
     border-radius: 3px;
-    border: 1px solid #e5e5e5;
+    border: $_reset-form-border;
     transition: border .66s ease;
 
     &:focus,
     &:hover {
-        border-color: #333;
+        border-color: $_reset-form-border-color-focus;
     }
 }

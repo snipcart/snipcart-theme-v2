@@ -6,41 +6,63 @@
     LOCAL VARIABLES
 \*------------------------------------*/
 
+$_qt-color: $cod-grey;
+
+$_qt-background: $silver--lighter;
+$_qt-background--hover: $manz;
+
+$_qt-font-size--large: 18px;
+
 
 /*------------------------------------*\
     STYLE
 \*------------------------------------*/
 
 .snip-quantity-trigger {
-    color: #333333;
+    color: $_qt-color;
     font-weight: bold;
     margin: 0 auto;
-    display: table;
+    display: flex;
+    justify-content: center;
 }
 
 .snip-quantity-trigger__text {
-    display: table-cell;
-    padding: 0 5px;
+    float: left;
+    padding: 0 .313em;
 }
 
 .snip-quantity-trigger__btn {
-    font-size: 18px;
+    font-size: $_qt-font-size--large;
     border-radius: 30px;
-    background-color: #e8e8e8;
-    color: #1c1e21;
-    text-align: center;
+    background-color: $_qt-background;
+    color: inherit;
     text-decoration: none;
     height: 1em;
     width: 1em;
-    line-height: 1em;
     font-weight: 400;
-    display: table-cell;
+    float: left;
 
     &:hover {
-        background-color: #efe778;
+        background-color: $_qt-background--hover;
+    }
+
+    &:before {
+        display: block;
+        height: 1em;
+        width: 1em;
+    }
+}
+
+.snip-quantity-trigger__btn--add {
+    &:before {
+        content: "+";
+        line-height: 1em;
     }
 }
 
 .snip-quantity-trigger__btn--minus {
-    line-height: 14px;
+    &:before {
+        content: "-";
+        line-height: 14px;
+    }
 }

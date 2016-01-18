@@ -6,7 +6,7 @@
     LOCAL VARIABLES
 \*------------------------------------*/
 
-
+$_cols-border: 1px solid $gallery;
 
 /*------------------------------------*\
     STYLE
@@ -23,7 +23,7 @@
     padding: .25em 1.25em;
 
     + .snip-col {
-        border-left: 1px solid #f1f1f2;
+        border-left: $_cols-border;
     }
 }
 

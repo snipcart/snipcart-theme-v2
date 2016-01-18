@@ -6,7 +6,13 @@
     LOCAL VARIABLES
 \*------------------------------------*/
 
+$_flash-border: 1px solid $mine-shaft--lighter;
+$_flash-color--light: $base--primary;
+$_flash-border--dark: $mine-shaft--lighter;
 
+$_flash-success: $atlantis;
+$_flash-warning: $manz;
+$_flash-error: $red;
 
 /*------------------------------------*\
     STYLE
@@ -14,20 +20,20 @@
 
 .snip-flash__item {
     padding: 10px 20px;
-    border-bottom: 1px solid #333;
+    border-bottom: $_flash-border;
 }
 
 .snip-flash__item--success {
-    background-color: #77D544;
-    color: #333;
+    background-color: $_flash-success;
+    color: $_flash-border--dark;
 }
 
 .snip-flash__item--warn {
-    background-color: #FFEC16;
-    color: #333;
+    background-color: $_flash-warning;
+    color: $_flash-border--dark;
 }
 
 .snip-flash__item--error {
-    background-color: #FF0600;
-    color: #fff;
+    background-color: $_flash-error;
+    color: $_flash-color--light;
 }

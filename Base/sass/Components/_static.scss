@@ -6,6 +6,15 @@
     LOCAL VARIABLES
 \*------------------------------------*/
 
+$_static-font-size--small: 12px;
+$_static-font-size--base: 14px;
+
+$_static-border: 1px solid $gallery;
+
+$_static-background--highlight: $alabaster;
+
+$_static-color--highlight: $mine-shaft--lighter;
+$_static-color--link: $dusty-gray;
 
 
 /*------------------------------------*\
@@ -14,30 +23,29 @@
 
 .snip-static {
     padding: 1em 15%;
-    font-size: 14px;
+    font-size: $_static-font-size--base;
     text-align: center;
 }
 
 .snip-static--highlight {
-    background: #fafafa;
-    border-top: 1px solid #eee;
+    background: $_static-background--highlight;
+    border-top: $_static-border;
 }
 
 .snip-static__title {
     font-weight: bold;
     text-transform: uppercase;
-    color: #333;
+    color: $_static-color--highlight;
     font-size: 1em;
 }
 
 .snip-static__title--main {
-    margin: .5em 20px 1em;
-
+    margin: .5em 1.429em 1em;
 }
 
 .snip-static__content {
     line-height: 1.6;
-    font-size: 12px;
+    font-size: $_static-font-size--small;
     margin-top: 1em;
 }
 
@@ -51,11 +59,11 @@
 
 .snip-static__link {
     text-decoration: underline;
-    color: #999;
+    color: $_static-color--link;
     display: inline-block;
     margin-top: .25em;
 
     &:hover {
-        color: #333;
+        color: $_static-color--highlight;
     }
 }
