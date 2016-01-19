@@ -1,5 +1,7 @@
 ﻿/**
     LAYOUT
+
+    Snipcar main container, basic content container, modal elements, loading screen
 */
 
 /*------------------------------------*\
@@ -18,6 +20,7 @@ $_layout-loading-color: $mine-shaft--lighter;
 $_layout-content-background: $alabaster;
 $_layout-content-border: 1px solid $silver;
 
+
 /*------------------------------------*\
     STYLE
 \*------------------------------------*/
@@ -26,13 +29,11 @@ $_layout-content-border: 1px solid $silver;
     position: relative;
     max-width: 62.25em;
     margin: 0 auto;
-    z-index: 15000;
     background: $_layout-background;
 }
 
 .snip-layout__close {
     text-decoration: none;
-    z-index: 10000;
     position: absolute;
     padding: .333em;
     top: .208em;

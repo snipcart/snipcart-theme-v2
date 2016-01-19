@@ -1,5 +1,7 @@
 ﻿/**
     ACTION
+
+    Container for action step buttons
 */
 
 /*------------------------------------*\
@@ -9,6 +11,7 @@
 $_action-pad: 20px;
 $_action-border: 1px solid $gallery;
 
+
 /*------------------------------------*\
     STYLE
 \*------------------------------------*/
@@ -17,5 +20,6 @@ $_action-border: 1px solid $gallery;
     padding: $_action-pad;
     border-top: $_action-border;
 
+    // Clear floating buttons
     @include clearfix;
 }

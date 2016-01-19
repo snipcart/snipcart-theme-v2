@@ -63,7 +63,7 @@ body.snip-open {
     font-family: $font-base;
     line-height: normal;
     color: $_base-color;
-    padding: $_base-padding;
+    padding: 0;
 
     // Compound settings and reset
     @import "Settings/_icons.scss";
@@ -86,4 +86,9 @@ body.snip-open {
     @import "Components/_static.scss";
     @import "Components/_tooltip.scss";
     @import "Components/_flash.scss";
+
+    // Responsive
+    @media #{$mq-large} {
+        padding: $_base-padding;
+    }
 }

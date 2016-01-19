@@ -1,5 +1,8 @@
 ﻿/**
     FORM
+
+    Form elements, except for basic input and select styling (check _reset.scss).
+    Also form fields errors.
 */
 
 /*------------------------------------*\
@@ -17,6 +20,7 @@ $_form-border: 1px solid $gallery;
 
 $_form-error-color: $base--primary;
 $_form-error-background: $red;
+
 
 /*------------------------------------*\
     STYLE

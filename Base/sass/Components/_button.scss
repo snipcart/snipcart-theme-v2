@@ -1,5 +1,10 @@
 ﻿/**
     BUTTON
+
+    [1]. Classic gray button
+    [2]. Smaller button for tooltip
+    [3]. Next or validate yellow action button
+    [4]. Position classes: right, left, full size button
 */
 
 /*------------------------------------*\
@@ -20,6 +25,7 @@ $_btn-background--highlight: $manz;
     STYLE
 \*------------------------------------*/
 
+// [1]
 .snip-btn {
     display: inline-block;
     background-color: $_btn-background;
@@ -37,17 +43,20 @@ $_btn-background--highlight: $manz;
     border: 0;
 }
 
+// [2]
 .snip-btn--small {
     height: auto;
     padding: .417em;
     line-height: normal;
 }
 
+// [3]
 .snip-btn--highlight {
     background: $_btn-background--highlight;
     color: $_btn-color--highlight;
 }
 
+// [4]
 .snip-btn--left {
     float: left;
 }

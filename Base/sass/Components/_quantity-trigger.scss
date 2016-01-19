@@ -1,5 +1,12 @@
 ﻿/**
     QUANTITY TRIGGER
+
+    Component to modify product quantity in the cart
+
+    [1]. We use flexbox here since overall browser support is about 95% worldwide.
+    [2]. Also, as fallback, we 'float' the columns. If your browser doesn't support flexbox, columns will be
+         properly positionned even if the columns won't have the same height (graceful degradation).
+    [3]. You can choose your own symbol (or even custom icon font) for add and remove product.
 */
 
 /*------------------------------------*\
@@ -18,6 +25,7 @@ $_qt-font-size--large: 18px;
     STYLE
 \*------------------------------------*/
 
+// [1]
 .snip-quantity-trigger {
     color: $_qt-color;
     font-weight: bold;
@@ -27,6 +35,7 @@ $_qt-font-size--large: 18px;
 }
 
 .snip-quantity-trigger__text {
+    // [2]
     float: left;
     padding: 0 .313em;
 }
@@ -40,6 +49,8 @@ $_qt-font-size--large: 18px;
     height: 1em;
     width: 1em;
     font-weight: 400;
+    
+    // [2]
     float: left;
 
     &:hover {
@@ -55,6 +66,7 @@ $_qt-font-size--large: 18px;
 
 .snip-quantity-trigger__btn--add {
     &:before {
+        // [3]
         content: "+";
         line-height: 1em;
     }
@@ -62,6 +74,7 @@ $_qt-font-size--large: 18px;
 
 .snip-quantity-trigger__btn--minus {
     &:before {
+        // [3]
         content: "-";
         line-height: 14px;
     }

@@ -99,7 +99,7 @@ body.snip-open {
   font-family: Arial, sans-serif;
   line-height: normal;
   color: #999;
-  padding: 1.5em 0;
+  padding: 0;
   /**
     ICON
 
@@ -122,6 +122,8 @@ body.snip-open {
 \*------------------------------------*/
   /**
     LAYOUT
+
+    Snipcar main container, basic content container, modal elements, loading screen
 */
   /*------------------------------------*    LOCAL VARIABLES
 \*------------------------------------*/
@@ -136,6 +138,8 @@ body.snip-open {
 \*------------------------------------*/
   /**
     FOOTER
+
+    Footer container and copyright link
 */
   /*------------------------------------*    LOCAL VARIABLES
 \*------------------------------------*/
@@ -143,6 +147,8 @@ body.snip-open {
 \*------------------------------------*/
   /**
     ACTION
+
+    Container for action step buttons
 */
   /*------------------------------------*    LOCAL VARIABLES
 \*------------------------------------*/
@@ -150,6 +156,11 @@ body.snip-open {
 \*------------------------------------*/
   /**
     BUTTON
+
+    [1]. Classic gray button
+    [2]. Smaller button for tooltip
+    [3]. Next or validate yellow action button
+    [4]. Position classes: right, left, full size button
 */
   /*------------------------------------*    LOCAL VARIABLES
 \*------------------------------------*/
@@ -168,6 +179,10 @@ body.snip-open {
 \*------------------------------------*/
   /**
     PRODUCT
+
+    Product component, used for product items, shipping choices and payment methods
+
+    [1]. Do not remove ".js-selected" class
 */
   /*------------------------------------*    LOCAL VARIABLES
 \*------------------------------------*/
@@ -175,6 +190,13 @@ body.snip-open {
 \*------------------------------------*/
   /**
     QUANTITY TRIGGER
+
+    Component to modify product quantity in the cart
+
+    [1]. We use flexbox here since overall browser support is about 95% worldwide.
+    [2]. Also, as fallback, we 'float' the columns. If your browser doesn't support flexbox, columns will be
+         properly positionned even if the columns won't have the same height (graceful degradation).
+    [3]. You can choose your own symbol (or even custom icon font) for add and remove product.
 */
   /*------------------------------------*    LOCAL VARIABLES
 \*------------------------------------*/
@@ -182,6 +204,10 @@ body.snip-open {
 \*------------------------------------*/
   /**
     LOADER
+
+    Loader element for product modifications
+    
+    [1]. Do not remove ".js-active" class.
 */
   /*------------------------------------*    LOCAL VARIABLES
 \*------------------------------------*/
@@ -189,6 +215,9 @@ body.snip-open {
 \*------------------------------------*/
   /**
     FORM
+
+    Form elements, except for basic input and select styling (check _reset.scss).
+    Also form fields errors.
 */
   /*------------------------------------*    LOCAL VARIABLES
 \*------------------------------------*/
@@ -203,6 +232,13 @@ body.snip-open {
 \*------------------------------------*/
   /**
     COLUMNS
+
+    Basic grid system for the cart
+
+    [1]. We use flexbox here since overall browser support is about 95% worldwide.
+    [2]. Also, as fallback, we 'float' the columns. If your browser doesn't support flexbox, columns will be
+         properly positionned even if the columns won't have the same height (graceful degradation).
+    [3]. Thnaks to flexbox, you can easily order columns. However, it won't be ordered for older browser.
 */
   /*------------------------------------*    LOCAL VARIABLES
 \*------------------------------------*/
@@ -210,6 +246,8 @@ body.snip-open {
 \*------------------------------------*/
   /**
     ERROR
+
+    Errors text, except for form fields errors.
 */
   /*------------------------------------*    LOCAL VARIABLES
 \*------------------------------------*/
@@ -217,6 +255,8 @@ body.snip-open {
 \*------------------------------------*/
   /**
     STATIC
+
+    Classic text and content blocks
 */
   /*------------------------------------*    LOCAL VARIABLES
 \*------------------------------------*/
@@ -231,6 +271,8 @@ body.snip-open {
 \*------------------------------------*/
   /**
     FLASH
+
+    Flash messages
 */
   /*------------------------------------*    LOCAL VARIABLES
 \*------------------------------------*/
@@ -341,11 +383,9 @@ body.snip-open {
     position: relative;
     max-width: 62.25em;
     margin: 0 auto;
-    z-index: 15000;
     background: #fff; }
   .snip-layout .snip-layout__close {
     text-decoration: none;
-    z-index: 10000;
     position: absolute;
     padding: .333em;
     top: .208em;
@@ -662,7 +702,7 @@ body.snip-open {
     user-select: none; }
     .snip-layout .snip-step__item + .snip-step__item {
       border-left: 1px solid #bbb; }
-    .snip-layout .snip-step__item.active {
+    .snip-layout .snip-step__item.js-active {
       color: #333;
       border-bottom-color: #fff;
       background: #fff; }
@@ -692,8 +732,8 @@ body.snip-open {
       content: "";
       display: table; }
   .snip-layout .snip-col {
-    width: 33.333333%;
     float: left;
+    width: 33.333333%;
     padding: 0.25em 1.25em; }
     .snip-layout .snip-col + .snip-col {
       border-left: 1px solid #eee; }
@@ -807,3 +847,6 @@ body.snip-open {
   .snip-layout .snip-flash__item--error {
     background-color: #f10;
     color: #fff; }
+  @media only screen and (min-width: 64em) {
+    .snip-layout {
+      padding: 1.5em 0; } }

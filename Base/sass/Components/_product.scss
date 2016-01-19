@@ -1,5 +1,9 @@
 ﻿/**
     PRODUCT
+
+    Product component, used for product items, shipping choices and payment methods
+
+    [1]. Do not remove ".js-selected" class
 */
 
 /*------------------------------------*\
@@ -19,6 +23,7 @@ $_product-color--error: $red;
 $_product-thumbnail-size: 65px;
 
 $_product-customfield-size: 200px;
+
 
 /*------------------------------------*\
     STYLE
@@ -40,6 +45,7 @@ $_product-customfield-size: 200px;
     padding-left: 2.286em;
     background: url("img/checkbox.png") no-repeat 0 center;
 
+    // [1]
     &.js-selected {
         background-image: url("img/selected.png");
     }

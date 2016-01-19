@@ -1,5 +1,12 @@
 ﻿/**
     COLUMNS
+
+    Basic grid system for the cart
+
+    [1]. We use flexbox here since overall browser support is about 95% worldwide.
+    [2]. Also, as fallback, we 'float' the columns. If your browser doesn't support flexbox, columns will be
+         properly positionned even if the columns won't have the same height (graceful degradation).
+    [3]. Thnaks to flexbox, you can easily order columns. However, it won't be ordered for older browser.
 */
 
 /*------------------------------------*\
@@ -8,25 +15,30 @@
 
 $_cols-border: 1px solid $gallery;
 
+
 /*------------------------------------*\
     STYLE
 \*------------------------------------*/
 
+// [1]
 .snip-cols {
     @include clearfix;
     display: flex;
 }
 
 .snip-col {
-    width: 33.333333%;
+    // [2]
     float: left;
-    padding: .25em 1.25em;
+    width: 33.333333%;
 
+    padding: .25em 1.25em;
+    
     + .snip-col {
         border-left: $_cols-border;
     }
 }
 
+// [3]
 .snip-col--right {
     order: 2;
 }

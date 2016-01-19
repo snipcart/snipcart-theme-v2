@@ -45,7 +45,7 @@ $_steps-color--active: $mine-shaft--lighter;
         border-left: $_steps-border;
     }
 
-    &.active {
+    &.js-active {
         color: $_steps-color--active;
         border-bottom-color: $_steps-background--active;
         background: $_steps-background--active;
