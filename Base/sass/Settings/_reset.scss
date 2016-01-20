@@ -17,6 +17,7 @@ $_reset-form-font-size: 14px;
 $_reset-form-border: 1px solid $gallery;
 $_reset-form-border-color-focus: $mine-shaft--lighter;
 
+
 /*------------------------------------*\
     STYLE
 \*------------------------------------*/
@@ -25,25 +26,21 @@ div,
 span,
 h1,
 h2,
-h3,
+h3
 h4,
 p,
 a,
-em,
 img,
+em,
 small,
 strong,
 ol,
 ul,
 li,
-fieldset,
 form,
 label,
-legend,
 table,
-caption,
 tbody,
-tfoot,
 thead,
 tr,
 th,
@@ -51,13 +48,13 @@ td,
 dl,
 dt,
 dd {
-    margin: 0;
-    padding: 0;
     border: 0;
+    box-sizing: border-box;
     font-size: 100%;
     font: inherit;
     line-height: inherit;
-    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 table {
@@ -79,27 +76,27 @@ input,
 select {
     &:focus,
     &:hover {
-        outline: none;
         box-shadow: none;
+        outline: none;
     }
 }
 
 input[type=text],
 input[type=password],
 select {
-    height: auto;
-    line-height: 18px;
-    box-sizing: border-box;
-    display: block;
-    width: 100%;
-    padding: .571em .429em;
-    margin: 0;
-    font-size: $_reset-form-font-size;
-    color: $_reset-form-color;
     background: $_reset-form-background-color;
     border-radius: 3px;
     border: $_reset-form-border;
+    box-sizing: border-box;
+    color: $_reset-form-color;
+    display: block;
+    font-size: $_reset-form-font-size;
+    height: auto;
+    line-height: 18px;
+    margin: 0;
+    padding: .571em .429em;
     transition: border .66s ease;
+    width: 100%;
 
     &:focus,
     &:hover {

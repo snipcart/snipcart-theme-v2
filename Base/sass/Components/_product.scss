@@ -10,6 +10,7 @@
     LOCAL VARIABLES
 \*------------------------------------*/
 
+$_product-font-size--small: 12px;
 $_product-font-size--base: 14px;
 $_product-font-size--large: 20px;
 $_product-font-size--icon: 30px;
@@ -32,9 +33,9 @@ $_product-customfield-size: 200px;
 .snip-product {
     @include clearfix;
     background: $_product-background;
-    padding: 2em 1.25em;
     border-top: $_product-border;
     font-size: $_product-font-size--base;
+    padding: 2em 1.25em;
 }
 
 .snip-product--selectable {
@@ -42,8 +43,8 @@ $_product-customfield-size: 200px;
 }
 
 .snip-product--selectable-item {
-    padding-left: 2.286em;
     background: url("img/checkbox.png") no-repeat 0 center;
+    padding-left: 2.286em;
 
     // [1]
     &.js-selected {
@@ -52,44 +53,74 @@ $_product-customfield-size: 200px;
 }
 
 .snip-product__thumbnail {
-    width: $_product-thumbnail-size;
-    height: $_product-thumbnail-size;
+    display: none;
     float: left;
+    height: $_product-thumbnail-size;
     margin-right: .714em;
+    width: $_product-thumbnail-size;
 
     img {
         max-height: 100%;
         max-width: 100%;
     }
+
+    @media #{$mq-medium} {
+        display: block;
+    }
 }
 
 .snip-product__name {
+    @include font-bold;
     color: $_product-color--highlight;
-    text-transform: uppercase;
-    font-weight: bold;
+    font-size: 1.125em;
     overflow: hidden;
+    text-transform: uppercase;
+
+    @media #{$mq-medium} {
+        font-size: $_product-font-size--base;
+        margin-top: .5em;
+    }
 }
 
 .snip-product__description {
-    font-size: $_product-font-size--base;
+    font-size: $_product-font-size--base / 1.125;
+    margin-top: .25em;
     overflow: hidden;
-    margin-top: .5em;
+
+    @media #{$mq-medium} {
+        font-size: $_product-font-size--base;
+        margin-top: .5em;
+    }
 }
 
 .snip-product__important {
-    font-weight: bold;
+    @include font-bold;
+    font-size: $_product-font-size--base / 1.125;
+
+    @media #{$mq-medium} {
+        font-size: $_product-font-size--base;
+    }
 }
 
 .snip-product__remove {
-    float: left;
-    font-size: $_product-font-size--icon;
-    margin: -.154em .192em 0 0;
     color: $_product-color--error;
+    font-size: $_product-font-size--icon;
+    position: absolute;
+    right: $padding-small / 3.5;
     text-decoration: none;
+    top: $padding-small / 1.75;
+
+    @media #{$mq-medium} {
+        float: left;
+        margin: -.154em .192em 0 0;
+        position: static;
+    }
 }
 
 .snip-product__customfields {
-    max-width: $_product-customfield-size;
+    @media #{$mq-medium} {
+        max-width: $_product-customfield-size;
+    }
 }
 
 .snip-product__customfields-checkbox {
@@ -99,7 +130,7 @@ $_product-customfield-size: 200px;
 
 .snip-product__empty {
     font-size: $_product-font-size--large;
-    text-transform: uppercase;
     padding: 1em 2em;
     text-align: center;
+    text-transform: uppercase;
 }

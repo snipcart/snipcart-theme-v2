@@ -33,17 +33,17 @@ $_error-text-color: $mine-shaft--lighter;
 }
 
 .snip-error__title {
-    text-transform: uppercase;
+    @include font-bold;
     color: $_error-text-color;
-    font-weight: bold;
-    text-align: center;
     margin: 1em 0;
+    text-align: center;
+    text-transform: uppercase;
 }
 
 .snip-error__list {
+    font-size: $_error-font-size;
     list-style: disc inside;
     margin: 2em 0;
-    font-size: $_error-font-size;
 }
 
 .snip-error__list-item {
@@ -55,7 +55,7 @@ $_error-text-color: $mine-shaft--lighter;
 }
 
 .snip-error__feedback {
+    font-size: $_error-font-size;
     text-align: center;
     text-transform: uppercase;
-    font-size: $_error-font-size;
 }

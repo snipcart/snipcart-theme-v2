@@ -11,9 +11,9 @@
     LOCAL VARIABLES
 \*------------------------------------*/
 
-$_btn-size: 38px;
+$_btn-size: 36px;
 
-$_btn-font-size: 38px;
+$_btn-font-size: 12px;
 
 $_btn-color--highlight: $mine-shaft;
 
@@ -27,27 +27,32 @@ $_btn-background--highlight: $manz;
 
 // [1]
 .snip-btn {
-    display: inline-block;
+    @include font-bold;
     background-color: $_btn-background;
-    padding: 0 2.083em;
-    color: $base--primary;
-    font-weight: bold;
-    text-decoration: none;
-    cursor: pointer;
-    font-size: 12px;
-    line-height: $_btn-size;
-    height: $_btn-size;
-    text-transform: uppercase;
     border-radius: 3px;
-    outline: 0;
     border: 0;
+    color: $base--primary;
+    cursor: pointer;
+    display: inline-block;
+    font-size: $_btn-font-size / 1.2;
+    height: $_btn-size;
+    line-height: $_btn-size;
+    outline: 0;
+    padding: 0 1em;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    @media #{$mq-medium} {
+        font-size: $_btn-font-size;
+        padding: 0 2em;
+    }
 }
 
 // [2]
 .snip-btn--small {
     height: auto;
-    padding: .417em;
     line-height: normal;
+    padding: .417em;
 }
 
 // [3]
@@ -66,7 +71,7 @@ $_btn-background--highlight: $manz;
 }
 
 .snip-btn--full {
-    margin-top: 1em;
     display: block;
+    margin-top: 1em;
     text-align: center;
 }

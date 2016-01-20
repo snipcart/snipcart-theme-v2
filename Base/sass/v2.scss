@@ -22,6 +22,13 @@
 
 
 /*------------------------------------*\
+    GLOBAL VARIABLES
+\*------------------------------------*/
+
+$padding-small: 1em;
+
+
+/*------------------------------------*\
     LOCAL VARIABLES
 \*------------------------------------*/
 
@@ -40,41 +47,40 @@ $_base-z-index: 1040;
 
 // Body override
 body.snip-open {
-    padding: 0 !important;
+    height: auto !important;
     margin: 0 !important;
     overflow: hidden !important;
-    height: auto !important;
+    padding: 0 !important;
 }
 
 // Base layout
 .snip-layout {
     background: radial-gradient(ellipse at center, rgba(0, 0, 0, .2) 0%, rgba(0, 0, 0, 1) 100%);
-    
-    position: fixed;
-    top: 0;
-    right: 0;
     bottom: 0;
-    left: 0;
-    z-index: $_base-z-index;
-
-    overflow-x: auto;
-    
-    font-size: $_base-font-size;
-    font-family: $font-base;
-    line-height: normal;
     color: $_base-color;
+    font-family: $font-base;
+    font-size: $_base-font-size / 1.14;
+    left: 0;
+    line-height: normal;
+    overflow-x: auto;
     padding: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: $_base-z-index;
 
     // Compound settings and reset
     @import "Settings/_icons.scss";
     @import "Settings/_reset.scss";
 
     // Components
+    @import "Components/_button.scss";
+
     @import "Components/_layout.scss";
     @import "Components/_header.scss";
     @import "Components/_footer.scss";
+    
     @import "Components/_action.scss";
-    @import "Components/_button.scss";
     @import "Components/_table.scss";
     @import "Components/_product.scss";
     @import "Components/_quantity-trigger.scss";
@@ -89,6 +95,7 @@ body.snip-open {
 
     // Responsive
     @media #{$mq-large} {
+        font-size: $_base-font-size;
         padding: $_base-padding;
     }
 }

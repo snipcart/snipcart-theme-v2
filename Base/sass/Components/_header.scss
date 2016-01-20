@@ -1,5 +1,10 @@
 ﻿/**
     HEADER
+
+    Top content for the Cart
+
+    [1]. Connected user welcome message.
+    [2]. If you keep the "js-show" class, title will be displayed on small size when there's no total block.
 */
 
 /*------------------------------------*\
@@ -18,25 +23,41 @@ $_header-label-color: $dusty-gray;
 $_header-font-size--small: 14px;
 $_header-font-size--large: 30px;
 
+
 /*------------------------------------*\
     STYLE
 \*------------------------------------*/
 
 .snip-header {
-    position: relative;
+    @include font-bold;
     background: $_header-background;
-    text-align: center;
-    height: $_header-height;
     color: $_header-color;
+    padding: $padding-small;
+    position: relative;
+    text-align: left;
     text-transform: uppercase;
-    font-weight: bold;
+
+    @media #{$mq-medium} {
+        color: $_header-color;
+        height: $_header-height;
+        padding: 0;
+        text-align: center;
+    }
 }
 
+// [1]
 .snip-header__user {
     background: $_header-background--highlight;
+    font-size: $_header-font-size--small;
     padding: .714em 1.429em;
     text-align: center;
-    font-size: $_header-font-size--small;
+}
+
+.snip-header__user-text {
+    max-width: 90%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .snip-header__user-mail {
@@ -44,21 +65,37 @@ $_header-font-size--large: 30px;
 }
 
 .snip-header__title {
-    position: absolute;
-    left: 1.25em;
-    text-align: left;
-    font-size: $_header-font-size--large;
-    line-height: $_header-height;
+    display: none;
+    font-size: $_header-font-size--large / 2;
+    text-align: center;
+
+    // [2]
+    &.js-show {
+        display: block;
+    }
+
+    @media #{$mq-medium} {
+        display: block;
+        font-size: $_header-font-size--large;
+        left: 1.25em;
+        line-height: $_header-height;
+        position: absolute;
+        text-align: left;
+    }
 }
 
 .snip-header__total {
-    display: inline-block;
-    height: $_header-total-height;
-    line-height: $_header-total-height;
     background: $_header-background--highlight;
     border-radius: 5px;
-    padding: 0 .625em;
-    margin-top: 2.188em;
+    display: inline-block;
+    padding: .5em;
+
+    @media #{$mq-medium} {
+        height: $_header-total-height;
+        line-height: $_header-total-height;
+        margin-top: 2.188em;
+        padding: 0 .625em;
+    }
 }
 
 .snip-header__total-label {
@@ -67,8 +104,15 @@ $_header-font-size--large: 30px;
 }
 
 .snip-header__continue {
-    margin-top: -1.188em;
-    position: absolute;
-    top: 50%;
-    right: 1.25em;
+    display: none;
+
+    @media #{$mq-medium} {
+        &.js-show {
+            display: block;
+            margin-top: -1.5em;
+            position: absolute;
+            right: 1.25em;
+            top: 50%;
+        }
+    }
 }

@@ -26,52 +26,56 @@ $_layout-content-border: 1px solid $silver;
 \*------------------------------------*/
 
 .snip-layout__main-container {
-    position: relative;
-    max-width: 62.25em;
-    margin: 0 auto;
     background: $_layout-background;
+    margin: 0 auto;
+    max-width: 62.25em;
+    position: relative;
 }
 
 .snip-layout__close {
-    text-decoration: none;
-    position: absolute;
-    padding: .333em;
-    top: .208em;
-    right: .417em;
-    padding: 0;
     color: $_layout-close-color;
-    font-size: $_layout-close-font-size;
-}
-
-.snip-layout__close-label {
+    font-size: $_layout-close-font-size * 1.2;
+    padding: .333em;
+    padding: 0;
     position: absolute;
-    text-indent: -100000px;
+    right: .417em;
+    text-decoration: none;
+    top: .1em;
+    z-index: 2;
+
+    @media #{$mq-medium} {
+        font-size: $_layout-close-font-size;
+        top: .208em;
+    }
 }
 
 .snip-layout__loading {
+    @include font-bold;
+    color: $_layout-loading-color;
+    padding-bottom: 30px;
+    text-align: center;
+    text-transform: uppercase;
 
     &:before {
-        content: "";
         background: url(img/ajax-loader.gif) no-repeat center center;
+        content: "";
         display: block;
         height: 160px;
     }
-
-    padding-bottom: 30px;
-    text-transform: uppercase;
-    color: $_layout-loading-color;
-    font-weight: bold;
-    text-align: center;
 }
 
 .snip-layout__content {
-    padding: 2em 0;
+    padding: 1em 0;
+
+    @media #{$mq-medium} {
+        padding: 2em 0;
+    }
 }
 
 .snip-layout__content--highlight {
-    border-top: $_layout-content-border;
-    border-bottom: $_layout-content-border;
     background-color: $_layout-content-background;
+    border-bottom: $_layout-content-border;
+    border-top: $_layout-content-border;
     padding: 1em 0;
 }
 

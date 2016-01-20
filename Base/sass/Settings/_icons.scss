@@ -26,14 +26,14 @@ $snip-ico--close: "\68";
 \*------------------------------------*/
 
 .snip-ico {
-    font-family: $snip-ico__font;
-    speak: none;
-    font-style: normal;
-    font-weight: normal;
-    font-variant: normal;
-    text-transform: none;
-    line-height: 1;
     -webkit-font-smoothing: antialiased;
+    font-family: $snip-ico__font;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    line-height: 1;
+    speak: none;
+    text-transform: none;
 }
 
 .snip-ico--credit-cart:before { content: $snip-ico--credit-cart; }

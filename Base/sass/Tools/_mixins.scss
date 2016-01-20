@@ -4,7 +4,7 @@
     [1]. Used to clear floating elements within a container
 **/
 
-/* [1] */
+// [1]
 @mixin clearfix {
     &::after {
         clear: both;

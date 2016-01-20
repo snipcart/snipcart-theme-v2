@@ -31,12 +31,19 @@ $_form-error-background: $red;
     text-align: center;
 }
 
-.snip-form--right {
+.snip-form--discount {
     float: right;
-    margin-right: 1em;
+    margin-right: .5em;
+    max-width: 50%;
+
+    @media #{$mq-medium} {
+        margin-right: 1em;
+        max-width: none;
+    }
 }
 
 .snip-form__container {
+    @include clearfix;
     clear: left;
 
     + .snip-form__container {
@@ -46,11 +53,11 @@ $_form-error-background: $red;
 
 .snip-form__label {
     color: $_form-label-color;
-    font-size: $_form-font-size--small;
-    text-transform: uppercase;
     display: block;
-    overflow: hidden;
+    font-size: $_form-font-size--small;
     margin: 0 0 .5em 0;
+    overflow: hidden;
+    text-transform: uppercase;
 }
 
 .snip-form__description {
@@ -58,25 +65,15 @@ $_form-error-background: $red;
 }
 
 .snip-form__help {
+    @include font-bold;
+    color: $_form-color--highlight;
     float: right;
-    color: $_form-color--highlight;
     font-size: $_form-font-size--small;
-    font-weight: bold;
-}
-
-.snip-form__field--big {
-    display: block;
-    padding: .571em .429em;
-    font-size: $_form-font-size--smaller;
-    color: $_form-color--highlight;
-    background: $base--primary;
-    border-radius: 3px;
-    border: $_form-border;
 }
 
 .snip-form__select--small {
-    width: 49%;
     float: left;
+    width: 49%;
 
     ~ .snip-form__select--small {
         margin-left: 2%;
@@ -84,10 +81,10 @@ $_form-error-background: $red;
 }
 
 .snip-form__error {
-    color: $_form-error-color;
-    text-align: center;
     background: $_form-error-background;
-    padding: .357em;
     border-radius: 3px;
+    color: $_form-error-color;
     font-size: $_form-font-size--smaller;
+    padding: .357em;
+    text-align: center;
 }

@@ -24,8 +24,8 @@ $_static-color--link: $dusty-gray;
 \*------------------------------------*/
 
 .snip-static {
-    padding: 1em 15%;
     font-size: $_static-font-size--base;
+    padding: 1em 15%;
     text-align: center;
 }
 
@@ -35,10 +35,10 @@ $_static-color--link: $dusty-gray;
 }
 
 .snip-static__title {
-    font-weight: bold;
-    text-transform: uppercase;
+    @include font-bold;
     color: $_static-color--highlight;
     font-size: 1em;
+    text-transform: uppercase;
 }
 
 .snip-static__title--main {
@@ -46,8 +46,8 @@ $_static-color--link: $dusty-gray;
 }
 
 .snip-static__content {
-    line-height: 1.6;
     font-size: $_static-font-size--small;
+    line-height: 1.6;
     margin-top: 1em;
 }
 
@@ -60,10 +60,10 @@ $_static-color--link: $dusty-gray;
 }
 
 .snip-static__link {
-    text-decoration: underline;
     color: $_static-color--link;
     display: inline-block;
     margin-top: .25em;
+    text-decoration: underline;
 
     &:hover {
         color: $_static-color--highlight;

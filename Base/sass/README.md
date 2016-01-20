@@ -8,6 +8,7 @@
 	- For every *Block* you must create a new scss file *_blockName.scss*. Separate words by a hyphen.
 	- Use *$snip-* prefix for global sass variables
 	- Use *$_fileName-* prefix for local sass variables
+    - Use *state classes* when you need javascript class injection (`js-show`, `js-hide`, `js-active`, etc).
 
 - Alphabetize declarations (it's not the smarter way, but it's the easier way)
 - Indent all block content
@@ -23,3 +24,5 @@
 - Omit unit specification after *0* values
 - Omit leading *0*s in values
 - Use 3 character hexadecimal notation where possible
+
+- If I recommand using relative units (em, %), we use pixel unit for font-size to avoid strange behavior.

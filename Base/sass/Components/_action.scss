@@ -17,9 +17,13 @@ $_action-border: 1px solid $gallery;
 \*------------------------------------*/
 
 .snip-actions {
-    padding: $_action-pad;
     border-top: $_action-border;
+    padding: $padding-small;
 
     // Clear floating buttons
     @include clearfix;
+
+    @media #{$mq-medium} {
+        padding: $_action-pad;
+    }
 }

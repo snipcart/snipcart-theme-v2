@@ -22,8 +22,8 @@ $_flash-error: $red;
 \*------------------------------------*/
 
 .snip-flash__item {
-    padding: 10px 20px;
     border-bottom: $_flash-border;
+    padding: 10px 20px;
 }
 
 .snip-flash__item--success {

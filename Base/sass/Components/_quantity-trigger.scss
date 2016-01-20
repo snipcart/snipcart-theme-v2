@@ -20,6 +20,10 @@ $_qt-background--hover: $manz;
 
 $_qt-font-size--large: 18px;
 
+// [3]
+$_qt-text-add: "+";
+$_qt-text-remove: "-";
+
 
 /*------------------------------------*\
     STYLE
@@ -27,11 +31,12 @@ $_qt-font-size--large: 18px;
 
 // [1]
 .snip-quantity-trigger {
+    @include font-bold;
+    align-items: center;
     color: $_qt-color;
-    font-weight: bold;
-    margin: 0 auto;
     display: flex;
     justify-content: center;
+    margin: 0 auto;
 }
 
 .snip-quantity-trigger__text {
@@ -41,17 +46,16 @@ $_qt-font-size--large: 18px;
 }
 
 .snip-quantity-trigger__btn {
-    font-size: $_qt-font-size--large;
-    border-radius: 30px;
-    background-color: $_qt-background;
-    color: inherit;
-    text-decoration: none;
-    height: 1em;
-    width: 1em;
-    font-weight: 400;
-    
     // [2]
+    background-color: $_qt-background;
+    border-radius: 30px;
+    color: inherit;
     float: left;
+    font-size: $_qt-font-size--large;
+    font-weight: 400;
+    height: 1em;
+    text-decoration: none;
+    width: 1em;
 
     &:hover {
         background-color: $_qt-background--hover;
@@ -67,7 +71,7 @@ $_qt-font-size--large: 18px;
 .snip-quantity-trigger__btn--add {
     &:before {
         // [3]
-        content: "+";
+        content: $_qt-text-add;
         line-height: 1em;
     }
 }
@@ -75,7 +79,7 @@ $_qt-font-size--large: 18px;
 .snip-quantity-trigger__btn--minus {
     &:before {
         // [3]
-        content: "-";
+        content: $_qt-text-remove;
         line-height: 14px;
     }
 }

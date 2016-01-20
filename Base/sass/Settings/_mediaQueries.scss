@@ -4,7 +4,6 @@
     Where all media queries' variables are defined
 */
 
+$mq-small: "only screen and (max-width: 48em)"; // under 768px
 $mq-medium: "only screen and (min-width: 48em)"; // 768px
 $mq-large: "only screen and (min-width: 64em)"; // 1024px
-$mq-xlarge: "only screen and (min-width: 90em)"; // 1440px
-$mq-xxlarge: "only screen and (min-width: 120em)"; // 1920px

@@ -21,17 +21,16 @@ $_loader-size: 20px;
     // [1]
     &.js-active {
         background-image: url(img/ajax-loader.gif);
-        background-repeat: no-repeat;
         background-position: center center;
+        background-repeat: no-repeat;
     }
-    
 }
 
 .snip-loader--table {
     // [1]
     &.js-active {
         background-size: $_loader-size $_loader-size;
-        width: $_loader-size;
         height: $_loader-size;
+        width: $_loader-size;
     }
 }

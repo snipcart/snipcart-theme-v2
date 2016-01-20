@@ -30,15 +30,13 @@ $_footer-font-size: 10px;
 
 .snip-footer__copyright {
     background: url('img/lock.png') no-repeat left .3em;
-    padding-left: 3.2em;
-
+    color: $_footer-color;
+    display: block;
     font-size: $_footer-font-size;
     height: $_footer-height;
     line-height: $_footer-height;
-
-    color: $_footer-color;
+    padding-left: 3.2em;
     text-decoration: none;
-    display: block;
 }
 
 .snip-footer__highlight {
