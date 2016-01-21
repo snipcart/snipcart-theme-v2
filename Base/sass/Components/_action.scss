@@ -2,6 +2,8 @@
     ACTION
 
     Container for action step buttons
+
+    [1]. Clear floating buttons
 */
 
 /*------------------------------------*\
@@ -20,7 +22,7 @@ $_action-border: 1px solid $gallery;
     border-top: $_action-border;
     padding: $padding-small;
 
-    // Clear floating buttons
+    // [1]
     @include clearfix;
 
     @media #{$mq-medium} {

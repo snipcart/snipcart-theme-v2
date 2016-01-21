@@ -20,8 +20,8 @@ $_header-total-height: 38px;
 $_header-color: $base--primary;
 $_header-label-color: $dusty-gray;
 
-$_header-font-size--small: 14px;
-$_header-font-size--large: 30px;
+$_header-font-size--small: $font-size--smaller;
+$_header-font-size--large: $font-size--xlarge;
 
 
 /*------------------------------------*\

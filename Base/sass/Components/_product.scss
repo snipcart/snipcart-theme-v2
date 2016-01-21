@@ -10,9 +10,9 @@
     LOCAL VARIABLES
 \*------------------------------------*/
 
-$_product-font-size--small: 12px;
-$_product-font-size--base: 14px;
-$_product-font-size--large: 20px;
+$_product-font-size--small: $font-size--small;
+$_product-font-size--base: $font-size--smaller;
+$_product-font-size--large: $font-size--large;
 $_product-font-size--icon: 30px;
 
 $_product-background: $alabaster;
@@ -107,7 +107,6 @@ $_product-customfield-size: 200px;
     font-size: $_product-font-size--icon;
     position: absolute;
     right: $padding-small / 3.5;
-    text-decoration: none;
     top: $padding-small / 1.75;
 
     @media #{$mq-medium} {

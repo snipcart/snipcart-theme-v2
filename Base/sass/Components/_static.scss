@@ -8,8 +8,8 @@
     LOCAL VARIABLES
 \*------------------------------------*/
 
-$_static-font-size--small: 12px;
-$_static-font-size--base: 14px;
+$_static-font-size--small: $font-size--small;
+$_static-font-size--base: $font-size--smaller;
 
 $_static-border: 1px solid $gallery;
 

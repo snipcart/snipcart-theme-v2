@@ -18,7 +18,7 @@ $_qt-color: $cod-grey;
 $_qt-background: $silver--lighter;
 $_qt-background--hover: $manz;
 
-$_qt-font-size--large: 18px;
+$_qt-font-size--large: $font-size--larger;
 
 // [3]
 $_qt-text-add: "+";
@@ -54,7 +54,6 @@ $_qt-text-remove: "-";
     font-size: $_qt-font-size--large;
     font-weight: 400;
     height: 1em;
-    text-decoration: none;
     width: 1em;
 
     &:hover {

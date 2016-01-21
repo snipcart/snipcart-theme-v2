@@ -11,8 +11,8 @@
 
 $_form-label-color: $dusty-gray;
 
-$_form-font-size--small: 12px;
-$_form-font-size--smaller: 14px;
+$_form-font-size--small: $font-size--small;
+$_form-font-size--smaller: $font-size--smaller;
 
 $_form-color--highlight: $mine-shaft--lighter;
 
@@ -58,6 +58,7 @@ $_form-error-background: $red;
     margin: 0 0 .5em 0;
     overflow: hidden;
     text-transform: uppercase;
+    cursor: pointer;
 }
 
 .snip-form__description {
@@ -69,6 +70,10 @@ $_form-error-background: $red;
     color: $_form-color--highlight;
     float: right;
     font-size: $_form-font-size--small;
+
+    &:hover {
+        text-decoration: underline;
+    }
 }
 
 .snip-form__select--small {

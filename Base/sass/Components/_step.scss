@@ -2,13 +2,15 @@
     STEP
 
     Breadcrump list navigation for the cart
+
+    [1]. We add user-select: none to prevent text selection on navigation items
 */
 
 /*------------------------------------*\
     LOCAL VARIABLES
 \*------------------------------------*/
 
-$_steps-font-size--small: 10px;
+$_steps-font-size--small: $font-size--xsmall;
 $_steps-font-size--icon: 34px;
 
 $_steps-height: 60px;
@@ -60,6 +62,7 @@ $_steps-color--active: $mine-shaft--lighter;
     display: table;
     float: left;
     height: inherit;
+    // [1]
     user-select: none;
 
     + .snip-step__item {

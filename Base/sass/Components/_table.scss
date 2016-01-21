@@ -5,15 +5,16 @@
          Since we can't define `padding` or `border` for tbody, thead, tr elements, it's easier.
          And for mobile block table behavior, style is already set for those elements.
     [2]. Exception to low specificity rule, as it removes a lot of classes.
+         For product table, on small device screen size, we use block display rather than table display.
 */
 
 /*------------------------------------*\
     LOCAL VARIABLES
 \*------------------------------------*/
 
-$_table-font-size--small: .714em;
-$_table-font-size--base: .875em;
-$_table-font-size--large: 1.286em;
+$_table-font-size--small: $font-size--small;
+$_table-font-size--base: $font-size--smaller;
+$_table-font-size--large: $font-size--large;
 
 $_table-border: 1px solid $gallery;
 
@@ -32,7 +33,7 @@ $_table-background--highlight: $alabaster;
     text-align: left;
     width: 100%;
 
-    /* [1] */
+    // [1]
     td, th, tr {
         border: inherit;
         padding: inherit;
@@ -40,7 +41,7 @@ $_table-background--highlight: $alabaster;
 }
 
 .snip-table--small {
-    /* [2] */
+    // [2]
     @media #{$mq-small} {
         display: block;
         font-size: $_table-font-size--base;

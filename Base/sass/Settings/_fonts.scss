@@ -11,12 +11,9 @@ $font-base: Arial, sans-serif;
     ICONS FONT
 */
 @font-face {
-    font-family: 'Snipcart';
-    src:url('fonts/snipcart/Snipcart.eot');
-    src:url('fonts/snipcart/Snipcart.eot?#iefix') format('embedded-opentype'),
-        url('fonts/snipcart/Snipcart.woff') format('woff'),
-        url('fonts/snipcart/Snipcart.ttf') format('truetype'),
-        url('fonts/snipcart/Snipcart.svg#Snipcart') format('svg');
+    font-family: "Snipcart";
+    src: url('fonts/snipcart/Snipcart.woff') format("woff"),
+         url('fonts/snipcart/Snipcart.ttf') format("truetype");
     font-weight: normal;
     font-style: normal;
 }
@@ -32,3 +29,15 @@ $font-base: Arial, sans-serif;
 @mixin font-bold {
     font-weight: 700;
 }
+
+
+/**
+    FONT SIZES
+*/
+$font-size--xsmall: 10px;
+$font-size--small: 12px;
+$font-size--smaller: 14px;
+
+$font-size--larger: 18px;
+$font-size--large: 20px;
+$font-size--xlarge: 30px;

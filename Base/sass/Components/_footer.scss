@@ -15,7 +15,7 @@ $_footer-color--highlight: $dusty-gray;
 
 $_footer-height: 35px;
 
-$_footer-font-size: 10px;
+$_footer-font-size: $font-size--xsmall;
 
 
 /*------------------------------------*\
@@ -36,7 +36,6 @@ $_footer-font-size: 10px;
     height: $_footer-height;
     line-height: $_footer-height;
     padding-left: 3.2em;
-    text-decoration: none;
 }
 
 .snip-footer__highlight {

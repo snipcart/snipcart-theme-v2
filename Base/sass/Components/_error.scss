@@ -8,7 +8,7 @@
     LOCAL VARIABLES
 \*------------------------------------*/
 
-$_error-font-size: 14px;
+$_error-font-size: $font-size--smaller;
 
 $_error-color: $red;
 $_error-text-color: $mine-shaft--lighter;

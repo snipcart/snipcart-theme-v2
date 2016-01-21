@@ -13,12 +13,14 @@
 
 $_btn-size: 36px;
 
-$_btn-font-size: 12px;
+$_btn-font-size: $font-size--small;
 
 $_btn-color--highlight: $mine-shaft;
 
 $_btn-background: $emperor;
+$_btn-background--hover: darken($emperor, 10%);
 $_btn-background--highlight: $manz;
+$_btn-background--highlight-hover: darken($manz, 10%);
 
 
 /*------------------------------------*\
@@ -39,8 +41,11 @@ $_btn-background--highlight: $manz;
     line-height: $_btn-size;
     outline: 0;
     padding: 0 1em;
-    text-decoration: none;
     text-transform: uppercase;
+
+    &:hover {
+        background-color: $_btn-background--hover;
+    }
 
     @media #{$mq-medium} {
         font-size: $_btn-font-size;
@@ -59,6 +64,10 @@ $_btn-background--highlight: $manz;
 .snip-btn--highlight {
     background: $_btn-background--highlight;
     color: $_btn-color--highlight;
+
+    &:hover {
+        background-color: $_btn-background--highlight-hover;
+    }
 }
 
 // [4]
