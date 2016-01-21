@@ -2,7 +2,7 @@
     SNIPCART V2
 
     We strongly use BEM methodology
-    Every rule must be written within .snip-layout class
+    Every rule must be written within .snip-layout class, to prevent basic conflict with your css
     Every class name must be prefix with "snip-"
 
     IMPORTANT you have to include snipcart's stylesheet AFTER all your stylesheets
@@ -78,8 +78,7 @@ body.snip-open {
   padding: 0 !important; }
 
 .snip-layout {
-  background: -webkit-radial-gradient(center, ellipse, rgba(0, 0, 0, 0.2) 0%, black 100%);
-  background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.2) 0%, black 100%);
+  background: rgba(123, 123, 123, 0.75);
   bottom: 0;
   color: #999;
   font-family: Arial, sans-serif;
@@ -490,7 +489,8 @@ h4,
     max-width: 90%;
     overflow: hidden;
     text-overflow: ellipsis;
-    white-space: nowrap; }
+    white-space: nowrap;
+    margin: auto; }
   .snip-layout .snip-header__user-mail {
     color: #fff; }
   .snip-layout .snip-header__title {

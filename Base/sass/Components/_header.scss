@@ -58,6 +58,7 @@ $_header-font-size--large: $font-size--xlarge;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+    margin: auto;
 }
 
 .snip-header__user-mail {

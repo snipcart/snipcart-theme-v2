@@ -2,7 +2,7 @@
     SNIPCART V2
 
     We strongly use BEM methodology
-    Every rule must be written within .snip-layout class
+    Every rule must be written within .snip-layout class, to prevent basic conflict with your css
     Every class name must be prefix with "snip-"
 
     IMPORTANT you have to include snipcart's stylesheet AFTER all your stylesheets
@@ -55,7 +55,7 @@ body.snip-open {
 
 // Base layout
 .snip-layout {
-    background: radial-gradient(ellipse at center, rgba(0, 0, 0, .2) 0%, rgba(0, 0, 0, 1) 100%);
+    background: rgba(123, 123, 123, .75);
     bottom: 0;
     color: $_base-color;
     font-family: $font-base;
