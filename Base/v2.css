@@ -841,12 +841,32 @@ h4,
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none; }
+    @supports ((display: -webkit-box) or (display: -webkit-flex) or (display: -ms-flexbox) or (display: flex)) {
+      .snip-layout .snip-step__item {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        align-items: center; } }
     .snip-layout .snip-step__item + .snip-step__item {
       border-left: 1px solid #bbb; }
     .snip-layout .snip-step__item.js-active {
       background: #fff;
       border-bottom-color: #fff;
       color: #333; }
+    @media only screen and (min-width: 48em) {
+      .snip-layout .snip-step__item {
+        -webkit-box-pack: initial;
+        -webkit-justify-content: initial;
+        -ms-flex-pack: initial;
+        justify-content: initial; } }
   .snip-layout .snip-step__nb {
     display: table-cell;
     font-size: 27.2px;

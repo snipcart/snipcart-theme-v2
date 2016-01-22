@@ -65,6 +65,12 @@ $_steps-color--active: $mine-shaft--lighter;
     // [1]
     user-select: none;
 
+    @supports (display: flex) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
     + .snip-step__item {
         border-left: $_steps-border;
     }
@@ -73,6 +79,10 @@ $_steps-color--active: $mine-shaft--lighter;
         background: $_steps-background--active;
         border-bottom-color: $_steps-background--active;
         color: $_steps-color--active;
+    }
+
+    @media #{$mq-medium} {
+        justify-content: initial;
     }
 }
 
