@@ -29,3 +29,8 @@ $_action-border: 1px solid $gallery;
         padding: $_action-pad;
     }
 }
+
+.snip-actions--top {
+    border-top: none;
+    border-bottom: $_action-border;
+}

@@ -554,6 +554,9 @@ h4,
     @media only screen and (min-width: 48em) {
       .snip-layout .snip-actions {
         padding: 20px; } }
+  .snip-layout .snip-actions--top {
+    border-top: none;
+    border-bottom: 1px solid #eee; }
   .snip-layout .snip-table {
     font-size: 14px;
     text-align: left;
