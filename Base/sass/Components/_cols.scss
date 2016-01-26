@@ -52,6 +52,12 @@ $_cols-border: 1px solid $gallery;
     }
 }
 
+.snip-col--half {
+    @media #{$mq-medium} {
+        width: 50%;
+    }
+}
+
 .snip-col--right {
     border-left: $_cols-border;
     // [3]

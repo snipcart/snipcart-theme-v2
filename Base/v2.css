@@ -919,6 +919,9 @@ h4,
           border-left: 1px solid #eee;
           border-top: 0;
           padding-top: .25em; } }
+  @media only screen and (min-width: 48em) {
+    .snip-layout .snip-col--half {
+      width: 50%; } }
   .snip-layout .snip-col--right {
     border-left: 1px solid #eee;
     -webkit-box-ordinal-group: 3;
