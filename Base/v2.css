@@ -537,7 +537,7 @@ h4,
   .snip-layout .snip-footer__copyright {
     background: url("img/lock.png") no-repeat left 0.3em;
     color: #555;
-    display: block;
+    display: inline-block;
     font-size: 10px;
     height: 35px;
     line-height: 35px;
