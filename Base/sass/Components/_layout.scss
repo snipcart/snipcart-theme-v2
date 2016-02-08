@@ -51,16 +51,11 @@ $_layout-content-border: 1px solid $silver;
 .snip-layout__loading {
     @include font-bold;
     color: $_layout-loading-color;
-    padding-bottom: 30px;
+    padding: 5em 0;
     text-align: center;
     text-transform: uppercase;
+    margin-top: -0.3em;
 
-    &:before {
-        background: url(img/ajax-loader.gif) no-repeat center center;
-        content: "";
-        display: block;
-        height: 160px;
-    }
 }
 
 .snip-layout__content {

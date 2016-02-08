@@ -138,6 +138,14 @@ $_table-background--highlight: $alabaster;
     }
 }
 
+.snip-table__loading {
+    text-align: center;
+    font-size: $_table-font-size--base;
+    color: $_table-color--highlight;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
 .snip-table__cell--center {
     text-align: center;
 }

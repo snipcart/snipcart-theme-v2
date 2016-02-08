@@ -11,6 +11,7 @@
 \*------------------------------------*/
 
 $_loader-size: 20px;
+$_big-loader-height: 0.3em;
 
 
 /*------------------------------------*\
@@ -33,4 +34,33 @@ $_loader-size: 20px;
         height: $_loader-size;
         width: $_loader-size;
     }
+}
+
+.snip-loader--bar {
+    height: $_big-loader-height;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    background-color: $mine-shaft;
+    margin-top: -0.3em;
+
+    &:before{
+        display: block;
+        position: absolute;
+        content: "";
+        left: -200px;
+        width: 30%;
+        height: $_big-loader-height;
+        background-color: $manz;
+        animation: snip-loading 2s ease-in-out infinite;
+    }
+
+    &.js-hidden {
+        display: none;
+    }
+}
+
+@keyframes snip-loading {
+    from {left: -30%; }
+    to {left: 100%;}
 }

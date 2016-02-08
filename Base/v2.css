@@ -446,14 +446,10 @@ h4,
   .snip-layout .snip-layout__loading {
     font-weight: 700;
     color: #333;
-    padding-bottom: 30px;
+    padding: 5em 0;
     text-align: center;
-    text-transform: uppercase; }
-    .snip-layout .snip-layout__loading:before {
-      background: url(img/ajax-loader.gif) no-repeat center center;
-      content: "";
-      display: block;
-      height: 160px; }
+    text-transform: uppercase;
+    margin-top: -0.3em; }
   .snip-layout .snip-layout__content {
     padding: 1em 0; }
     @media only screen and (min-width: 48em) {
@@ -627,6 +623,12 @@ h4,
     @media only screen and (min-width: 48em) {
       .snip-layout .snip-table__body--big {
         padding: 1.222em 1.111em 1.222em 1.222em; } }
+  .snip-layout .snip-table__loading {
+    text-align: center;
+    font-size: 14px;
+    color: #333;
+    font-weight: bold;
+    text-transform: uppercase; }
   .snip-layout .snip-table__cell--center {
     text-align: center; }
   .snip-layout .snip-table__cell--right {
@@ -769,6 +771,37 @@ h4,
     background-size: 20px 20px;
     height: 20px;
     width: 20px; }
+  .snip-layout .snip-loader--bar {
+    height: 0.3em;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    background-color: #222;
+    margin-top: -0.3em; }
+    .snip-layout .snip-loader--bar:before {
+      display: block;
+      position: absolute;
+      content: "";
+      left: -200px;
+      width: 30%;
+      height: 0.3em;
+      background-color: #efe778;
+      -webkit-animation: snip-loading 2s ease-in-out infinite;
+      animation: snip-loading 2s ease-in-out infinite; }
+    .snip-layout .snip-loader--bar.js-hidden {
+      display: none; }
+
+@-webkit-keyframes snip-loading {
+  from {
+    left: -30%; }
+  to {
+    left: 100%; } }
+
+@keyframes snip-loading {
+  from {
+    left: -30%; }
+  to {
+    left: 100%; } }
   .snip-layout .snip-form--small {
     padding: 2em 15%;
     text-align: center; }
