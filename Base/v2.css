@@ -1056,7 +1056,8 @@ h4,
     margin-bottom: 5px; }
   .snip-layout .snip-flash__item {
     border-bottom: 1px solid #333;
-    padding: 10px 20px; }
+    padding: 10px 20px;
+    font-size: 12px; }
   .snip-layout .snip-flash__item--success {
     background-color: #76d443;
     color: #333; }
