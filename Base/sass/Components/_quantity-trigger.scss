@@ -14,9 +14,11 @@
 \*------------------------------------*/
 
 $_qt-color: $cod-grey;
+$_qt-color--disabled: $silver;
 
 $_qt-background: $silver--lighter;
 $_qt-background--hover: $manz;
+$_qt-background--disabled: $gallery;
 
 $_qt-font-size--large: $font-size--larger;
 
@@ -80,5 +82,15 @@ $_qt-text-remove: "-";
         // [3]
         content: $_qt-text-remove;
         line-height: 14px;
+    }
+}
+
+.snip-quantity-trigger__btn--disabled {
+    background-color: $_qt-background--disabled;
+    color: $_qt-color--disabled;
+    cursor: default;
+
+    &:hover {
+        background-color: $_qt-background--disabled;
     }
 }

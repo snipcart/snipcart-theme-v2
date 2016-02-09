@@ -25,6 +25,8 @@ $_product-thumbnail-size: 65px;
 
 $_product-customfield-size: 200px;
 
+$_product-disabled-opacity: 0.2;
+
 
 /*------------------------------------*\
     STYLE
@@ -114,6 +116,11 @@ $_product-customfield-size: 200px;
         margin: -.154em .192em 0 0;
         position: static;
     }
+}
+
+.snip-product__remove--disabled {
+    opacity: $_product-disabled-opacity;
+    cursor: default;
 }
 
 .snip-product__customfields {
