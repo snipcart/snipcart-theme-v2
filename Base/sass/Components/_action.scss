@@ -12,7 +12,7 @@
 
 $_action-pad: 20px;
 $_action-border: 1px solid $gallery;
-
+$_action-link-color: $dusty-gray;
 
 /*------------------------------------*\
     STYLE
@@ -30,7 +30,24 @@ $_action-border: 1px solid $gallery;
     }
 }
 
+.snip-actions--no-border {
+    border-top: none;
+    padding-top: 0;
+}
+
 .snip-actions--top {
     border-top: none;
     border-bottom: $_action-border;
+}
+
+.snip-actions__link {
+    color: $_action-link-color;
+}
+
+.snip-actions__link--small {
+    font-size: $font-size--small;
+}
+
+.snip-actions__link--right {
+    float: right;
 }
