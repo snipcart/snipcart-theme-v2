@@ -627,6 +627,13 @@
         right: 20px;
     }
 
+    #snipcart-main-container #snipcart-header-place-order {
+      display: block;
+      position: absolute; 
+      top: 15px; 
+      right: 30px;
+    }
+
     #snipcart-logged-user { position: absolute; top: 40px; left: 25px; }
 
     #snipcart-main-content #snipcart-current-user {
@@ -1577,9 +1584,15 @@
 
 @media only screen and (min-width: 768px)
 {
-        #snipcart-main-container #snipcart-cartitems-continue-top 
+        #snipcart-main-container #snipcart-cartitems-continue-top {
+          display: block;
+        }
+
+        #snipcart-main-container #snipcart-header-place-order
         {
-            display: block
+          display: block;
+          top: 35px; 
+          right: 20px
         }
 
         a#snipcart-close {
