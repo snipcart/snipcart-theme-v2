@@ -45,6 +45,10 @@ $_layout-content-border: 1px solid $silver;
     @media #{$mq-medium} {
         font-size: $_layout-close-font-size;
         top: .208em;
+
+        &.js-hidden {
+            display: none;
+        }
     }
 }
 

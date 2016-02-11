@@ -442,7 +442,9 @@ h4,
     @media only screen and (min-width: 48em) {
       .snip-layout .snip-layout__close {
         font-size: 1.5em;
-        top: .208em; } }
+        top: .208em; }
+        .snip-layout .snip-layout__close.js-hidden {
+          display: none; } }
   .snip-layout .snip-layout__loading {
     font-weight: 700;
     color: #333;
@@ -915,6 +917,8 @@ h4,
       background: #fff;
       border-bottom-color: #fff;
       color: #333; }
+    .snip-layout .snip-step__item.js-hidden {
+      display: none; }
     @media only screen and (min-width: 48em) {
       .snip-layout .snip-step__item {
         -webkit-box-pack: initial;

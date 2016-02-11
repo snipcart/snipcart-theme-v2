@@ -81,6 +81,10 @@ $_steps-color--active: $mine-shaft--lighter;
         color: $_steps-color--active;
     }
 
+    &.js-hidden {
+        display: none;
+    }
+
     @media #{$mq-medium} {
         justify-content: initial;
     }
