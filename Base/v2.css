@@ -358,8 +358,7 @@ h4,
   .snip-layout ol,
   .snip-layout ul {
     list-style: none; }
-  .snip-layout input:focus,
-  .snip-layout input:hover,
+  .snip-layout input:focus, .snip-layout input:hover,
   .snip-layout select:focus,
   .snip-layout select:hover {
     box-shadow: none;
@@ -377,12 +376,11 @@ h4,
     height: auto;
     line-height: 18px;
     margin: 0;
-    padding: 0.571em 0.429em;
+    padding: .571em .429em;
     -webkit-transition: border 0.66s ease;
     transition: border 0.66s ease;
     width: 100%; }
-    .snip-layout input[type=text]:focus,
-    .snip-layout input[type=text]:hover,
+    .snip-layout input[type=text]:focus, .snip-layout input[type=text]:hover,
     .snip-layout input[type=password]:focus,
     .snip-layout input[type=password]:hover,
     .snip-layout select:focus,
@@ -403,7 +401,7 @@ h4,
     padding: 0 1em;
     text-transform: uppercase; }
     .snip-layout .snip-btn:hover {
-      background-color: #3b3b3b; }
+      background-color: #3c3c3c; }
     @media only screen and (min-width: 48em) {
       .snip-layout .snip-btn {
         font-size: 12px;
@@ -481,7 +479,7 @@ h4,
   .snip-layout .snip-header__user {
     background: #111;
     font-size: 14px;
-    padding: 0.714em 1.429em;
+    padding: .714em 1.429em;
     text-align: center; }
   .snip-layout .snip-header__user-text {
     max-width: 90%;
@@ -515,7 +513,7 @@ h4,
         height: 38px;
         line-height: 38px;
         margin-top: 2.188em;
-        padding: 0 0.625em; } }
+        padding: 0 .625em; } }
   .snip-layout .snip-header__total-label {
     color: #999;
     margin-right: .625em; }
@@ -530,7 +528,7 @@ h4,
         top: 50%; } }
   .snip-layout .snip-footer {
     background: #222;
-    padding: 0.125em 0.625em;
+    padding: .125em .625em;
     text-transform: uppercase; }
   .snip-layout .snip-footer__copyright {
     background: url("img/lock.png") no-repeat left 0.3em;
@@ -628,7 +626,7 @@ h4,
     background: #f8f8f8; }
     @media only screen and (min-width: 48em) {
       .snip-layout .snip-table__body--small {
-        padding: 0.429em 1.429em 0.429em 2.857em; } }
+        padding: .429em 1.429em .429em 2.857em; } }
   .snip-layout .snip-table__body--big {
     font-size: 20px; }
     @media only screen and (min-width: 48em) {
@@ -721,7 +719,7 @@ h4,
     @media only screen and (min-width: 48em) {
       .snip-layout .snip-product__remove {
         float: left;
-        margin: -0.154em 0.192em 0 0;
+        margin: -.154em .192em 0 0;
         position: static; } }
   .snip-layout .snip-product__remove--disabled {
     opacity: 0.2;
@@ -731,7 +729,7 @@ h4,
       max-width: 200px; } }
   .snip-layout .snip-product__customfields-checkbox {
     float: left;
-    margin: 0 0.5em 0.75em 0; }
+    margin: 0 .5em .75em 0; }
   .snip-layout .snip-product__empty {
     font-size: 20px;
     padding: 1em 2em;
@@ -755,7 +753,7 @@ h4,
     margin: 0 auto; }
   .snip-layout .snip-quantity-trigger__text {
     float: left;
-    padding: 0 0.313em; }
+    padding: 0 .313em; }
   .snip-layout .snip-quantity-trigger__btn {
     background-color: #ccc;
     border-radius: 30px;
@@ -845,7 +843,7 @@ h4,
     color: #999;
     display: block;
     font-size: 12px;
-    margin: 0 0 0.5em 0;
+    margin: 0 0 .5em 0;
     overflow: hidden;
     text-transform: uppercase;
     cursor: pointer; }
@@ -928,7 +926,7 @@ h4,
   .snip-layout .snip-step__nb {
     display: table-cell;
     font-size: 27.2px;
-    padding: 0 0.25em;
+    padding: 0 .25em;
     text-align: center;
     vertical-align: middle; }
     @media only screen and (min-width: 48em) {
@@ -968,7 +966,7 @@ h4,
     @media only screen and (min-width: 48em) {
       .snip-layout .snip-col {
         float: left;
-        padding: 0.25em 1.25em;
+        padding: .25em 1.25em;
         width: 33.333333%; }
         .snip-layout .snip-col + .snip-col {
           border-left: 1px solid #eee;
@@ -1022,7 +1020,7 @@ h4,
     font-size: 1em;
     text-transform: uppercase; }
   .snip-layout .snip-static__title--main {
-    margin: 0.5em 1.429em 1em; }
+    margin: .5em 1.429em 1em; }
   .snip-layout .snip-static__content {
     font-size: 12px;
     line-height: 1.6;
