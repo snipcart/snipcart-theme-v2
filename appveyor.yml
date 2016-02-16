@@ -53,7 +53,7 @@ after_build:
 #      artifacts configuration    #
 #---------------------------------#
 
-artifacts
+artifacts:
   # pushing a single file
   - path: themes.zip
     name: themes
