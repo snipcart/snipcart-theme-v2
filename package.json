@@ -1,0 +1,16 @@
+{
+  "name": "snipcart-themes",
+  "version": "1.0.0",
+  "description": "Snipcart SASS themes",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@bitbucket.org/spektrummedia/snipcart-themes.git"
+  },
+  "author": "Charles Ouellet <charles@snipcart.com> (https://snipcart.com)",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/spektrummedia/snipcart-themes#readme"
+}
