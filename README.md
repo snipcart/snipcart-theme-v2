@@ -41,3 +41,26 @@ themes
         ├───fonts
         └───img
 ```
+
+## Branches
+
+The default branch is `master`. Consider it as the latest stable version.
+
+You can use the `staging` branch to push assets to a non public blob storage account if you need to.
+
+We also keep branches for specific versions.
+
+- `v1.0`
+
+You can push to those branches at any time to update a specific version. You might need to merge the changes you will do to `master` but it's possible that the version branches will diverge with time.
+
+## Deployment
+
+Assets will be deployed to an Azure Blob Storage account.
+
+Production account: *snipcartpublic (cdn.snipcart.com)*
+Staging account: *snipcartcdndev (snipcartcdnstaging-10f3.kxcdn.com)*
+
+Both storage accounts are exposed via a CDN endpoint on KeyCDN.com.
+
+Whenever you push to `master` or a version branch, the assets will be deployed.
