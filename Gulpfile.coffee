@@ -4,11 +4,10 @@ sass = require 'gulp-sass'
 concat = require 'gulp-concat'
 minifyCss = require 'gulp-minify-css'
 rename = require 'gulp-rename'
-argv = require('yargs').argv
+argv = require('yargs').option('version', {type: 'string'}).argv
 
 themesDir = 'themes'
 workingDir = 'themes/base'
-
 sources =
   sass: "#{workingDir}/sass/snipcart.scss"
   css: "#{workingDir}/styles.css"
