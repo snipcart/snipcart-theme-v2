@@ -1,0 +1,54 @@
+#---------------------------------#
+#      general configuration      #
+#---------------------------------#
+
+# version format
+version: 1.0.{build}-{branch}
+
+# branches to build
+branches:
+  # whitelist
+  only:
+    - master
+    - v1.0
+    - v2.0
+
+#---------------------------------#
+#    environment configuration    #
+#---------------------------------#
+
+# scripts that are called at very beginning, before repo cloning
+init:
+  - npm install gulp -g
+  - git config --global core.autocrlf input
+
+# build cache to preserve files/folders between builds
+cache:
+  - node_modules                    # local npm modules
+
+# scripts that run after cloning repository
+install:
+  - npm install
+
+#---------------------------------#
+#       build configuration       #
+#---------------------------------#
+
+build_script:
+  - ps: $splitted = $env:APPVEYOR_BUILD_VERSION.Split(".")
+  - ps: $version = $splitted[0] + "." + $splitted[1]
+  - ps: gulp deploy --version $version
+
+after_build:
+  - 7z a themes.zip "dist\themes\**\*.*" -r -x!".gitkeep" -x!".gitignore" -x!"*.map"
+
+#---------------------------------#
+#      artifacts configuration    #
+#---------------------------------#
+
+artifacts:
+
+  # pushing a single file
+  - path: themes.zip
+    name: themes
+    type: zip
