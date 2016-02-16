@@ -4,13 +4,15 @@ sass = require 'gulp-sass'
 concat = require 'gulp-concat'
 minifyCss = require 'gulp-minify-css'
 rename = require 'gulp-rename'
+autoprefixer = require 'gulp-autoprefixer'
 argv = require('yargs').option('version', {type: 'string'}).argv
+postcss = require 'gulp-postcss'
+mqpacker = require 'css-mqpacker'
 
 themesDir = 'themes'
 workingDir = 'themes/base'
 sources =
   sass: "#{workingDir}/sass/snipcart.scss"
-  css: "#{workingDir}/styles.css"
   compiled: "#{workingDir}/snipcart.css"
 
 getDistDir = (output)->
@@ -25,23 +27,25 @@ getDistDir = (output)->
   return dir
 
 gulp.task 'sass', ->
-  scss = gulp.src(sources.sass)
-    .pipe(sass())
-
-  css = gulp.src(sources.css)
-
-  es.merge(css, scss)
-    .pipe(concat('snipcart.css'))
-    .pipe(gulp.dest('themes/base'))
+  gulp.src sources.sass
+    .pipe(sass().on('error', sass.logError))
+    .pipe autoprefixer(cascade: false, browsers: ['> 1%'])
+    .pipe gulp.dest(workingDir)
 
 gulp.task 'min', ['sass'], ->
+   gulp.src sources.compiled
+    .pipe(postcss([mqpacker]))
+    .pipe(minifyCss())
+    .pipe(rename({suffix: '.min'}))
+    .pipe(gulp.dest(workingDir))
+
   gulp.src(sources.compiled)
     .pipe(minifyCss())
     .pipe(rename({suffix: '.min'}))
     .pipe(gulp.dest(workingDir))
 
 gulp.task 'watch', ->
-    gulp.watch [sources.sass, sources.css], ['sass']
+    gulp.watch [sources.sass], ['sass']
 
 gulp.task 'default', ['watch']
 gulp.task 'deploy', ['min'], ->
