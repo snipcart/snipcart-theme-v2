@@ -6,24 +6,24 @@ minifyCss = require 'gulp-minify-css'
 rename = require 'gulp-rename'
 argv = require('yargs').argv
 
+themesDir = 'themes'
+workingDir = 'themes/base'
+
 sources =
-  sass: 'themes/base/sass/snipcart.scss'
-  css: 'themes/base/styles.css'
+  sass: "#{workingDir}/sass/snipcart.scss"
+  css: "#{workingDir}/styles.css"
+  compiled: "#{workingDir}/snipcart.css"
 
 getDistDir = (output)->
-  dir = './dist/themes/base'
+  dir = './dist/themes'
 
   if argv.version
-    dir = "./dist/themes/#{argv.version}/base"
+    dir = "./dist/themes/#{argv.version}"
 
   if output
     dir += "/#{output}"
 
   return dir
-
-compiled =
-  dir: './dist/themes/base'
-  css: './dist/themes/base/snipcart.css'
 
 gulp.task 'sass', ->
   scss = gulp.src(sources.sass)
@@ -36,13 +36,15 @@ gulp.task 'sass', ->
     .pipe(gulp.dest('themes/base'))
 
 gulp.task 'min', ['sass'], ->
-  gulp.src('./themes/base/snipcart.css')
+  gulp.src(sources.compiled)
     .pipe(minifyCss())
     .pipe(rename({suffix: '.min'}))
-    .pipe(gulp.dest(getDistDir()))
+    .pipe(gulp.dest(workingDir))
 
 gulp.task 'watch', ->
     gulp.watch [sources.sass, sources.css], ['sass']
 
 gulp.task 'default', ['watch']
-gulp.task 'deploy', ['min']
+gulp.task 'deploy', ['min'], ->
+  gulp.src(["#{themesDir}/**/*", '!**/*.scss', '!**/sass', '!**/styles.css'])
+    .pipe(gulp.dest(getDistDir()))
