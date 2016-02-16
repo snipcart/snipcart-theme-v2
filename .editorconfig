@@ -1,0 +1,7 @@
+[*.jade]
+indent_style = space
+indent_size = 4
+
+[*.coffee]
+ident_style = space
+ident_size = 2
