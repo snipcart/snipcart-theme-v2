@@ -40,7 +40,8 @@ build_script:
   - ps: gulp deploy --version $version
 
 after_build:
-  - 7z a themes.zip "dist\themes\**\*.*" -r -x!".gitkeep" -x!".gitignore" -x!"*.map"
+  - cd dist\themes
+  - 7z a themes.zip "**\*.*" -r -x!".gitkeep" -x!".gitignore" -x!"*.map"
 
 #---------------------------------#
 #      artifacts configuration    #
