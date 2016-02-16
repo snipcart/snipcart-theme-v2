@@ -53,15 +53,13 @@ after_build:
 #      artifacts configuration    #
 #---------------------------------#
 
-artifacts:
-
+artifacts
   # pushing a single file
   - path: themes.zip
     name: themes
     type: zip
 
 deploy:
-
   - provider: AzureBlob
     storage_account_name: snipcartcdndev
     storage_access_key:
@@ -74,4 +72,4 @@ deploy:
 
 after_deploy:
   - cd %APPVEYOR_BUILD_FOLDER%\tools\AzureStorageContentTypeUpdater
-  - AzureStorageContentTypeUpdater.exe -a snipcartcdndev -k %AZURE_STORAGE_ACCESS_KEY_STAGING% --lowercase true
+  - if /i "%APPVEYOR_REPO_BRANCH%"=="staging" AzureStorageContentTypeUpdater.exe -a snipcartcdndev -k %AZURE_STORAGE_ACCESS_KEY_STAGING% -c themes --lowercase true
