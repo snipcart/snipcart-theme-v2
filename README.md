@@ -1,5 +1,7 @@
 # snipcart-themes
 
+[![Build status](https://ci.appveyor.com/api/projects/status/q0qxt370jxpx1139?svg=true)](https://ci.appveyor.com/project/spektrum/snipcart-themes)
+
 This repository contains everything needed to generate snipcart.css file. Ultimately, it could also contains custom themes.
 
 ## Installation
