@@ -10,6 +10,7 @@ branches:
   # whitelist
   only:
     - master
+    - staging
     - v1.0
     - v2.0
 
@@ -53,3 +54,15 @@ artifacts:
   - path: themes.zip
     name: themes
     type: zip
+
+deploy:
+
+  - provider: AzureBlob
+    storage_account_name: snipcartcdndev
+    storage_access_key:
+      secure: LPX3Gv4dUzZ187kD3CZMsRWR1qNB9UM287fR1vh6FD4zAtUTzbPc5Hrh4syNokgYVPEN7JHxN0NL8Vt13DeCvW4STUyyFK+VgdDt5nTseMRsNbVST6ZYqmN19mF15yzi
+    container: themes
+    artifact: themes
+    unzip: true
+    on:
+      branch: staging
