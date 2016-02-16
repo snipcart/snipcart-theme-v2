@@ -18,6 +18,11 @@ branches:
 #    environment configuration    #
 #---------------------------------#
 
+# environment variables
+environment:
+  AZURE_STORAGE_ACCESS_KEY_STAGING:
+    secure: LPX3Gv4dUzZ187kD3CZMsRWR1qNB9UM287fR1vh6FD4zAtUTzbPc5Hrh4syNokgYVPEN7JHxN0NL8Vt13DeCvW4STUyyFK+VgdDt5nTseMRsNbVST6ZYqmN19mF15yzi
+
 # scripts that are called at very beginning, before repo cloning
 init:
   - npm install gulp -g
