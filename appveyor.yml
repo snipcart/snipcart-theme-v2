@@ -66,3 +66,7 @@ deploy:
     unzip: true
     on:
       branch: staging
+
+after_deploy:
+  - cd %APPVEYOR_BUILD_FOLDER%\tools\AzureStorageContentTypeUpdater
+  - AzureStorageContentTypeUpdater.exe -a snipcartcdndev -k %AZURE_STORAGE_ACCESS_KEY_STAGING% --lowercase true
