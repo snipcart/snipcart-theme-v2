@@ -37,8 +37,7 @@ install:
 build_script:
   - ps: $splitted = $env:APPVEYOR_BUILD_VERSION.Split(".")
   - ps: $version = $splitted[0] + "." + $splitted[1]
-  - ps: Write-Host "Version to be deployed is $version"
-  - ps: gulp deploy --version "$version"
+  - ps: gulp deploy --version $version
 
 after_build:
   - cd dist\themes
