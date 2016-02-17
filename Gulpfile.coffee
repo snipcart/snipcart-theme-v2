@@ -5,6 +5,7 @@ concat = require 'gulp-concat'
 minifyCss = require 'gulp-minify-css'
 rename = require 'gulp-rename'
 argv = require('yargs').option('version', {type: 'string'}).argv
+browserSync = require 'browser-sync'
 
 themesDir = 'themes'
 workingDir = 'themes/base'
@@ -43,7 +44,17 @@ gulp.task 'min', ['sass'], ->
 gulp.task 'watch', ->
     gulp.watch [sources.sass, sources.css], ['sass']
 
-gulp.task 'default', ['watch']
+gulp.task 'browser-sync', ->
+  sync = browserSync.create 'snipcart.client/'
+  sync.init
+    port: 3005
+    proxy: 'snipcart.client/'
+    serveStatic: ['.']
+    ui:
+        port: 3006
+  gulp.watch(sources.compiled).on 'change', sync.reload
+
+gulp.task 'default', ['sass', 'watch', 'browser-sync']
 gulp.task 'deploy', ['min'], ->
   gulp.src(["#{themesDir}/**/*", '!**/*.scss', '!**/sass', '!**/styles.css'])
     .pipe(gulp.dest(getDistDir()))
