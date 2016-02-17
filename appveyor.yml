@@ -48,7 +48,7 @@ build_script:
   - ps: $decimalVersion = [decimal]$version
   - ps: $fistversion = [decimal]1.0
   - ps: >-
-      if ($decimalVersion -gt $fistversion)
+      if ($decimalVersion -le $fistversion)
       {
         $version = ""
       }
