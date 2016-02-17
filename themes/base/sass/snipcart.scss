@@ -13,12 +13,12 @@
 \*------------------------------------*/
 
 // Global mixins, functions
-@import "Tools/_mixins.scss";
+@import "tools/_mixins.scss";
 
 // Global settings, mostly variables
-@import "Settings/_fonts.scss";
-@import "Settings/_mediaQueries.scss";
-@import "Settings/_colors.scss";
+@import "settings/_fonts.scss";
+@import "settings/_mediaQueries.scss";
+@import "settings/_colors.scss";
 
 
 /*------------------------------------*\
@@ -71,28 +71,28 @@ body.snip-open {
     z-index: $_base-z-index;
 
     // Compound settings and reset
-    @import "Settings/_icons.scss";
-    @import "Settings/_reset.scss";
+    @import "settings/_icons.scss";
+    @import "settings/_reset.scss";
 
-    // Components
-    @import "Components/_button.scss";
+    // components
+    @import "components/_button.scss";
 
-    @import "Components/_layout.scss";
-    @import "Components/_header.scss";
-    @import "Components/_footer.scss";
+    @import "components/_layout.scss";
+    @import "components/_header.scss";
+    @import "components/_footer.scss";
 
-    @import "Components/_action.scss";
-    @import "Components/_table.scss";
-    @import "Components/_product.scss";
-    @import "Components/_quantity-trigger.scss";
-    @import "Components/_loader.scss";
-    @import "Components/_form.scss";
-    @import "Components/_step.scss";
-    @import "Components/_cols.scss";
-    @import "Components/_error.scss";
-    @import "Components/_static.scss";
-    @import "Components/_tooltip.scss";
-    @import "Components/_flash.scss";
+    @import "components/_action.scss";
+    @import "components/_table.scss";
+    @import "components/_product.scss";
+    @import "components/_quantity-trigger.scss";
+    @import "components/_loader.scss";
+    @import "components/_form.scss";
+    @import "components/_step.scss";
+    @import "components/_cols.scss";
+    @import "components/_error.scss";
+    @import "components/_static.scss";
+    @import "components/_tooltip.scss";
+    @import "components/_flash.scss";
 
     // Responsive
     @media #{$mq-large} {
