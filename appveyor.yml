@@ -45,6 +45,13 @@ install:
 build_script:
   - ps: $splitted = $env:APPVEYOR_BUILD_VERSION.Split(".")
   - ps: $version = $splitted[0] + "." + $splitted[1]
+  - ps: $decimalVersion = [decimal]$version
+  - ps: $fistversion = [decimal]1.0
+  - ps: >-
+      if ($decimalVersion -le $fistversion)
+      {
+        $version = ""
+      }
   - ps: gulp deploy --version $version
 
 after_build:
