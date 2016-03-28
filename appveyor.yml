@@ -11,6 +11,7 @@ branches:
   only:
     - master
     - staging
+    - canary
     - v1.0
     - v2.0
 
@@ -20,10 +21,18 @@ branches:
 
 # environment variables
 environment:
-  AZURE_STORAGE_ACCESS_KEY_STAGING:
+  azure_storage_access_key_staging:
     secure: LPX3Gv4dUzZ187kD3CZMsRWR1qNB9UM287fR1vh6FD4zAtUTzbPc5Hrh4syNokgYVPEN7JHxN0NL8Vt13DeCvW4STUyyFK+VgdDt5nTseMRsNbVST6ZYqmN19mF15yzi
-  AZURE_STORAGE_ACCESS_KEY:
+  azure_storage_access_key:
     secure: pLJQvFOvO9DWeIX7KGdhUOSyEL7IH8CPegPlFMeZNod2fCeQIZ679KR8deYzrGeWKOAPi8j1+P0m4RSuorWnvXrU2MrJaxer912WbQHZ4Z/D8Q4kGFFwU3siJS9OzOap
+  azure_storage_access_key_canary:
+    secure: qvb26x/k1hCCVODmVKvc3c+3JHg1WX3VSmoI2KGLD6QE9WF+eSV4+4H71Qv9ORfz388G6B2VxM1JxHKRshwCZ59kbdRicpYE2ClEwGFxvROxlrzuGob9Bh0BvBHUDWPV
+  keycdn_api_key:
+    secure: HIuW8miNWA5qAAW3BGGQTMoxFlnWsoc4c9b4Yy1Eo9MYnHFNTjtV9BFdsm8pfLxj
+  keycdn_prod:
+    secure: J4aOP8rLKXjQ8hUVl0suBg==
+  keycdn_staging:
+    secure: 93E/Z5lVFdeq8uw87xvuZg==
 
 # scripts that are called at very beginning, before repo cloning
 init:
@@ -69,6 +78,21 @@ artifacts:
     type: zip
 
 deploy:
+
+# Production
+  - provider: AzureBlob
+    storage_account_name: snipcartpublic
+    storage_access_key:
+    secure: pLJQvFOvO9DWeIX7KGdhUOSyEL7IH8CPegPlFMeZNod2fCeQIZ679KR8deYzrGeWKOAPi8j1+P0m4RSuorWnvXrU2MrJaxer912WbQHZ4Z/D8Q4kGFFwU3siJS9OzOap
+    container: themes
+    artifact: themes
+    unzip: true
+    on:
+      branch:
+        - master
+        - v1.0
+        - v2.0
+
   # Staging
   - provider: AzureBlob
     storage_account_name: snipcartcdndev
@@ -80,25 +104,41 @@ deploy:
     on:
       branch: staging
 
-  # Production
+  # Canary
   - provider: AzureBlob
-    storage_account_name: snipcartpublic
+    storage_account_name: snipcartcdncanary
     storage_access_key:
-      secure: pLJQvFOvO9DWeIX7KGdhUOSyEL7IH8CPegPlFMeZNod2fCeQIZ679KR8deYzrGeWKOAPi8j1+P0m4RSuorWnvXrU2MrJaxer912WbQHZ4Z/D8Q4kGFFwU3siJS9OzOap
+      secure: qvb26x/k1hCCVODmVKvc3c+3JHg1WX3VSmoI2KGLD6QE9WF+eSV4+4H71Qv9ORfz388G6B2VxM1JxHKRshwCZ59kbdRicpYE2ClEwGFxvROxlrzuGob9Bh0BvBHUDWPV
     container: themes
     artifact: themes
     unzip: true
     on:
-      branch:
-        - master
-        - v1.0
-        - v2.0
+      branch: canary
 
 after_deploy:
   - cd %APPVEYOR_BUILD_FOLDER%\tools\AzureStorageContentTypeUpdater
-  # Staging
-  - if /i "%APPVEYOR_REPO_BRANCH%"=="staging" AzureStorageContentTypeUpdater.exe -a snipcartcdndev -k %AZURE_STORAGE_ACCESS_KEY_STAGING% -c themes --lowercase true
   # Production
-  - if /i "%APPVEYOR_REPO_BRANCH%"=="master" AzureStorageContentTypeUpdater.exe -a snipcartpublic -k %AZURE_STORAGE_ACCESS_KEY% -c themes --lowercase true
-  - if /i "%APPVEYOR_REPO_BRANCH%"=="v1.0" AzureStorageContentTypeUpdater.exe -a snipcartpublic -k %AZURE_STORAGE_ACCESS_KEY% -c themes --lowercase true
-  - if /i "%APPVEYOR_REPO_BRANCH%"=="v2.0" AzureStorageContentTypeUpdater.exe -a snipcartpublic -k %AZURE_STORAGE_ACCESS_KEY% -c themes --lowercase true
+  - if /i "%APPVEYOR_REPO_BRANCH%"=="master" AzureStorageContentTypeUpdater.exe -a snipcartpublic -k %azure_storage_access_key% -c themes --lowercase true
+  - if /i "%APPVEYOR_REPO_BRANCH%"=="v1.0" AzureStorageContentTypeUpdater.exe -a snipcartpublic -k %azure_storage_access_key% -c themes --lowercase true
+  - if /i "%APPVEYOR_REPO_BRANCH%"=="v2.0" AzureStorageContentTypeUpdater.exe -a snipcartpublic -k %azure_storage_access_key% -c themes --lowercase true
+  # Staging
+  - if /i "%APPVEYOR_REPO_BRANCH%"=="staging" AzureStorageContentTypeUpdater.exe -a snipcartcdndev -k %azure_storage_access_key_staging% -c themes --lowercase true
+  # Canary
+  - if /i "%APPVEYOR_REPO_BRANCH%"=="canary" AzureStorageContentTypeUpdater.exe -a snipcartcdncanary -k %azure_storage_access_key_canary% --lowercase true -c scripts
+
+  - ps: >-
+      $auth = [Convert]::ToBase64String([Text.Encoding]::ASCII.GetBytes(("{0}:{1}" -f $env:keycdn_api_key,"")))
+
+      if (($env:APPVEYOR_REPO_BRANCH -eq "production"))
+      {
+        $url = "https://api.keycdn.com/zones/purge/{0}.json" -f $env:keycdn_prod
+        Add-AppveyorMessage "Purging PRODUCTION CDN"
+        Invoke-RestMethod -Headers @{Authorization=("Basic {0}" -f $auth)} -Uri $url
+      }
+
+      if (($env:APPVEYOR_REPO_BRANCH -eq "staging"))
+      {
+        $url = "https://api.keycdn.com/zones/purge/{0}.json" -f $env:keycdn_staging
+        Add-AppveyorMessage "Purging STAGING CDN"
+        Invoke-RestMethod -Headers @{Authorization=("Basic {0}" -f $auth)} -Uri $url
+      }
