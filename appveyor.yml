@@ -39,10 +39,6 @@ init:
   - npm install gulp -g
   - git config --global core.autocrlf input
 
-# build cache to preserve files/folders between builds
-cache:
-  - node_modules                    # local npm modules
-
 # scripts that run after cloning repository
 install:
   - npm install
