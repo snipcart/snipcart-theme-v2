@@ -33,6 +33,7 @@ environment:
     secure: J4aOP8rLKXjQ8hUVl0suBg==
   keycdn_staging:
     secure: 93E/Z5lVFdeq8uw87xvuZg==
+  keycdn_canary: snipcartcanary
 
 # scripts that are called at very beginning, before repo cloning
 init:
@@ -120,7 +121,7 @@ after_deploy:
   # Staging
   - if /i "%APPVEYOR_REPO_BRANCH%"=="staging" AzureStorageContentTypeUpdater.exe -a snipcartcdndev -k %azure_storage_access_key_staging% -c themes --lowercase true
   # Canary
-  - if /i "%APPVEYOR_REPO_BRANCH%"=="canary" AzureStorageContentTypeUpdater.exe -a snipcartcdncanary -k %azure_storage_access_key_canary% --lowercase true -c scripts
+  - if /i "%APPVEYOR_REPO_BRANCH%"=="canary" AzureStorageContentTypeUpdater.exe -a snipcartcdncanary -k %azure_storage_access_key_canary% --lowercase true -c themes
 
   - ps: >-
       $auth = [Convert]::ToBase64String([Text.Encoding]::ASCII.GetBytes(("{0}:{1}" -f $env:keycdn_api_key,"")))
@@ -135,6 +136,14 @@ after_deploy:
       if (($env:APPVEYOR_REPO_BRANCH -eq "staging"))
       {
         $url = "https://api.keycdn.com/zones/purge/{0}.json" -f $env:keycdn_staging
+        Add-AppveyorMessage "Purging STAGING CDN"
+        Invoke-RestMethod -Headers @{Authorization=("Basic {0}" -f $auth)} -Uri $url
+      }
+
+
+      if (($env:APPVEYOR_REPO_BRANCH -eq "canary"))
+      {
+        $url = "https://api.keycdn.com/zones/purge/{0}.json" -f $env:keycdn_canary
         Add-AppveyorMessage "Purging STAGING CDN"
         Invoke-RestMethod -Headers @{Authorization=("Basic {0}" -f $auth)} -Uri $url
       }
