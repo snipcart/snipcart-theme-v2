@@ -33,7 +33,8 @@ environment:
     secure: J4aOP8rLKXjQ8hUVl0suBg==
   keycdn_staging:
     secure: 93E/Z5lVFdeq8uw87xvuZg==
-  keycdn_canary: snipcartcanary
+  keycdn_canary:
+    secure: mTyxClT8rVXIAfmz+DnIdQ==
 
 # scripts that are called at very beginning, before repo cloning
 init:
