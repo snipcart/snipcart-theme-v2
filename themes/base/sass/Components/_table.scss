@@ -12,16 +12,7 @@
     LOCAL VARIABLES
 \*------------------------------------*/
 
-$_table-font-size--small: $font-size--small;
-$_table-font-size--base: $font-size--smaller;
-$_table-font-size--large: $font-size--large;
-
-$_table-border: 1px solid $gallery;
-
-$_table-color--highlight: $mine-shaft--lighter;
-$_table-color--success: $atlantis;
-
-$_table-background--highlight: $alabaster;
+$_table-border: 1px solid palette(table, border);
 
 
 /*------------------------------------*\
@@ -29,7 +20,7 @@ $_table-background--highlight: $alabaster;
 \*------------------------------------*/
 
 .snip-table {
-    font-size: $_table-font-size--base;
+    font-size: fontsize(table, base);
     text-align: left;
     width: 100%;
 
@@ -44,7 +35,7 @@ $_table-background--highlight: $alabaster;
     // [2]
     @media #{$mq-small} {
         display: block;
-        font-size: $_table-font-size--base;
+        font-size: fontsize(table, base);
         text-align: left;
 
         td, th, tr {
@@ -107,7 +98,7 @@ $_table-background--highlight: $alabaster;
 }
 
 .snip-table__header {
-    font-size: $_table-font-size--small;
+    font-size: fontsize(table, small);
     padding: 1em 2em;
     text-transform: uppercase;
 
@@ -123,7 +114,7 @@ $_table-background--highlight: $alabaster;
 }
 
 .snip-table__body--small {
-    background: $_table-background--highlight;
+    background: palette(table, background--highlight);
 
     @media #{$mq-medium} {
         padding: .429em 1.429em .429em 2.857em;
@@ -131,7 +122,7 @@ $_table-background--highlight: $alabaster;
 }
 
 .snip-table__body--big {
-    font-size: $_table-font-size--large;
+    font-size: fontsize(table, large);
 
     @media #{$mq-medium} {
         padding: 1.222em 1.111em 1.222em 1.222em;
@@ -140,8 +131,8 @@ $_table-background--highlight: $alabaster;
 
 .snip-table__loading {
     text-align: center;
-    font-size: $_table-font-size--base;
-    color: $_table-color--highlight;
+    font-size: fontsize(table, base);
+    color: palette(table, color--highlight);
     font-weight: bold;
     text-transform: uppercase;
 }
@@ -160,12 +151,12 @@ $_table-background--highlight: $alabaster;
 
 .snip-table__cell--highlight {
     @include font-bold;
-    color: $_table-color--highlight;
+    color: palette(table, color--highlight);
 }
 
 .snip-table__cell--success {
     @include font-bold;
-    color: $_table-color--success;
+    color: palette(table, color--success);
 }
 
 .snip-table__small-col {

@@ -11,7 +11,7 @@
 \*------------------------------------*/
 
 $_loader-size: 20px;
-$_big-loader-height: 0.3em;
+$_big-loader-height: .3em;
 
 
 /*------------------------------------*\
@@ -41,8 +41,8 @@ $_big-loader-height: 0.3em;
     width: 100%;
     position: relative;
     overflow: hidden;
-    background-color: $mine-shaft;
-    margin-top: -0.3em;
+    background-color: palette(loader, background);
+    margin-top: -.3em;
 
     &:before{
         display: block;
@@ -51,7 +51,7 @@ $_big-loader-height: 0.3em;
         left: -200px;
         width: 30%;
         height: $_big-loader-height;
-        background-color: $manz;
+        background-color: palette(loader, background--highlight);
         animation: snip-loading 2s ease-in-out infinite;
     }
 

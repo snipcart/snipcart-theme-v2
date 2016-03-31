@@ -9,17 +9,7 @@
     LOCAL VARIABLES
 \*------------------------------------*/
 
-$_form-label-color: $dusty-gray;
-
-$_form-font-size--small: $font-size--small;
-$_form-font-size--smaller: $font-size--smaller;
-
-$_form-color--highlight: $mine-shaft--lighter;
-
-$_form-border: 1px solid $gallery;
-
-$_form-error-color: $base--primary;
-$_form-error-background: $red;
+$_form-border: 1px solid palette(form, border);
 
 
 /*------------------------------------*\
@@ -52,9 +42,9 @@ $_form-error-background: $red;
 }
 
 .snip-form__label {
-    color: $_form-label-color;
+    color: palette(form, label-color);
     display: block;
-    font-size: $_form-font-size--small;
+    font-size: fontsize(form, small);
     margin: 0 0 .5em 0;
     overflow: hidden;
     text-transform: uppercase;
@@ -67,9 +57,9 @@ $_form-error-background: $red;
 
 .snip-form__help {
     @include font-bold;
-    color: $_form-color--highlight;
+    color: palette(form, color--highlight);
     float: right;
-    font-size: $_form-font-size--small;
+    font-size: fontsize(form, small);
 
     &:hover {
         text-decoration: underline;
@@ -86,10 +76,10 @@ $_form-error-background: $red;
 }
 
 .snip-form__error {
-    background: $_form-error-background;
+    background: palette(error, color);
     border-radius: 3px;
-    color: $_form-error-color;
-    font-size: $_form-font-size--smaller;
+    color: palette(error, text-color--invert);
+    font-size: fontsize(form, base);
     padding: .357em;
     text-align: center;
 }

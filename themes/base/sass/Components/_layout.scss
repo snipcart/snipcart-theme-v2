@@ -8,17 +8,11 @@
     LOCAL VARIABLES
 \*------------------------------------*/
 
-$_layout-background: $base--primary;
+$_layout-border: 1px solid palette(layout, border);
 
-$_layout-border: 1px solid $gallery;
-
-$_layout-close-color: $base--primary;
 $_layout-close-font-size: 1.5em;
 
-$_layout-loading-color: $mine-shaft--lighter;
-
-$_layout-content-background: $alabaster;
-$_layout-content-border: 1px solid $silver;
+$_layout-content-border: 1px solid palette(layout, content-border);
 
 
 /*------------------------------------*\
@@ -26,14 +20,14 @@ $_layout-content-border: 1px solid $silver;
 \*------------------------------------*/
 
 .snip-layout__main-container {
-    background: $_layout-background;
+    background: palette(layout, background);
     margin: 0 auto;
     max-width: 62.25em;
     position: relative;
 }
 
 .snip-layout__close {
-    color: $_layout-close-color;
+    color: palette(layout, close-color);
     font-size: $_layout-close-font-size * 1.2;
     padding: .333em;
     padding: 0;
@@ -54,7 +48,7 @@ $_layout-content-border: 1px solid $silver;
 
 .snip-layout__loading {
     @include font-bold;
-    color: $_layout-loading-color;
+    color: palette(layout, loading-color);
     padding: 5em 0;
     text-align: center;
     text-transform: uppercase;
@@ -71,7 +65,7 @@ $_layout-content-border: 1px solid $silver;
 }
 
 .snip-layout__content--highlight {
-    background-color: $_layout-content-background;
+    background-color: palette(layout, content-background);
     border-bottom: $_layout-content-border;
     border-top: $_layout-content-border;
     padding: 1em 0;

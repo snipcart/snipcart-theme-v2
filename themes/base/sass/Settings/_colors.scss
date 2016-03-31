@@ -1,74 +1,105 @@
-﻿/**
+/**
     COLOR
 
     Where all color's variables are defined
 
-    We provide you the official color's name, rgb value, and small hint for
-    where the color is used in Snipcart
-
-    If you prefer rgb notation, just switch inside each variable
-    For example, $white: rgb(255, 255, 255)
+    Thanks to SASS Map, we can define all colors at one place.
+    We also respect our BEM like notation and files architecture.
 */
 
-/*------------------------------------*\
-    BASE
-\*------------------------------------*/
-
-// 255, 255, 255
-$base--primary: #fff;
-
-
-/*------------------------------------*\
-    GRAY / GREY
-\*------------------------------------*/
-
-// rgb: 17, 17, 17
-$cod-grey: #111;
-
-// rgb: 34, 34, 34
-$mine-shaft: #222;
-
-// rgb: 51, 51, 51
-$mine-shaft--lighter: #333;
-
-// rgb: 85, 85, 85
-$emperor: #555;
-
-// rgb: 153, 153, 153
-$dusty-gray: #999;
-
-// rgb: 187, 187, 187
-$silver: #bbb;
-
-// rgb: 204, 204, 204
-$silver--lighter: #ccc;
-
-// rgb: 238, 238, 238
-$gallery: #eee;
-
-// rgb: 248, 248, 248
-$alabaster: #f8f8f8;
-
-
-/*------------------------------------*\
-    YELLOW
-\*------------------------------------*/
-
-// rgb: 239, 231, 120
-$manz: #efe778;
-
-
-/*------------------------------------*\
-    GREEN
-\*------------------------------------*/
-
-// rgb: 118, 212, 67
-$atlantis: #76d443;
-
-
-/*------------------------------------*\
-    RED
-\*------------------------------------*/
-
-// rgb: 255, 17, 0
-$red: #f10;
+$palettes: (
+    action: (
+        link: #999
+    ),
+    button: (
+        background: #555,
+        background--highlight: #efe778,
+        background--hover: darken(#555, 10%),
+        background--highlight-hover: darken(#efe778, 10%),
+        color: #fff,
+        color--highlight: #222
+    ),
+    error: (
+        color: #f10,
+        text-color: #333,
+        text-color--invert: #fff
+    ),
+    flash: (
+        background--error: #f10,
+        background--success: #76d443,
+        background--warning: #efe778,
+        border: #333,
+        color: #333,
+        color--invert: #fff
+    ),
+    footer: (
+        background: #222,
+        color: #555,
+        color--highlight: #999
+    ),
+    form: (
+        background: #fff,
+        border: #eee,
+        border--focus: #333,
+        color: #555,
+        color--highlight: #333,
+        label-color: #999
+    ),
+    header: (
+        background: #222,
+        background--highlight: #111,
+        color: #fff,
+        label-color: #999
+    ),
+    layout: (
+        background: #fff,
+        border: #eee,
+        close-color: #fff,
+        color: #999,
+        content-background: #f8f8f8,
+        content-border: #bbb,
+        loading-color: #333
+    ),
+    loader: (
+        background: #222,
+        background--highlight: #efe778
+    ),
+    product: (
+        background: #f8f8f8,
+        border: #eee,
+        color--error: #f10,
+        color--highlight: #333
+    ),
+    quantity-trigger: (
+        background: #ccc,
+        background--hover: #efe778,
+        background--disabled: #eee,
+        color: #111,
+        color--disabled: #bbb
+    ),
+    static: (
+        background--highlight: #f8f8f8,
+        border: #eee,
+        color--highlight: #333,
+        color--link: #999
+    ),
+    step: (
+        background: #ccc,
+        background--active: #fff,
+        border: #bbb,
+        color: #999,
+        color--active: #333
+    ),
+    table: (
+        background--highlight: #f8f8f8,
+        border: #eee,
+        color--highlight: #333,
+        color--success: #76d443
+    ),
+    tooltip: (
+        background: #ccc,
+        border: #ccc transparent,
+        label: #555,
+        text: #111
+    )
+);

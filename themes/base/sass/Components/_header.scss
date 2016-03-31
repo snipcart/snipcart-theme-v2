@@ -11,17 +11,8 @@
     LOCAL VARIABLES
 \*------------------------------------*/
 
-$_header-background: $mine-shaft;
-$_header-background--highlight: $cod-grey;
-
 $_header-height: 105px;
 $_header-total-height: 38px;
-
-$_header-color: $base--primary;
-$_header-label-color: $dusty-gray;
-
-$_header-font-size--small: $font-size--smaller;
-$_header-font-size--large: $font-size--xlarge;
 
 
 /*------------------------------------*\
@@ -30,15 +21,15 @@ $_header-font-size--large: $font-size--xlarge;
 
 .snip-header {
     @include font-bold;
-    background: $_header-background;
-    color: $_header-color;
+    background: palette(header, background);
+    color: palette(header, color);
     padding: $padding-small;
     position: relative;
     text-align: left;
     text-transform: uppercase;
 
     @media #{$mq-medium} {
-        color: $_header-color;
+        color: palette(header, color);
         height: $_header-height;
         padding: 0;
         text-align: center;
@@ -47,8 +38,8 @@ $_header-font-size--large: $font-size--xlarge;
 
 // [1]
 .snip-header__user {
-    background: $_header-background--highlight;
-    font-size: $_header-font-size--small;
+    background: palette(header, background--highlight);
+    font-size: fontsize(header, small);
     padding: .714em 1.429em;
     text-align: center;
 }
@@ -62,12 +53,12 @@ $_header-font-size--large: $font-size--xlarge;
 }
 
 .snip-header__user-mail {
-    color: $_header-color;
+    color: palette(header, color);
 }
 
 .snip-header__title {
     display: none;
-    font-size: $_header-font-size--large / 2;
+    font-size: fontsize(header, large) / 2;
     text-align: center;
 
     // [2]
@@ -77,7 +68,7 @@ $_header-font-size--large: $font-size--xlarge;
 
     @media #{$mq-medium} {
         display: block;
-        font-size: $_header-font-size--large;
+        font-size: fontsize(header, large);
         left: 1.25em;
         line-height: $_header-height;
         position: absolute;
@@ -86,7 +77,7 @@ $_header-font-size--large: $font-size--xlarge;
 }
 
 .snip-header__total {
-    background: $_header-background--highlight;
+    background: palette(header, background--highlight);
     border-radius: 5px;
     display: inline-block;
     padding: .5em;
@@ -100,7 +91,7 @@ $_header-font-size--large: $font-size--xlarge;
 }
 
 .snip-header__total-label {
-    color: $_header-label-color;
+    color: palette(header, label-color);
     margin-right: .625em;
 }
 

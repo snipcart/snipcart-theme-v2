@@ -34,10 +34,53 @@ $font-base: Arial, sans-serif;
 /**
     FONT SIZES
 */
-$font-size--xsmall: 10px;
-$font-size--small: 12px;
-$font-size--smaller: 14px;
-
-$font-size--larger: 18px;
-$font-size--large: 20px;
-$font-size--xlarge: 30px;
+$fontsize: (
+    action: (
+        small: 12px
+    ),
+    button: (
+        base: 12px
+    ),
+    error: (
+        base: 14px
+    ),
+    flash: (
+        base: 12px
+    ),
+    footer: (
+        base: 10px
+    ),
+    form: (
+        small: 12px,
+        base: 14px
+    ),
+    header: (
+        small: 14px,
+        large: 30px
+    ),
+    product: (
+        base: 14px,
+        large: 20px,
+        icon: 30px
+    ),
+    quantity-trigger: (
+        large: 18px
+    ),
+    reset: (
+        base: 14px,
+        large: 16px
+    ),
+    static: (
+        small: 12px,
+        base: 14px
+    ),
+    step: (
+        small: 10px,
+        icon: 34px
+    ),
+    table: (
+        small: 12px,
+        base: 14px,
+        large: 20px
+    )
+);

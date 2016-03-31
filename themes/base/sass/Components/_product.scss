@@ -10,16 +10,7 @@
     LOCAL VARIABLES
 \*------------------------------------*/
 
-$_product-font-size--small: $font-size--small;
-$_product-font-size--base: $font-size--smaller;
-$_product-font-size--large: $font-size--large;
-$_product-font-size--icon: 30px;
-
-$_product-background: $alabaster;
-$_product-border: 1px solid $gallery;
-
-$_product-color--highlight: $mine-shaft--lighter;
-$_product-color--error: $red;
+$_product-border: 1px solid palette(product, border);
 
 $_product-thumbnail-size: 65px;
 
@@ -34,9 +25,9 @@ $_product-disabled-opacity: 0.2;
 
 .snip-product {
     @include clearfix;
-    background: $_product-background;
+    background: palette(product, background);
     border-top: $_product-border;
-    font-size: $_product-font-size--base;
+    font-size: fontsize(product, base);
     padding: 2em 1.25em;
 }
 
@@ -73,40 +64,40 @@ $_product-disabled-opacity: 0.2;
 
 .snip-product__name {
     @include font-bold;
-    color: $_product-color--highlight;
+    color: palette(product, color--highlight);
     font-size: 1.125em;
     overflow: hidden;
     text-transform: uppercase;
 
     @media #{$mq-medium} {
-        font-size: $_product-font-size--base;
+        font-size: fontsize(product, base);
         margin-top: .5em;
     }
 }
 
 .snip-product__description {
-    font-size: $_product-font-size--base / 1.125;
+    font-size: fontsize(product, base) / 1.125;
     margin-top: .25em;
     overflow: hidden;
 
     @media #{$mq-medium} {
-        font-size: $_product-font-size--base;
+        font-size: fontsize(product, base);
         margin-top: .5em;
     }
 }
 
 .snip-product__important {
     @include font-bold;
-    font-size: $_product-font-size--base / 1.125;
+    font-size: fontsize(product, base) / 1.125;
 
     @media #{$mq-medium} {
-        font-size: $_product-font-size--base;
+        font-size: fontsize(product, base);
     }
 }
 
 .snip-product__remove {
-    color: $_product-color--error;
-    font-size: $_product-font-size--icon;
+    color: palette(product, color--error);
+    font-size: fontsize(product, icon);
     position: absolute;
     right: $padding-small / 3.5;
     top: $padding-small / 1.75;
@@ -135,7 +126,7 @@ $_product-disabled-opacity: 0.2;
 }
 
 .snip-product__empty {
-    font-size: $_product-font-size--large;
+    font-size: fontsize(product, large);
     padding: 1em 2em;
     text-align: center;
     text-transform: uppercase;

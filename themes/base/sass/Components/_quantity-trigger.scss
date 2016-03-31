@@ -13,15 +13,6 @@
     LOCAL VARIABLES
 \*------------------------------------*/
 
-$_qt-color: $cod-grey;
-$_qt-color--disabled: $silver;
-
-$_qt-background: $silver--lighter;
-$_qt-background--hover: $manz;
-$_qt-background--disabled: $gallery;
-
-$_qt-font-size--large: $font-size--larger;
-
 // [3]
 $_qt-text-add: "+";
 $_qt-text-remove: "-";
@@ -35,7 +26,7 @@ $_qt-text-remove: "-";
 .snip-quantity-trigger {
     @include font-bold;
     align-items: center;
-    color: $_qt-color;
+    color: palette(quantity-trigger, color);
     display: flex;
     justify-content: center;
     margin: 0 auto;
@@ -49,17 +40,17 @@ $_qt-text-remove: "-";
 
 .snip-quantity-trigger__btn {
     // [2]
-    background-color: $_qt-background;
+    background-color: palette(quantity-trigger, background);
     border-radius: 30px;
     color: inherit;
     float: left;
-    font-size: $_qt-font-size--large;
+    font-size: fontsize(quantity-trigger, large);
     font-weight: 400;
     height: 1em;
     width: 1em;
 
     &:hover {
-        background-color: $_qt-background--hover;
+        background-color: palette(quantity-trigger, background--hover);
     }
 
     &:before {
@@ -86,11 +77,11 @@ $_qt-text-remove: "-";
 }
 
 .snip-quantity-trigger__btn--disabled {
-    background-color: $_qt-background--disabled;
-    color: $_qt-color--disabled;
+    background-color: palette(quantity-trigger, background--disabled);
+    color: palette(quantity-trigger, color--disabled);
     cursor: default;
 
     &:hover {
-        background-color: $_qt-background--disabled;
+        background-color: palette(quantity-trigger, background--disabled);
     }
 }

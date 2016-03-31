@@ -12,11 +12,6 @@
 
 $_tooltip-padding: 10px 20px;
 
-$_tooltip-background: $silver--lighter;
-$_tooltip-border-color: $silver--lighter transparent;
-$_tooltip-label-color: $emperor;
-$_tooltip-text-color: $cod-grey;
-
 // [1]
 $_tooltip-text-closed: "?";
 $_tooltip-text-opened: "-";
@@ -27,7 +22,7 @@ $_tooltip-text-opened: "-";
 \*------------------------------------*/
 
 .snip-tooltip {
-    background-color: $_tooltip-background;
+    background-color: palette(tooltip, background);
     border-radius: 3px;
     bottom: 100%;
     display: none;
@@ -38,7 +33,7 @@ $_tooltip-text-opened: "-";
     text-align: center;
 
     &:after {
-        border-color: $_tooltip-border-color;
+        border-color: palette(tooltip, border);
         border-style: solid;
         border-width: 15px 15px 0;
         bottom: -15px;
@@ -73,11 +68,11 @@ $_tooltip-text-opened: "-";
 }
 
 .snip-tooltip__list {
-    color: $_tooltip-label-color;
+    color: palette(tooltip, label);
 }
 
 .snip-tooltip__item {
     @include font-bold;
-    color: $_tooltip-text-color;
+    color: palette(tooltip, text);
     margin-bottom: 5px;
 }

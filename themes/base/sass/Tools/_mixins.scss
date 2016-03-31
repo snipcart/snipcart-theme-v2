@@ -12,3 +12,19 @@
         display: table;
     }
 }
+
+@function fontsize($block, $size) {
+    @if not map-has-key($fontsize, $block) {
+      @warn "No palette found for `#{$block}` in $styleguide map. Property omitted.";
+    }
+
+    @return map-get(map-get($fontsize, $block), $size);
+}
+
+@function palette($palette, $tone) {
+    @if not map-has-key($palettes, $palette) {
+      @warn "No palette found for `#{$palette}` in $palettes map. Property omitted.";
+    }
+
+    @return map-get(map-get($palettes, $palette), $tone);
+}

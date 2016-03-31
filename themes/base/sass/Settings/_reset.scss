@@ -9,16 +9,7 @@
     LOCAL VARIABLES
 \*------------------------------------*/
 
-$_reset-form-color: $emperor;
-$_reset-form-background-color: $base--primary;
-
-$_reset-form-font-size: $font-size--smaller;
-
-$_reset-form-border: 1px solid $gallery;
-$_reset-form-border-color-focus: $mine-shaft--lighter;
-
 $_reset-form-transition: border .66s ease;
-
 $_reset-link-transition: background .33s ease;
 
 
@@ -94,13 +85,13 @@ select {
 input[type=text],
 input[type=password],
 select {
-    background: $_reset-form-background-color;
+    background: palette(form, background);
     border-radius: 3px;
-    border: $_reset-form-border;
+    border: 1px solid palette(form, border);
     box-sizing: border-box;
-    color: $_reset-form-color;
+    color: palette(form, color);
     display: block;
-    font-size: $_reset-form-font-size;
+    font-size: fontsize(reset, base);
     height: auto;
     line-height: 18px;
     margin: 0;
@@ -110,6 +101,6 @@ select {
 
     &:focus,
     &:hover {
-        border-color: $_reset-form-border-color-focus;
+        border-color: palette(form, border--focus);
     }
 }

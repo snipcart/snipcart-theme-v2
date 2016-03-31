@@ -8,14 +8,7 @@
     LOCAL VARIABLES
 \*------------------------------------*/
 
-$_footer-background: $mine-shaft;
-
-$_footer-color: $emperor;
-$_footer-color--highlight: $dusty-gray;
-
 $_footer-height: 35px;
-
-$_footer-font-size: $font-size--xsmall;
 
 
 /*------------------------------------*\
@@ -23,21 +16,21 @@ $_footer-font-size: $font-size--xsmall;
 \*------------------------------------*/
 
 .snip-footer {
-    background: $_footer-background;
+    background: palette(footer, background);
     padding: .125em .625em;
     text-transform: uppercase;
 }
 
 .snip-footer__copyright {
     background: url('img/lock.png') no-repeat left .3em;
-    color: $_footer-color;
+    color: palette(footer, color);
     display: inline-block;
-    font-size: $_footer-font-size;
+    font-size: fontsize(footer, base);
     height: $_footer-height;
     line-height: $_footer-height;
     padding-left: 3.2em;
 }
 
 .snip-footer__highlight {
-    color: $_footer-color--highlight;
+    color: palette(footer, color--highlight);
 }

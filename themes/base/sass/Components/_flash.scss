@@ -8,14 +8,7 @@
     LOCAL VARIABLES
 \*------------------------------------*/
 
-$_flash-border: 1px solid $mine-shaft--lighter;
-$_flash-color--light: $base--primary;
-$_flash-font-size: $font-size--small;
-$_flash-border--dark: $mine-shaft--lighter;
-
-$_flash-success: $atlantis;
-$_flash-warning: $manz;
-$_flash-error: $red;
+$_flash-border: 1px solid palette(flash, border);
 
 
 /*------------------------------------*\
@@ -25,20 +18,20 @@ $_flash-error: $red;
 .snip-flash__item {
     border-bottom: $_flash-border;
     padding: 10px 20px;
-    font-size: $_flash-font-size;
+    font-size: fontsize(flash, base);
 }
 
 .snip-flash__item--success {
-    background-color: $_flash-success;
-    color: $_flash-border--dark;
+    background-color: palette(flash, background--success);
+    color: palette(flash, color);
 }
 
 .snip-flash__item--warn {
-    background-color: $_flash-warning;
-    color: $_flash-border--dark;
+    background-color: palette(flash, background--warning);
+    color: palette(flash, color);
 }
 
 .snip-flash__item--error {
-    background-color: $_flash-error;
-    color: $_flash-color--light;
+    background-color: palette(flash, background--error);
+    color: palette(flash, color--invert);
 }

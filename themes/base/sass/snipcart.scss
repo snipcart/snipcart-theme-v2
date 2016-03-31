@@ -25,17 +25,12 @@
     GLOBAL VARIABLES
 \*------------------------------------*/
 
-$padding-mini: 0.5em 1em 0.5em 1em;
 $padding-small: 1em;
 
 
 /*------------------------------------*\
     LOCAL VARIABLES
 \*------------------------------------*/
-
-$_base-color: $dusty-gray;
-
-$_base-font-size: 16px;
 
 $_base-padding: 1.5em 0;
 
@@ -58,9 +53,9 @@ body.snip-open {
 .snip-layout {
     background: rgba(123, 123, 123, .75);
     bottom: 0;
-    color: $_base-color;
+    color: palette(layout, color);
     font-family: $font-base;
-    font-size: $_base-font-size / 1.14;
+    font-size: fontsize(reset, base);
     left: 0;
     line-height: normal;
     overflow-x: auto;
@@ -96,7 +91,7 @@ body.snip-open {
 
     // Responsive
     @media #{$mq-large} {
-        font-size: $_base-font-size;
+        font-size: fontsize(reset, large);
         padding: $_base-padding;
     }
 }
