@@ -9,6 +9,7 @@ argv = require('yargs').option('version', {type: 'string'}).argv
 postcss = require 'gulp-postcss'
 mqpacker = require 'css-mqpacker'
 browserSync = require 'browser-sync'
+argv = require('yargs').argv
 
 themesDir = 'themes'
 workingDir = 'themes/base'
@@ -49,17 +50,19 @@ gulp.task 'min', ['sass'], ->
 gulp.task 'watch', ->
   gulp.watch [watch.sass], ['sass']
 
-gulp.task 'browser-sync', ->
-  sync = browserSync.create 'snipcart.client/'
+gulp.task 'browser-sync', ['dev'], ->
+  proxy = argv.proxy ? 'snipcart.client/'
+  sync = browserSync.create proxy
   sync.init
     port: 3005
-    proxy: 'snipcart.client/'
+    proxy: proxy
     serveStatic: ['.']
     ui:
         port: 3006
   gulp.watch(sources.compiled).on 'change', sync.reload
 
-gulp.task 'default', ['sass', 'watch', 'browser-sync']
+gulp.task 'dev', ['default', 'watch']
+gulp.task 'default', ['sass']
 gulp.task 'deploy', ['min'], ->
   gulp.src(["#{themesDir}/**/*", '!**/*.scss', '!**/sass', '!**/styles.css'])
     .pipe(gulp.dest(getDistDir()))
