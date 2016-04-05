@@ -1,6 +1,6 @@
 # snipcart-themes
 
-![Build status](https://ci.appveyor.com/api/projects/status/q0qxt370jxpx1139?svg=true)]
+![Build status](https://ci.appveyor.com/api/projects/status/q0qxt370jxpx1139?svg=true)
 
 This repository contains everything needed to generate snipcart.css file. Ultimately, it could also contains custom themes.
 
