@@ -81,7 +81,7 @@ deploy:
   - provider: AzureBlob
     storage_account_name: snipcartpublic
     storage_access_key:
-    secure: pLJQvFOvO9DWeIX7KGdhUOSyEL7IH8CPegPlFMeZNod2fCeQIZ679KR8deYzrGeWKOAPi8j1+P0m4RSuorWnvXrU2MrJaxer912WbQHZ4Z/D8Q4kGFFwU3siJS9OzOap
+      secure: pLJQvFOvO9DWeIX7KGdhUOSyEL7IH8CPegPlFMeZNod2fCeQIZ679KR8deYzrGeWKOAPi8j1+P0m4RSuorWnvXrU2MrJaxer912WbQHZ4Z/D8Q4kGFFwU3siJS9OzOap
     container: themes
     artifact: themes
     unzip: true
@@ -128,6 +128,13 @@ after_deploy:
       $auth = [Convert]::ToBase64String([Text.Encoding]::ASCII.GetBytes(("{0}:{1}" -f $env:keycdn_api_key,"")))
 
       if (($env:APPVEYOR_REPO_BRANCH -eq "production"))
+      {
+        $url = "https://api.keycdn.com/zones/purge/{0}.json" -f $env:keycdn_prod
+        Add-AppveyorMessage "Purging PRODUCTION CDN"
+        Invoke-RestMethod -Headers @{Authorization=("Basic {0}" -f $auth)} -Uri $url
+      }
+
+      if (($env:APPVEYOR_REPO_BRANCH -eq "v2.0"))
       {
         $url = "https://api.keycdn.com/zones/purge/{0}.json" -f $env:keycdn_prod
         Add-AppveyorMessage "Purging PRODUCTION CDN"
