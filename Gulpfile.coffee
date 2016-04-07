@@ -50,7 +50,7 @@ gulp.task 'min', ['sass'], ->
 gulp.task 'watch', ->
   gulp.watch [watch.sass], ['sass']
 
-gulp.task 'browser-sync', ['dev'], ->
+gulp.task 'sync', ['dev'], ->
   proxy = argv.proxy ? 'snipcart.client/'
   sync = browserSync.create proxy
   sync.init
