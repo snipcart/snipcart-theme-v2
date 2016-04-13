@@ -21,7 +21,7 @@ gulp
 You may also use the `browser-sync` task. This can be useful if you are working on a customization for a specific project. You can use the `proxy` flag to specify which URL [Browsersync](https://www.browsersync.io/) should start a proxy over.
 ​
 ```sh
-gulp browser-sync --proxy https://snipcart.com
+gulp sync --proxy https://snipcart.com
 ```
 ​
 By default, Browsersync will serve the content on `localhost:3005`. If you wish to use this setup on the application you are building you can add `snipcart.css` reference on this path:
@@ -60,4 +60,3 @@ The default branch is `master`. Consider it as the latest stable version.
 We also keep branches for specific versions:
 ​
 - `v1.0`
-- `v2.0`
