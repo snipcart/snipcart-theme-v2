@@ -18,7 +18,7 @@ npm install
 gulp
 ```
 ​
-You may also use the `browser-sync` task. This can be useful if you are working on a customization for a specific project. You can use the `proxy` flag to specify which URL [Browsersync](https://www.browsersync.io/) should start a proxy over.
+You may also use the `sync` task. This can be useful if you are working on a customization for a specific project. You can use the `proxy` flag to specify which URL [Browsersync](https://www.browsersync.io/) should start a proxy over.
 ​
 ```sh
 gulp sync --proxy https://snipcart.com
