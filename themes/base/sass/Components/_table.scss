@@ -145,6 +145,11 @@ $_table-border: 1px solid palette(table, border);
     text-align: right;
 }
 
+.snip-table__cell--invalid {
+    text-decoration: line-through;
+    font-weight: normal;
+}
+
 .snip-table__cell--bold {
     @include font-bold;
 }
@@ -157,6 +162,10 @@ $_table-border: 1px solid palette(table, border);
 .snip-table__cell--success {
     @include font-bold;
     color: palette(table, color--success);
+}
+
+.snip-table__row--invalid {
+  background-color: palette(table, background--highlight);
 }
 
 .snip-table__small-col {
