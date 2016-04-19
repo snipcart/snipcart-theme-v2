@@ -134,6 +134,13 @@ after_deploy:
         Invoke-RestMethod -Headers @{Authorization=("Basic {0}" -f $auth)} -Uri $url
       }
 
+      if (($env:APPVEYOR_REPO_BRANCH -eq "master"))
+      {
+        $url = "https://api.keycdn.com/zones/purge/{0}.json" -f $env:keycdn_prod
+        Add-AppveyorMessage "Purging PRODUCTION CDN"
+        Invoke-RestMethod -Headers @{Authorization=("Basic {0}" -f $auth)} -Uri $url
+      }
+
       if (($env:APPVEYOR_REPO_BRANCH -eq "v2.0"))
       {
         $url = "https://api.keycdn.com/zones/purge/{0}.json" -f $env:keycdn_prod
