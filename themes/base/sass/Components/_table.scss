@@ -145,6 +145,10 @@ $_table-border: 1px solid palette(table, border);
     text-align: right;
 }
 
+.snip-table__cell--clear {
+    @include clearfix;
+}
+
 .snip-table__cell--invalid {
     text-decoration: line-through;
     font-weight: normal;
