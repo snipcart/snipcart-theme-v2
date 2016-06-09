@@ -32,7 +32,7 @@ getDistDir = (output)->
 gulp.task 'sass', ->
   gulp.src sources.sass
     .pipe(sass().on('error', sass.logError))
-    .pipe autoprefixer(cascade: false, browsers: ['> 1%'])
+    .pipe autoprefixer(cascade: false, browsers: ['> 0.25%'])
     .pipe gulp.dest(workingDir)
 
 gulp.task 'min', ['sass'], ->
