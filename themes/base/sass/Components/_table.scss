@@ -14,6 +14,12 @@
 
 $_table-border: 1px solid palette(table, border);
 
+$_notice-warning--background-color: lighten(palette(flash, background--warning), 20%);
+$_notice-warning--text-color: palette(static, color--highlight);
+
+$_notice-error--background-color: lighten(palette(flash, background--error), 40%);
+$_notice-error--text-color: palette(static, color--highlight);
+
 
 /*------------------------------------*\
     STYLE
@@ -26,9 +32,39 @@ $_table-border: 1px solid palette(table, border);
 
     // [1]
     td, th, tr {
-        border: inherit;
+        border-bottom: $_table-border;
         padding: inherit;
+
+        &.snip-table__row--no-border {
+          border-bottom: none;
+          td {
+            border-bottom: 0;
+          }
+        }
     }
+}
+
+.snip-table {
+  .snip-table__cell__notices {
+    margin: 0;
+    padding: 0;
+
+    div {
+      margin: 10px 20px 5px 20px;
+      padding: 10px;
+      border-radius: 5px;
+
+      &.snip-table__cell__notices--warning {
+        background-color: $_notice-warning--background-color;
+        color: $_notice-warning--text-color;
+      }
+
+      &.snip-table__cell__notices--error {
+        background-color: $_notice-error--background-color;
+        color: $_notice-error--text-color;
+      }
+    }
+  }
 }
 
 .snip-table--small {
@@ -53,7 +89,7 @@ $_table-border: 1px solid palette(table, border);
             position: relative;
 
             + tr {
-                border-top: $_table-border;
+                //border-top: $_table-border;
             }
         }
 
@@ -139,6 +175,12 @@ $_table-border: 1px solid palette(table, border);
 
 .snip-table__cell--center {
     text-align: center;
+}
+
+.snip-table__cell--long-text {
+    @media #{$mq-medium} {
+      max-width: 20em;
+    }
 }
 
 .snip-table__cell--right {
