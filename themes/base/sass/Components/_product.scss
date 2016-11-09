@@ -98,14 +98,17 @@ $_product-disabled-opacity: 0.2;
 .snip-product__remove {
     color: palette(product, color--error);
     font-size: fontsize(product, icon);
-    position: absolute;
-    right: $padding-small / 3.5;
-    top: $padding-small / 1.75;
+    position: static;
+
+    @media #{$mq-small} {
+      position: absolute;
+      right: $padding-small / 3.5;
+      top: $padding-small / 1.75;
+    }
 
     @media #{$mq-medium} {
         float: left;
         margin: -.154em .192em 0 0;
-        position: static;
     }
 }
 
