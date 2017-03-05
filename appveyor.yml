@@ -21,6 +21,8 @@ branches:
 
 # environment variables
 environment:
+  NODE_UNICODETABLE_UNICODEDATA_TXT: '%appveyor_build_folder%\tools\UnicodeData.txt'
+  nodejs_version: "6"
   azure_storage_access_key_staging:
     secure: LPX3Gv4dUzZ187kD3CZMsRWR1qNB9UM287fR1vh6FD4zAtUTzbPc5Hrh4syNokgYVPEN7JHxN0NL8Vt13DeCvW4STUyyFK+VgdDt5nTseMRsNbVST6ZYqmN19mF15yzi
   azure_storage_access_key:
@@ -43,6 +45,7 @@ init:
 
 # scripts that run after cloning repository
 install:
+  - ps: Install-Product node $env:nodejs_version
   - npm install
 
 #---------------------------------#
@@ -84,6 +87,7 @@ deploy:
       secure: pLJQvFOvO9DWeIX7KGdhUOSyEL7IH8CPegPlFMeZNod2fCeQIZ679KR8deYzrGeWKOAPi8j1+P0m4RSuorWnvXrU2MrJaxer912WbQHZ4Z/D8Q4kGFFwU3siJS9OzOap
     container: themes
     artifact: themes
+    set_content_type: true
     unzip: true
     on:
       branch:
@@ -98,6 +102,7 @@ deploy:
       secure: LPX3Gv4dUzZ187kD3CZMsRWR1qNB9UM287fR1vh6FD4zAtUTzbPc5Hrh4syNokgYVPEN7JHxN0NL8Vt13DeCvW4STUyyFK+VgdDt5nTseMRsNbVST6ZYqmN19mF15yzi
     container: themes
     artifact: themes
+    set_content_type: true
     unzip: true
     on:
       branch: staging
@@ -109,21 +114,12 @@ deploy:
       secure: qvb26x/k1hCCVODmVKvc3c+3JHg1WX3VSmoI2KGLD6QE9WF+eSV4+4H71Qv9ORfz388G6B2VxM1JxHKRshwCZ59kbdRicpYE2ClEwGFxvROxlrzuGob9Bh0BvBHUDWPV
     container: themes
     artifact: themes
+    set_content_type: true
     unzip: true
     on:
       branch: canary
 
 after_deploy:
-  - cd %APPVEYOR_BUILD_FOLDER%\tools\AzureStorageContentTypeUpdater
-  # Production
-  - if /i "%APPVEYOR_REPO_BRANCH%"=="master" AzureStorageContentTypeUpdater.exe -a snipcartpublic -k %azure_storage_access_key% -c themes --lowercase true
-  - if /i "%APPVEYOR_REPO_BRANCH%"=="v1.0" AzureStorageContentTypeUpdater.exe -a snipcartpublic -k %azure_storage_access_key% -c themes --lowercase true
-  - if /i "%APPVEYOR_REPO_BRANCH%"=="v2.0" AzureStorageContentTypeUpdater.exe -a snipcartpublic -k %azure_storage_access_key% -c themes --lowercase true
-  # Staging
-  - if /i "%APPVEYOR_REPO_BRANCH%"=="staging" AzureStorageContentTypeUpdater.exe -a snipcartcdndev -k %azure_storage_access_key_staging% -c themes --lowercase true
-  # Canary
-  - if /i "%APPVEYOR_REPO_BRANCH%"=="canary" AzureStorageContentTypeUpdater.exe -a snipcartcdncanary -k %azure_storage_access_key_canary% --lowercase true -c themes
-
   - ps: >-
       $auth = [Convert]::ToBase64String([Text.Encoding]::ASCII.GetBytes(("{0}:{1}" -f $env:keycdn_api_key,"")))
 
@@ -154,7 +150,6 @@ after_deploy:
         Add-AppveyorMessage "Purging STAGING CDN"
         Invoke-RestMethod -Headers @{Authorization=("Basic {0}" -f $auth)} -Uri $url
       }
-
 
       if (($env:APPVEYOR_REPO_BRANCH -eq "canary"))
       {
