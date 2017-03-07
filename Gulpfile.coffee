@@ -54,11 +54,11 @@ gulp.task 'sync', ['dev'], ->
   proxy = argv.proxy ? 'snipcart.client/'
   sync = browserSync.create proxy
   sync.init
-    port: 3005
+    port: 3006
     proxy: proxy
     serveStatic: ['.']
     ui:
-        port: 3006
+        port: 3007
   gulp.watch(sources.compiled).on 'change', sync.reload
 
 gulp.task 'dev', ['default', 'watch']
