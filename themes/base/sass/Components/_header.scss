@@ -52,6 +52,27 @@ $_header-total-height: 38px;
     margin: auto;
 }
 
+.snip-header__back {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: flex;
+    background: palette(header, background--highlight);
+    font-size: fontsize(header, small);
+    padding: .714em 1.429em;
+}
+
+.snip-header__back--button {
+  cursor: pointer;
+  cursor: hand;
+  margin: auto;
+}
+
+.snip-header__back--button:hover {
+  color: palette(header, color);
+}
+
+
 .snip-header__user-mail {
     color: palette(header, color);
 }
