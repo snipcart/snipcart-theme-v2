@@ -129,3 +129,13 @@ $_header-total-height: 38px;
         }
     }
 }
+
+.snip-header__placeorder {
+    @media #{$mq-medium} {
+            display: block;
+            margin-top: -1.5em;
+            position: absolute;
+            right: 1.25em;
+            top: 50%;
+    }
+}
