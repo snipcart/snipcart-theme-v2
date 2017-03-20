@@ -47,11 +47,11 @@ gulp.task 'watch', ->
 gulp.task 'browser-sync', ->
   sync = browserSync.create 'snipcart.client/'
   sync.init
-    port: 3005
+    port: 3006
     proxy: 'snipcart.client/'
     serveStatic: ['.']
     ui:
-        port: 3006
+        port: 3007
   gulp.watch(sources.compiled).on 'change', sync.reload
 
 gulp.task 'default', ['sass', 'watch', 'browser-sync']
