@@ -15,6 +15,48 @@ $_flash-border: 1px solid palette(flash, border);
     STYLE
 \*------------------------------------*/
 
+.snip-flash__content {
+    
+    display: flex;
+    flex-direction: column;
+
+    @media only screen and (min-width: 768px) {
+        display: block;
+    }
+
+    .snip-static__title {
+        line-height: 4em;
+        vertical-align: middle;
+    }
+
+    .snip-flash__confirm {
+        order: 2;
+
+        .snip-btn {
+            padding: 0;
+        }
+
+        a {
+            font-size: smaller;
+            display: block;
+            width: 100%;
+            text-align: center;
+            margin-top: 5px;
+            @media only screen and (min-width: 768px) {
+                display: inline-block;
+                width: 10%;
+                margin-left: 10px;
+            }
+        }
+        
+        @media only screen and (min-width: 768px) {
+            float: right;
+            width: 50%;
+            text-align: right;
+        }
+    }
+}
+
 .snip-flash__item {
     border-bottom: $_flash-border;
     padding: 10px 20px;
@@ -24,6 +66,10 @@ $_flash-border: 1px solid palette(flash, border);
 .snip-flash__item--success {
     background-color: palette(flash, background--success);
     color: palette(flash, color);
+
+    &:hover{
+        background-color: darken(palette(flash, background--success), 20%)
+    }
 }
 
 .snip-flash__item--warn {
@@ -34,4 +80,8 @@ $_flash-border: 1px solid palette(flash, border);
 .snip-flash__item--error {
     background-color: palette(flash, background--error);
     color: palette(flash, color--invert);
+
+    &:hover{
+        background-color: darken(palette(flash, background--error), 20%)
+    }
 }

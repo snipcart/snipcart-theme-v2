@@ -48,9 +48,14 @@ $_cols-border: 1px solid palette(layout, border);
             border-left: $_cols-border;
             border-top: 0;
             padding-top: .25em;
+
+            &.snip-col--no-border {
+                border-left: none;
+            }
         }
     }
 }
+
 
 .snip-col--half {
     @media #{$mq-medium} {
