@@ -24,10 +24,10 @@ You may also use the `sync` task. This can be useful if you are working on a cus
 gulp sync --proxy https://snipcart.com
 ```
 ​
-By default, Browsersync will serve the content on `localhost:3005`. If you wish to use this setup on the application you are building you can add `snipcart.css` reference on this path:
+By default, Browsersync will serve the content on `localhost:3006`. If you wish to use this setup on the application you are building you can add `snipcart.css` reference on this path:
 ​
 ```html
-<link href="http://localhost:3005/themes/base/snipcart.css" rel="stylesheet" type="text/css" />
+<link href="http://localhost:3006/themes/base/snipcart.css" rel="stylesheet" type="text/css" />
 ```
 ​
 ## Deploy assets

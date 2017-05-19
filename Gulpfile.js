@@ -62,6 +62,7 @@ gulp.task('sync', ['dev'], function() {
     sync.init({
         port: 3006,
         proxy: proxy,
+        cors: true,
         serveStatic: ['.'],
         ui: {
             port: 3007
