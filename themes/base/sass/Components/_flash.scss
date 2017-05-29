@@ -77,6 +77,13 @@ $_flash-border: 1px solid palette(flash, border);
     color: palette(flash, color);
 }
 
+.snip-flash__item--confirm {
+    background-color: palette(flash, background--confirm);
+    .snip-static__title {
+        color: palette(flash, color--invert);
+    }
+}
+
 .snip-flash__item--error {
     background-color: palette(flash, background--error);
     color: palette(flash, color--invert);

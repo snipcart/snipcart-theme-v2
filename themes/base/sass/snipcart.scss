@@ -88,6 +88,7 @@ body.snip-open {
     @import "components/_static.scss";
     @import "components/_tooltip.scss";
     @import "components/_flash.scss";
+    @import "components/_discount.scss";
 
     // Responsive
     @media #{$mq-large} {
