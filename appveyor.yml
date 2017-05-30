@@ -22,7 +22,7 @@ branches:
 # environment variables
 environment:
   NODE_UNICODETABLE_UNICODEDATA_TXT: '%appveyor_build_folder%\tools\UnicodeData.txt'
-  nodejs_version: "6"
+  nodejs_version: "LTS"
   azure_storage_access_key_staging:
     secure: LPX3Gv4dUzZ187kD3CZMsRWR1qNB9UM287fR1vh6FD4zAtUTzbPc5Hrh4syNokgYVPEN7JHxN0NL8Vt13DeCvW4STUyyFK+VgdDt5nTseMRsNbVST6ZYqmN19mF15yzi
   azure_storage_access_key:
