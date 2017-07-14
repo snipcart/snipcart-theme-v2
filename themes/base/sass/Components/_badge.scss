@@ -1,0 +1,38 @@
+/**
+    BADGE
+*/
+
+/*------------------------------------*\
+    LOCAL VARIABLES
+\*------------------------------------*/
+
+$_btn-size: 36px;
+
+/*------------------------------------*\
+    STYLE
+\*------------------------------------*/
+
+.snip-badge {
+    @include font-bold;
+    text-transform: uppercase;
+    border-radius: 3px;
+    padding: 0.5em;
+    display: inline-block;
+    margin: 0 1em;
+    font-size: smaller;
+}
+
+.snip-badge--success {
+    background-color: palette(badge, background--success);
+    color: palette(badge, text--success);
+}
+
+.snip-badge--error {
+    background-color: palette(badge, background--error);
+    color: palette(badge, text--error);
+}
+
+.snip-badge--warn {
+    background-color: palette(badge, background--warn);
+    color: palette(badge, text--warn);
+}

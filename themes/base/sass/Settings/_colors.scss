@@ -15,14 +15,24 @@ $palettes: (
         background: #555,
         background--highlight: #efe778,
         background--hover: darken(#555, 10%),
+        background--danger: #f10,
+        background--danger-hover: darken(#f10, 10%),
         background--highlight-hover: darken(#efe778, 10%),
         color: #fff,
-        color--highlight: #222
+        color--highlight: #222,
     ),
     error: (
         color: #f10,
         text-color: #333,
         text-color--invert: #fff
+    ),
+    badge: (
+        background--success: #76d443,
+        background--error: #f10,
+        background--warn: #efe778,
+        text--success: #333,
+        text--error: #fff,
+        text--warn: #333
     ),
     flash: (
         background--error: #f10,
