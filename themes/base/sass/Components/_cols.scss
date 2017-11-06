@@ -63,6 +63,13 @@ $_cols-border: 1px solid palette(layout, border);
     }
 }
 
+
+.snip-col--full {
+    @media #{$mq-medium} {
+        width: 100%;
+    }
+}
+
 .snip-col--right {
     border-left: $_cols-border;
     // [3]
