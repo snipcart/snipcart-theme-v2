@@ -5,7 +5,6 @@ concat = require 'gulp-concat'
 minifyCss = require 'gulp-minify-css'
 rename = require 'gulp-rename'
 autoprefixer = require 'gulp-autoprefixer'
-argv = require('yargs').option('version', {type: 'string'}).argv
 postcss = require 'gulp-postcss'
 mqpacker = require 'css-mqpacker'
 browserSync = require 'browser-sync'
@@ -22,9 +21,10 @@ watch =
   sass: "#{workingDir}/sass/**/*.scss"
 
 getDistDir = (output)->
+  version = "2.0"
   dir = './dist/themes'
-  if argv.version
-    dir = "./dist/themes/#{argv.version}"
+  if version
+    dir = "./dist/themes/#{version}"
   if output
     dir += "/#{output}"
   return dir
