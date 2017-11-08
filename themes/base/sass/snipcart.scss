@@ -47,6 +47,12 @@ body.snip-open {
     margin: 0 !important;
     overflow: hidden !important;
     padding: 0 !important;
+
+    // Fix body scroll and input focus issue in iOS11 Safari
+    @media #{$mq-phone} {
+        position: fixed;
+        width: 100%;
+    }
 }
 
 // Base layout
