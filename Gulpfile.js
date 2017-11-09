@@ -5,7 +5,7 @@ var concat = require('gulp-concat');
 var minifyCss = require('gulp-minify-css');
 var rename = require('gulp-rename');
 var autoprefixer = require('gulp-autoprefixer');
-var argv = require('yargs').option('version', {type: 'string'}).argv;
+var argv = require('yargs').option('release', {type: 'string'}).argv;
 var postcss = require('gulp-postcss');
 var mqpacker = require('css-mqpacker');
 var browserSync = require('browser-sync');
@@ -26,8 +26,8 @@ var watch = {
 var getDistDir = function (output) {
     var dir = './dist/themes';
 
-    if (argv.version) {
-        dir = "./dist/themes/" + argv.version;
+    if (argv.release) {
+        dir = "./dist/themes/" + argv.release;
     }
 
     if (output) {
