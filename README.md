@@ -34,10 +34,10 @@ By default, Browsersync will serve the content on `localhost:3006`. If you wish 
 ​
 To generate assets to be deployed, you can use the `deploy` gulp task. This task will make sure to copy files needed to `dist` folder and `snipcart.css` + `snipcart.min.css`. Images, fonts, and more will also be copied to the `dist` folder.
 ​
-You may use the `version` flag to create a version directory inside the `dist` folder.
+You may use the `release` flag to create a version directory inside the `dist` folder.
 ​
 ```sh
-gulp deploy --version 1.2.3
+gulp deploy --release 1.2.3
 ```
 ​
 The example above would generate the following directory structure:
