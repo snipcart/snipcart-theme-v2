@@ -75,3 +75,7 @@ $_cols-border: 1px solid palette(layout, border);
     // [3]
     order: 2;
 }
+
+.snip-col--no-border {
+    border: none;
+}
