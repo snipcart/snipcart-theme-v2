@@ -64,6 +64,26 @@ $_layout-content-border: 1px solid palette(layout, content-border);
     }
 }
 
+.snipcart-step{
+    &--inner-loading{
+        .snip-layout__loading{
+            display:block;
+        }
+        .snip-layout__content{
+            display:none;
+        }
+    }
+
+    &--inner-loaded{
+        .snip-layout__loading{
+            display:none;
+        }
+        .snip-layout__content{
+            display:block;
+        }
+    }
+}
+
 .snip-layout__content--highlight {
     background-color: palette(layout, content-background);
     border-bottom: $_layout-content-border;
