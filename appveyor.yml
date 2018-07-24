@@ -34,7 +34,7 @@ environment:
   keycdn_prod:
     secure: J4aOP8rLKXjQ8hUVl0suBg==
   keycdn_staging:
-    secure: 93E/Z5lVFdeq8uw87xvuZg==
+    secure: jjw4B/DIDPshlAYTBpS3gQ==
   keycdn_canary:
     secure: mTyxClT8rVXIAfmz+DnIdQ==
 
