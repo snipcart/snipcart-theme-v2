@@ -62,7 +62,7 @@ build_script:
       {
         $version = ""
       }
-  - ps: gulp deploy --version $version
+  - ps: gulp deploy --snipcartVersion $version
 
 after_build:
   - cd dist\themes
