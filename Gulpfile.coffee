@@ -8,7 +8,7 @@ autoprefixer = require 'gulp-autoprefixer'
 postcss = require 'gulp-postcss'
 mqpacker = require 'css-mqpacker'
 browserSync = require 'browser-sync'
-argv = require('yargs').argv
+argv = require('yargs').option('snipcartVersion', {type: 'string'}).argv
 
 themesDir = 'themes'
 workingDir = 'themes/base'
