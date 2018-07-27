@@ -34,7 +34,7 @@ environment:
   keycdn_prod:
     secure: J4aOP8rLKXjQ8hUVl0suBg==
   keycdn_staging:
-    secure: 93E/Z5lVFdeq8uw87xvuZg==
+    secure: jjw4B/DIDPshlAYTBpS3gQ==
   keycdn_canary:
     secure: mTyxClT8rVXIAfmz+DnIdQ==
 
@@ -53,7 +53,16 @@ install:
 #---------------------------------#
 
 build_script:
-  - gulp deploy
+  - ps: $splitted = $env:APPVEYOR_BUILD_VERSION.Split(".")
+  - ps: $version = $splitted[0] + "." + $splitted[1]
+  - ps: $decimalVersion = [decimal]$version
+  - ps: $fistversion = [decimal]1.0
+  - ps: >-
+      if ($decimalVersion -le $fistversion)
+      {
+        $version = ""
+      }
+  - ps: gulp deploy --snipcartVersion $version
 
 after_build:
   - cd dist\themes

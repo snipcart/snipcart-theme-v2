@@ -8,7 +8,7 @@ autoprefixer = require 'gulp-autoprefixer'
 postcss = require 'gulp-postcss'
 mqpacker = require 'css-mqpacker'
 browserSync = require 'browser-sync'
-argv = require('yargs').argv
+argv = require('yargs').option('snipcartVersion', {type: 'string'}).argv
 
 themesDir = 'themes'
 workingDir = 'themes/base'
@@ -23,8 +23,8 @@ watch =
 getDistDir = (output)->
   version = "2.0"
   dir = './dist/themes'
-  if version
-    dir = "./dist/themes/#{version}"
+  if argv.snipcartVersion
+    dir = "./dist/themes/#{argv.snipcartVersion}"
   if output
     dir += "/#{output}"
   return dir

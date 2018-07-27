@@ -83,3 +83,7 @@ $_form-border: 1px solid palette(form, border);
     padding: .357em;
     text-align: center;
 }
+
+.snip-form__sq-input {
+    @include input-reset;
+}
