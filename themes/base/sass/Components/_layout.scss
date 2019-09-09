@@ -62,6 +62,10 @@ $_layout-content-border: 1px solid palette(layout, content-border);
     @media #{$mq-medium} {
         padding: 2em 0;
     }
+
+    &--full {
+        padding: 0;
+    }
 }
 
 .snipcart-step{

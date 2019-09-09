@@ -96,6 +96,8 @@ body.snip-open {
     @import "components/_flash.scss";
     @import "components/_discount.scss";
     @import "components/_badge.scss";
+    @import "components/_payment.scss";
+
 
     // Responsive
     @media #{$mq-large} {

@@ -19,6 +19,14 @@ $_header-total-height: 38px;
     STYLE
 \*------------------------------------*/
 
+.snip-3dsecure-iframe {
+    position: absolute;
+    z-index:9999;
+    iframe {
+        width: 600px;
+        height: 400px;
+    }
+}
 .snip-header {
     @include font-bold;
     background: palette(header, background);
