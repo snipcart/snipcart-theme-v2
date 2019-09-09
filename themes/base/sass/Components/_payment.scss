@@ -1,0 +1,16 @@
+.snip-payment {
+    &__layout {
+        padding: 20px 20px 0 20px;
+    }
+    
+    &__iframe-container {
+        &--authenticating {
+            text-align: center;
+        }
+        iframe {
+            border: none;
+            border: none;
+            width: 100%;
+        }
+    }
+}
