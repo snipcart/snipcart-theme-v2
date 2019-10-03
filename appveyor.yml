@@ -23,20 +23,20 @@ branches:
 environment:
   NODE_UNICODETABLE_UNICODEDATA_TXT: '%appveyor_build_folder%\tools\UnicodeData.txt'
   nodejs_version: "8"
-  azure_storage_access_key_staging:
-    secure: LPX3Gv4dUzZ187kD3CZMsRWR1qNB9UM287fR1vh6FD4zAtUTzbPc5Hrh4syNokgYVPEN7JHxN0NL8Vt13DeCvW4STUyyFK+VgdDt5nTseMRsNbVST6ZYqmN19mF15yzi
   azure_storage_access_key:
-    secure: pLJQvFOvO9DWeIX7KGdhUOSyEL7IH8CPegPlFMeZNod2fCeQIZ679KR8deYzrGeWKOAPi8j1+P0m4RSuorWnvXrU2MrJaxer912WbQHZ4Z/D8Q4kGFFwU3siJS9OzOap
+    secure: J6yWumM4mBI1P5oaw0/bUM+R3Wx6tzbLLfi+ZKxbRgbILXwhUmY3yPVlAvMulXbNCDLi5TURoJFLw0TS+28zzBWzlW4swGZ7/KCcaWVLhX/UJMo+Whsaj8iHZTdkyiXm
+  azure_storage_access_key_staging:
+    secure: VkQWxgtwz07x1YG7G6Yplg7pAiydB9agL93eesFxagSJXOFvzA7OCLoTKavMOsVwur2oQZJuYY0nRXn5njBP0D1R5IddH8+MMtBTGBhQpIqwo3x2/vfKYfxyqZ+XxNC0
   azure_storage_access_key_canary:
-    secure: qvb26x/k1hCCVODmVKvc3c+3JHg1WX3VSmoI2KGLD6QE9WF+eSV4+4H71Qv9ORfz388G6B2VxM1JxHKRshwCZ59kbdRicpYE2ClEwGFxvROxlrzuGob9Bh0BvBHUDWPV
-  keycdn_api_key:
-    secure: HIuW8miNWA5qAAW3BGGQTMoxFlnWsoc4c9b4Yy1Eo9MYnHFNTjtV9BFdsm8pfLxj
+    secure: Nrn3a601MlKI8/m7cVA8q/MkhqTZ6fA9hsTpvs3/XYzGaTPOjAIu6Ul/jR8h2gyD2r9jwwZ+2Qs/EqKi9HcsXT3+XwinCOhaWVXaBHsSgL2moTc3kqBSzaZ2fBuzS84C
   keycdn_prod:
-    secure: J4aOP8rLKXjQ8hUVl0suBg==
+    secure: Huzh5ka/34JssGiAAcy3NQ==
   keycdn_staging:
-    secure: jjw4B/DIDPshlAYTBpS3gQ==
+    secure: p5v73CByqygknYvAn3Iriw==
   keycdn_canary:
-    secure: mTyxClT8rVXIAfmz+DnIdQ==
+    secure: QGLtO8+uBR7yQWidhVi2+A==
+  keycdn_api_key:
+    secure: nd3s+m12v7rzqG+/xXHfkmTX3eGxvfxk0lQSSA1ZggmFIcVEH2ABMpAv7aOXz0a7
 
 # scripts that are called at very beginning, before repo cloning
 init:
@@ -84,7 +84,7 @@ deploy:
   - provider: AzureBlob
     storage_account_name: snipcartpublic
     storage_access_key:
-      secure: pLJQvFOvO9DWeIX7KGdhUOSyEL7IH8CPegPlFMeZNod2fCeQIZ679KR8deYzrGeWKOAPi8j1+P0m4RSuorWnvXrU2MrJaxer912WbQHZ4Z/D8Q4kGFFwU3siJS9OzOap
+      secure: J6yWumM4mBI1P5oaw0/bUM+R3Wx6tzbLLfi+ZKxbRgbILXwhUmY3yPVlAvMulXbNCDLi5TURoJFLw0TS+28zzBWzlW4swGZ7/KCcaWVLhX/UJMo+Whsaj8iHZTdkyiXm
     container: themes
     artifact: themes
     set_content_type: true
@@ -99,7 +99,7 @@ deploy:
   - provider: AzureBlob
     storage_account_name: snipcartcdndev
     storage_access_key:
-      secure: LPX3Gv4dUzZ187kD3CZMsRWR1qNB9UM287fR1vh6FD4zAtUTzbPc5Hrh4syNokgYVPEN7JHxN0NL8Vt13DeCvW4STUyyFK+VgdDt5nTseMRsNbVST6ZYqmN19mF15yzi
+      secure: VkQWxgtwz07x1YG7G6Yplg7pAiydB9agL93eesFxagSJXOFvzA7OCLoTKavMOsVwur2oQZJuYY0nRXn5njBP0D1R5IddH8+MMtBTGBhQpIqwo3x2/vfKYfxyqZ+XxNC0
     container: themes
     artifact: themes
     set_content_type: true
@@ -111,7 +111,7 @@ deploy:
   - provider: AzureBlob
     storage_account_name: snipcartcdncanary
     storage_access_key:
-      secure: qvb26x/k1hCCVODmVKvc3c+3JHg1WX3VSmoI2KGLD6QE9WF+eSV4+4H71Qv9ORfz388G6B2VxM1JxHKRshwCZ59kbdRicpYE2ClEwGFxvROxlrzuGob9Bh0BvBHUDWPV
+      secure: Nrn3a601MlKI8/m7cVA8q/MkhqTZ6fA9hsTpvs3/XYzGaTPOjAIu6Ul/jR8h2gyD2r9jwwZ+2Qs/EqKi9HcsXT3+XwinCOhaWVXaBHsSgL2moTc3kqBSzaZ2fBuzS84C
     container: themes
     artifact: themes
     set_content_type: true
