@@ -1,6 +1,6 @@
 # snipcart-theme
 
-This repository contains everything needed to generate a `snipcart.css` file.
+This repository contains everything needed to generate a `snipcart.css` file used on Snipcart's v2.
 ​
 ## Installation
 ​
