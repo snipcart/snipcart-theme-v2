@@ -82,6 +82,7 @@ select {
 
 input[type=text],
 input[type=password],
+div#snipcart-stripe-card,
 select {
     @include input-reset
 }
